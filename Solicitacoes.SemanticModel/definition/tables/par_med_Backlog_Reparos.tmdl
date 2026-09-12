@@ -1,0 +1,58 @@
+table par_med_Backlog_Reparos
+	lineageTag: c1bba914-0b92-46fb-9c88-808ac5914fa6
+
+	column par_med_BacklogSolicitacoes
+		lineageTag: 8074a80c-54b2-47f1-b6fb-5ed510ccc62f
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'par_med_BacklogSolicitacoes Pedido'
+
+		relatedColumnDetails
+			groupByColumn: 'par_med_BacklogSolicitacoes Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'par_med_BacklogSolicitacoes Campos'
+		isHidden
+		lineageTag: 067fe1b0-b4ce-4753-b6bd-f64cfded10b6
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'par_med_BacklogSolicitacoes Pedido'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'par_med_BacklogSolicitacoes Pedido'
+		isHidden
+		formatString: 0
+		lineageTag: a572e2ea-4d61-4f8f-a66d-a75e3f1a677d
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition par_med_Backlog_Reparos = calculated
+		mode: import
+		source =
+				{
+				    ("Backlog Total", NAMEOF('Medidas'[Backlog Total]), 0),
+				    ("Fila", NAMEOF('Medidas'[Fila]), 1),
+				    ("Backlog Acima De 36h", NAMEOF('Medidas'[Backlog Acima De 36h]), 2),
+				    ("% Backlog Acima De 36h", NAMEOF('Medidas'[% Backlog Acima de 36h]), 3),
+				    -- ("Backlog Ate 12h", NAMEOF('Medidas'[Backlog Ate 12h]), 0),
+				    ("Backlog De 12h A 24h", NAMEOF('Medidas'[Backlog De 12h A 24h]), 4),
+				    ("Backlog De 24h A 36h", NAMEOF('Medidas'[Backlog De 24h A 36h]), 5),
+				    ("Backlog De 36h A 48h", NAMEOF('Medidas'[Backlog De 36h A 48h]), 6),
+				    ("Backlog De 48h A 72h", NAMEOF('Medidas'[Backlog De 48h A 72h]), 7),
+				    ("Backlog De 72h A 96h", NAMEOF('Medidas'[Backlog De 72h A 96h]), 8),
+				    ("Backlog De 96h A 120h", NAMEOF('Medidas'[Backlog De 96h A 120h]), 9),
+				    ("Backlog Acima De 120h", NAMEOF('Medidas'[Backlog Acima De 120h]), 10)
+				}
+
+	annotation PBI_Id = 3b68fab3781b43ea983e4a9c7097c8d6
+

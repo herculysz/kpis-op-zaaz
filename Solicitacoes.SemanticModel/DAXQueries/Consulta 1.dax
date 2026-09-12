@@ -1,0 +1,15 @@
+// Bem-vindo ao modo de exibição de consulta DAX! Saiba mais sobre consultas DAX em https://aka.ms/dax-queries.
+// Clique com o botão direito do mouse em tabelas, colunas ou medidas no painel de dados para acessar consultas rápidas ou peça ajuda ao Copilot para escrever DAX.
+
+// Selecione "Executar" para experimentar esta consulta DAX de exemplo.
+EVALUATE
+VAR vDt_Contexto = IF( MAX(d_Calendario[data]) > TODAY(), TODAY(), MAX(d_Calendario[data]) )
+VAR vDt_Ult_7d = vDt_Contexto-7
+VAR vPeriodo =
+    DATESBETWEEN(
+        d_Calendario[data],
+        vDt_Ult_7d,
+        vDt_Contexto-1
+    )
+RETURN
+vPeriodo

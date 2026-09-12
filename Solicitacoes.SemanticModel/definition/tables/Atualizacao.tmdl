@@ -1,0 +1,31 @@
+table Atualizacao
+	lineageTag: b5e77921-14a8-4406-bf2a-8f13bcf5822e
+
+	column 'Data/hora Online'
+		dataType: dateTime
+		formatString: dd/mm/yy hh:nn
+		lineageTag: d210bab0-fd66-4b65-8749-7d23327d1802
+		summarizeBy: none
+		sourceColumn: Data/hora Online
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	partition Atualizacao = m
+		mode: import
+		source =
+				let
+				    Fonte = DateTime.LocalNow(),
+				    #"Convertido para Tabela" = #table(1, {{Fonte}}),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Convertido para Tabela",{{"Column1", type datetimezone}}),
+				    #"Personalização Adicionada" = Table.AddColumn(#"Tipo Alterado", "Data/hora Online", each DateTimeZone.SwitchZone([#"Column1"],-3)),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Personalização Adicionada",{{"Data/hora Online", type datetimezone}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado1",{"Column1"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
