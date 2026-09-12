@@ -3729,7 +3729,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medida.no_prazo_SLA_72H": {
+			    "medida.no_prazo_sla_7_2h": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
@@ -3739,18 +3739,25 @@ cultureInfo pt-BR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "no prazo SLA 72H": {
+			          "no prazo sla 7 2h": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "number prazo sla 72h": {
+			          "NO_PRAZO_SLA72H": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "number prazo sla 7 2h": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.599
+			            "Weight": 0.605
 			          }
 			        },
 			        {
@@ -3952,6 +3959,13 @@ cultureInfo pt-BR
 			        {
 			          "cumprida no prazo": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CUMPRIDA_NO_PRAZO": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
 			          }
 			        },
 			        {
@@ -4335,6 +4349,16 @@ cultureInfo pt-BR
 			          "proj. rein": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "PROJ. REIN.": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -4389,7 +4413,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Meta": {
+			          "META": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4415,7 +4439,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Taxa Proj.": {
+			          "TAXA PROJ.": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4425,9 +4449,107 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "medida.cor_back_proj_taxa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "@cor_back_proj_taxa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "@cor_back_proj_taxa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.cor_txt_proj_taxa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "@cor_txt_proj_taxa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "@cor_txt_proj_taxa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "medida_has_cor_back_proj_taxa": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.cor_back_proj_taxa": {
+			          "Target": {
+			            "Entity": "medida.cor_back_proj_taxa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.cor_back_proj_taxa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_cor_back_proj_taxa"
+			        }
+			      ]
+			    },
+			    "medida_has_PER_Projecao_Reincidencia_taxa": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.PER_Projecao_Reincidencia_taxa": {
+			          "Target": {
+			            "Entity": "medida.PER_Projecao_Reincidencia_taxa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.PER_Projecao_Reincidencia_taxa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_PER_Projecao_Reincidencia_taxa"
+			        }
+			      ]
+			    },
 			    "medida_has_PER_Projecao_Reincidencia_meta": {
 			      "Binding": {
 			        "ConceptualEntity": "Medidas"
@@ -5134,7 +5256,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "mvp_solicitacao_servico_has_medida_no_prazo_SLA_72H": {
+			    "mvp_solicitacao_servico_has_medida_no_prazo_sla_7_2h": {
 			      "Binding": {
 			        "ConceptualEntity": "mvp solicitacao_servicos"
 			      },
@@ -5145,9 +5267,9 @@ cultureInfo pt-BR
 			            "Entity": "mvp_solicitacao_servico"
 			          }
 			        },
-			        "medida.no_prazo_SLA_72H": {
+			        "medida.no_prazo_sla_7_2h": {
 			          "Target": {
-			            "Entity": "medida.no_prazo_SLA_72H"
+			            "Entity": "medida.no_prazo_sla_7_2h"
 			          }
 			        }
 			      },
@@ -5158,12 +5280,12 @@ cultureInfo pt-BR
 			              "Role": "mvp_solicitacao_servico"
 			            },
 			            "Object": {
-			              "Role": "medida.no_prazo_SLA_72H"
+			              "Role": "medida.no_prazo_sla_7_2h"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mvp_solicitacao_servicos_have_no_prazo_SLA_72H"
+			          "ID": "mvp_solicitacao_servicos_have_no_prazo_sla_7_2h"
 			        }
 			      ]
 			    },
@@ -8368,7 +8490,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medida_has_PER_Projecao_Reincidencia_taxa": {
+			    "medida_has_cor_txt_proj_taxa": {
 			      "Binding": {
 			        "ConceptualEntity": "Medidas"
 			      },
@@ -8379,9 +8501,9 @@ cultureInfo pt-BR
 			            "Entity": "medida"
 			          }
 			        },
-			        "medida.PER_Projecao_Reincidencia_taxa": {
+			        "medida.cor_txt_proj_taxa": {
 			          "Target": {
-			            "Entity": "medida.PER_Projecao_Reincidencia_taxa"
+			            "Entity": "medida.cor_txt_proj_taxa"
 			          }
 			        }
 			      },
@@ -8392,12 +8514,12 @@ cultureInfo pt-BR
 			              "Role": "medida"
 			            },
 			            "Object": {
-			              "Role": "medida.PER_Projecao_Reincidencia_taxa"
+			              "Role": "medida.cor_txt_proj_taxa"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "medidas_have_PER_Projecao_Reincidencia_taxa"
+			          "ID": "medidas_have_cor_txt_proj_taxa"
 			        }
 			      ]
 			    }

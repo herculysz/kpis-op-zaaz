@@ -6,7 +6,7 @@
     "y": 128.38038632986627,
     "z": 1008,
     "height": 900.08915304606239,
-    "width": 620.5052005943536,
+    "width": 674.71025260029717,
     "tabOrder": 9
   },
   "visual": {
@@ -79,7 +79,8 @@
                 }
               },
               "queryRef": "Medidas.Protocolos em garantia",
-              "nativeQueryRef": "Reincidente"
+              "nativeQueryRef": "REINCIDENTE",
+              "displayName": "REINCIDENTE"
             },
             {
               "field": {
@@ -93,7 +94,8 @@
                 }
               },
               "queryRef": "Medidas.Proj. Rein",
-              "nativeQueryRef": "Proj. Rein"
+              "nativeQueryRef": "PROJ. REIN.",
+              "displayName": "PROJ. REIN."
             },
             {
               "field": {
@@ -107,7 +109,8 @@
                 }
               },
               "queryRef": "Medidas.Proj. Total",
-              "nativeQueryRef": "Proj. Total"
+              "nativeQueryRef": "PROJ. TOTAL",
+              "displayName": "PROJ. TOTAL"
             },
             {
               "field": {
@@ -121,8 +124,8 @@
                 }
               },
               "queryRef": "Medidas.{PER} Projecao_Reincidencia_taxa",
-              "nativeQueryRef": "Taxa Proj.",
-              "displayName": "Taxa Proj."
+              "nativeQueryRef": "TAXA PROJ.",
+              "displayName": "TAXA PROJ."
             },
             {
               "field": {
@@ -136,8 +139,8 @@
                 }
               },
               "queryRef": "Medidas.{PER} Projecao_Reincidencia_meta",
-              "nativeQueryRef": "Meta",
-              "displayName": "Meta"
+              "nativeQueryRef": "META",
+              "displayName": "META"
             }
           ]
         }
@@ -666,7 +669,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "261D"
+                  "Value": "262.42644871320704D"
                 }
               }
             }

@@ -1,6 +1,9 @@
 table Atualizacao
 	lineageTag: b5e77921-14a8-4406-bf2a-8f13bcf5822e
 
+	measure 'Atualizacao Horario' = "Atualizado em "&FORMAT(MAX(Atualizacao[Data/hora Online]), "dd/mm/yyyy hh:mm")
+		lineageTag: 6a1560bb-a6b2-460d-8eb1-4503382e4b4b
+
 	column 'Data/hora Online'
 		dataType: dateTime
 		formatString: dd/mm/yy hh:nn

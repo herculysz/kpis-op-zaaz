@@ -8,12 +8,12 @@ table Medidas
 			    , ISBLANK('mvp solicitacao_servicos'[data_fechamento])
 			)
 		formatString: 0
-		displayFolder: calculos\Backlog
+		displayFolder: Backlog
 		lineageTag: 52bc39de-efa2-4e7b-b085-c6174d93f30f
 
 	measure 'Qtd Solicitacoes' = COUNTROWS('mvp solicitacao_servicos')
 		formatString: #,0
-		displayFolder: calculos\Gerais
+		displayFolder: Backlog\Gerais
 		lineageTag: 8cd5392e-29b7-49b0-bbbb-49c058ed6acf
 
 	measure 'Backlog Reparos' =
@@ -23,7 +23,7 @@ table Medidas
 			    , 'mvp solicitacao_servicos'[tipo_servico] = "Reparo"
 			)
 		formatString: 0
-		displayFolder: calculos\Backlog
+		displayFolder: Backlog
 		lineageTag: 2174f6db-40cd-4e16-8394-ec13cd8f6e81
 
 	measure 'Backlog Total' =
@@ -38,7 +38,7 @@ table Medidas
 			    , USERELATIONSHIP( 'mvp solicitacao_servicos'[data_abertura], d_Calendario[data] )
 			)
 		formatString: 0
-		displayFolder: calculos\Backlog
+		displayFolder: Backlog
 		lineageTag: 9d5e8cc1-8872-4ccb-bcdc-922bd6233a52
 
 	measure Fila =
@@ -47,7 +47,7 @@ table Medidas
 			    [Backlog Total],
 			    [Media Solicitacoes Encerradas 7d]
 			)
-		displayFolder: calculos\Gerais
+		displayFolder: Backlog\Gerais
 		lineageTag: f350e557-8993-42c0-ad0a-a8dd8eaab978
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -74,7 +74,7 @@ table Medidas
 			RETURN
 			vSolicitacoesEncerradas
 		formatString: #,0
-		displayFolder: calculos\Gerais
+		displayFolder: Backlog\Gerais
 		lineageTag: 27d58745-87c1-457e-8481-7a0256f844a7
 
 	measure 'Media Solicitacoes Encerradas 7d' =
@@ -84,7 +84,7 @@ table Medidas
 			RETURN
 			vMedia
 		formatString: 0
-		displayFolder: calculos\Gerais
+		displayFolder: Backlog\Gerais
 		lineageTag: cf111fc6-fb18-452a-820c-9c93d11791cd
 
 	measure 'Backlog Acima De 36h' =
@@ -94,7 +94,7 @@ table Medidas
 			    'mvp solicitacao_servicos'[horas] > 36
 			)
 		formatString: 0
-		displayFolder: calculos\Backlog
+		displayFolder: Backlog
 		lineageTag: 0ef07920-c2c6-48a8-83d8-b2ab4d3707e8
 
 	measure '% Backlog Acima de 36h' =
@@ -104,7 +104,7 @@ table Medidas
 			    [Backlog Total]
 			)
 		formatString: 0%;-0%;0%
-		displayFolder: calculos\Backlog
+		displayFolder: Backlog
 		lineageTag: be2193cc-f93a-4239-ba2d-fa1cf868184b
 
 	measure 'Backlog Ate 12h' =
@@ -114,7 +114,7 @@ table Medidas
 			    'mvp solicitacao_servicos'[faixa_tempo] = "ATÉ 12H"
 			)
 		formatString: 0
-		displayFolder: calculos\Backlog
+		displayFolder: Backlog
 		lineageTag: 4d9d8b01-2b5a-4c68-b0c8-1d942842c31c
 
 	measure 'Backlog De 12h A 24h' =
@@ -124,7 +124,7 @@ table Medidas
 			    'mvp solicitacao_servicos'[faixa_tempo] = "DE 12H A 24H"
 			)
 		formatString: 0
-		displayFolder: calculos\Backlog
+		displayFolder: Backlog
 		lineageTag: f2214ea1-fba6-41aa-a210-58ac37df3014
 
 	measure 'Backlog De 24h A 36h' =
@@ -134,7 +134,7 @@ table Medidas
 			    'mvp solicitacao_servicos'[faixa_tempo] = "DE 24H A 36H"
 			)
 		formatString: 0
-		displayFolder: calculos\Backlog
+		displayFolder: Backlog
 		lineageTag: b5c776a0-b6fc-4ef3-aa17-4c5eab4642de
 
 	measure 'Backlog De 36h A 48h' =
@@ -144,7 +144,7 @@ table Medidas
 			    'mvp solicitacao_servicos'[faixa_tempo] = "DE 36H A 48H"
 			)
 		formatString: 0
-		displayFolder: calculos\Backlog
+		displayFolder: Backlog
 		lineageTag: cc2b2569-8dfa-4fb4-869b-56e296fc52e6
 
 	measure 'Backlog De 48h A 72h' =
@@ -154,7 +154,7 @@ table Medidas
 			    'mvp solicitacao_servicos'[faixa_tempo] = "DE 48H A 72H"
 			)
 		formatString: 0
-		displayFolder: calculos\Backlog
+		displayFolder: Backlog
 		lineageTag: 3ae4e5ea-5388-427e-9bb3-ade1dd2b8053
 
 	measure 'Backlog De 72h A 96h' =
@@ -164,7 +164,7 @@ table Medidas
 			    'mvp solicitacao_servicos'[faixa_tempo] = "DE 72H A 96H"
 			)
 		formatString: 0
-		displayFolder: calculos\Backlog
+		displayFolder: Backlog
 		lineageTag: 0969a7f2-6942-4f1d-aed4-c39d1a551c16
 
 	measure 'Backlog De 96h A 120h' =
@@ -174,7 +174,7 @@ table Medidas
 			    'mvp solicitacao_servicos'[faixa_tempo] = "DE 96H A 120H"
 			)
 		formatString: 0
-		displayFolder: calculos\Backlog
+		displayFolder: Backlog
 		lineageTag: 117d16f2-c74f-4941-a757-e0a75933452f
 
 	measure 'Backlog Acima De 120h' =
@@ -184,13 +184,13 @@ table Medidas
 			    'mvp solicitacao_servicos'[faixa_tempo] = "ACIMA DE 120H"
 			)
 		formatString: 0
-		displayFolder: calculos\Backlog
+		displayFolder: Backlog
 		lineageTag: f8907cef-6f57-4406-b373-c5db1b44f95a
 
 	measure 'Titulo Backlog Tipo Servico' =
 			
 			"BACKLOG - " & SELECTEDVALUE( 'mvp solicitacao_servicos'[tipo_servico], "Múltiplos tipo selecionados" )
-		displayFolder: calculos\Auxiliares
+		displayFolder: Backlog
 		lineageTag: 0f3ae425-f9f5-48d9-a2af-b021587f8f99
 
 	measure 'Backlog Ate 24h' =
@@ -200,7 +200,7 @@ table Medidas
 			    'mvp solicitacao_servicos'[horas] <= 24
 			)
 		formatString: 0
-		displayFolder: calculos\Backlog
+		displayFolder: Backlog
 		lineageTag: baf8f328-1a88-451b-9b16-a5908971fd83
 
 	measure 'Backlog De 24h A 48h' =
@@ -210,16 +210,12 @@ table Medidas
 			    'mvp solicitacao_servicos'[horas] > 24 && 'mvp solicitacao_servicos'[horas] <= 48
 			)
 		formatString: 0
-		displayFolder: calculos\Backlog
+		displayFolder: Backlog
 		lineageTag: 2be968e9-068e-419a-a81f-10b29a69fc98
-
-	measure 'Atualizacao Horario' = "Atualizado em "&FORMAT(MAX(Atualizacao[Data/hora Online]), "dd/mm/yyyy hh:mm")
-		displayFolder: calculos\Auxiliares
-		lineageTag: 6a1560bb-a6b2-460d-8eb1-4503382e4b4b
 
 	measure '{PER} agenda_meta' = 0.9
 		formatString: 0%;-0%;0%
-		displayFolder: calculos
+		displayFolder: GrossAtivacao\Calculos
 		lineageTag: 3881e865-f79b-4093-8679-1f282aa7ae00
 
 	measure '{PER} agenda_taxa' = ```
@@ -228,14 +224,14 @@ table Medidas
 			    DIVIDE([CUMPRIDA_NO_PRAZO], [TOTAL], 0), BLANK())
 			```
 		formatString: 0.0%;-0.0%;0.0%
-		displayFolder: calculos
+		displayFolder: GrossAtivacao\Calculos
 		lineageTag: 6d4fa749-048a-4782-a451-55e28a366e67
 
 		changedProperty = IsHidden
 
 	measure '{PER} eficacia_meta' = 0.9
 		formatString: 0%;-0%;0%
-		displayFolder: calculos
+		displayFolder: GrossAtivacao\Calculos
 		lineageTag: 6ef991d3-5b44-4e2e-bb44-afaded23232e
 
 	measure '{PER} eficacia_taxa' = ```
@@ -244,12 +240,12 @@ table Medidas
 			        DIVIDE([PRODUTIVAS], [TOTAL], 0), BLANK())
 			```
 		formatString: #,0.0%;-#,0.0%;#,0.0%
-		displayFolder: calculos
+		displayFolder: GrossAtivacao\Calculos
 		lineageTag: 7fb04f98-3a38-4dad-98c0-ee6cc2372c40
 
 	measure '{PER} velocidade_meta' = 0.95
 		formatString: 0%;-0%;0%
-		displayFolder: calculos
+		displayFolder: GrossAtivacao\Calculos
 		lineageTag: 49de0497-51f3-49b2-9b7a-df694c8d97b4
 
 	measure '{PER} velocidade_taxa' = ```
@@ -258,7 +254,7 @@ table Medidas
 			    DIVIDE([NO_PRAZO_SLA72H], [PRODUTIVAS], 0), BLANK())
 			```
 		formatString: 0.0%;-0.0%;0.0%
-		displayFolder: calculos
+		displayFolder: GrossAtivacao\Calculos
 		lineageTag: fa225a96-5a12-4188-87b5-9de1cab56f45
 
 	measure PRODUTIVAS = ```
@@ -276,7 +272,7 @@ table Medidas
 			
 			```
 		formatString: #,0
-		displayFolder: calculos\Totais
+		displayFolder: GrossAtivacao\Totais
 		lineageTag: e937c85e-c176-4b02-807f-380fed740b03
 
 	measure TOTAL = ```
@@ -294,7 +290,7 @@ table Medidas
 			
 			```
 		formatString: #,0
-		displayFolder: calculos\Totais
+		displayFolder: GrossAtivacao\Totais
 		lineageTag: 7089937e-7bd7-41ab-83f2-ec091ed5e34d
 
 	measure NO_PRAZO_SLA72H = ```
@@ -313,11 +309,11 @@ table Medidas
 			
 			```
 		formatString: #,0
-		displayFolder: calculos\Totais
+		displayFolder: GrossAtivacao\Totais
 		lineageTag: 07baad15-fda3-4df0-9285-b00c4098a7ec
 
 	measure 'Qtd Registros' = [Qtd Solicitacoes]& " registros"
-		displayFolder: calculos\Gerais
+		displayFolder: Backlog\Gerais
 		lineageTag: 36481aec-67f0-4935-a9cf-f5e90ec5c714
 
 	measure @cor_txt_eficacia_taxa =
@@ -336,7 +332,7 @@ table Medidas
 			    Taxa < Meta, "#856c16",
 			    "#1b6242"
 			)
-		displayFolder: calculos\cores
+		displayFolder: GrossAtivacao\cores
 		lineageTag: ff551008-3dbc-4db5-9e5d-bdd9b1863d59
 
 	measure @cor_back_eficacia_taxa =
@@ -355,7 +351,7 @@ table Medidas
 			    Taxa < Meta, "#E5D38C",
 			    "#B2D788"
 			)
-		displayFolder: calculos\cores
+		displayFolder: GrossAtivacao\cores
 		lineageTag: cae66e92-258a-438c-a0d1-9d23de4142db
 
 	measure @cor_txt_velocidade_taxa =
@@ -374,7 +370,7 @@ table Medidas
 			    Taxa < Meta, "#856c16",
 			    "#1b6242"
 			)
-		displayFolder: calculos\cores
+		displayFolder: GrossAtivacao\cores
 		lineageTag: 33c53665-5aa5-42d9-b860-3d3279a17e3d
 
 	measure @cor_back_velocidade_taxa =
@@ -393,7 +389,7 @@ table Medidas
 			    Taxa < Meta, "#E5D38C",
 			    "#B2D788"
 			)
-		displayFolder: calculos\cores
+		displayFolder: GrossAtivacao\cores
 		lineageTag: 5dd38f74-ca86-4a16-88fe-2bd06b029f1f
 
 	measure @cor_back_agenda_taxa =
@@ -412,7 +408,7 @@ table Medidas
 			    Taxa < Meta, "#E5D38C",
 			    "#B2D788"
 			)
-		displayFolder: calculos\cores
+		displayFolder: GrossAtivacao\cores
 		lineageTag: b1ad86b0-17aa-4018-83b3-6ba4aa9572f4
 
 	measure @cor_txt_agenda_taxa =
@@ -431,7 +427,7 @@ table Medidas
 			    Taxa < Meta, "#856c16",
 			    "#1b6242"
 			)
-		displayFolder: calculos\cores
+		displayFolder: GrossAtivacao\cores
 		lineageTag: fbd62ba0-5440-4015-82fc-0166d227c13f
 
 	measure CUMPRIDA_NO_PRAZO = ```
@@ -450,7 +446,7 @@ table Medidas
 			
 			```
 		formatString: #,0
-		displayFolder: calculos\Totais
+		displayFolder: GrossAtivacao\Totais
 		lineageTag: 8f873144-0eca-45a0-85f9-8a1fe1a7e792
 
 	measure peso_dia_util =
@@ -466,7 +462,7 @@ table Medidas
 			        0.00
 			    )
 		formatString: 0.00
-		displayFolder: calculos\Garantia\Pesos
+		displayFolder: Garantia\Pesos
 		lineageTag: 07ce382d-1ce6-4b88-ab0e-178299b3f3bf
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -484,7 +480,7 @@ table Medidas
 			        0.00
 			    )
 		formatString: 0.00
-		displayFolder: calculos\Garantia\Pesos
+		displayFolder: Garantia\Pesos
 		lineageTag: 59a88e9b-d9ce-4f02-90cf-44192a1b37ae
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -502,7 +498,7 @@ table Medidas
 			        0.00
 			    )
 		formatString: 0.00
-		displayFolder: calculos\Garantia\Pesos
+		displayFolder: Garantia\Pesos
 		lineageTag: 7c7d2d8e-6f18-4d28-80be-97776f15292c
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -512,7 +508,7 @@ table Medidas
 			
 			IF(SELECTEDVALUE(d_Calendario[feriado], FALSE()), 0.15, 0.00)
 		formatString: 0.00
-		displayFolder: calculos\Garantia\Pesos
+		displayFolder: Garantia\Pesos
 		lineageTag: 62db4f28-bc3f-4d55-8ef2-64af8d78a7a0
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -579,7 +575,7 @@ table Medidas
 			    BLANK()
 			)
 		formatString: 0
-		displayFolder: calculos\Garantia
+		displayFolder: Garantia\Totais
 		lineageTag: 5ae166c4-b1b0-4ecb-ac0c-17b05abbd624
 
 	measure 'DU REAL' =
@@ -605,13 +601,21 @@ table Medidas
 			        [peso_dia_util] + [peso_sabado] + [peso_domingo] + [peso_feriado]
 			    )
 		formatString: 0.00
-		displayFolder: calculos\Garantia
+		displayFolder: Garantia\DiasUteis
 		lineageTag: fe5f6298-1855-48b5-a598-351ba7dafdcb
 
 	measure 'DU PLAN' =
 			
 			
-			VAR _DataReferencia = MAXX(ALLSELECTED(d_Calendario[data]), d_Calendario[data])
+			VAR _DataReferencia =
+			    CALCULATE(
+			        MAX('mvp solicitacao_servicos'[data_fechamento]),
+			        ALLSELECTED('mvp solicitacao_servicos'),
+			        USERELATIONSHIP(
+			            d_Calendario[data],
+			            'mvp solicitacao_servicos'[data_fechamento]
+			        )
+			    )
 			VAR _InicioMes = DATE(YEAR(_DataReferencia), MONTH(_DataReferencia), 1)
 			VAR _FimMes = EOMONTH(_DataReferencia, 0)
 			RETURN
@@ -624,7 +628,7 @@ table Medidas
 			        [peso_dia_util] + [peso_sabado] + [peso_domingo] + [peso_feriado]
 			    )
 		formatString: 0.00
-		displayFolder: calculos\Garantia
+		displayFolder: Garantia\DiasUteis
 		lineageTag: 9fd27f7c-1ea8-4ff9-bf64-a135cb104132
 
 	measure 'Proj. Rein' =
@@ -645,7 +649,7 @@ table Medidas
 			    BLANK()
 			)
 		formatString: 0
-		displayFolder: calculos\Garantia
+		displayFolder: Garantia\Totais
 		lineageTag: 1fc2dd3e-0fef-4d5d-b9e7-43d4c2580a4a
 
 	measure 'Proj. Total' =
@@ -661,16 +665,17 @@ table Medidas
 			    )
 			)
 		formatString: #,0
-		displayFolder: calculos\Garantia
+		displayFolder: Garantia\Totais
 		lineageTag: a2156f76-e347-4c9b-9e1a-7855d6583918
 
 	measure '{PER} Projecao_Reincidencia_meta' =
 			
 			
 			IF([Proj. Total] > 0, 0.10, BLANK())
-		formatString: 0%;-0%;0%
-		displayFolder: calculos\Garantia
+		displayFolder: Garantia\Calculos
 		lineageTag: 93f32f53-2308-402f-90ac-80a10b1aa4c0
+
+		formatStringDefinition = "MAX "&"0%;-0%;0%"
 
 	measure '{PER} Projecao_Reincidencia_taxa' =
 			
@@ -681,7 +686,7 @@ table Medidas
 			    BLANK()
 			)
 		formatString: 0.00%;-0.00%;0.00%
-		displayFolder: calculos\Garantia
+		displayFolder: Garantia\Calculos
 		lineageTag: 6a3f8617-c9aa-4cc9-a942-d0af92b0d5bc
 
 	measure @cor_back_proj_taxa = ```
@@ -701,7 +706,7 @@ table Medidas
 			    "#E5B389"
 			)
 			```
-		displayFolder: calculos\Garantia
+		displayFolder: Garantia\Cores
 		lineageTag: c358e838-ad8a-434e-a013-347ef82ef5af
 
 	measure @cor_txt_proj_taxa = ```
@@ -721,7 +726,7 @@ table Medidas
 			    "#E5B389"
 			)
 			```
-		displayFolder: calculos\Garantia
+		displayFolder: Garantia\Cores
 		lineageTag: f623dbff-03b6-4254-99a6-7ddb4bc13e88
 
 	column 'Coluna 1'
