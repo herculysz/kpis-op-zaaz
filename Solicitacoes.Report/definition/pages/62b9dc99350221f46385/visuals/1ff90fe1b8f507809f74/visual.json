@@ -313,6 +313,76 @@
               },
               "queryRef": "Medidas.TOTAL",
               "nativeQueryRef": "TOTAL"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Proj. Rein"
+                }
+              },
+              "queryRef": "Medidas.Proj. Rein",
+              "nativeQueryRef": "Proj. Rein"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Proj. Total"
+                }
+              },
+              "queryRef": "Medidas.Proj. Total",
+              "nativeQueryRef": "Proj. Total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Reincidente"
+                }
+              },
+              "queryRef": "Medidas.Reincidente",
+              "nativeQueryRef": "Reincidente"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "DU Total"
+                }
+              },
+              "queryRef": "Medidas.DU Total",
+              "nativeQueryRef": "DU Total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Prod. Bruta"
+                }
+              },
+              "queryRef": "Medidas.Prod. Bruta",
+              "nativeQueryRef": "Prod. Bruta"
             }
           ]
         }
@@ -709,7 +779,14 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "type": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Default'"
                 }
               }
             }

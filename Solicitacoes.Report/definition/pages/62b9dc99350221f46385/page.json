@@ -20,21 +20,114 @@
           }
         },
         "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "mvp solicitacao_servicos",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "m"
+                          }
+                        },
+                        "Property": "empresa"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'ZAAZ NORDESTE'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
         "howCreated": "Drillthrough"
       },
       {
-        "name": "9f8e1f4042bd3a01cc01",
+        "name": "79e35d8f7a26865d16c6",
         "field": {
-          "Measure": {
+          "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Medidas"
+                "Entity": "mvp solicitacao_servicos"
               }
             },
-            "Property": "TOTAL"
+            "Property": "uf_ajustada"
           }
         },
         "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "897c7d26a415e1bdbb90",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mvp solicitacao_servicos"
+              }
+            },
+            "Property": "cidade"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "mvp solicitacao_servicos",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "m"
+                          }
+                        },
+                        "Property": "cidade"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'BAIXIO | CE'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
         "howCreated": "Drillthrough"
       }
     ]
@@ -58,23 +151,38 @@
         }
       },
       {
-        "name": "ee7f9624fad1069a2180",
-        "boundFilter": "9f8e1f4042bd3a01cc01",
+        "name": "f8dddb95d733ab4d023d",
+        "boundFilter": "79e35d8f7a26865d16c6",
         "asAggregation": false,
         "qnaSingleSelectRequired": false,
         "fieldExpr": {
-          "Measure": {
+          "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Medidas"
+                "Entity": "mvp solicitacao_servicos"
               }
             },
-            "Property": "TOTAL"
+            "Property": "uf_ajustada"
+          }
+        }
+      },
+      {
+        "name": "dd722e5419b053edd1d9",
+        "boundFilter": "897c7d26a415e1bdbb90",
+        "asAggregation": false,
+        "qnaSingleSelectRequired": false,
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mvp solicitacao_servicos"
+              }
+            },
+            "Property": "cidade"
           }
         }
       }
-    ],
-    "referenceScope": "CrossReport"
+    ]
   },
   "objects": {
     "background": [

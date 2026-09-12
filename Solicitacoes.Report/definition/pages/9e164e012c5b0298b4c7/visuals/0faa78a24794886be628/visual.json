@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "076a5587862787bbd242",
+  "name": "0faa78a24794886be628",
   "position": {
-    "x": 285.28974739970283,
-    "y": 128.38038632986627,
-    "z": 1008,
+    "x": 999.94056463595837,
+    "y": 129.80683506686478,
+    "z": 1010,
     "height": 900.08915304606239,
     "width": 674.71025260029717,
-    "tabOrder": 9
+    "tabOrder": 11
   },
   "visual": {
     "visualType": "pivotTable",
@@ -39,13 +39,12 @@
                       "Entity": "mvp solicitacao_servicos"
                     }
                   },
-                  "Property": "uf_ajustada"
+                  "Property": "uf"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.uf_ajustada",
-              "nativeQueryRef": "UF",
-              "active": true,
-              "displayName": "UF"
+              "queryRef": "mvp solicitacao_servicos.uf",
+              "nativeQueryRef": "uf",
+              "active": true
             },
             {
               "field": {
@@ -75,12 +74,12 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Reincidente"
+                  "Property": "Prod. Bruta"
                 }
               },
-              "queryRef": "Medidas.Protocolos em garantia",
-              "nativeQueryRef": "REINCIDENTE",
-              "displayName": "REINCIDENTE"
+              "queryRef": "Medidas.Prod. Bruta",
+              "nativeQueryRef": "PROD. BRUTA",
+              "displayName": "PROD. BRUTA"
             },
             {
               "field": {
@@ -90,12 +89,12 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Proj. Rein"
+                  "Property": "DU Total"
                 }
               },
-              "queryRef": "Medidas.Proj. Rein",
-              "nativeQueryRef": "PROJ. REIN.",
-              "displayName": "PROJ. REIN."
+              "queryRef": "Medidas.DU Total",
+              "nativeQueryRef": "DU TOTAL",
+              "displayName": "DU TOTAL"
             },
             {
               "field": {
@@ -105,12 +104,12 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Proj. Total"
+                  "Property": "Prod_Bruta_real"
                 }
               },
-              "queryRef": "Medidas.Proj. Total",
-              "nativeQueryRef": "PROJ. TOTAL",
-              "displayName": "PROJ. TOTAL"
+              "queryRef": "Medidas.Prod_Bruta_real",
+              "nativeQueryRef": "REAL",
+              "displayName": "REAL"
             },
             {
               "field": {
@@ -120,25 +119,10 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "{PER} Projecao_Reincidencia_taxa"
+                  "Property": "Prod_Bruta_Meta"
                 }
               },
-              "queryRef": "Medidas.{PER} Projecao_Reincidencia_taxa",
-              "nativeQueryRef": "TAXA PROJ.",
-              "displayName": "TAXA PROJ."
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
-                    }
-                  },
-                  "Property": "{PER} Projecao_Reincidencia_meta"
-                }
-              },
-              "queryRef": "Medidas.{PER} Projecao_Reincidencia_meta",
+              "queryRef": "Medidas.Prod_Bruta_Meta",
               "nativeQueryRef": "META",
               "displayName": "META"
             }
@@ -172,7 +156,7 @@
           },
           {
             "queryRefs": [
-              "mvp solicitacao_servicos.uf_ajustada"
+              "mvp solicitacao_servicos.uf"
             ],
             "isCollapsed": true,
             "identityKeys": [
@@ -183,7 +167,7 @@
                       "Entity": "mvp solicitacao_servicos"
                     }
                   },
-                  "Property": "uf_ajustada"
+                  "Property": "uf"
                 }
               }
             ],
@@ -519,7 +503,23 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "@cor_back_proj_taxa"
+                      "Property": "@cor_back_prod_real"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "@cor_txt_prod_real"
                     }
                   }
                 }
@@ -534,7 +534,7 @@
                 }
               }
             ],
-            "metadata": "Medidas.{PER} Projecao_Reincidencia_taxa"
+            "metadata": "Medidas.Prod_Bruta_real"
           }
         }
       ],
@@ -685,13 +685,41 @@
             "labelPrecision": {
               "expr": {
                 "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Prod. Bruta"
+          }
+        },
+        {
+          "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
                   "Value": "1L"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Medidas.{PER} Projecao_Reincidencia_taxa"
+            "metadata": "Medidas.Prod_Bruta_Meta"
+          }
+        },
+        {
+          "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Prod_Bruta_real"
           }
         }
       ]
@@ -703,7 +731,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'O.S. EM GARANTIA 30 DIAS'"
+                  "Value": "'PRODUTIVIDADE BRUTA'"
                 }
               }
             },
@@ -1047,7 +1075,6 @@
             }
           ]
         },
-        "howCreated": "User",
         "isLockedInViewMode": true,
         "objects": {
           "general": [
@@ -1064,118 +1091,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "cf5f774090645b7c586c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "empresa"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "d65c1f9e98da4dd28401",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "uf_ajustada"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "006369cd053dbee181bd",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "cidade"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "fdf757f0b70947ee4927",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Reincidente"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "5327ea562784d0cb70ce",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Proj. Rein"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "3c5f34405721176c397c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Proj. Total"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "50eaceca5297016c6c00",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "{PER} Projecao_Reincidencia_taxa"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "14c4d71390151d85d79a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "{PER} Projecao_Reincidencia_meta"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

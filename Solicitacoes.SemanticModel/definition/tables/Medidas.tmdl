@@ -729,6 +729,144 @@ table Medidas
 		displayFolder: Garantia\Cores
 		lineageTag: f623dbff-03b6-4254-99a6-7ddb4bc13e88
 
+	measure 'Prod. Bruta' = ```
+			
+			
+			VAR qtdProdutivo =
+			CALCULATE(
+			    SUM('mvp solicitacao_servicos'[produtivo]),
+			   'mvp solicitacao_servicos'[tipo_servico] IN 
+			    {
+			        "GROSS - ATIV",
+			        "GROSS - REATIV",
+			        "MIGRACAO",
+			        "MUD. ENDERECO",
+			        "OUTRAS ATIVIDADES",
+			        "OUTROS",
+			        "PREVENTIVA",
+			        "REPARO",
+			        "RETIRADA",
+			        "ROUTER ADICIONAL",
+			        "TROCA EQUIP."
+			    },
+			    'mvp solicitacao_servicos'[tecnico] <> "" && NOT(ISBLANK('mvp solicitacao_servicos'[tecnico])),
+			    'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"},
+			    USERELATIONSHIP(
+			        d_Calendario[data],
+			        'mvp solicitacao_servicos'[data_fechamento]
+			    )
+			)
+			
+			RETURN
+			
+			IF(qtdProdutivo > 0, qtdProdutivo, BLANK())
+			```
+		formatString: #,0
+		displayFolder: ProdutividadeBruta\Totais
+		lineageTag: 4ca981f5-d703-4d0d-98d0-480b64527686
+
+	measure 'DU Total' = ```
+			
+			
+			VAR _TecnicosValidos =
+			    FILTER(
+			        VALUES('mvp solicitacao_servicos'[id_tecnico]),
+			        NOT ISBLANK('mvp solicitacao_servicos'[id_tecnico])
+			    )
+			RETURN
+			    SUMX(
+			        _TecnicosValidos,
+			        CALCULATE(
+			            DISTINCTCOUNT('mvp solicitacao_servicos'[data_fechamento]),
+			            USERELATIONSHIP(
+			                d_Calendario[data],
+			                'mvp solicitacao_servicos'[data_fechamento]
+			            ),
+			            'mvp solicitacao_servicos'[tipo_servico] IN 
+			            {
+			                "GROSS - ATIV",
+			                "GROSS - REATIV",
+			                "MIGRACAO",
+			                "MUD. ENDERECO",
+			                "OUTRAS ATIVIDADES",
+			                "OUTROS",
+			                "PREVENTIVA",
+			                "REPARO",
+			                "RETIRADA",
+			                "ROUTER ADICIONAL",
+			                "TROCA EQUIP."
+			            },
+			            'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"}
+			        )
+			    )
+			```
+		formatString: #,0
+		displayFolder: ProdutividadeBruta\Totais
+		lineageTag: 5b3e669d-1844-4c8e-9f59-8609c9afd4ba
+
+	measure Prod_Bruta_Meta =
+			
+			
+			IF([DU Total] > 0, 3.5, BLANK())
+		displayFolder: ProdutividadeBruta\Calculos
+		lineageTag: d96d1b3d-2b63-423e-b4dc-ec4d6ca645b2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Prod_Bruta_real = ```
+			
+			
+			IF([DU Total] > 0, 
+			    DIVIDE(
+			        [Prod. Bruta],
+			        [DU Total],
+			        0),
+			    BLANK()
+			)
+			```
+		displayFolder: ProdutividadeBruta\Calculos
+		lineageTag: 1fb3d47c-cfc3-4725-9e46-b71f6dae87ae
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure @cor_back_prod_real =
+			
+			
+			VAR Taxa = [Prod_Bruta_real]
+			VAR Meta = [Prod_Bruta_Meta]
+			VAR RedLight = Meta - 0.10
+			RETURN
+			
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(Taxa), BLANK(),
+			    Taxa < 0, BLANK(),
+			    Taxa > Meta, "#B2D788",
+			    Taxa > RedLight, "#E5D38C",
+			    "#E5B389"
+			)
+		displayFolder: ProdutividadeBruta\Cores
+		lineageTag: 9775a20f-6b78-40ba-9208-f4863c92b91a
+
+	measure @cor_txt_prod_real =
+			
+			
+			VAR Taxa = [Prod_Bruta_real]
+			VAR Meta = [Prod_Bruta_Meta]
+			VAR RedLight = Meta - 0.10
+			RETURN
+			
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(Taxa), BLANK(),
+			    Taxa < 0, BLANK(),
+			    Taxa > Meta, "1b6242",
+			    Taxa > RedLight, "#856c16",
+			    "#7F0000"
+			)
+		displayFolder: ProdutividadeBruta\Cores
+		lineageTag: 57ff2c0c-4a05-4fc7-83a4-ce5510cf8192
+
 	column 'Coluna 1'
 		dataType: string
 		isHidden
