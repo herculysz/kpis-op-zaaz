@@ -1,0 +1,3 @@
+EVALUATE
+
+DISTINCT('mvp solicitacao_servicos'[tipo_servico])

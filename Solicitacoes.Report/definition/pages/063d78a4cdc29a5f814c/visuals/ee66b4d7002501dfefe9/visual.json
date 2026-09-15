@@ -43,9 +43,9 @@
                 }
               },
               "queryRef": "mvp solicitacao_servicos.uf_ajustada",
-              "nativeQueryRef": "UF",
+              "nativeQueryRef": "uf_ajustada",
               "active": true,
-              "displayName": "UF"
+              "displayName": "uf_ajustada"
             },
             {
               "field": {
@@ -75,7 +75,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "PRODUTIVAS"
+                  "Property": "PRODUTIVAS_GROSS_ATIV"
                 }
               },
               "queryRef": "Medidas.OSs Produtivas",
@@ -90,11 +90,12 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "TOTAL"
+                  "Property": "TOTAL_ATIV"
                 }
               },
               "queryRef": "Medidas.TOTAL",
-              "nativeQueryRef": "TOTAL1"
+              "nativeQueryRef": "TOTAL",
+              "displayName": "TOTAL"
             },
             {
               "field": {
@@ -1032,20 +1033,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "09d4d387d5aa52c2393e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "empresa"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
         "name": "0a09426ab7edd2aec3db",
         "field": {
           "Column": {
@@ -1118,76 +1105,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "0355e4674d076b4b72cd",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "cidade"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "8d7415938d83492a4543",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "PRODUTIVAS"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ed05ea7cbe9ceea71c27",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "TOTAL"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "2bb3b3995307c49510a9",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "{PER} eficacia_taxa"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "3c2968fe16b7138791da",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "{PER} eficacia_meta"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

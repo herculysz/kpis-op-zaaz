@@ -4,10 +4,10 @@
   "position": {
     "x": 25,
     "y": 356.25,
-    "z": 16000,
+    "z": 15000,
     "height": 65,
     "width": 200.17621145374449,
-    "tabOrder": 16000
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "slicer",
@@ -159,23 +159,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b177057e05c207b0031c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "cidade"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

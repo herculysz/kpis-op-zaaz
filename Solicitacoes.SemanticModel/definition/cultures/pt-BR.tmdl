@@ -3235,6 +3235,16 @@ cultureInfo pt-BR
 			          "prod. bruta": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "ProdutividadeBruta[TOTAL]": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -3657,54 +3667,138 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medida.total": {
+			    "medida.total_ativ": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "TOTAL"
+			          "ConceptualProperty": "TOTAL_ATIV"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "total": {
+			          "total ativ": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "aggregate": {
+			          "TOTAL_ATIV": {
 			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
+			            "State": "Generated",
+			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "overall": {
+			          "aggregate ativ": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.714
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall ativ": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "TOTAL": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "GrossAtiv[TOTAL]": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
 			    },
-			    "medida.produtivas": {
+			    "medida.produtivas_gross_ativ": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "PRODUTIVAS"
+			          "ConceptualProperty": "PRODUTIVAS_GROSS_ATIV"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "produtivas": {
+			          "produtivas gross ativ": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PRODUTIVAS_GROSS_ATIV": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "produtiva aggregate ativ": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.657
+			          }
+			        },
+			        {
+			          "produtiva overall ativ": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.657
+			          }
+			        },
+			        {
+			          "produtiva whole ativ": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.657
+			          }
+			        },
+			        {
+			          "produtiva sum ativ": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "produtiva total ativ": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
 			          }
 			        },
 			        {
@@ -3726,42 +3820,52 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "GrossAtivProdutivas[O.S. OK]": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
-			    "medida.no_prazo_sla_7_2h": {
+			    "medida.no_prazo_sla_7_2h_ativ": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "NO_PRAZO_SLA72H"
+			          "ConceptualProperty": "NO_PRAZO_SLA72H_ATIV"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "no prazo sla 7 2h": {
+			          "no prazo sla 7 2h ativ": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "NO_PRAZO_SLA72H": {
+			          "NO_PRAZO_SLA72H_ATIV": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "number prazo sla 7 2h": {
-			            "Type": "Noun",
+			          "NO PRAZO": {
 			            "State": "Suggested",
 			            "Source": {
-			              "Agent": "Thesaurus"
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
 			            },
-			            "Weight": 0.605
+			            "Weight": 0.9
 			          }
 			        },
 			        {
-			          "NO PRAZO": {
+			          "GrossAtivProdutivas[SLA 72h]": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -3947,39 +4051,49 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medida.cumprida_no_prazo": {
+			    "medida.cumprida_no_prazo_ativ": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "CUMPRIDA_NO_PRAZO"
+			          "ConceptualProperty": "CUMPRIDA_NO_PRAZO_ATIV"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "cumprida no prazo": {
+			          "cumprida no prazo ativ": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "CUMPRIDA_NO_PRAZO": {
+			          "CUMPRIDA_NO_PRAZO_ATIV": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "cumprida number prazo": {
+			          "cumprida number prazo ativ": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.591
+			            "Weight": 0.599
 			          }
 			        },
 			        {
 			          "CUMPRIDA": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "GrossAtiv[NO PRAZO]": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4188,18 +4302,45 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medida.reincidente": {
+			    "medida.reincidente_ATIV": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Reincidente"
+			          "ConceptualProperty": "Reincidente_ATIV"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "reincidente": {
+			          "reincidente ATIV": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Reincidente_ATIV": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "REINCIDENTE": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "GarantiaAtiv[REINCIDENTE 30D]": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -4550,6 +4691,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.727
 			          }
+			        },
+			        {
+			          "DiasUteis[TOTAL]": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -4650,9 +4801,4433 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "medida.no_prazo_2_4h_reparo_produtivo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "NO_PRAZO_24H_REPARO_PRODUTIVO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "no prazo 2 4h reparo produtivo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "NO_PRAZO_24H_REPARO_PRODUTIVO": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "NO PRAZO": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "ReparosProdutivos[SLA 24h]": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.total_reparo_produtivo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "TOTAL_REPARO_PRODUTIVO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total reparo produtivo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TOTAL_REPARO_PRODUTIVO": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate reparo produtivo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall reparo produtivo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "TOTAL": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "ReparosProdutivos[TOTAL]": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.PER_Reparo_24H_taxa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "{PER} Reparo_24H_taxa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "{PER} Reparo_24H_taxa": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TAXA": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.PER_Reparo_24H_meta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "{PER} Reparo_24H_meta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "{PER} Reparo_24H_meta": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "META": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.cor_back_reparo24h_taxa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "@cor_back_reparo24h_taxa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "@cor_back_reparo24h_taxa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.cor_txt_reparo24h_taxa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "@cor_txt_reparo24h_taxa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "@cor_txt_reparo24h_taxa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico.duracao_servico": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp solicitacao_servicos",
+			          "ConceptualProperty": "duracao_servico"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "duracao servico": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "duracao_servico": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida.TMR_reparo_24H": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "TMR_Reparo24H"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "TMR reparo 24H": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TMR_Reparo24H": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "TMR": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.reincidente_REPARO_TESTE": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Reincidente_REPARO_TESTE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reincidente REPARO TESTE": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Reincidente_REPARO_TESTE": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida.TMR_reparo_desafio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "TMR_Reparo_Desafio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "TMR reparo desafio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TMR_Reparo_Desafio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "DESAFIO": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.Reincidente_Reparo_Produtivos_TESTE": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Reincidente_Reparo_Produtivos TESTE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Reincidente_Reparo_Produtivos TESTE": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.Reincidente_REPARO_Contratos_TESTE": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Reincidente_REPARO_Contratos TESTE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Reincidente_REPARO_Contratos TESTE": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.reincidente_reparo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "REINCIDENTE_REPARO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reincidente reparo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "REINCIDENTE_REPARO": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "REINCIDENTE": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Reparos[REINCIDENTE 30D]": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.total_reparo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "TOTAL_REPARO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total reparo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TOTAL_REPARO": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate reparo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall reparo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "TOTAL": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "ENTRANTE": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Reparos[TOTAL]": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.PER_Reincidencia_Reparo_taxa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "{PER} Reincidencia_Reparo_taxa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "{PER} Reincidencia_Reparo_taxa": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TAXA": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.PER_Reincidencia_Reparo_meta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "{PER} Reincidencia_Reparo_meta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "{PER} Reincidencia_Reparo_meta": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "META": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.cor_back_reincidente_taxa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "@cor_back_reincidente_taxa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "@cor_back_reincidente_taxa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.cor_txt_reincidente_taxa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "@cor_txt_reincidente_taxa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "@cor_txt_reincidente_taxa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.projeção_reparo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "PROJEÇÃO_REPARO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "projeção reparo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PROJEÇÃO_REPARO": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "PROJEÇÃO": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.clientes_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Clientes_count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "clientes count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Clientes_count": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "cliente amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "ACESSOS": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.clientes_count_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Clientes_count2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "clientes count 2": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Clientes_count2": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "cliente amount 2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "medida.PER_Projecao_entrante_taxa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "{PER} Projecao_entrante_taxa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "{PER} Projecao_entrante_taxa": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TAXA PROJ.": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.PER_Projecao_entrante_meta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "{PER} Projecao_entrante_meta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "{PER} Projecao_entrante_meta": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "META": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.cor_back_entrante_proj_taxa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "@cor_back_entrante_proj_taxa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "@cor_back_entrante_proj_taxa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.cor_txt_entrante_proj_taxa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "@cor_txt_entrante_proj_taxa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "@cor_txt_entrante_proj_taxa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mvp base_cliente": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.id_cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "id_cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id cliente": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id_cliente": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification cliente": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity cliente": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier cliente": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential cliente": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.nome_cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "nome_cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nome cliente": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "nome_cliente": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.id_contrato": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "id_contrato"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id contrato": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id_contrato": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification contrato": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity contrato": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier contrato": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential contrato": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.doc": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "doc"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "doc": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.tipo_pessoa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "tipo_pessoa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo pessoa": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tipo_pessoa": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.plano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "plano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "plano": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.velocidade": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "velocidade"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "velocidade": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.grupo_produto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "grupo_produto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "grupo produto": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "grupo_produto": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.dt_servico": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "dt_servico"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dt servico": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dt_servico": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "mvp_base_cliente.usuario": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "usuario"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "usuario": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.concentrador": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "concentrador"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "concentrador": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.olt": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "olt"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "olt": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.cidade_olt": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "cidade_olt"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cidade olt": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cidade_olt": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.uf_olt": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "uf_olt"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "uf olt": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "uf_olt": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.port_olt": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "port_olt"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "port olt": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "port_olt": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.slot_olt": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "slot_olt"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "slot olt": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "slot_olt": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.tipo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "tipo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.endereco": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "endereco"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "endereco": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.numero": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "numero"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "numero": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.bairro": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "bairro"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "bairro": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.cod_ibge": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "cod_ibge"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cod ibge": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cod_ibge": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.cidade": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "cidade"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cidade": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.filial_regional": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "filial_regional"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "filial regional": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "filial_regional": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.uf": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "uf"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "uf": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.estagio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "estagio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estagio": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "status"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "status": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "prestige": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "prominence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "condition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "grade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "level": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "position": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.data_venda": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "data_venda"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data venda": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data_venda": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "venda": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "information venda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact venda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info venda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic venda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document venda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure venda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record venda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "mvp_base_cliente.data_ativacao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "data_ativacao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data ativacao": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data_ativacao": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information ativacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact ativacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info ativacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic ativacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document ativacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure ativacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record ativacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "mvp_base_cliente.data_cancelamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "data_cancelamento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data cancelamento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data_cancelamento": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information cancelamento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact cancelamento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info cancelamento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic cancelamento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document cancelamento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure cancelamento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record cancelamento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "mvp_base_cliente.evento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "evento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "evento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.descricao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "descricao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "descricao": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.vendedor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "vendedor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vendedor": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.id_vendedor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "id_vendedor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id vendedor": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id_vendedor": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification vendedor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity vendedor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier vendedor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential vendedor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.cpf_vendedor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "cpf_vendedor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cpf vendedor": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cpf_vendedor": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.ativacao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "ativacao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ativacao": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.churn": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "churn"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "churn": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.mvno": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "mvno"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mvno": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.valor_contrato": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "valor_contrato"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor contrato": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "valor_contrato": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.empresa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "empresa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "empresa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.credenciado_sky": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "credenciado_sky"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "credenciado sky": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "credenciado_sky": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "credenciado firmament": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "credenciado atmosphere": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "credenciado blue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.possui_streaming_sky": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "possui_streaming_sky"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "possui streaming sky": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "possui_streaming_sky": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "possui streaming firmament": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "possui streaming atmosphere": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "possui streaming blue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.segmento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "segmento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "segmento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.ajuste_uf": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "ajuste_uf"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ajuste uf": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ajuste_uf": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente.ajuste_cidade": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp base_clientes",
+			          "ConceptualProperty": "ajuste_cidade"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ajuste cidade": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ajuste_cidade": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "mvp_base_cliente_has_ajuste_uf": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.ajuste_uf": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.ajuste_uf"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.ajuste_uf"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_ajuste_ufs"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_segmento": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.segmento": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.segmento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.segmento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_segmentos"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_possui_streaming_sky": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.possui_streaming_sky": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.possui_streaming_sky"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.possui_streaming_sky"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_possui_streaming_skies"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_credenciado_sky": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.credenciado_sky": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.credenciado_sky"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.credenciado_sky"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_credenciado_skies"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_empresa": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.empresa": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.empresa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_empresas"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_valor_contrato": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.valor_contrato": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.valor_contrato"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.valor_contrato"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_valor_contratos"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_mvno": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.mvno": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.mvno"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.mvno"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_mvnos"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_churn": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.churn": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.churn"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.churn"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_churns"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_ativacao": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.ativacao": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.ativacao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.ativacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_ativacaos"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_cpf_vendedor": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.cpf_vendedor": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.cpf_vendedor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.cpf_vendedor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_cpf_vendedors"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_id_vendedor": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.id_vendedor": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.id_vendedor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.id_vendedor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_id_vendedors"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_vendedor": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.vendedor": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.vendedor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.vendedor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_vendedors"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_descricao": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.descricao": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.descricao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.descricao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_descricaos"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_evento": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.evento": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.evento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.evento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_eventos"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_data_cancelamento": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.data_cancelamento": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.data_cancelamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.data_cancelamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_data_cancelamentos"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_data_ativacao": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.data_ativacao": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.data_ativacao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.data_ativacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_data_ativacaos"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_data_venda": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.data_venda": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.data_venda"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.data_venda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_data_venda"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_status": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.status": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.status"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.status"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_statuses"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_estagio": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.estagio": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.estagio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.estagio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_estagios"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_uf": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.uf": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.uf"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.uf"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_ufs"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_filial_regional": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.filial_regional": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.filial_regional"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.filial_regional"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_filial_regionals"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_cidade": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.cidade": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.cidade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.cidade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_cidades"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_cod_ibge": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.cod_ibge": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.cod_ibge"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.cod_ibge"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_cod_ibges"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_bairro": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.bairro": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.bairro"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.bairro"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_bairros"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_numero": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.numero": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.numero"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.numero"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_numeros"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_endereco": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.endereco": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.endereco"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.endereco"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_enderecos"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_tipo": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.tipo": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.tipo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.tipo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_tipos"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_slot_olt": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.slot_olt": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.slot_olt"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.slot_olt"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_slot_olts"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_port_olt": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.port_olt": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.port_olt"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.port_olt"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_port_olts"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_uf_olt": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.uf_olt": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.uf_olt"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.uf_olt"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_uf_olts"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_cidade_olt": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.cidade_olt": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.cidade_olt"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.cidade_olt"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_cidade_olts"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_olt": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.olt": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.olt"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.olt"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_olts"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_concentrador": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.concentrador": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.concentrador"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.concentrador"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_concentradors"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_usuario": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.usuario": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.usuario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.usuario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_usuarios"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_dt_servico": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.dt_servico": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.dt_servico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.dt_servico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_dt_servicos"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_grupo_produto": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.grupo_produto": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.grupo_produto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.grupo_produto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_grupo_produtos"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_velocidade": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.velocidade": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.velocidade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.velocidade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_velocidades"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_plano": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.plano": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.plano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.plano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_plano"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_tipo_pessoa": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.tipo_pessoa": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.tipo_pessoa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.tipo_pessoa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_tipo_pessoa"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_doc": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.doc": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.doc"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.doc"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_docs"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_id_contrato": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.id_contrato": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.id_contrato"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.id_contrato"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_id_contratos"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_nome_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.nome_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.nome_cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.nome_cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_nome_clientes"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_id_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "mvp_base_cliente.id_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente.id_cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "mvp_base_cliente.id_cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_id_clientes"
+			        }
+			      ]
+			    },
+			    "medida_has_cor_txt_entrante_proj_taxa": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.cor_txt_entrante_proj_taxa": {
+			          "Target": {
+			            "Entity": "medida.cor_txt_entrante_proj_taxa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.cor_txt_entrante_proj_taxa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_cor_txt_entrante_proj_taxa"
+			        }
+			      ]
+			    },
+			    "medida_has_cor_back_entrante_proj_taxa": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.cor_back_entrante_proj_taxa": {
+			          "Target": {
+			            "Entity": "medida.cor_back_entrante_proj_taxa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.cor_back_entrante_proj_taxa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_cor_back_entrante_proj_taxa"
+			        }
+			      ]
+			    },
+			    "medida_has_PER_Projecao_entrante_meta": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.PER_Projecao_entrante_meta": {
+			          "Target": {
+			            "Entity": "medida.PER_Projecao_entrante_meta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.PER_Projecao_entrante_meta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_PER_Projecao_entrante_meta"
+			        }
+			      ]
+			    },
+			    "medida_has_PER_Projecao_entrante_taxa": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.PER_Projecao_entrante_taxa": {
+			          "Target": {
+			            "Entity": "medida.PER_Projecao_entrante_taxa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.PER_Projecao_entrante_taxa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_PER_Projecao_entrante_taxa"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_medida_clientes_count_2": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "medida.clientes_count_2": {
+			          "Target": {
+			            "Entity": "medida.clientes_count_2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "medida.clientes_count_2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_clientes_count_2"
+			        }
+			      ]
+			    },
+			    "mvp_base_cliente_has_medida_clientes_count": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp base_clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_base_cliente": {
+			          "Target": {
+			            "Entity": "mvp_base_cliente"
+			          }
+			        },
+			        "medida.clientes_count": {
+			          "Target": {
+			            "Entity": "medida.clientes_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_base_cliente"
+			            },
+			            "Object": {
+			              "Role": "medida.clientes_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_base_clientes_have_clientes_count"
+			        }
+			      ]
+			    },
+			    "medida_has_projeção_reparo": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.projeção_reparo": {
+			          "Target": {
+			            "Entity": "medida.projeção_reparo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.projeção_reparo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_projeção_reparo"
+			        }
+			      ]
+			    },
+			    "medida_has_cor_txt_reincidente_taxa": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.cor_txt_reincidente_taxa": {
+			          "Target": {
+			            "Entity": "medida.cor_txt_reincidente_taxa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.cor_txt_reincidente_taxa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_cor_txt_reincidente_taxa"
+			        }
+			      ]
+			    },
+			    "medida_has_cor_back_reincidente_taxa": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.cor_back_reincidente_taxa": {
+			          "Target": {
+			            "Entity": "medida.cor_back_reincidente_taxa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.cor_back_reincidente_taxa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_cor_back_reincidente_taxa"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_medida_PER_Reincidencia_Reparo_meta": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "medida.PER_Reincidencia_Reparo_meta": {
+			          "Target": {
+			            "Entity": "medida.PER_Reincidencia_Reparo_meta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "medida.PER_Reincidencia_Reparo_meta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_PER_Reincidencia_Reparo_meta"
+			        }
+			      ]
+			    },
+			    "medida_has_PER_Reincidencia_Reparo_taxa": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.PER_Reincidencia_Reparo_taxa": {
+			          "Target": {
+			            "Entity": "medida.PER_Reincidencia_Reparo_taxa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.PER_Reincidencia_Reparo_taxa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_PER_Reincidencia_Reparo_taxa"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_medida_total_reparo": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "medida.total_reparo": {
+			          "Target": {
+			            "Entity": "medida.total_reparo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "medida.total_reparo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_total_reparo"
+			        }
+			      ]
+			    },
+			    "medida_has_reincidente_reparo": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.reincidente_reparo": {
+			          "Target": {
+			            "Entity": "medida.reincidente_reparo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.reincidente_reparo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_reincidente_reparo"
+			        }
+			      ]
+			    },
+			    "medida_has_Reincidente_REPARO_Contratos_TESTE": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.Reincidente_REPARO_Contratos_TESTE": {
+			          "Target": {
+			            "Entity": "medida.Reincidente_REPARO_Contratos_TESTE"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.Reincidente_REPARO_Contratos_TESTE"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_Reincidente_REPARO_Contratos_TESTE"
+			        }
+			      ]
+			    },
+			    "medida_has_Reincidente_Reparo_Produtivos_TESTE": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.Reincidente_Reparo_Produtivos_TESTE": {
+			          "Target": {
+			            "Entity": "medida.Reincidente_Reparo_Produtivos_TESTE"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.Reincidente_Reparo_Produtivos_TESTE"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_Reincidente_Reparo_Produtivos_TESTE"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_medida_TMR_reparo_desafio": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "medida.TMR_reparo_desafio": {
+			          "Target": {
+			            "Entity": "medida.TMR_reparo_desafio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "medida.TMR_reparo_desafio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_TMR_reparo_desafio"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_medida_reincidente_REPARO_TESTE": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "medida.reincidente_REPARO_TESTE": {
+			          "Target": {
+			            "Entity": "medida.reincidente_REPARO_TESTE"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "medida.reincidente_REPARO_TESTE"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_reincidente_REPARO_TESTE"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_medida_TMR_reparo_24H": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "medida.TMR_reparo_24H": {
+			          "Target": {
+			            "Entity": "medida.TMR_reparo_24H"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "medida.TMR_reparo_24H"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_TMR_reparo_24H"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_duracao_servico": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "mvp_solicitacao_servico.duracao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico.duracao_servico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "mvp_solicitacao_servico.duracao_servico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_duracao_servicos"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_medida_cor_txt_reparo24h_taxa": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "medida.cor_txt_reparo24h_taxa": {
+			          "Target": {
+			            "Entity": "medida.cor_txt_reparo24h_taxa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "medida.cor_txt_reparo24h_taxa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_cor_txt_reparo24h_taxa"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_medida_cor_back_reparo24h_taxa": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "medida.cor_back_reparo24h_taxa": {
+			          "Target": {
+			            "Entity": "medida.cor_back_reparo24h_taxa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "medida.cor_back_reparo24h_taxa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_cor_back_reparo24h_taxa"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_medida_PER_Reparo_24H_meta": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "medida.PER_Reparo_24H_meta": {
+			          "Target": {
+			            "Entity": "medida.PER_Reparo_24H_meta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "medida.PER_Reparo_24H_meta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_PER_Reparo_24H_meta"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_medida_PER_Reparo_24H_taxa": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "medida.PER_Reparo_24H_taxa": {
+			          "Target": {
+			            "Entity": "medida.PER_Reparo_24H_taxa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "medida.PER_Reparo_24H_taxa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_PER_Reparo_24H_taxa"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_medida_total_reparo_produtivo": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "medida.total_reparo_produtivo": {
+			          "Target": {
+			            "Entity": "medida.total_reparo_produtivo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "medida.total_reparo_produtivo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_total_reparo_produtivo"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_medida_no_prazo_2_4h_reparo_produtivo": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "medida.no_prazo_2_4h_reparo_produtivo": {
+			          "Target": {
+			            "Entity": "medida.no_prazo_2_4h_reparo_produtivo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "medida.no_prazo_2_4h_reparo_produtivo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_no_prazo_2_4h_reparo_produtivo"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_medida_cor_txt_prod_real": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "medida.cor_txt_prod_real": {
+			          "Target": {
+			            "Entity": "medida.cor_txt_prod_real"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "medida.cor_txt_prod_real"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_cor_txt_prod_real"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_medida_cor_back_prod_real": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "medida.cor_back_prod_real": {
+			          "Target": {
+			            "Entity": "medida.cor_back_prod_real"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "medida.cor_back_prod_real"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_cor_back_prod_real"
+			        }
+			      ]
+			    },
 			    "mvp_solicitacao_servico_has_medida_prod_bruta_real": {
 			      "Binding": {
 			        "ConceptualEntity": "mvp solicitacao_servicos"
@@ -5049,7 +9624,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medida_has_reincidente": {
+			    "medida_has_reincidente_ATIV": {
 			      "Binding": {
 			        "ConceptualEntity": "Medidas"
 			      },
@@ -5060,9 +9635,9 @@ cultureInfo pt-BR
 			            "Entity": "medida"
 			          }
 			        },
-			        "medida.reincidente": {
+			        "medida.reincidente_ATIV": {
 			          "Target": {
-			            "Entity": "medida.reincidente"
+			            "Entity": "medida.reincidente_ATIV"
 			          }
 			        }
 			      },
@@ -5073,12 +9648,12 @@ cultureInfo pt-BR
 			              "Role": "medida"
 			            },
 			            "Object": {
-			              "Role": "medida.reincidente"
+			              "Role": "medida.reincidente_ATIV"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "medidas_have_reincidente"
+			          "ID": "medidas_have_reincidente_ATIV"
 			        }
 			      ]
 			    },
@@ -5247,7 +9822,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "mvp_solicitacao_servico_has_medida_cumprida_no_prazo": {
+			    "mvp_solicitacao_servico_has_medida_cumprida_no_prazo_ativ": {
 			      "Binding": {
 			        "ConceptualEntity": "mvp solicitacao_servicos"
 			      },
@@ -5258,9 +9833,9 @@ cultureInfo pt-BR
 			            "Entity": "mvp_solicitacao_servico"
 			          }
 			        },
-			        "medida.cumprida_no_prazo": {
+			        "medida.cumprida_no_prazo_ativ": {
 			          "Target": {
-			            "Entity": "medida.cumprida_no_prazo"
+			            "Entity": "medida.cumprida_no_prazo_ativ"
 			          }
 			        }
 			      },
@@ -5271,12 +9846,12 @@ cultureInfo pt-BR
 			              "Role": "mvp_solicitacao_servico"
 			            },
 			            "Object": {
-			              "Role": "medida.cumprida_no_prazo"
+			              "Role": "medida.cumprida_no_prazo_ativ"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mvp_solicitacao_servicos_have_cumprida_no_prazo"
+			          "ID": "mvp_solicitacao_servicos_have_cumprida_no_prazo_ativ"
 			        }
 			      ]
 			    },
@@ -5590,7 +10165,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "mvp_solicitacao_servico_has_medida_no_prazo_sla_7_2h": {
+			    "mvp_solicitacao_servico_has_medida_no_prazo_sla_7_2h_ativ": {
 			      "Binding": {
 			        "ConceptualEntity": "mvp solicitacao_servicos"
 			      },
@@ -5601,9 +10176,9 @@ cultureInfo pt-BR
 			            "Entity": "mvp_solicitacao_servico"
 			          }
 			        },
-			        "medida.no_prazo_sla_7_2h": {
+			        "medida.no_prazo_sla_7_2h_ativ": {
 			          "Target": {
-			            "Entity": "medida.no_prazo_sla_7_2h"
+			            "Entity": "medida.no_prazo_sla_7_2h_ativ"
 			          }
 			        }
 			      },
@@ -5614,16 +10189,16 @@ cultureInfo pt-BR
 			              "Role": "mvp_solicitacao_servico"
 			            },
 			            "Object": {
-			              "Role": "medida.no_prazo_sla_7_2h"
+			              "Role": "medida.no_prazo_sla_7_2h_ativ"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mvp_solicitacao_servicos_have_no_prazo_sla_7_2h"
+			          "ID": "mvp_solicitacao_servicos_have_no_prazo_sla_7_2h_ativ"
 			        }
 			      ]
 			    },
-			    "mvp_solicitacao_servico_has_medida_produtivas": {
+			    "mvp_solicitacao_servico_has_medida_produtivas_gross_ativ": {
 			      "Binding": {
 			        "ConceptualEntity": "mvp solicitacao_servicos"
 			      },
@@ -5634,9 +10209,9 @@ cultureInfo pt-BR
 			            "Entity": "mvp_solicitacao_servico"
 			          }
 			        },
-			        "medida.produtivas": {
+			        "medida.produtivas_gross_ativ": {
 			          "Target": {
-			            "Entity": "medida.produtivas"
+			            "Entity": "medida.produtivas_gross_ativ"
 			          }
 			        }
 			      },
@@ -5647,16 +10222,16 @@ cultureInfo pt-BR
 			              "Role": "mvp_solicitacao_servico"
 			            },
 			            "Object": {
-			              "Role": "medida.produtivas"
+			              "Role": "medida.produtivas_gross_ativ"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mvp_solicitacao_servicos_have_produtivas"
+			          "ID": "mvp_solicitacao_servicos_have_produtivas_gross_ativ"
 			        }
 			      ]
 			    },
-			    "mvp_solicitacao_servico_has_medida_total": {
+			    "mvp_solicitacao_servico_has_medida_total_ativ": {
 			      "Binding": {
 			        "ConceptualEntity": "mvp solicitacao_servicos"
 			      },
@@ -5667,9 +10242,9 @@ cultureInfo pt-BR
 			            "Entity": "mvp_solicitacao_servico"
 			          }
 			        },
-			        "medida.total": {
+			        "medida.total_ativ": {
 			          "Target": {
-			            "Entity": "medida.total"
+			            "Entity": "medida.total_ativ"
 			          }
 			        }
 			      },
@@ -5680,12 +10255,12 @@ cultureInfo pt-BR
 			              "Role": "mvp_solicitacao_servico"
 			            },
 			            "Object": {
-			              "Role": "medida.total"
+			              "Role": "medida.total_ativ"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mvp_solicitacao_servicos_have_total"
+			          "ID": "mvp_solicitacao_servicos_have_total_ativ"
 			        }
 			      ]
 			    },
@@ -8824,20 +13399,20 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "mvp_solicitacao_servico_has_medida_cor_back_prod_real": {
+			    "mvp_base_cliente_has_ajuste_cidade": {
 			      "Binding": {
-			        "ConceptualEntity": "mvp solicitacao_servicos"
+			        "ConceptualEntity": "mvp base_clientes"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "mvp_solicitacao_servico": {
+			        "mvp_base_cliente": {
 			          "Target": {
-			            "Entity": "mvp_solicitacao_servico"
+			            "Entity": "mvp_base_cliente"
 			          }
 			        },
-			        "medida.cor_back_prod_real": {
+			        "mvp_base_cliente.ajuste_cidade": {
 			          "Target": {
-			            "Entity": "medida.cor_back_prod_real"
+			            "Entity": "mvp_base_cliente.ajuste_cidade"
 			          }
 			        }
 			      },
@@ -8845,48 +13420,15 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "mvp_solicitacao_servico"
+			              "Role": "mvp_base_cliente"
 			            },
 			            "Object": {
-			              "Role": "medida.cor_back_prod_real"
+			              "Role": "mvp_base_cliente.ajuste_cidade"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mvp_solicitacao_servicos_have_cor_back_prod_real"
-			        }
-			      ]
-			    },
-			    "mvp_solicitacao_servico_has_medida_cor_txt_prod_real": {
-			      "Binding": {
-			        "ConceptualEntity": "mvp solicitacao_servicos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "mvp_solicitacao_servico": {
-			          "Target": {
-			            "Entity": "mvp_solicitacao_servico"
-			          }
-			        },
-			        "medida.cor_txt_prod_real": {
-			          "Target": {
-			            "Entity": "medida.cor_txt_prod_real"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mvp_solicitacao_servico"
-			            },
-			            "Object": {
-			              "Role": "medida.cor_txt_prod_real"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mvp_solicitacao_servicos_have_cor_txt_prod_real"
+			          "ID": "mvp_base_clientes_have_ajuste_cidades"
 			        }
 			      ]
 			    }

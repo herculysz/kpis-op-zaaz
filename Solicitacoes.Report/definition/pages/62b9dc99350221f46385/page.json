@@ -49,7 +49,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'ZAAZ NORDESTE'"
+                          "Value": "'ZAAZ SUL/SUDESTE'"
                         }
                       }
                     ]
@@ -74,6 +74,45 @@
           }
         },
         "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "mvp solicitacao_servicos",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "m"
+                          }
+                        },
+                        "Property": "uf_ajustada"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'MG'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
         "howCreated": "Drillthrough"
       },
       {
@@ -118,7 +157,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'BAIXIO | CE'"
+                          "Value": "'CRUZÍLIA'"
                         }
                       }
                     ]
@@ -153,8 +192,6 @@
       {
         "name": "f8dddb95d733ab4d023d",
         "boundFilter": "79e35d8f7a26865d16c6",
-        "asAggregation": false,
-        "qnaSingleSelectRequired": false,
         "fieldExpr": {
           "Column": {
             "Expression": {
@@ -169,8 +206,6 @@
       {
         "name": "dd722e5419b053edd1d9",
         "boundFilter": "897c7d26a415e1bdbb90",
-        "asAggregation": false,
-        "qnaSingleSelectRequired": false,
         "fieldExpr": {
           "Column": {
             "Expression": {

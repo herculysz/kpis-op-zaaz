@@ -1,401 +1,94 @@
 createOrReplace
 
-	table 'mvp solicitacao_servicos'
-		lineageTag: bff224f5-cd61-4515-81af-b51dddd47aaa
+	/// Agregacao de reparos reincidentes referenciando a tabela mvp solicitacao_servicos, sem nova consulta ao banco.
+	table 'Reparos reincidentes 30d'
+		lineageTag: 65b59a75-7025-450e-8bdc-d1912c12632b
 
-		column id_ticket
-			dataType: int64
-			formatString: 0
-			lineageTag: 132421c6-a67a-4745-9951-a1596fb07a23
-			summarizeBy: sum
-			sourceColumn: id_ticket
-
-			annotation SummarizationSetBy = Automatic
-
-		column id_contrato
-			dataType: int64
-			formatString: 0
-			lineageTag: d43f3799-3150-474c-9b97-a234ed35c3d1
-			summarizeBy: sum
-			sourceColumn: id_contrato
-
-			annotation SummarizationSetBy = Automatic
-
-		column id_cliente
-			dataType: int64
-			formatString: 0
-			lineageTag: 18d6d73f-7381-444b-9e50-89e40e16f921
-			summarizeBy: sum
-			sourceColumn: id_cliente
-
-			annotation SummarizationSetBy = Automatic
-
-		column cliente
+		column periodo
 			dataType: string
-			lineageTag: e07e42d0-cd72-4356-b86c-b2d377d9f303
-			summarizeBy: none
-			sourceColumn: cliente
-
-			annotation SummarizationSetBy = Automatic
-
-		column tipo_solicitacao
-			dataType: string
-			lineageTag: 26e6143b-f4ce-4b93-bb9a-c0d326f3b4b1
-			summarizeBy: none
-			sourceColumn: tipo_solicitacao
-
-			annotation SummarizationSetBy = Automatic
-
-		column diagnostico_final
-			dataType: string
-			lineageTag: 60814f20-d2ec-48b1-9af7-e10e3efc818c
-			summarizeBy: none
-			sourceColumn: diagnostico_final
-
-			annotation SummarizationSetBy = Automatic
-
-		column tipo_servico
-			dataType: string
-			lineageTag: 9680585c-01c0-46a4-b981-1c4f741d152d
-			summarizeBy: none
-			sourceColumn: tipo_servico
-
-			annotation SummarizationSetBy = Automatic
-
-		column produtivo
-			dataType: int64
-			formatString: 0
-			lineageTag: 279c58c4-57ff-4a33-abf0-ca10745b4432
-			summarizeBy: sum
-			sourceColumn: produtivo
-
-			annotation SummarizationSetBy = Automatic
-
-		column status
-			dataType: string
-			lineageTag: 8443f506-8000-4bea-bf7c-08b06baf744f
-			summarizeBy: none
-			sourceColumn: status
-
-			annotation SummarizationSetBy = Automatic
-
-		column data_abertura
-			dataType: dateTime
-			formatString: dd/mm/yyyy
-			lineageTag: c8fd0692-fd81-4b03-ae83-02788eee32df
-			summarizeBy: none
-			sourceColumn: data_abertura
-
-			annotation SummarizationSetBy = Automatic
-
-			annotation UnderlyingDateTimeDataType = Date
-
-			annotation PBI_FormatHint = {"isDateTimeCustom":true}
-
-		column data_primeira_agenda
-			dataType: dateTime
-			formatString: General Date
-			lineageTag: 88701b87-4e8a-4256-b7d5-8b1c036e9d8b
-			summarizeBy: none
-			sourceColumn: data_primeira_agenda
-
-			annotation SummarizationSetBy = Automatic
-
-		column data_agendamento_atual
-			dataType: dateTime
-			formatString: General Date
-			lineageTag: c21bd13b-f7df-4939-a865-872aa0a45627
-			summarizeBy: none
-			sourceColumn: data_agendamento_atual
-
-			annotation SummarizationSetBy = Automatic
-
-		column data_fechamento
-			dataType: dateTime
-			formatString: dd/mm/yyyy
-			lineageTag: a8f10e52-a647-461d-8793-197d5d97c93e
-			summarizeBy: none
-			sourceColumn: data_fechamento
-
-			annotation SummarizationSetBy = Automatic
-
-			annotation UnderlyingDateTimeDataType = Date
-
-			annotation PBI_FormatHint = {"isDateTimeCustom":true}
-
-		column login
-			dataType: string
-			lineageTag: 5c85c184-0d77-46f0-9149-7dc2d537e335
-			summarizeBy: none
-			sourceColumn: login
-
-			annotation SummarizationSetBy = Automatic
-
-		column id_tecnico
-			dataType: int64
-			formatString: 0
-			lineageTag: e7bcc541-84f3-4eb7-b78c-accdfbcbde1d
-			summarizeBy: sum
-			sourceColumn: id_tecnico
-
-			annotation SummarizationSetBy = Automatic
-
-		column tecnico
-			dataType: string
-			lineageTag: b2931cfc-baff-4e9a-b2e1-044f8e9dce06
-			summarizeBy: none
-			sourceColumn: tecnico
-
-			annotation SummarizationSetBy = Automatic
-
-		column filial_regional
-			dataType: string
-			lineageTag: 3106863b-3953-4540-a0e8-777a7351c574
-			summarizeBy: none
-			sourceColumn: filial_regional
-
-			annotation SummarizationSetBy = Automatic
-
-		column nome_atendente
-			dataType: string
-			lineageTag: 4bf08455-808e-4ee6-8179-4256e8d036f5
-			summarizeBy: none
-			sourceColumn: nome_atendente
-
-			annotation SummarizationSetBy = Automatic
-
-		column setor
-			dataType: string
-			lineageTag: e5e95215-3889-4b66-a7ba-1dab8b05dd08
-			summarizeBy: none
-			sourceColumn: setor
-
-			annotation SummarizationSetBy = Automatic
-
-		column cod_ibge
-			dataType: int64
-			formatString: 0
-			lineageTag: 58b6a873-2d7a-4ed9-af2c-c3f2e466ee73
-			summarizeBy: sum
-			sourceColumn: cod_ibge
-
-			annotation SummarizationSetBy = Automatic
+			lineageTag: 49047a1f-8e03-4d55-b1bb-18074c9723e4
+			sourceColumn: periodo
 
 		column cidade
 			dataType: string
-			lineageTag: 6c2b26e0-38b4-4b50-845f-e1d75289e7ef
-			summarizeBy: none
+			lineageTag: 94956f92-ec20-4fe8-bf7a-0fce5e0648aa
 			sourceColumn: cidade
-
-			annotation SummarizationSetBy = Automatic
 
 		column uf
 			dataType: string
-			lineageTag: f59abfd6-24eb-4d53-971c-8eba781d883a
-			summarizeBy: none
+			lineageTag: c78476ab-581b-4a24-85f8-0e019e4b8ab4
 			sourceColumn: uf
 
-			annotation SummarizationSetBy = Automatic
-
-		column sla_24h
+		column total_reparos
 			dataType: int64
-			formatString: 0
-			lineageTag: eba74f6a-3cbb-4a69-8c14-527132b4483f
-			summarizeBy: sum
-			sourceColumn: sla_24h
+			lineageTag: f8a7f24a-08df-490f-8805-d9c11a8ecbec
+			sourceColumn: total_reparos
 
-			annotation SummarizationSetBy = Automatic
-
-		column sla_48h
+		column reparos_reincidentes_30d
 			dataType: int64
-			formatString: 0
-			lineageTag: 30e44d6f-ba73-4915-ac22-c8ecf5bf0150
-			summarizeBy: sum
-			sourceColumn: sla_48h
+			lineageTag: bcc130a0-200b-4219-944f-5079bbf6f39b
+			sourceColumn: reparos_reincidentes_30d
 
-			annotation SummarizationSetBy = Automatic
-
-		column sla_72h
-			dataType: int64
-			formatString: 0
-			lineageTag: e7bc1aea-ce4d-4342-acab-a488837d3496
-			summarizeBy: sum
-			sourceColumn: sla_72h
-
-			annotation SummarizationSetBy = Automatic
-
-		column primeira_agenda
-			dataType: int64
-			formatString: 0
-			lineageTag: b0a72c9e-6c12-4086-bbfa-c3ee3de044ec
-			summarizeBy: sum
-			sourceColumn: primeira_agenda
-
-			annotation SummarizationSetBy = Automatic
-
-		column empresa
-			dataType: string
-			lineageTag: 05a194ee-fe60-4cb8-9032-4c247f6305aa
-			summarizeBy: none
-			sourceColumn: empresa
-
-			annotation SummarizationSetBy = Automatic
-
-		column dt_carga
-			dataType: dateTime
-			formatString: General Date
-			lineageTag: c5ee28f1-226f-432c-a0f3-4e0107966d30
-			summarizeBy: none
-			sourceColumn: dt_carga
-
-			annotation SummarizationSetBy = Automatic
-
-		column uf_ajustada
-			dataType: string
-			lineageTag: 6019dd9f-3a83-4517-a4ca-0967f307be21
-			summarizeBy: none
-			sourceColumn: uf_ajustada
-
-			annotation SummarizationSetBy = Automatic
-
-		column horas
-			dataType: double
-			lineageTag: f355beee-d49e-4c15-a3b8-38ccd87ca051
-			summarizeBy: sum
-			sourceColumn: horas
-
-			annotation SummarizationSetBy = Automatic
-
-			annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-		column faixa_tempo
-			dataType: string
-			lineageTag: bae32e4e-5ed9-45f4-b7f1-2ad39542cdb6
-			summarizeBy: none
-			sourceColumn: faixa_tempo
-			sortByColumn: faixa_tempo_classificador
-
-			changedProperty = SortByColumn
-
-			annotation SummarizationSetBy = Automatic
-
-		column faixa_tempo_classificador
-			dataType: int64
-			formatString: 0
-			lineageTag: 5aeccced-2c55-47db-8310-7dce4d8ec1da
-			summarizeBy: sum
-			sourceColumn: faixa_tempo_classificador
-
-			annotation SummarizationSetBy = Automatic
-
-		column noprazo
-			dataType: int64
-			formatString: 0
-			lineageTag: 21696100-fcc8-424b-9d31-92c06bfb3392
-			summarizeBy: sum
-			sourceColumn: noprazo
-
-			annotation SummarizationSetBy = Automatic
-
-		column id
-			dataType: string
-			lineageTag: 1407e3c0-7330-420f-995a-0d401e9f740e
-			summarizeBy: none
-			sourceColumn: id
-
-			annotation SummarizationSetBy = Automatic
-
-		column protocolo
-			dataType: string
-			lineageTag: 1a14cff6-45e5-402f-81fd-2b36620ba9b6
-			summarizeBy: none
-			sourceColumn: protocolo
-
-			annotation SummarizationSetBy = Automatic
-
-		partition 'mvp solicitacao_servicos' = m
+		partition 'Reparos reincidentes 30d' = m
 			mode: import
-			source = ```
+			source =
 					let
-					    Fonte = Value.NativeQuery(
-					        PostgreSQL.Database(
-					            host, /* ip:porta */
-					            database    /* database */
-					        ), 
-					        "
-					        SELECT
-					            t.*,
-					            CASE
-					                WHEN horas <= 12  THEN 'ATÉ 12H'
-					                WHEN horas <= 24  THEN 'DE 12H A 24H'
-					                WHEN horas <= 36  THEN 'DE 24H A 36H'
-					                WHEN horas <= 48  THEN 'DE 36H A 48H'
-					                WHEN horas <= 72  THEN 'DE 48H A 72H'
-					                WHEN horas <= 96  THEN 'DE 72H A 96H'
-					                WHEN horas <= 120 THEN 'DE 96H A 120H'
-					                WHEN horas > 120  THEN 'ACIMA DE 120H'
-					            END AS FAIXA_TEMPO,
-					            CASE
-					                WHEN horas <= 12  THEN 1
-					                WHEN horas <= 24  THEN 2
-					                WHEN horas <= 36  THEN 3
-					                WHEN horas <= 48  THEN 4
-					                WHEN horas <= 72  THEN 5
-					                WHEN horas <= 96  THEN 6
-					                WHEN horas <= 120 THEN 7
-					                WHEN horas > 120  THEN 8
-					            END AS FAIXA_TEMPO_CLASSIFICADOR
-					        FROM (
-					            SELECT
-					                *,
-					                CASE
-					                    WHEN uf = 'SP' AND filial_regional IN ('FILIAL MG', 'ICONECTA', 'VOUE') THEN 'MG'
-					                    ELSE uf
-					                END AS uf_ajustada,
-					                CASE
-					                    WHEN status NOT IN ('ABERTA', 'AGENDADA', 'ANDAMENTO', 'ENCAMINHADA', 'ABERTURA') THEN NULL
-					                    ELSE ROUND(EXTRACT(EPOCH FROM (NOW() - data_abertura)) / 3600, 2)
-					                END AS horas,
-					                CASE
-					                    /*
-										--WHEN data_primeira_agenda::date >= data_fechamento::date THEN 1
-										WHEN data_primeira_agenda::date <= data_fechamento::date THEN 1
-										ELSE 0
-										*/
-										WHEN data_fechamento::date <= data_primeira_agenda::date THEN 1
-					                    ELSE 0
-					                END AS noprazo
-					            FROM
-					                mvp.solicitacao_servicos
-					            WHERE
-					                data_abertura > '2026-07-31'
-					                -- ss.data_fechamento::date BETWEEN '2026-08-01' AND CURRENT_DATE
-					                -- AND status IN ('ABERTA','AGENDADA','ANDAMENTO','ENCAMINHADA','ABERTURA')
-					                -- AND status IN ('ENCERRAMENTO', 'FINALIZADA', 'FECHAMENTO')
-					                -- AND tipo_servico = 'REPARO'
-					                -- AND tipo_servico = 'GROSS - ATIV'
-					        ) AS t
-					        ", 
-					        null, 
-					        [EnableFolding = true]
+					    Fonte = #"mvp solicitacao_servicos",
+					    Filtrada = Table.SelectRows(
+					        Fonte,
+					        each [tipo_servico] = "REPARO"
+					            and [data_abertura] >= #datetime(2026, 8, 1, 0, 0, 1)
+					            and List.Contains({"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"}, [status])
 					    ),
-					    #"Data Extraída" = Table.TransformColumns(
-					        Fonte, 
+					    Selecionadas = Table.SelectColumns(Filtrada, {"id_contrato", "cidade", "uf", "data_abertura", "data_fechamento"}),
+					    Ordenadas = Table.Sort(Selecionadas, {{"id_contrato", Order.Ascending}, {"data_abertura", Order.Ascending}}),
+					    PorContrato = Table.Group(
+					        Ordenadas,
+					        {"id_contrato"},
+					        {{
+					            "Dados",
+					            each
+					                let
+					                    ComIndice = Table.AddIndexColumn(_, "Indice", 0, 1, Int64.Type),
+					                    ComAnterior = Table.AddColumn(
+					                        ComIndice,
+					                        "data_fechamento_anterior",
+					                        each if [Indice] = 0 then null else ComIndice[data_fechamento]{[Indice] - 1},
+					                        type nullable datetime
+					                    ),
+					                    SemIndice = Table.RemoveColumns(ComAnterior, {"Indice"})
+					                in
+					                    SemIndice,
+					            type table [id_contrato=nullable number, cidade=nullable text, uf=nullable text, data_abertura=nullable datetime, data_fechamento=nullable datetime, data_fechamento_anterior=nullable datetime]
+					        }}
+					    ),
+					    Expandida = Table.ExpandTableColumn(
+					        PorContrato,
+					        "Dados",
+					        {"cidade", "uf", "data_abertura", "data_fechamento", "data_fechamento_anterior"},
+					        {"cidade", "uf", "data_abertura", "data_fechamento", "data_fechamento_anterior"}
+					    ),
+					    ComPeriodo = Table.AddColumn(Expandida, "periodo", each Date.ToText(Date.From([data_abertura]), "yyyy-MM"), type text),
+					    Agrupada = Table.Group(
+					        ComPeriodo,
+					        {"periodo", "cidade", "uf"},
 					        {
-					            {"data_abertura", DateTime.Date, type date}, 
-					            {"data_fechamento", DateTime.Date, type date},
-								{"data_primeira_agenda", DateTime.Date, type date}
+					            {"total_reparos", each Table.RowCount(_), Int64.Type},
+					            {
+					                "reparos_reincidentes_30d",
+					                each Table.RowCount(
+					                    Table.SelectRows(
+					                        _,
+					                        each [data_fechamento_anterior] <> null
+					                            and [data_abertura] <> null
+					                            and Date.From([data_abertura]) - Date.From([data_fechamento_anterior]) <= #duration(30, 0, 0, 0)
+					                    )
+					                ),
+					                Int64.Type
+					            }
 					        }
 					    ),
-					    #"Tipo Alterado" = Table.TransformColumnTypes(
-					        #"Data Extraída", 
-					        {{"id", type text}}
-					    )
+					    Resultado = Table.Sort(Agrupada, {{"periodo", Order.Ascending}, {"cidade", Order.Ascending}, {"uf", Order.Ascending}})
 					in
-					    #"Tipo Alterado"
-					```
-
-		annotation PBI_NavigationStepName = Navegação
-
-		annotation PBI_ResultType = Table
+					    Resultado
 

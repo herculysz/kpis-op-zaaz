@@ -37,7 +37,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "TOTAL"
+                  "Property": "TOTAL_ATIV"
                 }
               },
               "howCreated": 5
@@ -268,7 +268,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "NO_PRAZO_SLA72H"
+                      "Property": "NO_PRAZO_SLA72H_ATIV"
                     }
                   },
                   "howCreated": 0
@@ -283,7 +283,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "PRODUTIVAS"
+                      "Property": "PRODUTIVAS_GROSS_ATIV"
                     }
                   },
                   "howCreated": 0
@@ -298,7 +298,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "TOTAL"
+                      "Property": "TOTAL_ATIV"
                     }
                   },
                   "howCreated": 0
@@ -313,7 +313,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "CUMPRIDA_NO_PRAZO"
+                      "Property": "CUMPRIDA_NO_PRAZO_ATIV"
                     }
                   },
                   "howCreated": 0

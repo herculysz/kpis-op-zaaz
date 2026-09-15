@@ -14,7 +14,7 @@ queryGroup Parametros
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["mvp solicitacao_servicos","d_Calendario","Medidas","Atualizacao","host","database"]
+annotation PBI_QueryOrder = ["mvp solicitacao_servicos","mvp base_clientes","d_Calendario","Medidas","Atualizacao","host","database"]
 
 annotation PBI_ProTooling = ["DevMode","DaxQueryView_Desktop","TMDLView_Desktop","MCP-PBIModeling"]
 
@@ -25,6 +25,7 @@ ref table Medidas
 ref table d_Calendario
 ref table Atualizacao
 ref table par_med_Backlog_Reparos
+ref table 'mvp base_clientes'
 
 ref cultureInfo pt-BR
 

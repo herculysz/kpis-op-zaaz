@@ -4,10 +4,10 @@
   "position": {
     "x": 25.37444933920705,
     "y": 163.1166079777058,
-    "z": 9000,
+    "z": 7000,
     "height": 56.38766519823789,
     "width": 200.17621145374449,
-    "tabOrder": 12000
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "slicer",
@@ -172,23 +172,5 @@
       "filterChanges": true
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "d0a8dadb4e1b1c6ad521",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "empresa"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

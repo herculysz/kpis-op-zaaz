@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
+        "x": 705,
         "y": 0
       },
       "nodes": [
@@ -72,6 +72,19 @@
             "width": 234
           },
           "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1894,
+            "y": 194.5
+          },
+          "nodeIndex": "mvp base_clientes",
+          "nodeLineageTag": "460c6ea7-7cc8-4ada-a4f6-84c435766e55",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "Todas as tabelas",

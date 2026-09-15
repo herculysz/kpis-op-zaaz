@@ -4,10 +4,10 @@
   "position": {
     "x": 25.11627906976744,
     "y": 231.62790697674419,
-    "z": 15000,
+    "z": 11000,
     "height": 56.38766519823789,
     "width": 200.17621145374449,
-    "tabOrder": 16001
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "slicer",
@@ -57,6 +57,13 @@
                   "Value": "true"
                 }
               }
+            },
+            "strictSingleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -101,7 +108,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'REPARO'"
+                                "Value": "'MUD. ENDERECO'"
                               }
                             }
                           ]
@@ -224,45 +231,6 @@
           }
         },
         "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "m",
-              "Entity": "mvp solicitacao_servicos",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "m"
-                          }
-                        },
-                        "Property": "tipo_servico"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'REPARO'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
         "isLockedInViewMode": true
       }
     ]

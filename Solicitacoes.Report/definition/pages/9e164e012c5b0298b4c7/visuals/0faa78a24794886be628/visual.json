@@ -4,10 +4,10 @@
   "position": {
     "x": 999.94056463595837,
     "y": 129.80683506686478,
-    "z": 1010,
+    "z": 11000,
     "height": 900.08915304606239,
     "width": 674.71025260029717,
-    "tabOrder": 11
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -39,11 +39,11 @@
                       "Entity": "mvp solicitacao_servicos"
                     }
                   },
-                  "Property": "uf"
+                  "Property": "uf_ajustada"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.uf",
-              "nativeQueryRef": "uf",
+              "queryRef": "mvp solicitacao_servicos.uf_ajustada",
+              "nativeQueryRef": "uf_ajustada",
               "active": true
             },
             {
@@ -156,7 +156,7 @@
           },
           {
             "queryRefs": [
-              "mvp solicitacao_servicos.uf"
+              "mvp solicitacao_servicos.uf_ajustada"
             ],
             "isCollapsed": true,
             "identityKeys": [
@@ -167,7 +167,7 @@
                       "Entity": "mvp solicitacao_servicos"
                     }
                   },
-                  "Property": "uf"
+                  "Property": "uf_ajustada"
                 }
               }
             ],
@@ -1075,6 +1075,7 @@
             }
           ]
         },
+        "howCreated": "User",
         "isLockedInViewMode": true,
         "objects": {
           "general": [

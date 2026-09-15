@@ -4,10 +4,10 @@
   "position": {
     "x": 285.28974739970283,
     "y": 128.38038632986627,
-    "z": 1008,
+    "z": 9000,
     "height": 900.08915304606239,
     "width": 674.71025260029717,
-    "tabOrder": 9
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -43,9 +43,9 @@
                 }
               },
               "queryRef": "mvp solicitacao_servicos.uf_ajustada",
-              "nativeQueryRef": "UF",
+              "nativeQueryRef": "uf_ajustada",
               "active": true,
-              "displayName": "UF"
+              "displayName": "uf_ajustada"
             },
             {
               "field": {
@@ -75,7 +75,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Reincidente"
+                  "Property": "Reincidente_ATIV"
                 }
               },
               "queryRef": "Medidas.Protocolos em garantia",
@@ -524,6 +524,22 @@
                   }
                 }
               }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "@cor_txt_proj_taxa"
+                    }
+                  }
+                }
+              }
             }
           },
           "selector": {
@@ -703,7 +719,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'O.S. EM GARANTIA 30 DIAS'"
+                  "Value": "'O.S. DE INSTALAÇÃO EM GARANTIA 30 DIAS'"
                 }
               }
             },
@@ -1064,118 +1080,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "cf5f774090645b7c586c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "empresa"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "d65c1f9e98da4dd28401",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "uf_ajustada"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "006369cd053dbee181bd",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "cidade"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "fdf757f0b70947ee4927",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Reincidente"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "5327ea562784d0cb70ce",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Proj. Rein"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "3c5f34405721176c397c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Proj. Total"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "50eaceca5297016c6c00",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "{PER} Projecao_Reincidencia_taxa"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "14c4d71390151d85d79a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "{PER} Projecao_Reincidencia_meta"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

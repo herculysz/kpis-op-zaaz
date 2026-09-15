@@ -4,10 +4,10 @@
   "position": {
     "x": 284.6511627906977,
     "y": 126.97674418604652,
-    "z": 17002,
+    "z": 15000,
     "height": 500,
     "width": 1601.6684045881127,
-    "tabOrder": 16003
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -1431,20 +1431,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "ba6fc5303b9188985d2d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "empresa"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
         "name": "71925ce275b0018bc54c",
         "field": {
           "Column": {
@@ -1457,6 +1443,49 @@
           }
         },
         "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "mvp solicitacao_servicos",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "m"
+                              }
+                            },
+                            "Property": "uf_ajustada"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
         "objects": {
           "general": [
             {
@@ -1472,162 +1501,7 @@
             }
           ]
         }
-      },
-      {
-        "name": "5ab2f8f03816c1053416",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Backlog Total"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "8785b3101cabaeaaee34",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Fila"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "cca3c50dd0b12d65bc9a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Backlog Acima De 36h"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "57c1dd13702d59878b2a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "% Backlog Acima de 36h"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "502cfd8799943602a153",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Backlog De 12h A 24h"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "337871a6b7048001ba60",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Backlog De 24h A 36h"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "2b3d879120cb9856bce4",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Backlog De 36h A 48h"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "f3550afc1bb9b745cebd",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Backlog De 48h A 72h"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4fd6c9a36b4d95d10100",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Backlog De 72h A 96h"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "d6fffa507d440c4025c1",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Backlog De 96h A 120h"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "3019bce23769ead4d02e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Backlog Acima De 120h"
-          }
-        },
-        "type": "Advanced"
       }
     ]
-  },
-  "isHidden": true
+  }
 }

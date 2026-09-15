@@ -1,0 +1,12 @@
+EVALUATE
+CALCULATETABLE(
+    SUMMARIZE(
+        'mvp base_clientes',
+        'mvp base_clientes'[plano],
+        "Qtd_Clientes", COUNT('mvp base_clientes'[plano])
+    ),
+    'mvp base_clientes'[empresa] = "ZAAZ SUL/SUDESTE",
+    'mvp base_clientes'[uf_ajustada] = "" || ISBLANK('mvp base_clientes'[uf_ajustada])
+)
+ORDER BY
+    [Qtd_Clientes] DESC

@@ -43,9 +43,9 @@
                 }
               },
               "queryRef": "mvp solicitacao_servicos.uf_ajustada",
-              "nativeQueryRef": "UF",
+              "nativeQueryRef": "uf_ajustada",
               "active": true,
-              "displayName": "UF"
+              "displayName": "uf_ajustada"
             },
             {
               "field": {
@@ -75,7 +75,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "CUMPRIDA_NO_PRAZO"
+                  "Property": "CUMPRIDA_NO_PRAZO_ATIV"
                 }
               },
               "queryRef": "Medidas.Cumprida no prazo",
@@ -90,11 +90,12 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "TOTAL"
+                  "Property": "TOTAL_ATIV"
                 }
               },
               "queryRef": "Medidas.TOTAL",
-              "nativeQueryRef": "TOTAL1"
+              "nativeQueryRef": "TOTAL",
+              "displayName": "TOTAL"
             },
             {
               "field": {
@@ -1027,20 +1028,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "83bd809aed076057a0e1",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "empresa"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
         "name": "13862a0683be0794b7ee",
         "field": {
           "Column": {
@@ -1113,48 +1100,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "c793d3d28ee100e686ce",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "cidade"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "56e84100ac3ab4e65bd9",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "{PER} agenda_taxa"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "5fe868f468dc9125a290",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "{PER} agenda_meta"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

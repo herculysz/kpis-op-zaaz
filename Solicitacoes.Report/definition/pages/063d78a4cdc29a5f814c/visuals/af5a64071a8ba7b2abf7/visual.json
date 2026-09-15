@@ -43,9 +43,9 @@
                 }
               },
               "queryRef": "mvp solicitacao_servicos.uf_ajustada",
-              "nativeQueryRef": "UF",
+              "nativeQueryRef": "uf_ajustada",
               "active": true,
-              "displayName": "UF"
+              "displayName": "uf_ajustada"
             },
             {
               "field": {
@@ -75,7 +75,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "NO_PRAZO_SLA72H"
+                  "Property": "NO_PRAZO_SLA72H_ATIV"
                 }
               },
               "queryRef": "Medidas.No Prazo SLA 72H",
@@ -90,7 +90,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "PRODUTIVAS"
+                  "Property": "PRODUTIVAS_GROSS_ATIV"
                 }
               },
               "queryRef": "Medidas.OSs Produtivas",
@@ -1051,20 +1051,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "cb0564174a34979cbb8d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "empresa"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
         "name": "f84db39372244e058acb",
         "field": {
           "Column": {
@@ -1137,76 +1123,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "4c2ee58aa90b208be22c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "cidade"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ef8006c3d20c57550e46",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "NO_PRAZO_SLA72H"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "0224782b45c03679d5d0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "PRODUTIVAS"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "16d82a50bcba86c7a790",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "{PER} velocidade_taxa"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c1bbdb41ac58d9744614",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "{PER} velocidade_meta"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

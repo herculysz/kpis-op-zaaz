@@ -324,6 +324,16 @@ table 'mvp solicitacao_servicos'
 
 		annotation UnderlyingDateTimeDataType = Date
 
+	column duracao_servico
+		dataType: double
+		lineageTag: 2d1d82d3-0919-4171-b7bb-a28b949d459f
+		summarizeBy: sum
+		sourceColumn: duracao_servico
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition 'mvp solicitacao_servicos' = m
 		mode: import
 		source = ```
@@ -371,11 +381,15 @@ table 'mvp solicitacao_servicos'
 				                CASE
 				                    WHEN data_fechamento::date <= data_primeira_agenda::date THEN 1
 				                    ELSE 0
-				                END AS noprazo
+				                END AS noprazo,
+								CASE
+									WHEN status IN	('FINALIZADA', 'FECHAMENTO', 'ENCERRAMENTO') THEN EXTRACT(EPOCH FROM (data_fechamento - data_abertura)) / 3600
+									ELSE NULL 
+								END AS duracao_servico
 				            FROM
 				                mvp.solicitacao_servicos
 				            WHERE
-				                data_abertura > '2026-07-31'
+				                data_abertura > '2026-01-01'
 				                -- ss.data_fechamento::date BETWEEN '2026-08-01' AND CURRENT_DATE
 				                -- AND status IN ('ABERTA','AGENDADA','ANDAMENTO','ENCAMINHADA','ABERTURA')
 				                -- AND status IN ('ENCERRAMENTO', 'FINALIZADA', 'FECHAMENTO')
