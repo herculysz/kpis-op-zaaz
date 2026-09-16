@@ -1,0 +1,1610 @@
+table Medidas
+	lineageTag: 4b362e9d-aa35-4bdf-9a66-4a20a11fc8eb
+
+	measure Backlog =
+			
+			CALCULATE(
+			      [Qtd Solicitacoes]
+			    , ISBLANK('mvp solicitacao_servicos'[data_fechamento])
+			)
+		formatString: 0
+		displayFolder: Backlog
+		lineageTag: 52bc39de-efa2-4e7b-b085-c6174d93f30f
+
+	measure 'Qtd Solicitacoes' = COUNTROWS('mvp solicitacao_servicos')
+		formatString: #,0
+		displayFolder: Backlog\Gerais
+		lineageTag: 8cd5392e-29b7-49b0-bbbb-49c058ed6acf
+
+	measure 'Backlog Reparos' =
+			
+			CALCULATE(
+			      [Backlog]
+			    , 'mvp solicitacao_servicos'[tipo_servico] = "Reparo"
+			)
+		formatString: 0
+		displayFolder: Backlog
+		lineageTag: 2174f6db-40cd-4e16-8394-ec13cd8f6e81
+
+	measure 'Backlog Total' =
+			
+			-- Dados validados por Oliveira
+			var vTipo = SELECTEDVALUE('mvp solicitacao_servicos'[tipo_servico])
+			return
+			CALCULATE(
+			      [Qtd Solicitacoes]
+			    , 'mvp solicitacao_servicos'[tipo_servico] = vTipo
+			    , 'mvp solicitacao_servicos'[status] IN {"ABERTA","AGENDADA","ANDAMENTO","ENCAMINHADA","ABERTURA"}
+			    , USERELATIONSHIP( 'mvp solicitacao_servicos'[data_abertura], d_Calendario[data] )
+			)
+		formatString: 0
+		displayFolder: Backlog
+		lineageTag: 9d5e8cc1-8872-4ccb-bcdc-922bd6233a52
+
+	measure Fila =
+			
+			DIVIDE(
+			    [Backlog Total],
+			    [Media Solicitacoes Encerradas 7d]
+			)
+		displayFolder: Backlog\Gerais
+		lineageTag: f350e557-8993-42c0-ad0a-a8dd8eaab978
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Qtd Solicitacoes Encerradas 7d' =
+			
+			VAR vDt_Contexto = IF( MAX(d_Calendario[data]) > TODAY(), TODAY(), MAX(d_Calendario[data]) )
+			VAR vDt_Ult_7d = vDt_Contexto-7
+			VAR vPeriodo =
+			    DATESBETWEEN(
+			        d_Calendario[data],
+			        vDt_Ult_7d,
+			        vDt_Contexto -1 //Para considerar apenas os 7 dias anteriores à data do contexto, pois DATESBETWEEN é inclusiva
+			    )
+			VAR vSolicitacoesEncerradas =
+			    CALCULATE(
+			        [Qtd Solicitacoes],
+			        vPeriodo,
+			        USERELATIONSHIP(
+			            'mvp solicitacao_servicos'[data_fechamento],
+			            d_Calendario[data]
+			        )
+			    )
+			RETURN
+			vSolicitacoesEncerradas
+		formatString: #,0
+		displayFolder: Backlog\Gerais
+		lineageTag: 27d58745-87c1-457e-8481-7a0256f844a7
+
+	measure 'Media Solicitacoes Encerradas 7d' =
+			
+			VAR vSolicitacoesEncerradas = [Qtd Solicitacoes Encerradas 7d]
+			VAR vMedia = DIVIDE( vSolicitacoesEncerradas, 6 )
+			RETURN
+			vMedia
+		formatString: 0
+		displayFolder: Backlog\Gerais
+		lineageTag: cf111fc6-fb18-452a-820c-9c93d11791cd
+
+	measure 'Backlog Acima De 36h' =
+			
+			CALCULATE(
+			    [Backlog Total],
+			    'mvp solicitacao_servicos'[horas] > 36
+			)
+		formatString: 0
+		displayFolder: Backlog
+		lineageTag: 0ef07920-c2c6-48a8-83d8-b2ab4d3707e8
+
+	measure '% Backlog Acima de 36h' =
+			
+			DIVIDE(
+			    [Backlog Acima De 36h],
+			    [Backlog Total]
+			)
+		formatString: 0%;-0%;0%
+		displayFolder: Backlog
+		lineageTag: be2193cc-f93a-4239-ba2d-fa1cf868184b
+
+	measure 'Backlog Ate 12h' =
+			
+			CALCULATE(
+			    [Backlog Total],
+			    'mvp solicitacao_servicos'[faixa_tempo] = "ATÉ 12H"
+			)
+		formatString: 0
+		displayFolder: Backlog
+		lineageTag: 4d9d8b01-2b5a-4c68-b0c8-1d942842c31c
+
+	measure 'Backlog De 12h A 24h' =
+			
+			CALCULATE(
+			    [Backlog Total],
+			    'mvp solicitacao_servicos'[faixa_tempo] = "DE 12H A 24H"
+			)
+		formatString: 0
+		displayFolder: Backlog
+		lineageTag: f2214ea1-fba6-41aa-a210-58ac37df3014
+
+	measure 'Backlog De 24h A 36h' =
+			
+			CALCULATE(
+			    [Backlog Total],
+			    'mvp solicitacao_servicos'[faixa_tempo] = "DE 24H A 36H"
+			)
+		formatString: 0
+		displayFolder: Backlog
+		lineageTag: b5c776a0-b6fc-4ef3-aa17-4c5eab4642de
+
+	measure 'Backlog De 36h A 48h' =
+			
+			CALCULATE(
+			    [Backlog Total],
+			    'mvp solicitacao_servicos'[faixa_tempo] = "DE 36H A 48H"
+			)
+		formatString: 0
+		displayFolder: Backlog
+		lineageTag: cc2b2569-8dfa-4fb4-869b-56e296fc52e6
+
+	measure 'Backlog De 48h A 72h' =
+			
+			CALCULATE(
+			    [Backlog Total],
+			    'mvp solicitacao_servicos'[faixa_tempo] = "DE 48H A 72H"
+			)
+		formatString: 0
+		displayFolder: Backlog
+		lineageTag: 3ae4e5ea-5388-427e-9bb3-ade1dd2b8053
+
+	measure 'Backlog De 72h A 96h' =
+			
+			CALCULATE(
+			    [Backlog Total],
+			    'mvp solicitacao_servicos'[faixa_tempo] = "DE 72H A 96H"
+			)
+		formatString: 0
+		displayFolder: Backlog
+		lineageTag: 0969a7f2-6942-4f1d-aed4-c39d1a551c16
+
+	measure 'Backlog De 96h A 120h' =
+			
+			CALCULATE(
+			    [Backlog Total],
+			    'mvp solicitacao_servicos'[faixa_tempo] = "DE 96H A 120H"
+			)
+		formatString: 0
+		displayFolder: Backlog
+		lineageTag: 117d16f2-c74f-4941-a757-e0a75933452f
+
+	measure 'Backlog Acima De 120h' =
+			
+			CALCULATE(
+			    [Backlog Total],
+			    'mvp solicitacao_servicos'[faixa_tempo] = "ACIMA DE 120H"
+			)
+		formatString: 0
+		displayFolder: Backlog
+		lineageTag: f8907cef-6f57-4406-b373-c5db1b44f95a
+
+	measure 'Titulo Backlog Tipo Servico' =
+			
+			"BACKLOG - " & SELECTEDVALUE( 'mvp solicitacao_servicos'[tipo_servico], "Múltiplos tipo selecionados" )
+		displayFolder: Backlog
+		lineageTag: 0f3ae425-f9f5-48d9-a2af-b021587f8f99
+
+	measure 'Backlog Ate 24h' =
+			
+			CALCULATE(
+			    [Backlog Total],
+			    'mvp solicitacao_servicos'[horas] <= 24
+			)
+		formatString: 0
+		displayFolder: Backlog
+		lineageTag: baf8f328-1a88-451b-9b16-a5908971fd83
+
+	measure 'Backlog De 24h A 48h' =
+			
+			CALCULATE(
+			    [Backlog Total],
+			    'mvp solicitacao_servicos'[horas] > 24 && 'mvp solicitacao_servicos'[horas] <= 48
+			)
+		formatString: 0
+		displayFolder: Backlog
+		lineageTag: 2be968e9-068e-419a-a81f-10b29a69fc98
+
+	measure '{PER} agenda_meta' =
+			
+			
+			VAR taxa = 0.9
+			RETURN
+			
+			IF([TOTAL_ATIV]>0, taxa, BLANK())
+		formatString: 0%;-0%;0%
+		displayFolder: GrossAtivacao\Calculos
+		lineageTag: 3881e865-f79b-4093-8679-1f282aa7ae00
+
+	measure '{PER} agenda_taxa' = ```
+			
+			    IF([TOTAL_ATIV] > 0,
+			    DIVIDE([CUMPRIDA_NO_PRAZO_ATIV], [TOTAL_ATIV], 0), BLANK())
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: GrossAtivacao\Calculos
+		lineageTag: 6d4fa749-048a-4782-a451-55e28a366e67
+
+		changedProperty = IsHidden
+
+	measure '{PER} eficacia_meta' =
+			
+			
+			VAR taxa = 0.9
+			RETURN
+			
+			IF([TOTAL_ATIV]>0, taxa, BLANK())
+		formatString: 0%;-0%;0%
+		displayFolder: GrossAtivacao\Calculos
+		lineageTag: 6ef991d3-5b44-4e2e-bb44-afaded23232e
+
+	measure '{PER} eficacia_taxa' = ```
+			
+			    IF([TOTAL_ATIV] > 0,
+			        DIVIDE([PRODUTIVAS_GROSS_ATIV], [TOTAL_ATIV], 0), BLANK())
+			```
+		formatString: #,0.0%;-#,0.0%;#,0.0%
+		displayFolder: GrossAtivacao\Calculos
+		lineageTag: 7fb04f98-3a38-4dad-98c0-ee6cc2372c40
+
+	measure '{PER} velocidade_meta' =
+			
+			
+			VAR taxa = 0.95
+			RETURN
+			
+			IF([PRODUTIVAS_GROSS_ATIV]>0, taxa, BLANK())
+		formatString: 0%;-0%;0%
+		displayFolder: GrossAtivacao\Calculos
+		lineageTag: 49de0497-51f3-49b2-9b7a-df694c8d97b4
+
+	measure '{PER} velocidade_taxa' = ```
+			
+			    IF([PRODUTIVAS_GROSS_ATIV] > 0, 
+			    DIVIDE([NO_PRAZO_SLA72H_ATIV], [PRODUTIVAS_GROSS_ATIV], 0), BLANK())
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: GrossAtivacao\Calculos
+		lineageTag: fa225a96-5a12-4188-87b5-9de1cab56f45
+
+	measure PRODUTIVAS_GROSS_ATIV = ```
+			
+			
+			CALCULATE(
+			    SUM('mvp solicitacao_servicos'[produtivo]),
+			    'mvp solicitacao_servicos'[tipo_servico] = "GROSS - ATIV",
+			    'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"},
+			    USERELATIONSHIP(
+			        d_Calendario[data],
+			        'mvp solicitacao_servicos'[data_fechamento]
+			    )
+			)
+			
+			```
+		formatString: #,0
+		displayFolder: GrossAtivacao\Totais
+		lineageTag: e937c85e-c176-4b02-807f-380fed740b03
+
+	measure TOTAL_ATIV = ```
+			
+			
+			CALCULATE(
+			    COUNTROWS('mvp solicitacao_servicos'),
+			    'mvp solicitacao_servicos'[tipo_servico] = "GROSS - ATIV",
+			    'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"},
+			    USERELATIONSHIP(
+			        d_Calendario[data],
+			        'mvp solicitacao_servicos'[data_fechamento]
+			    )
+			)
+			
+			```
+		formatString: #,0
+		displayFolder: GrossAtivacao\Totais
+		lineageTag: 7089937e-7bd7-41ab-83f2-ec091ed5e34d
+
+	measure NO_PRAZO_SLA72H_ATIV = ```
+			
+			
+			CALCULATE(
+			    SUM('mvp solicitacao_servicos'[produtivo]),
+			    'mvp solicitacao_servicos'[sla_72h] = 1,
+			    'mvp solicitacao_servicos'[tipo_servico] = "GROSS - ATIV",
+			    'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"},
+			    USERELATIONSHIP(
+			        d_Calendario[data],
+			        'mvp solicitacao_servicos'[data_fechamento]
+			    )
+			)
+			
+			```
+		formatString: #,0
+		displayFolder: GrossAtivacao\Totais
+		lineageTag: 07baad15-fda3-4df0-9285-b00c4098a7ec
+
+	measure 'Qtd Registros' = [Qtd Solicitacoes]& " registros"
+		displayFolder: Backlog\Gerais
+		lineageTag: 36481aec-67f0-4935-a9cf-f5e90ec5c714
+
+	measure @cor_txt_eficacia_taxa =
+			
+			
+			VAR Taxa = [{PER} eficacia_taxa]
+			VAR Meta = [{PER} eficacia_meta]
+			VAR RedLight = Meta - 0.05
+			RETURN
+			
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(Taxa), BLANK(),
+			    Taxa < 0, BLANK(),
+			    Taxa < RedLight, "#7F0000",
+			    Taxa < Meta, "#856c16",
+			    "#1b6242"
+			)
+		displayFolder: GrossAtivacao\cores
+		lineageTag: ff551008-3dbc-4db5-9e5d-bdd9b1863d59
+
+	measure @cor_back_eficacia_taxa =
+			
+			
+			VAR Taxa = [{PER} eficacia_taxa]
+			VAR Meta = [{PER} eficacia_meta]
+			VAR RedLight = Meta - 0.05
+			RETURN
+			
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(Taxa), BLANK(),
+			    Taxa < 0, BLANK(),
+			    Taxa < RedLight, "#E5B389",
+			    Taxa < Meta, "#E5D38C",
+			    "#B2D788"
+			)
+		displayFolder: GrossAtivacao\cores
+		lineageTag: cae66e92-258a-438c-a0d1-9d23de4142db
+
+	measure @cor_txt_velocidade_taxa =
+			
+			
+			VAR Taxa = [{PER} velocidade_taxa]
+			VAR Meta = [{PER} velocidade_meta]
+			VAR RedLight = Meta - 0.10
+			RETURN
+			
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(Taxa), BLANK(),
+			    Taxa < 0, BLANK(),
+			    Taxa < RedLight, "#7F0000",
+			    Taxa < Meta, "#856c16",
+			    "#1b6242"
+			)
+		displayFolder: GrossAtivacao\cores
+		lineageTag: 33c53665-5aa5-42d9-b860-3d3279a17e3d
+
+	measure @cor_back_velocidade_taxa =
+			
+			
+			VAR Taxa = [{PER} velocidade_taxa]
+			VAR Meta = [{PER} velocidade_meta]
+			VAR RedLight = Meta - 0.10
+			RETURN
+			
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(Taxa), BLANK(),
+			    Taxa < 0, BLANK(),
+			    Taxa < RedLight, "#E5B389",
+			    Taxa < Meta, "#E5D38C",
+			    "#B2D788"
+			)
+		displayFolder: GrossAtivacao\cores
+		lineageTag: 5dd38f74-ca86-4a16-88fe-2bd06b029f1f
+
+	measure @cor_back_agenda_taxa =
+			
+			
+			VAR Taxa = [{PER} agenda_taxa]
+			VAR Meta = [{PER} agenda_meta]
+			VAR RedLight = Meta - 0.05
+			RETURN
+			
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(Taxa), BLANK(),
+			    Taxa < 0, BLANK(),
+			    Taxa < RedLight, "#E5B389",
+			    Taxa < Meta, "#E5D38C",
+			    "#B2D788"
+			)
+		displayFolder: GrossAtivacao\cores
+		lineageTag: b1ad86b0-17aa-4018-83b3-6ba4aa9572f4
+
+	measure @cor_txt_agenda_taxa =
+			
+			
+			VAR Taxa = [{PER} agenda_taxa]
+			VAR Meta = [{PER} agenda_meta]
+			VAR RedLight = Meta - 0.05
+			RETURN
+			
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(Taxa), BLANK(),
+			    Taxa < 0, BLANK(),
+			    Taxa < RedLight, "#7F0000",
+			    Taxa < Meta, "#856c16",
+			    "#1b6242"
+			)
+		displayFolder: GrossAtivacao\cores
+		lineageTag: fbd62ba0-5440-4015-82fc-0166d227c13f
+
+	measure CUMPRIDA_NO_PRAZO_ATIV = ```
+			
+			
+			CALCULATE(
+			    COUNTROWS('mvp solicitacao_servicos'),
+			    'mvp solicitacao_servicos'[noprazo] = 1,
+			    'mvp solicitacao_servicos'[tipo_servico] = "GROSS - ATIV",
+			    'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"},
+			    USERELATIONSHIP(
+			        d_Calendario[data],
+			        'mvp solicitacao_servicos'[data_fechamento]
+			    )
+			)
+			
+			```
+		formatString: #,0
+		displayFolder: GrossAtivacao\Totais
+		lineageTag: 8f873144-0eca-45a0-85f9-8a1fe1a7e792
+
+	measure peso_dia_util =
+			
+			
+			VAR _Feriado = SELECTEDVALUE(d_Calendario[feriado], FALSE())
+			VAR _DiaUtil = SELECTEDVALUE(d_Calendario[dia_util], FALSE())
+			VAR _DiaSemana = SELECTEDVALUE(d_Calendario[nome_dia_semana_abrev])
+			RETURN
+			    IF(
+			        _DiaUtil
+			            && NOT _Feriado
+			            && NOT (_DiaSemana IN {"sáb", "sab", "dom"}),
+			        1.00,
+			        0.00
+			    )
+		formatString: 0.00
+		displayFolder: Garantia\Pesos
+		lineageTag: 07ce382d-1ce6-4b88-ab0e-178299b3f3bf
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure peso_sabado =
+			
+			
+			VAR _Feriado = SELECTEDVALUE(d_Calendario[feriado], FALSE())
+			VAR _DiaSemana = SELECTEDVALUE(d_Calendario[nome_dia_semana_abrev])
+			RETURN
+			    IF(
+			        NOT _Feriado
+			            && _DiaSemana IN {"sáb", "sab"},
+			        0.50,
+			        0.00
+			    )
+		formatString: 0.00
+		displayFolder: Garantia\Pesos
+		lineageTag: 59a88e9b-d9ce-4f02-90cf-44192a1b37ae
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure peso_domingo =
+			
+			
+			VAR _Feriado = SELECTEDVALUE(d_Calendario[feriado], FALSE())
+			VAR _DiaSemana = SELECTEDVALUE(d_Calendario[nome_dia_semana_abrev])
+			RETURN
+			    IF(
+			        NOT _Feriado
+			            && _DiaSemana = "dom",
+			        0.25,
+			        0.00
+			    )
+		formatString: 0.00
+		displayFolder: Garantia\Pesos
+		lineageTag: 7c7d2d8e-6f18-4d28-80be-97776f15292c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure peso_feriado =
+			
+			
+			IF(SELECTEDVALUE(d_Calendario[feriado], FALSE()), 0.15, 0.00)
+		formatString: 0.00
+		displayFolder: Garantia\Pesos
+		lineageTag: 62db4f28-bc3f-4d55-8ef2-64af8d78a7a0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Reincidente_ATIV =
+			
+			
+			IF(
+			    [Proj. Total] > 0,
+			    COALESCE(
+			        VAR _ChamadosBase =
+			            CALCULATETABLE(
+			                ADDCOLUMNS(
+			                    SUMMARIZE(
+			                        'mvp solicitacao_servicos',
+			                        'mvp solicitacao_servicos'[protocolo],
+			                        'mvp solicitacao_servicos'[id_contrato]
+			                    ),
+			                    "@DataFechamento", CALCULATE(MAX('mvp solicitacao_servicos'[data_fechamento])),
+			                    "@DataFimGarantia", CALCULATE(MAX('mvp solicitacao_servicos'[data_termino_garantia]))
+			                ),
+			                'mvp solicitacao_servicos'[tipo_servico] = "GROSS - ATIV",
+			                'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"},
+			                USERELATIONSHIP(
+			                    d_Calendario[data],
+			                    'mvp solicitacao_servicos'[data_fechamento]
+			                )
+			            )
+			        VAR _TodosChamados =
+			            CALCULATETABLE(
+			                ADDCOLUMNS(
+			                    SUMMARIZE(
+			                        'mvp solicitacao_servicos',
+			                        'mvp solicitacao_servicos'[protocolo],
+			                        'mvp solicitacao_servicos'[id_contrato]
+			                    ),
+			                    "@DataAbertura", CALCULATE(MIN('mvp solicitacao_servicos'[data_abertura]))
+			                ),
+			                REMOVEFILTERS(d_Calendario),
+			                'mvp solicitacao_servicos'[tipo_servico] = "REPARO",
+			                'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"}
+			            )
+			        VAR _Reincidentes =
+			            FILTER(
+			                _ChamadosBase,
+			                VAR _ProtocoloOriginal = [protocolo]
+			                VAR _ContratoOriginal = [id_contrato]
+			                VAR _DataFechamentoOriginal = [@DataFechamento]
+			                VAR _DataFimGarantia = [@DataFimGarantia]
+			                RETURN
+			                    COUNTROWS(
+			                        FILTER(
+			                            _TodosChamados,
+			                            [id_contrato] = _ContratoOriginal
+			                                && [protocolo] <> _ProtocoloOriginal
+			                                && [@DataAbertura] >= _DataFechamentoOriginal
+			                                && [@DataAbertura] <= _DataFimGarantia
+			                        )
+			                    ) > 0
+			            )
+			        RETURN COUNTROWS(_Reincidentes),
+			        0
+			    ),
+			    BLANK()
+			)
+		formatString: 0
+		displayFolder: Garantia\Totais
+		lineageTag: 5ae166c4-b1b0-4ecb-ac0c-17b05abbd624
+
+	measure 'DU REAL' =
+			
+			
+			VAR _DataReferencia =
+			    CALCULATE(
+			        MAX('mvp solicitacao_servicos'[data_fechamento]),
+			        ALLSELECTED('mvp solicitacao_servicos'),
+			        USERELATIONSHIP(
+			            d_Calendario[data],
+			            'mvp solicitacao_servicos'[data_fechamento]
+			        )
+			    )
+			VAR _InicioMes = DATE(YEAR(_DataReferencia), MONTH(_DataReferencia), 1)
+			RETURN
+			    SUMX(
+			        FILTER(
+			            ALL(d_Calendario),
+			            d_Calendario[data] >= _InicioMes
+			                && d_Calendario[data] <= _DataReferencia
+			        ),
+			        [peso_dia_util] + [peso_sabado] + [peso_domingo] + [peso_feriado]
+			    )
+		formatString: 0.00
+		displayFolder: Garantia\DiasUteis
+		lineageTag: fe5f6298-1855-48b5-a598-351ba7dafdcb
+
+	measure 'DU PLAN' =
+			
+			
+			VAR _DataReferencia =
+			    CALCULATE(
+			        MAX('mvp solicitacao_servicos'[data_fechamento]),
+			        ALLSELECTED('mvp solicitacao_servicos'),
+			        USERELATIONSHIP(
+			            d_Calendario[data],
+			            'mvp solicitacao_servicos'[data_fechamento]
+			        )
+			    )
+			VAR _InicioMes = DATE(YEAR(_DataReferencia), MONTH(_DataReferencia), 1)
+			VAR _FimMes = EOMONTH(_DataReferencia, 0)
+			RETURN
+			    SUMX(
+			        FILTER(
+			            ALL(d_Calendario),
+			            d_Calendario[data] >= _InicioMes
+			                && d_Calendario[data] <= _FimMes
+			        ),
+			        [peso_dia_util] + [peso_sabado] + [peso_domingo] + [peso_feriado]
+			    )
+		formatString: 0.00
+		displayFolder: Garantia\DiasUteis
+		lineageTag: 9fd27f7c-1ea8-4ff9-bf64-a135cb104132
+
+	measure 'Proj. Rein' =
+			
+			
+			IF(
+			    [Proj. Total] > 0,
+			    COALESCE(
+			        ROUND(
+			            DIVIDE(
+			                [Reincidente_ATIV],
+			                [DU REAL]
+			            ) * [DU PLAN],
+			            0
+			        ),
+			        0
+			    ),
+			    BLANK()
+			)
+		formatString: 0
+		displayFolder: Garantia\Totais
+		lineageTag: 1fc2dd3e-0fef-4d5d-b9e7-43d4c2580a4a
+
+	measure 'Proj. Total' =
+			
+			
+			IF([PRODUTIVAS_GROSS_ATIV] = 0, BLANK(),
+			    ROUND(
+			        DIVIDE(
+			            [PRODUTIVAS_GROSS_ATIV],
+			            [DU REAL]
+			        ) * [DU PLAN],
+			        0
+			    )
+			)
+		formatString: #,0
+		displayFolder: Garantia\Totais
+		lineageTag: a2156f76-e347-4c9b-9e1a-7855d6583918
+
+	measure '{PER} Projecao_Reincidencia_meta' =
+			
+			
+			IF([Proj. Total] > 0, 0.10, BLANK())
+		displayFolder: Garantia\Calculos
+		lineageTag: 93f32f53-2308-402f-90ac-80a10b1aa4c0
+
+		formatStringDefinition = "MAX "&"0%;-0%;0%"
+
+	measure '{PER} Projecao_Reincidencia_taxa' =
+			
+			
+			IF(
+			    [Proj. Total] > 0,
+			    DIVIDE([Proj. Rein], [Proj. Total], 0),
+			    BLANK()
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Garantia\Calculos
+		lineageTag: 6a3f8617-c9aa-4cc9-a942-d0af92b0d5bc
+
+	measure @cor_back_proj_taxa = ```
+			
+			
+			VAR Taxa = [{PER} Projecao_Reincidencia_taxa]
+			VAR Meta = [{PER} Projecao_Reincidencia_meta]
+			VAR RedLight = Meta + 0.05
+			RETURN
+			
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(Taxa), BLANK(),
+			    Taxa < 0, BLANK(),
+			    Taxa < Meta, "#B2D788",
+			    Taxa < RedLight, "#E5D38C", 
+			    "#E5B389"
+			)
+			```
+		displayFolder: Garantia\Cores
+		lineageTag: c358e838-ad8a-434e-a013-347ef82ef5af
+
+	measure @cor_txt_proj_taxa = ```
+			
+			
+			VAR Taxa = [{PER} Projecao_Reincidencia_taxa]
+			VAR Meta = [{PER} Projecao_Reincidencia_meta]
+			VAR RedLight = Meta + 0.05
+			RETURN
+			
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(Taxa), BLANK(),
+			    Taxa < 0, BLANK(),
+			    Taxa < Meta, "#1b6242",
+			    Taxa < RedLight, "#856c16", 
+			    "#E5B389"
+			)
+			```
+		displayFolder: Garantia\Cores
+		lineageTag: f623dbff-03b6-4254-99a6-7ddb4bc13e88
+
+	measure 'Prod. Bruta' = ```
+			
+			
+			VAR qtdProdutivo =
+			CALCULATE(
+			    SUM('mvp solicitacao_servicos'[produtivo]),
+			   'mvp solicitacao_servicos'[tipo_servico] IN 
+			    {
+			        "GROSS - ATIV",
+			        "GROSS - REATIV",
+			        "MIGRACAO",
+			        "MUD. ENDERECO",
+			        "OUTRAS ATIVIDADES",
+			        "OUTROS",
+			        "PREVENTIVA",
+			        "REPARO",
+			        "RETIRADA",
+			        "ROUTER ADICIONAL",
+			        "TROCA EQUIP."
+			    },
+			    'mvp solicitacao_servicos'[tecnico] <> "" && NOT(ISBLANK('mvp solicitacao_servicos'[tecnico])),
+			    'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"},
+			    USERELATIONSHIP(
+			        d_Calendario[data],
+			        'mvp solicitacao_servicos'[data_fechamento]
+			    )
+			)
+			
+			RETURN
+			
+			IF(qtdProdutivo > 0, qtdProdutivo, BLANK())
+			```
+		formatString: #,0
+		displayFolder: ProdutividadeBruta\Totais
+		lineageTag: 4ca981f5-d703-4d0d-98d0-480b64527686
+
+	measure 'DU Total' = ```
+			
+			
+			VAR _TecnicosValidos =
+			    FILTER(
+			        VALUES('mvp solicitacao_servicos'[id_tecnico]),
+			        NOT ISBLANK('mvp solicitacao_servicos'[id_tecnico])
+			    )
+			RETURN
+			    SUMX(
+			        _TecnicosValidos,
+			        CALCULATE(
+			            DISTINCTCOUNT('mvp solicitacao_servicos'[data_fechamento]),
+			            USERELATIONSHIP(
+			                d_Calendario[data],
+			                'mvp solicitacao_servicos'[data_fechamento]
+			            ),
+			            'mvp solicitacao_servicos'[tipo_servico] IN 
+			            {
+			                "GROSS - ATIV",
+			                "GROSS - REATIV",
+			                "MIGRACAO",
+			                "MUD. ENDERECO",
+			                "OUTRAS ATIVIDADES",
+			                "OUTROS",
+			                "PREVENTIVA",
+			                "REPARO",
+			                "RETIRADA",
+			                "ROUTER ADICIONAL",
+			                "TROCA EQUIP."
+			            },
+			            'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"}
+			        )
+			    )
+			```
+		formatString: #,0
+		displayFolder: ProdutividadeBruta\Totais
+		lineageTag: 5b3e669d-1844-4c8e-9f59-8609c9afd4ba
+
+	measure Prod_Bruta_Meta =
+			
+			
+			IF([DU Total] > 0, 3.5, BLANK())
+		displayFolder: ProdutividadeBruta\Calculos
+		lineageTag: d96d1b3d-2b63-423e-b4dc-ec4d6ca645b2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Prod_Bruta_real = ```
+			
+			
+			IF([DU Total] > 0, 
+			    DIVIDE(
+			        [Prod. Bruta],
+			        [DU Total],
+			        0),
+			    BLANK()
+			)
+			```
+		displayFolder: ProdutividadeBruta\Calculos
+		lineageTag: 1fb3d47c-cfc3-4725-9e46-b71f6dae87ae
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure @cor_back_prod_real =
+			
+			
+			VAR Taxa = [Prod_Bruta_real]
+			VAR Meta = [Prod_Bruta_Meta]
+			VAR RedLight = Meta - 0.5
+			RETURN
+			
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(Taxa), BLANK(),
+			    Taxa < 0, BLANK(),
+			    Taxa > Meta, "#B2D788",
+			    Taxa > RedLight, "#E5D38C",
+			    "#E5B389"
+			)
+		displayFolder: ProdutividadeBruta\Cores
+		lineageTag: 9775a20f-6b78-40ba-9208-f4863c92b91a
+
+	measure @cor_txt_prod_real =
+			
+			
+			VAR Taxa = [Prod_Bruta_real]
+			VAR Meta = [Prod_Bruta_Meta]
+			VAR RedLight = Meta - 0.5
+			RETURN
+			
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(Taxa), BLANK(),
+			    Taxa < 0, BLANK(),
+			    Taxa > Meta, "1b6242",
+			    Taxa > RedLight, "#856c16",
+			    "#7F0000"
+			)
+		displayFolder: ProdutividadeBruta\Cores
+		lineageTag: 57ff2c0c-4a05-4fc7-83a4-ce5510cf8192
+
+	measure NO_PRAZO_24H_REPARO = ```
+			
+			
+			
+			VAR noprazoSLA24H = 
+			CALCULATE(
+			    --COUNTROWS('mvp solicitacao_servicos'),
+			    SUM('mvp solicitacao_servicos'[noprazo2]),
+			    --SUM('mvp solicitacao_servicos'[sla_24h]),
+			    'mvp solicitacao_servicos'[produtivo] IN {0, 1},
+			    'mvp solicitacao_servicos'[tipo_servico] IN {"REPARO"},
+			    'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"},
+			    USERELATIONSHIP(
+			        d_Calendario[data],
+			        'mvp solicitacao_servicos'[data_fechamento]
+			    )
+			) + 0
+			RETURN
+			
+			IF([TOTAL_REPARO_PRODUTIVO_IMPRODUTIVO]> 0, noprazoSLA24H, BLANK())
+			```
+		formatString: #,0
+		displayFolder: Reparo_SLA24H\Totais
+		lineageTag: 805ae024-7226-446f-895c-730f554fbf18
+
+	measure TOTAL_REPARO_PRODUTIVO_IMPRODUTIVO = ```
+			
+			
+			VAR totalReparos = 
+			CALCULATE(
+			    COUNTROWS('mvp solicitacao_servicos'),
+			    'mvp solicitacao_servicos'[produtivo] IN {0, 1}, -- &&  NOT(ISBLANK('mvp solicitacao_servicos'[produtivo])),
+			    'mvp solicitacao_servicos'[tipo_servico] IN {"REPARO"},
+			    'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"},
+			    USERELATIONSHIP(
+			        d_Calendario[data],
+			        'mvp solicitacao_servicos'[data_fechamento]
+			    )
+			)
+			RETURN
+			
+			IF(totalReparos > 0, totalReparos, BLANK())
+			```
+		formatString: #,0
+		displayFolder: Reparo_SLA24H\Totais
+		lineageTag: 009be04b-9fe6-4fe3-aced-d038f6d86fae
+
+	measure '{PER} Reparo_24H_taxa' =
+			
+			DIVIDE(
+			    [NO_PRAZO_24H_REPARO],
+			    [TOTAL_REPARO_PRODUTIVO_IMPRODUTIVO],
+			    0
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Reparo_SLA24H\Calculos
+		lineageTag: d43f9d1d-b87d-43b6-8eea-e5fc8fb57690
+
+	measure '{PER} Reparo_24H_meta' =
+			
+			VAR Taxa = 0.90
+			RETURN
+			
+			IF([TOTAL_REPARO_PRODUTIVO_IMPRODUTIVO]>0, taxa, BLANK())
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Reparo_SLA24H\Calculos
+		lineageTag: c736cf93-2225-4692-840d-0f620ac19884
+
+	measure @cor_back_reparo24h_taxa =
+			VAR Taxa = [{PER} Reparo_24H_taxa]
+			VAR Meta = [{PER} Reparo_24H_meta]
+			VAR RedLight = Meta - 0.05
+			RETURN
+			
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(Taxa), BLANK(),
+			    Taxa < 0, BLANK(),
+			    Taxa < RedLight, "#E5B389",
+			    Taxa < Meta, "#E5D38C",
+			    "#B2D788"
+			)
+		displayFolder: Reparo_SLA24H\Cores
+		lineageTag: 2acc92d0-e7fc-4141-9291-c134dd2c45c2
+
+	measure @cor_txt_reparo24h_taxa =
+			
+			
+			VAR Taxa = [{PER} Reparo_24H_taxa]
+			VAR Meta = [{PER} Reparo_24H_meta]
+			VAR RedLight = Meta - 0.05
+			RETURN
+			
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(Taxa), BLANK(),
+			    Taxa < 0, BLANK(),
+			    Taxa < RedLight, "#7F0000",
+			    Taxa < Meta, "#856c16",
+			    "#1b6242"
+			)
+		displayFolder: Reparo_SLA24H\Cores
+		lineageTag: f1f2e74f-b6b9-48c8-92a2-f7e021039c5e
+
+	measure TMR_Reparo24H =
+			
+			
+			VAR _TMRHoras =
+			    CALCULATE(
+			        AVERAGE('mvp solicitacao_servicos'[duracao_servico]),
+			        'mvp solicitacao_servicos'[tipo_servico] = "REPARO",
+			        'mvp solicitacao_servicos'[status] IN {
+			            "ENCERRAMENTO",
+			            "FINALIZADA",
+			            "FECHAMENTO"
+			        },
+			        USERELATIONSHIP(
+			            d_Calendario[data],
+			            'mvp solicitacao_servicos'[data_fechamento]
+			        )
+			    )
+			VAR _TotalMinutos = ROUND(_TMRHoras * 60, 0)
+			VAR _Horas = QUOTIENT(_TotalMinutos, 60)
+			VAR _Minutos = MOD(_TotalMinutos, 60)
+			RETURN
+			    IF(
+			        ISBLANK(_TMRHoras),
+			        BLANK(),
+			        FORMAT(_Horas, "00") & ":" & FORMAT(_Minutos, "00")
+			    )
+		formatString: hh:mm
+		displayFolder: Reparo_SLA24H\Totais
+		lineageTag: 7ec3660a-6f01-4f9a-8e69-e7747c3199f8
+
+	measure Reincidente_REPARO_TESTE = ```
+			
+			
+			        VAR _ChamadosBase =
+			            CALCULATETABLE(
+			                ADDCOLUMNS(
+			                    SUMMARIZE(
+			                        'mvp solicitacao_servicos',
+			                        'mvp solicitacao_servicos'[protocolo],
+			                        'mvp solicitacao_servicos'[id_contrato]
+			                    ),
+			                    "@DataFechamento", CALCULATE(MAX('mvp solicitacao_servicos'[data_fechamento])),
+			                    "@DataFimGarantia", CALCULATE(MAX('mvp solicitacao_servicos'[data_termino_garantia]))
+			                ),
+			                'mvp solicitacao_servicos'[tipo_servico] = "REPARO",
+			                'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"},
+			                USERELATIONSHIP(
+			                    d_Calendario[data],
+			                    'mvp solicitacao_servicos'[data_fechamento]
+			                )
+			            )
+			        VAR _TodosChamados =
+			            CALCULATETABLE(
+			                ADDCOLUMNS(
+			                    SUMMARIZE(
+			                        'mvp solicitacao_servicos',
+			                        'mvp solicitacao_servicos'[protocolo],
+			                        'mvp solicitacao_servicos'[id_contrato]
+			                    ),
+			                    "@DataAbertura", CALCULATE(MIN('mvp solicitacao_servicos'[data_abertura]))
+			                ),
+			                REMOVEFILTERS(d_Calendario),
+			                'mvp solicitacao_servicos'[tipo_servico] = "REPARO",
+			                'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"}
+			            )
+			        VAR _Reincidentes =
+			            FILTER(
+			                _ChamadosBase,
+			                VAR _ProtocoloOriginal = [protocolo]
+			                VAR _ContratoOriginal = [id_contrato]
+			                VAR _DataFechamentoOriginal = [@DataFechamento]
+			                VAR _DataFimGarantia = [@DataFimGarantia]
+			                RETURN
+			                    COUNTROWS(
+			                        FILTER(
+			                            _TodosChamados,
+			                            [id_contrato] = _ContratoOriginal
+			                                && [protocolo] <> _ProtocoloOriginal
+			                                && [@DataAbertura] >= _DataFechamentoOriginal
+			                                && [@DataAbertura] <= _DataFimGarantia
+			                        )
+			                    ) > 0
+			            )
+			        RETURN COUNTROWS(_Reincidentes)
+			```
+		formatString: #,0
+		displayFolder: Reincidente_Reparo\Teste
+		lineageTag: 100198b9-64a3-4659-85aa-7d3e3beb8bdd
+
+	measure TMR_Reparo_Desafio =
+			
+			
+			VAR _Horas = "12"
+			VAR _Minutos = "00"
+			RETURN
+			    IF(
+			        ISBLANK([TMR_Reparo24H]),
+			        BLANK(),
+			        FORMAT(_Horas, "00") & ":" & FORMAT(_Minutos, "00")
+			    )
+		displayFolder: Reparo_SLA24H\Totais
+		lineageTag: 02bcfc90-0d33-4f73-9e79-000abdcfd286
+
+	measure 'Reincidente_Reparo_Produtivos TESTE' =
+			
+			VAR _ReparosBase =
+			    CALCULATETABLE(
+			        ADDCOLUMNS(
+			            SUMMARIZE(
+			                'mvp solicitacao_servicos',
+			                'mvp solicitacao_servicos'[protocolo],
+			                'mvp solicitacao_servicos'[id_contrato],
+			                'mvp solicitacao_servicos'[data_fechamento]
+			            ),
+			            "@Produtivo", CALCULATE(SUM('mvp solicitacao_servicos'[produtivo]))
+			        ),
+			        'mvp solicitacao_servicos'[tipo_servico] = "REPARO",
+			        'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"},
+			        USERELATIONSHIP(
+			            d_Calendario[data],
+			            'mvp solicitacao_servicos'[data_fechamento]
+			        )
+			    )
+			
+			VAR _TodosReparos =
+			    CALCULATETABLE(
+			        SUMMARIZE(
+			            'mvp solicitacao_servicos',
+			            'mvp solicitacao_servicos'[protocolo],
+			            'mvp solicitacao_servicos'[id_contrato],
+			            'mvp solicitacao_servicos'[data_abertura]
+			        ),
+			        REMOVEFILTERS(d_Calendario),
+			        'mvp solicitacao_servicos'[tipo_servico] = "REPARO"
+			    )
+			
+			VAR _Reincidentes =
+			    FILTER(
+			        _ReparosBase,
+			        VAR _ProtocoloOriginal = [protocolo]
+			        VAR _ContratoOriginal = [id_contrato]
+			        VAR _DataFechamento = [data_fechamento]
+			        RETURN
+			            NOT ISBLANK(_ProtocoloOriginal)
+			                && NOT ISBLANK(_ContratoOriginal)
+			                && NOT ISBLANK(_DataFechamento)
+			                && COUNTROWS(
+			                    FILTER(
+			                        _TodosReparos,
+			                        NOT ISBLANK([protocolo])
+			                            && [id_contrato] = _ContratoOriginal
+			                            && [protocolo] <> _ProtocoloOriginal
+			                            && [data_abertura] >= _DataFechamento
+			                            && [data_abertura] <= _DataFechamento + 30
+			                    )
+			                ) > 0
+			    )
+			
+			RETURN
+			    SUMX(_Reincidentes, [@Produtivo]) + 0
+		formatString: #,0
+		displayFolder: Reincidente_Reparo\Teste
+		lineageTag: 09927ad7-60cb-491f-9a09-a677cc930a5f
+
+	measure 'Reincidente_REPARO_Contratos TESTE' =
+			
+			
+			VAR _ReparosOrigem =
+			    CALCULATETABLE(
+			        SUMMARIZE(
+			            'mvp solicitacao_servicos',
+			            'mvp solicitacao_servicos'[id_contrato],
+			            'mvp solicitacao_servicos'[protocolo],
+			            'mvp solicitacao_servicos'[data_fechamento]
+			        ),
+			        'mvp solicitacao_servicos'[tipo_servico] = "REPARO",
+			        'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"},
+			        USERELATIONSHIP(
+			            d_Calendario[data],
+			            'mvp solicitacao_servicos'[data_fechamento]
+			        )
+			    )
+			
+			VAR _TodosReparos =
+			    CALCULATETABLE(
+			        SUMMARIZE(
+			            'mvp solicitacao_servicos',
+			            'mvp solicitacao_servicos'[id_contrato],
+			            'mvp solicitacao_servicos'[protocolo],
+			            'mvp solicitacao_servicos'[data_abertura]
+			        ),
+			        REMOVEFILTERS(d_Calendario),
+			        'mvp solicitacao_servicos'[tipo_servico] = "REPARO"
+			    )
+			
+			VAR _ContratosReincidentes =
+			    FILTER(
+			        DISTINCT(
+			            SELECTCOLUMNS(
+			                FILTER(
+			                    _ReparosOrigem,
+			                    VAR _ContratoOrigem = [id_contrato]
+			                    VAR _ProtocoloOrigem = [protocolo]
+			                    VAR _DataFechamentoOrigem = [data_fechamento]
+			                    RETURN
+			                        NOT ISBLANK(_ContratoOrigem)
+			                            && NOT ISBLANK(_ProtocoloOrigem)
+			                            && NOT ISBLANK(_DataFechamentoOrigem)
+			                            && COUNTROWS(
+			                                FILTER(
+			                                    _TodosReparos,
+			                                    [id_contrato] = _ContratoOrigem
+			                                        && [protocolo] <> _ProtocoloOrigem
+			                                        && [data_abertura] >= _DataFechamentoOrigem
+			                                )
+			                            ) > 0
+			                ),
+			                "id_contrato", [id_contrato]
+			            )
+			        ),
+			        NOT ISBLANK([id_contrato])
+			    )
+			
+			RETURN
+			    COUNTROWS(_ContratosReincidentes)
+		formatString: #,0
+		displayFolder: Reincidente_Reparo\Teste
+		lineageTag: 508044b4-8334-4743-8525-f4a60b742166
+
+	measure REINCIDENTE_REPARO = ```
+			
+			
+			VAR _ReparosNoContexto =
+			    CALCULATETABLE(
+			        SELECTCOLUMNS(
+			            'mvp solicitacao_servicos',
+			            "@Contrato", 'mvp solicitacao_servicos'[id_contrato],
+			            "@Abertura", 'mvp solicitacao_servicos'[data_abertura],
+			            "@Fechamento", 'mvp solicitacao_servicos'[data_fechamento]
+			        ),
+			        'mvp solicitacao_servicos'[tipo_servico] = "REPARO",
+			        'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"}
+			    )
+			VAR _TodosOsReparos =
+			    CALCULATETABLE(
+			        SELECTCOLUMNS(
+			            'mvp solicitacao_servicos',
+			            "@Contrato", 'mvp solicitacao_servicos'[id_contrato],
+			            "@Abertura", 'mvp solicitacao_servicos'[data_abertura],
+			            "@Fechamento", 'mvp solicitacao_servicos'[data_fechamento]
+			        ),
+			        REMOVEFILTERS('mvp solicitacao_servicos'),
+			        REMOVEFILTERS(d_Calendario),
+			        'mvp solicitacao_servicos'[tipo_servico] = "REPARO",
+			        'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"}
+			    )
+			VAR _ComFechamentoAnterior =
+			    ADDCOLUMNS(
+			        _ReparosNoContexto,
+			        "@FechamentoAnterior",
+			            VAR _ContratoAtual = [@Contrato]
+			            VAR _AberturaAtual = [@Abertura]
+			            RETURN
+			                MAXX(
+			                    TOPN(
+			                        1,
+			                        FILTER(
+			                            _TodosOsReparos,
+			                            [@Contrato] = _ContratoAtual
+			                                && [@Abertura] < _AberturaAtual
+			                        ),
+			                        [@Abertura], DESC
+			                    ),
+			                    [@Fechamento]
+			                )
+			    )
+			RETURN
+			
+			IF( [TOTAL_REPARO]>0,
+			COUNTROWS(
+			        FILTER(
+			            _ComFechamentoAnterior,
+			            NOT ISBLANK([@FechamentoAnterior])
+			                && NOT ISBLANK([@Abertura])
+			                && DATEDIFF(
+			                    DATEVALUE([@FechamentoAnterior]),
+			                    DATEVALUE([@Abertura]),
+			                    DAY
+			                ) <= 30
+			        )
+			    ) + 0,
+			    BLANK()
+			)
+			
+			
+			
+			```
+		formatString: #,0
+		displayFolder: Reincidente_Reparo\Totais
+		lineageTag: 65a5da33-f7b2-473c-a0e4-599affe0aed9
+
+	measure TOTAL_REPARO = ```
+			
+			
+			VAR totalReparos = 
+			CALCULATE(
+			    COUNTROWS('mvp solicitacao_servicos'),
+			    'mvp solicitacao_servicos'[tipo_servico] IN {"REPARO"},
+			    'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"},
+			    USERELATIONSHIP(
+			        d_Calendario[data],
+			        'mvp solicitacao_servicos'[data_fechamento]
+			    )
+			)
+			RETURN
+			
+			IF(totalReparos > 0, totalReparos, BLANK())
+			```
+		formatString: #,0
+		displayFolder: Reincidente_Reparo\Totais
+		lineageTag: 42d009d5-830a-4c38-ba3d-7fcd78c900cd
+
+	measure '{PER} Reincidencia_Reparo_taxa' =
+			
+			
+			DIVIDE(
+			    [REINCIDENTE_REPARO],
+			    [TOTAL_REPARO],
+			    0
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Reincidente_Reparo\Calculos
+		lineageTag: 292f4af6-87d3-4602-8cc1-90145ac3271e
+
+	measure '{PER} Reincidencia_Reparo_meta' =
+			
+			
+			VAR taxa = 0.1
+			RETURN
+			
+			IF([TOTAL_REPARO] > 0, taxa, BLANK())
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Reincidente_Reparo\Calculos
+		lineageTag: 5edb06a3-392e-46d6-9cd1-901ed5bd10d9
+
+	measure @cor_back_reincidente_taxa = ```
+			
+			
+			VAR Taxa = [{PER} Reincidencia_Reparo_taxa]
+			VAR Meta = [{PER} Reincidencia_Reparo_meta]
+			VAR RedLight = Meta + 0.01
+			RETURN
+			/*
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(Taxa), BLANK(),
+			    Taxa < 0, BLANK(),
+			    Taxa < Meta, "#B2D788",
+			    Taxa < RedLight, "#E5D38C", 
+			    "#E5B389"
+			)
+			*/
+			
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(Taxa), BLANK(),
+			    Taxa < 0, BLANK(),
+			    Taxa < Meta, "#B2D788",
+			    Taxa < RedLight, "#E5D38C",
+			    "#E5B389"
+			)
+			
+			
+			--VERDE #B2D788
+			--AMARELO #E5D38C
+			--VERMELHO #E5B389
+			```
+		displayFolder: Reincidente_Reparo\Cores
+		lineageTag: 112ed358-00ec-4e87-befc-90d8a21eb454
+
+	measure @cor_txt_reincidente_taxa = ```
+			
+			
+			VAR Taxa = [{PER} Reincidencia_Reparo_taxa]
+			VAR Meta = [{PER} Reincidencia_Reparo_meta]
+			VAR RedLight = Meta + 0.01
+			RETURN
+			/*
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(Taxa), BLANK(),
+			    Taxa < 0, BLANK(),
+			    Taxa < Meta, "#1b6242",
+			    Taxa < RedLight, "#856c16", 
+			    "#7F0000"
+			)
+			*/
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(Taxa), BLANK(),
+			    Taxa < 0, BLANK(),
+			    Taxa < Meta, "#1b6242",
+			    Taxa < RedLight, "#856c16", 
+			    "#7F0000"
+			)
+			
+			
+			--VERDE #1b6242
+			--AMARELO #856c16
+			--VERMELHO #7F0000
+			```
+		displayFolder: Reincidente_Reparo\Cores
+		lineageTag: ac2304ac-5cd0-4642-b048-2243785ace36
+
+	measure PROJEÇÃO_REPARO =
+			
+			
+			IF(
+			    [TOTAL_REPARO] > 0,
+			    COALESCE(
+			        ROUND(
+			            DIVIDE(
+			                [TOTAL_REPARO],
+			                [DU REAL]
+			            ) * [DU PLAN],
+			            0
+			        ),
+			        0
+			    ),
+			    BLANK()
+			)
+		displayFolder: EntranteBase\Totais
+		lineageTag: d2125615-7fe9-456a-96f9-c6557f2a7df4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Clientes_count =
+			
+			
+			VAR estagiosAtivos = {"ATIVO"}
+			VAR statusAtivos = {
+			    "AGUARDANDO ASSINATURA",
+			    "ATIVO",
+			    "BLOQUEIO ADMINISTRATIVO",
+			    "BLOQUEIO AUTOMATICO",
+			    "BLOQUEIO FINANCEIRO",
+			    "BLOQUEIO MANUAL",
+			    "CORTESIA",
+			    "FINANCEIRO EM ATRASO"
+			}
+			
+			
+			VAR EmpresasContexto =
+			    VALUES('mvp solicitacao_servicos'[empresa])
+			VAR UFsContexto =
+			    VALUES('mvp solicitacao_servicos'[uf_ajustada])
+			VAR CidadesContexto =
+			    SELECTCOLUMNS(
+			        VALUES('mvp solicitacao_servicos'[cidade]),
+			        "Cidade",
+			            VAR CidadeAtual = 'mvp solicitacao_servicos'[cidade]
+			            VAR PosicaoUF = SEARCH(" | ", CidadeAtual, 1, 0)
+			            RETURN
+			                IF(
+			                    PosicaoUF > 0,
+			                    LEFT(CidadeAtual, PosicaoUF - 1),
+			                    CidadeAtual
+			                )
+			    )
+			RETURN
+			    CALCULATE(
+			        --DISTINCTCOUNT('mvp base_clientes'[id_cliente]),
+			        COUNTROWS('mvp base_clientes'),
+			        REMOVEFILTERS('mvp solicitacao_servicos'[data_fechamento]),
+			        FILTER(
+			            'mvp base_clientes',
+			            (
+			                NOT ISINSCOPE('mvp solicitacao_servicos'[empresa])
+			                    || 'mvp base_clientes'[empresa] IN EmpresasContexto
+			            )
+			                && (
+			                    NOT ISINSCOPE('mvp solicitacao_servicos'[uf_ajustada])
+			                        || 'mvp base_clientes'[ajuste_uf] IN UFsContexto
+			                )
+			                && (
+			                    NOT ISINSCOPE('mvp solicitacao_servicos'[cidade])
+			                        || 'mvp base_clientes'[ajuste_cidade] IN CidadesContexto
+			                )
+			        ),
+			        'mvp base_clientes'[estagio] IN estagiosAtivos && 'mvp base_clientes'[status] IN statusAtivos
+			    )
+		formatString: #,0
+		displayFolder: EntranteBase\Totais
+		lineageTag: 41e19ce1-18e0-4407-9fe1-851327545931
+
+	measure Clientes_count2 =
+			
+			
+			VAR estagiosAtivos = {"ATIVO"}
+			VAR statusAtivos = {
+			    "AGUARDANDO ASSINATURA",
+			    "ATIVO",
+			    "BLOQUEIO ADMINISTRATIVO",
+			    "BLOQUEIO AUTOMATICO",
+			    "BLOQUEIO FINANCEIRO",
+			    "BLOQUEIO MANUAL",
+			    "CORTESIA",
+			    "FINANCEIRO EM ATRASO"
+			}
+			
+			
+			RETURN
+			    CALCULATE(
+			        COUNTROWS('mvp base_clientes'),
+			        'mvp base_clientes'[estagio] IN estagiosAtivos && 'mvp base_clientes'[status] IN statusAtivos
+			    )
+		formatString: 0
+		displayFolder: EntranteBase\Totais
+		lineageTag: cd0d8dd4-54de-4a5c-b508-a3ebd9f6d51f
+
+	measure '{PER} Projecao_entrante_taxa' =
+			
+			
+			DIVIDE(
+			    [PROJEÇÃO_REPARO],
+			    [Clientes_count],
+			    0
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: EntranteBase\Calculos
+		lineageTag: a07c3dc7-6d4a-488a-9b16-18c4d988aaa0
+
+	measure '{PER} Projecao_entrante_meta' =
+			
+			
+			VAR taxa = 0.035
+			RETURN
+			
+			IF([PROJEÇÃO_REPARO] > 0, taxa, BLANK())
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: EntranteBase\Calculos
+		lineageTag: 098a149a-e6a4-48a1-85aa-e4f82744bd47
+
+	measure @cor_back_entrante_proj_taxa = ```
+			
+			
+			VAR Taxa = [{PER} Projecao_entrante_taxa]
+			VAR Meta = [{PER} Projecao_entrante_meta]
+			VAR RedLight = Meta + 0.005
+			RETURN
+			
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(Taxa), BLANK(),
+			    Taxa < 0, BLANK(),
+			    Taxa < Meta, "#B2D788",
+			    Taxa < RedLight, "#E5D38C", 
+			    "#E5B389"
+			)
+			
+			
+			--VERDE #B2D788
+			--AMARELO #E5D38C
+			--VERMELHO #E5B389
+			```
+		displayFolder: EntranteBase\Cores
+		lineageTag: 538785a6-eb0f-4a5f-84a8-f68554c8454e
+
+	measure @cor_txt_entrante_proj_taxa = ```
+			
+			
+			VAR Taxa = [{PER} Projecao_entrante_taxa]
+			VAR Meta = [{PER} Projecao_entrante_meta]
+			VAR RedLight = Meta + 0.005
+			RETURN
+			
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(Taxa), BLANK(),
+			    Taxa < 0, BLANK(),
+			    Taxa < Meta, "#1b6242",
+			    Taxa < RedLight, "#856c16", 
+			    "#7F0000"
+			)
+			
+			--VERDE #1b6242
+			--AMARELO #856c16
+			--VERMELHO #7F0000
+			
+			```
+		displayFolder: EntranteBase\Cores
+		lineageTag: 4eb3c597-3071-4a96-b1ca-e549997a35cc
+
+	column 'Coluna 1'
+		dataType: string
+		isHidden
+		displayFolder: _
+		lineageTag: 05625bdf-b9f5-45ea-983b-6112724f69e3
+		summarizeBy: none
+		sourceColumn: Coluna 1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Medidas = m
+		mode: import
+		source =
+				let
+				  Origem = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t])
+				in
+				  Origem
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

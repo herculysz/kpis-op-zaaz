@@ -1,0 +1,315 @@
+table d_Calendario
+	lineageTag: fa213065-d1e3-4ab6-810e-ee1f80c7540a
+
+	column data
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 5cc56333-3893-4ed4-92fb-f59c64e41a42
+		summarizeBy: none
+		sourceColumn: data
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column dia
+		dataType: int64
+		formatString: 0
+		lineageTag: 38991a76-51d7-4eb7-b627-e6f0d8937b36
+		summarizeBy: none
+		sourceColumn: dia
+
+		annotation SummarizationSetBy = Automatic
+
+	column num_dia_semana
+		dataType: int64
+		formatString: 0
+		lineageTag: 9dc3a89e-7bc4-495d-af6c-8cb360ba4826
+		summarizeBy: none
+		sourceColumn: num_dia_semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column dia_semana
+		dataType: string
+		lineageTag: 9de4f8f9-b032-4f18-bbea-ac5a913e729c
+		summarizeBy: none
+		sourceColumn: dia_semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome_dia_semana_abrev
+		dataType: string
+		lineageTag: 7947b842-7577-4a89-abbf-52fd933b9734
+		summarizeBy: none
+		sourceColumn: nome_dia_semana_abrev
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_dia
+		dataType: string
+		lineageTag: db98fb2c-f48b-479d-be22-00d71e3b88b3
+		summarizeBy: none
+		sourceColumn: tipo_dia
+
+		annotation SummarizationSetBy = Automatic
+
+	column dia_util
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 950109e7-018b-42eb-91f8-de401c9eb8c9
+		summarizeBy: none
+		sourceColumn: dia_util
+
+		annotation SummarizationSetBy = Automatic
+
+	column feriado
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a53e6fed-f98b-4e68-b208-8850679cd7d3
+		summarizeBy: none
+		sourceColumn: feriado
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome_feriado
+		dataType: string
+		lineageTag: 17b09026-ef37-48ba-afea-55f486224b64
+		summarizeBy: none
+		sourceColumn: nome_feriado
+
+		annotation SummarizationSetBy = Automatic
+
+	column semana_ano
+		dataType: int64
+		formatString: 0
+		lineageTag: 5ce491d2-03fe-4405-bf1c-412b61973ab7
+		summarizeBy: none
+		sourceColumn: semana_ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column ano_semana
+		dataType: string
+		lineageTag: d2538117-b4a9-4443-b14a-cbccaa0d8ced
+		summarizeBy: none
+		sourceColumn: ano_semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column inicio_semana
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ab21e1ae-35fe-4b54-a2f3-e91d6628d12d
+		summarizeBy: none
+		sourceColumn: inicio_semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column fim_semana
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 32f8b82a-c1b0-45ba-93e1-9732a23cf4e4
+		summarizeBy: none
+		sourceColumn: fim_semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column num_mes
+		dataType: int64
+		formatString: 0
+		lineageTag: a2bb34f2-ab63-4115-b7e3-c082cc7ef1d1
+		summarizeBy: none
+		sourceColumn: num_mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: string
+		lineageTag: 141e302c-ba4c-460a-b39e-5409d02d25bf
+		summarizeBy: none
+		sourceColumn: mes
+		sortByColumn: num_mes
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ano_mes
+		dataType: string
+		lineageTag: fd2cf7df-3f7e-4138-b4aa-db3cea5a27f0
+		summarizeBy: none
+		sourceColumn: ano_mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column inicio_mes
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f211db01-d00b-4a0f-9dea-40df62cbd73b
+		summarizeBy: none
+		sourceColumn: inicio_mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column fim_mes
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 660626dd-b974-4f0a-9f6c-b7b6c1693d54
+		summarizeBy: none
+		sourceColumn: fim_mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column dias_no_mes
+		dataType: int64
+		formatString: 0
+		lineageTag: b5d83286-4bb4-4ac1-8a08-4e847beb8535
+		summarizeBy: none
+		sourceColumn: dias_no_mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column num_trimestre
+		dataType: int64
+		formatString: 0
+		lineageTag: 75fb2a88-6c14-4bf2-bf38-bd7349308b47
+		summarizeBy: none
+		sourceColumn: num_trimestre
+
+		annotation SummarizationSetBy = Automatic
+
+	column trimestre
+		dataType: string
+		lineageTag: 77e6c341-e322-487d-998b-c88bddd48228
+		summarizeBy: none
+		sourceColumn: trimestre
+
+		annotation SummarizationSetBy = Automatic
+
+	column ano_trimestre
+		dataType: string
+		lineageTag: e446cf88-791b-4b05-b49e-3150abd702b0
+		summarizeBy: none
+		sourceColumn: ano_trimestre
+
+		annotation SummarizationSetBy = Automatic
+
+	column inicio_trimestre
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 01f32c72-0975-43a4-8683-0ce67d14b529
+		summarizeBy: none
+		sourceColumn: inicio_trimestre
+
+		annotation SummarizationSetBy = Automatic
+
+	column fim_trimestre
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7082ac88-829b-46b1-9df5-2dc8416eaf18
+		summarizeBy: none
+		sourceColumn: fim_trimestre
+
+		annotation SummarizationSetBy = Automatic
+
+	column num_semestre
+		dataType: int64
+		formatString: 0
+		lineageTag: 57b2718e-9e79-4a67-b818-38b7cd87b2bb
+		summarizeBy: none
+		sourceColumn: num_semestre
+
+		annotation SummarizationSetBy = Automatic
+
+	column ano_semestre
+		dataType: string
+		lineageTag: 4e9998bc-20ba-4f51-9d0f-7392204c12f4
+		summarizeBy: none
+		sourceColumn: ano_semestre
+
+		annotation SummarizationSetBy = Automatic
+
+	column ano
+		dataType: int64
+		formatString: 0
+		lineageTag: f0c9a885-ca61-40d1-b954-efe461c0a130
+		summarizeBy: none
+		sourceColumn: ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column primeiro_dia_mes
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: c6022c78-a5f6-40f9-b15d-4f49ac8cff45
+		summarizeBy: none
+		sourceColumn: primeiro_dia_mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column ultimo_dia_mes
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f303b0ac-7338-4916-a8b3-9a396cd327c1
+		summarizeBy: none
+		sourceColumn: ultimo_dia_mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column primeiro_dia_ano
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 73accf47-c340-460a-992c-c6b656ce7570
+		summarizeBy: none
+		sourceColumn: primeiro_dia_ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column ultimo_dia_ano
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 26910daf-640d-4018-814a-9d8cf2ef4202
+		summarizeBy: none
+		sourceColumn: ultimo_dia_ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_passada
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 6ee09cd3-5a57-4af8-a16c-d2bc902f7850
+		summarizeBy: none
+		sourceColumn: data_passada
+
+		annotation SummarizationSetBy = Automatic
+
+	column hoje
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 51f8b30b-c628-4724-a2fc-366b502f58bf
+		summarizeBy: none
+		sourceColumn: hoje
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_Calendario = m
+		mode: import
+		source =
+				let
+				    Origem = Value.NativeQuery(PostgreSQL.Database(
+				        host, /* ip:porta */
+				        database), /* database */
+				
+				    "SELECT * FROM gold.dim_calendario WHERE ano BETWEEN 2025 AND ( DATE_PART( 'YEAR', CURRENT_DATE ) + 1 )", null, [EnableFolding=true]),
+				    #"Colunas Removidas" = Table.RemoveColumns(Origem,{"sk_data", "data_formatada"}),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Colunas Removidas",{{"data", type date}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

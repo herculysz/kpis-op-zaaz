@@ -1,0 +1,452 @@
+table 'mvp base_clientes'
+	lineageTag: 460c6ea7-7cc8-4ada-a4f6-84c435766e55
+
+	column id_cliente
+		dataType: int64
+		formatString: 0
+		lineageTag: 35e26b97-df6e-422b-b96a-cf478d71873d
+		summarizeBy: sum
+		sourceColumn: id_cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome_cliente
+		dataType: string
+		lineageTag: 1ea7393e-7162-4941-8b01-e074eaf4ae9e
+		summarizeBy: none
+		sourceColumn: nome_cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_contrato
+		dataType: int64
+		formatString: 0
+		lineageTag: 98b7c299-906b-4431-9232-84755faa2c57
+		summarizeBy: sum
+		sourceColumn: id_contrato
+
+		annotation SummarizationSetBy = Automatic
+
+	column doc
+		dataType: string
+		lineageTag: e8a8daa4-ef28-4b02-a283-adb7328c618c
+		summarizeBy: none
+		sourceColumn: doc
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_pessoa
+		dataType: string
+		lineageTag: e8aed98e-e58f-40f8-b60e-1a750835b31d
+		summarizeBy: none
+		sourceColumn: tipo_pessoa
+
+		annotation SummarizationSetBy = Automatic
+
+	column plano
+		dataType: string
+		lineageTag: 772de220-9479-48f9-9756-84b84c99159a
+		summarizeBy: none
+		sourceColumn: plano
+
+		annotation SummarizationSetBy = Automatic
+
+	column velocidade
+		dataType: string
+		lineageTag: 506030cf-6875-4b4a-a581-2e5849fd6484
+		summarizeBy: none
+		sourceColumn: velocidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column grupo_produto
+		dataType: string
+		lineageTag: 691e66be-9d84-4c74-8d84-33a5ad7765d0
+		summarizeBy: none
+		sourceColumn: grupo_produto
+
+		annotation SummarizationSetBy = Automatic
+
+	column dt_servico
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 2b92126d-2a79-4eaa-b3fe-a4d266cf50ee
+		summarizeBy: none
+		sourceColumn: dt_servico
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column usuario
+		dataType: string
+		lineageTag: 5bd09d6a-eaf7-4ea7-bd74-ab7f277e83ab
+		summarizeBy: none
+		sourceColumn: usuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column concentrador
+		dataType: string
+		lineageTag: b601cb52-8a71-4766-89b6-fd6ee776e5f9
+		summarizeBy: none
+		sourceColumn: concentrador
+
+		annotation SummarizationSetBy = Automatic
+
+	column olt
+		dataType: string
+		lineageTag: 7fc2c887-954e-4074-964e-625304f431e5
+		summarizeBy: none
+		sourceColumn: olt
+
+		annotation SummarizationSetBy = Automatic
+
+	column cidade_olt
+		dataType: string
+		lineageTag: 74b27a60-ca98-45aa-9e9b-38a984a4306c
+		summarizeBy: none
+		sourceColumn: cidade_olt
+
+		annotation SummarizationSetBy = Automatic
+
+	column uf_olt
+		dataType: string
+		lineageTag: 8c122184-e945-472c-b430-393236d65496
+		summarizeBy: none
+		sourceColumn: uf_olt
+
+		annotation SummarizationSetBy = Automatic
+
+	column port_olt
+		dataType: string
+		lineageTag: 4b15bfee-5244-4dab-a624-fb36ab09d7c2
+		summarizeBy: none
+		sourceColumn: port_olt
+
+		annotation SummarizationSetBy = Automatic
+
+	column slot_olt
+		dataType: string
+		lineageTag: 1493072b-fd93-4742-8ffd-a2cd6ae5a666
+		summarizeBy: none
+		sourceColumn: slot_olt
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo
+		dataType: string
+		lineageTag: 04dc067a-11bd-4cd0-aa8d-cb6a717e6f52
+		summarizeBy: none
+		sourceColumn: tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column endereco
+		dataType: string
+		lineageTag: 4adafc0c-96c3-43c9-b551-9c07be943fa0
+		summarizeBy: none
+		sourceColumn: endereco
+
+		annotation SummarizationSetBy = Automatic
+
+	column numero
+		dataType: string
+		lineageTag: 337b1124-2226-4208-a1a3-f38c02fa34e7
+		summarizeBy: none
+		sourceColumn: numero
+
+		annotation SummarizationSetBy = Automatic
+
+	column bairro
+		dataType: string
+		lineageTag: b1a1fe23-2bac-4c86-b22b-e88bb3906bdf
+		summarizeBy: none
+		sourceColumn: bairro
+
+		annotation SummarizationSetBy = Automatic
+
+	column cod_ibge
+		dataType: string
+		lineageTag: aee6aa38-3756-4049-b178-1dafd61b5aca
+		summarizeBy: none
+		sourceColumn: cod_ibge
+
+		annotation SummarizationSetBy = Automatic
+
+	column cidade
+		dataType: string
+		lineageTag: 1d936565-b98c-4414-80a9-963c1745c387
+		summarizeBy: none
+		sourceColumn: cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column filial_regional
+		dataType: string
+		lineageTag: 44a8abd4-66bf-4412-8fe8-efe623450988
+		summarizeBy: none
+		sourceColumn: filial_regional
+
+		annotation SummarizationSetBy = Automatic
+
+	column uf
+		dataType: string
+		lineageTag: 56f374bd-3c19-497a-b59a-23185623970d
+		summarizeBy: none
+		sourceColumn: uf
+
+		annotation SummarizationSetBy = Automatic
+
+	column estagio
+		dataType: string
+		lineageTag: ecb4217e-9e32-4a8b-9334-74224cc221a5
+		summarizeBy: none
+		sourceColumn: estagio
+
+		annotation SummarizationSetBy = Automatic
+
+	column status
+		dataType: string
+		lineageTag: bed910be-8ca5-4357-bfa0-28619306b705
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_venda
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: f8d933de-1aee-4857-ad1c-fa496a597e39
+		summarizeBy: none
+		sourceColumn: data_venda
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column data_ativacao
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: baef2629-f1a9-4fd7-abf9-174beef90a7d
+		summarizeBy: none
+		sourceColumn: data_ativacao
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column data_cancelamento
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: ab739cd8-8647-4642-8ffa-a0b5bde87660
+		summarizeBy: none
+		sourceColumn: data_cancelamento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column evento
+		dataType: string
+		lineageTag: 21e2133b-518e-48ea-97d8-668c598548a6
+		summarizeBy: none
+		sourceColumn: evento
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricao
+		dataType: string
+		lineageTag: 39507255-e82e-4980-b118-ace2f7a7f63f
+		summarizeBy: none
+		sourceColumn: descricao
+
+		annotation SummarizationSetBy = Automatic
+
+	column vendedor
+		dataType: string
+		lineageTag: ebab34a1-2fb8-43a9-a717-9ae01e1d5eb0
+		summarizeBy: none
+		sourceColumn: vendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_vendedor
+		dataType: int64
+		formatString: 0
+		lineageTag: c968a46d-5c5c-4190-89e3-2651d612b733
+		summarizeBy: sum
+		sourceColumn: id_vendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column cpf_vendedor
+		dataType: string
+		lineageTag: 65017110-572a-430e-b988-d58b36aee178
+		summarizeBy: none
+		sourceColumn: cpf_vendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column ativacao
+		dataType: int64
+		formatString: 0
+		lineageTag: e4c8ab5e-e90e-4204-84ca-98c8328f3c95
+		summarizeBy: sum
+		sourceColumn: ativacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column churn
+		dataType: int64
+		formatString: 0
+		lineageTag: 569f9fda-676e-4d51-ac69-993972ce4d12
+		summarizeBy: sum
+		sourceColumn: churn
+
+		annotation SummarizationSetBy = Automatic
+
+	column mvno
+		dataType: int64
+		formatString: 0
+		lineageTag: 8ae16a36-f9cc-46ca-a050-5599b9cb4bcf
+		summarizeBy: sum
+		sourceColumn: mvno
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_contrato
+		dataType: double
+		lineageTag: e21a247a-e5ff-40eb-8818-f6f0c6535e01
+		summarizeBy: sum
+		sourceColumn: valor_contrato
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column empresa
+		dataType: string
+		lineageTag: cf26d4cb-4e85-4ef7-811f-9e4bf0f78b86
+		summarizeBy: none
+		sourceColumn: empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column credenciado_sky
+		dataType: int64
+		formatString: 0
+		lineageTag: c5c9b959-8359-4f4b-bf1f-27d0e7abb7fb
+		summarizeBy: sum
+		sourceColumn: credenciado_sky
+
+		annotation SummarizationSetBy = Automatic
+
+	column possui_streaming_sky
+		dataType: int64
+		formatString: 0
+		lineageTag: 46965a6d-6245-4d16-8aef-c65b803f1399
+		summarizeBy: sum
+		sourceColumn: possui_streaming_sky
+
+		annotation SummarizationSetBy = Automatic
+
+	column segmento
+		dataType: string
+		lineageTag: 0c32797c-f2bd-4076-9106-7ca6549dea33
+		summarizeBy: none
+		sourceColumn: segmento
+
+		annotation SummarizationSetBy = Automatic
+
+	column ajuste_uf = ```
+			
+			VAR DuasPrimeirasLetras = LEFT('mvp base_clientes'[plano], 2)
+			VAR estadosSSE = {"MG", "PR", "SP"}
+			VAR estadosNONE = {"CE", "MA", "PA", "PI"}
+			VAR estadosNE = {"BA", "CE", "PB", "PE", "RN"}
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        'mvp base_clientes'[uf] = "SP" && 'mvp base_clientes'[filial_regional] IN {"FILIAL MG", "ICONECTA", "VOUE"}, "MG",
+			        
+			        (ISBLANK('mvp base_clientes'[uf]) || 'mvp base_clientes'[uf] = "") && 
+			        NOT(ISBLANK('mvp base_clientes'[uf_olt])) && 'mvp base_clientes'[uf_olt] <> "", 'mvp base_clientes'[uf_olt],
+			        
+			        (ISBLANK('mvp base_clientes'[uf]) || 'mvp base_clientes'[uf] = "") && 
+			        DuasPrimeirasLetras IN estadosSSE, DuasPrimeirasLetras,
+			
+			        (ISBLANK('mvp base_clientes'[uf]) || 'mvp base_clientes'[uf] = ""), "SEM INFORMAÇÃO",
+			
+			        'mvp base_clientes'[empresa] = "ZAAZ NORDESTE" && NOT('mvp base_clientes'[uf] IN estadosNE), "PB",
+			        'mvp base_clientes'[empresa] = "ZAAZ NORTE" && NOT('mvp base_clientes'[uf] IN estadosNONE), "PA",
+			        'mvp base_clientes'[empresa] = "ZAAZ SUL/SUDESTE" && NOT('mvp base_clientes'[uf] IN estadosSSE), "SP",
+			        
+			        'mvp base_clientes'[uf]
+			    )
+			
+			```
+		lineageTag: a09f2659-77fd-4472-9d63-db401c0691b0
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column ajuste_cidade = ```
+			
+			
+			--COALESCE('mvp base_clientes'[cidade], 'mvp base_clientes'[cidade_olt])
+			
+			IF(
+			    'mvp base_clientes'[cidade] = "" || ISBLANK('mvp base_clientes'[cidade]), 
+			    IF('mvp base_clientes'[cidade_olt] <> "" && NOT(ISBLANK('mvp base_clientes'[cidade_olt])), 'mvp base_clientes'[cidade_olt], "SEM INFORMAÇÃO"), 
+			    'mvp base_clientes'[cidade]
+			)
+			```
+		lineageTag: 84d40126-8b18-4a19-adc0-cae27d81b899
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column tecnologia
+		dataType: string
+		lineageTag: 70f971db-4062-44cd-aa69-3a4e0ec7b882
+		summarizeBy: none
+		sourceColumn: tecnologia
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'mvp base_clientes' = m
+		mode: import
+		source = ```
+				let
+				    Fonte = Value.NativeQuery(
+				        PostgreSQL.Database(
+				            host, /* ip:porta */
+				            database /* database */
+				        ), 
+				        "
+				            SELECT
+				                *
+				            FROM
+				                mvp.base_clientes 
+				        ", 
+				        null, 
+				        [EnableFolding = true]
+				    ),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(
+				        Fonte,
+				        {
+				            {"dt_servico", type date},
+				            {"data_venda", type date},
+				            {"data_cancelamento", type date},
+				            {"data_ativacao", type date}
+				        }
+				    )
+				in
+				    #"Tipo Alterado"
+				```
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,4 @@
+relationship 0a1f5e62-aca2-5208-27cf-80e229bc24b9
+	fromColumn: 'mvp solicitacao_servicos'.data_fechamento
+	toColumn: d_Calendario.data
+

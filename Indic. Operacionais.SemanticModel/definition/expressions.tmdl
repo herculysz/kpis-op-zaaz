@@ -1,0 +1,16 @@
+expression host = "177.13.0.39:5432" meta [IsParameterQuery=true, List={"10.11.119.20:5432", "177.13.0.39:5432"}, DefaultValue="10.11.119.20:5432", Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 143012d3-6eed-4d27-b1d6-5bdef100bafe
+	queryGroup: Parametros
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Text
+
+expression database = "dw_empresa" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: f7fa7f04-1666-40fb-8738-a34df8e49812
+	queryGroup: Parametros
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Text
+
