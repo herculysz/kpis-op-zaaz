@@ -450,7 +450,7 @@ table Medidas
 
 	measure CUMPRIDA_NO_PRAZO_ATIV = ```
 			
-			
+			IF([TOTAL_ATIV] > 0,
 			CALCULATE(
 			    COUNTROWS('mvp solicitacao_servicos'),
 			    'mvp solicitacao_servicos'[noprazo] = 1,
@@ -460,6 +460,8 @@ table Medidas
 			        d_Calendario[data],
 			        'mvp solicitacao_servicos'[data_fechamento]
 			    )
+			)+0,
+			BLANK()
 			)
 			
 			```
@@ -752,7 +754,9 @@ table Medidas
 	measure 'Prod. Bruta' = ```
 			
 			
-			VAR qtdProdutivo =
+			--VAR qtdProdutivo =
+			
+			IF([DU Total] > 0,
 			CALCULATE(
 			    SUM('mvp solicitacao_servicos'[produtivo]),
 			   'mvp solicitacao_servicos'[tipo_servico] IN 
@@ -775,11 +779,12 @@ table Medidas
 			        d_Calendario[data],
 			        'mvp solicitacao_servicos'[data_fechamento]
 			    )
-			)
+			),
+			BLANK())
 			
-			RETURN
+			--RETURN
 			
-			IF(qtdProdutivo > 0, qtdProdutivo, BLANK())
+			--IF(qtdProdutivo > 0, qtdProdutivo, BLANK())
 			```
 		formatString: #,0
 		displayFolder: ProdutividadeBruta\Totais
@@ -1422,10 +1427,11 @@ table Medidas
 			    ),
 			    BLANK()
 			)
+		formatString: #,0
 		displayFolder: EntranteBase\Totais
 		lineageTag: d2125615-7fe9-456a-96f9-c6557f2a7df4
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	measure Clientes_count =
 			

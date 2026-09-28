@@ -1,0 +1,105 @@
+table Parâmetro_analitico
+	lineageTag: d3ce9b66-f45b-49de-b0f9-eeb09c4303b8
+
+	column Parâmetro
+		lineageTag: 2a170730-fe2e-4b66-92b4-4a7ad498ba0a
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Parâmetro Pedido'
+
+		relatedColumnDetails
+			groupByColumn: 'Parâmetro Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parâmetro Campos'
+		isHidden
+		lineageTag: d7e60d97-4baf-43e9-bc23-03436fa05a05
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Parâmetro Pedido'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parâmetro Pedido'
+		isHidden
+		formatString: 0
+		lineageTag: 0d183beb-f21a-4f40-ab7b-428acff0bb3f
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Value4
+		lineageTag: d42f38f9-93c8-466b-b734-ba9a403b30de
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Value5
+		formatString: 0
+		lineageTag: 640b73cf-5f6b-4dde-9e31-f5c51131cba2
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Value5]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Value6
+		lineageTag: 7677a4c7-1b4f-4452-8084-a0c98e402213
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Value6]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Value7
+		formatString: 0
+		lineageTag: 9c764884-bc03-4b22-991d-bd0cf353378c
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Value7]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Parâmetro_analitico = calculated
+		mode: import
+		source = ```
+				{
+				    ("E. I. [O.S. OK]", NAMEOF('Medidas'[PRODUTIVAS_GROSS_ATIV]), 0, "Eficácia de Instalação", 1, "Gross Ativação", 1),
+				    ("E. I. [TOTAL]", NAMEOF('Medidas'[TOTAL_ATIV]), 1, "Eficácia de Instalação", 1, "Gross Ativação", 1),
+				    
+				    ("V. I. 72H [NO PRAZO]", NAMEOF('Medidas'[NO_PRAZO_SLA72H_ATIV]), 2, "Velocidade Instação 72H", 2, "Gross Ativação", 1),
+				    ("V. I. 72H [TOTAL]", NAMEOF('Medidas'[PRODUTIVAS_GROSS_ATIV]), 3, "Velocidade Instação 72H", 2, "Gross Ativação", 1),
+				    
+				    ("C. 1ª A.[CUMPRIDA]", NAMEOF('Medidas'[CUMPRIDA_NO_PRAZO_ATIV]), 4, "Cumprimento 1ª Agenda", 3, "Gross Ativação", 1),
+				    ("C. 1ª A. [TOTAL]", NAMEOF('Medidas'[TOTAL_ATIV]), 5, "Cumprimento 1ª Agenda", 3, "Gross Ativação", 1),
+				    
+				    ("E. S. B. [ENTRANTE]", NAMEOF([TOTAL_REPARO]), 6, "Entrante Sobre a Base", 4, "Reparo", 2),
+				    ("E. S. B. [PROJEÇÃO]", NAMEOF([PROJEÇÃO_REPARO]), 7, "Entrante Sobre a Base", 4, "Reparo", 2),
+				    
+				    ("V. R. 24H [NO PRAZO]", NAMEOF([NO_PRAZO_24H_REPARO]), 8, "Velocidade Reparo 24H", 5, "Reparo", 2),
+				    ("V. R. 24H [TOTAL]", NAMEOF([TOTAL_REPARO_PRODUTIVO_IMPRODUTIVO]), 9, "Velocidade Reparo 24H", 5, "Reparo", 2),
+				    
+				    ("R. R. 30D [REINCIDENTE]", NAMEOF([REINCIDENTE_REPARO]), 10, "Reincidência Reparo 30D", 6, "Reparo", 2),
+				    ("R. R. 30D [TOTAL]", NAMEOF([TOTAL_REPARO]), 11, "Reincidência Reparo 30D", 6, "Reparo", 2),
+				    
+				    ("O.S I. G. 30D [REINCIDENTE]", NAMEOF([Reincidente_ATIV]), 12, "OS Insta. Garantia 30D", 7, "Garantia", 3),
+				    ("O.S I. G. 30D [PROJ. REIN.]", NAMEOF([Proj. Rein]), 13, "OS Insta. Garantia 30D", 7, "Garantia", 3),
+				    ("O.S I. G. 30D [PROJ. TOTAL]", NAMEOF([Proj. Total]), 14, "OS Insta. Garantia 30D", 7, "Garantia", 3),
+				    
+				    ("P. B. [PROD. BRUTA]", NAMEOF([Prod. Bruta]), 15, "Produtividade Bruta", 8, "Garantia", 3),
+				    ("P. B. [DU TOTAL]", NAMEOF([DU Total]), 16, "Produtividade Bruta", 8, "Garantia", 3)
+				}
+				```
+
+	annotation PBI_Id = b4c54707372c4fb6b16b4678130c7c47
+

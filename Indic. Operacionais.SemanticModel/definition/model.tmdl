@@ -26,6 +26,7 @@ ref table d_Calendario
 ref table Atualizacao
 ref table par_med_Backlog_Reparos
 ref table 'mvp base_clientes'
+ref table Parâmetro_analitico
 
 ref cultureInfo pt-BR
 

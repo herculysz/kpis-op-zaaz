@@ -1079,62 +1079,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "338425b8eb678701c485",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "empresa"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "90efae2e4c5310ed8096",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "uf_ajustada"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "d19e6d6039cb96099502",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "cidade"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "7bcc99e2149c5d4c7302",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "REINCIDENTE_REPARO"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

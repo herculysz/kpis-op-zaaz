@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "1ff90fe1b8f507809f74",
   "position": {
-    "x": 284.77751756440279,
-    "y": 127.40046838407493,
+    "x": 284.502024291498,
+    "y": 191.22267206477733,
     "z": 2000,
-    "height": 896.29976580796244,
-    "width": 1600.7494145199062,
+    "height": 831.74089068825913,
+    "width": 1601.2955465587045,
     "tabOrder": 1000
   },
   "visual": {
@@ -263,12 +263,12 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "TOTAL_REPARO"
+                  "Property": "PRODUTIVAS_GROSS_ATIV"
                 }
               },
-              "queryRef": "Medidas.TOTAL_REPARO1",
-              "nativeQueryRef": "Reparos[TOTAL]",
-              "displayName": "Reparos[TOTAL]"
+              "queryRef": "Medidas.PRODUTIVAS_GROSS_ATIV",
+              "nativeQueryRef": "V. I. 72H [TOTAL]",
+              "displayName": "V. I. 72H [TOTAL]"
             },
             {
               "field": {
@@ -278,12 +278,102 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "TOTAL_REPARO_PRODUTIVO_IMPRODUTIVO"
+                  "Property": "TOTAL_ATIV"
+                }
+              },
+              "queryRef": "Medidas.TOTAL_ATIV",
+              "nativeQueryRef": "C. 1ª A. [TOTAL]",
+              "displayName": "C. 1ª A. [TOTAL]"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "NO_PRAZO_SLA72H_ATIV"
+                }
+              },
+              "queryRef": "Medidas.NO_PRAZO_SLA72H_ATIV",
+              "nativeQueryRef": "V. I. 72H [NO PRAZO]",
+              "displayName": "V. I. 72H [NO PRAZO]"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "PRODUTIVAS_GROSS_ATIV"
+                }
+              },
+              "queryRef": "Medidas.PRODUTIVAS_GROSS_ATIV",
+              "nativeQueryRef": "V. I. 72H [TOTAL]",
+              "displayName": "V. I. 72H [TOTAL]"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "CUMPRIDA_NO_PRAZO_ATIV"
+                }
+              },
+              "queryRef": "Medidas.CUMPRIDA_NO_PRAZO_ATIV",
+              "nativeQueryRef": "C. 1ª A.[CUMPRIDA]",
+              "displayName": "C. 1ª A.[CUMPRIDA]"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "TOTAL_ATIV"
+                }
+              },
+              "queryRef": "Medidas.TOTAL_ATIV",
+              "nativeQueryRef": "C. 1ª A. [TOTAL]",
+              "displayName": "C. 1ª A. [TOTAL]"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "TOTAL_REPARO"
                 }
               },
               "queryRef": "Medidas.TOTAL_REPARO",
-              "nativeQueryRef": "ReparosProdutivos[TOTAL]",
-              "displayName": "ReparosProdutivos[TOTAL]"
+              "nativeQueryRef": "R. R. 30D [TOTAL]",
+              "displayName": "R. R. 30D [TOTAL]"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "PROJEÇÃO_REPARO"
+                }
+              },
+              "queryRef": "Medidas.PROJEÇÃO_REPARO",
+              "nativeQueryRef": "E. S. B. [PROJEÇÃO]",
+              "displayName": "E. S. B. [PROJEÇÃO]"
             },
             {
               "field": {
@@ -297,8 +387,23 @@
                 }
               },
               "queryRef": "Medidas.NO_PRAZO_24H_REPARO",
-              "nativeQueryRef": "ReparosProdutivos[SLA 24h]",
-              "displayName": "ReparosProdutivos[SLA 24h]"
+              "nativeQueryRef": "V. R. 24H [NO PRAZO]",
+              "displayName": "V. R. 24H [NO PRAZO]"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "TOTAL_REPARO_PRODUTIVO_IMPRODUTIVO"
+                }
+              },
+              "queryRef": "Medidas.TOTAL_REPARO_PRODUTIVO_IMPRODUTIVO",
+              "nativeQueryRef": "V. R. 24H [TOTAL]",
+              "displayName": "V. R. 24H [TOTAL]"
             },
             {
               "field": {
@@ -311,9 +416,9 @@
                   "Property": "REINCIDENTE_REPARO"
                 }
               },
-              "queryRef": "Medidas.REINCIDENTE_REPARO_VERIFICADOR",
-              "nativeQueryRef": "Reparos[REINCIDENTE 30D]",
-              "displayName": "Reparos[REINCIDENTE 30D]"
+              "queryRef": "Medidas.REINCIDENTE_REPARO",
+              "nativeQueryRef": "R. R. 30D [REINCIDENTE]",
+              "displayName": "R. R. 30D [REINCIDENTE]"
             },
             {
               "field": {
@@ -323,57 +428,12 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "TOTAL_ATIV"
+                  "Property": "TOTAL_REPARO"
                 }
               },
-              "queryRef": "Medidas.TOTAL",
-              "nativeQueryRef": "GrossAtiv[TOTAL]",
-              "displayName": "GrossAtiv[TOTAL]"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
-                    }
-                  },
-                  "Property": "PRODUTIVAS_GROSS_ATIV"
-                }
-              },
-              "queryRef": "Medidas.OSs Produtivas",
-              "nativeQueryRef": "GrossAtivProdutivas[O.S. OK]",
-              "displayName": "GrossAtivProdutivas[O.S. OK]"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
-                    }
-                  },
-                  "Property": "NO_PRAZO_SLA72H_ATIV"
-                }
-              },
-              "queryRef": "Medidas.No Prazo SLA 72H",
-              "nativeQueryRef": "GrossAtivProdutivas[SLA 72h]",
-              "displayName": "GrossAtivProdutivas[SLA 72h]"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
-                    }
-                  },
-                  "Property": "CUMPRIDA_NO_PRAZO_ATIV"
-                }
-              },
-              "queryRef": "Medidas.Cumprida no prazo",
-              "nativeQueryRef": "GrossAtiv[NO PRAZO]",
-              "displayName": "GrossAtiv[NO PRAZO]"
+              "queryRef": "Medidas.TOTAL_REPARO",
+              "nativeQueryRef": "R. R. 30D [TOTAL]",
+              "displayName": "R. R. 30D [TOTAL]"
             },
             {
               "field": {
@@ -386,9 +446,9 @@
                   "Property": "Reincidente_ATIV"
                 }
               },
-              "queryRef": "Medidas.Reincidente",
-              "nativeQueryRef": "GarantiaAtiv[REINCIDENTE 30D]",
-              "displayName": "GarantiaAtiv[REINCIDENTE 30D]"
+              "queryRef": "Medidas.Reincidente_ATIV",
+              "nativeQueryRef": "O.S I. G. 30D [REINCIDENTE]",
+              "displayName": "O.S I. G. 30D [REINCIDENTE]"
             },
             {
               "field": {
@@ -398,12 +458,27 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "DU Total"
+                  "Property": "Proj. Rein"
                 }
               },
-              "queryRef": "Medidas.DU Total",
-              "nativeQueryRef": "DiasUteis[TOTAL]",
-              "displayName": "DiasUteis[TOTAL]"
+              "queryRef": "Medidas.Proj. Rein",
+              "nativeQueryRef": "O.S I. G. 30D [PROJ. REIN.]",
+              "displayName": "O.S I. G. 30D [PROJ. REIN.]"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Proj. Total"
+                }
+              },
+              "queryRef": "Medidas.Proj. Total",
+              "nativeQueryRef": "O.S I. G. 30D [PROJ. TOTAL]",
+              "displayName": "O.S I. G. 30D [PROJ. TOTAL]"
             },
             {
               "field": {
@@ -417,8 +492,39 @@
                 }
               },
               "queryRef": "Medidas.Prod. Bruta",
-              "nativeQueryRef": "ProdutividadeBruta[TOTAL]",
-              "displayName": "ProdutividadeBruta[TOTAL]"
+              "nativeQueryRef": "P. B. [PROD. BRUTA]",
+              "displayName": "P. B. [PROD. BRUTA]"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "DU Total"
+                }
+              },
+              "queryRef": "Medidas.DU Total",
+              "nativeQueryRef": "P. B. [DU TOTAL]",
+              "displayName": "P. B. [DU TOTAL]"
+            }
+          ],
+          "fieldParameters": [
+            {
+              "parameterExpr": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Parâmetro_analitico"
+                    }
+                  },
+                  "Property": "Parâmetro"
+                }
+              },
+              "index": 16,
+              "length": 17
             }
           ]
         }

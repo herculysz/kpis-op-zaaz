@@ -289,20 +289,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "ec505950049232b90947",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "data_fechamento"
-          }
-        },
-        "type": "RelativeDate"
-      },
-      {
         "name": "e7f448a0dd3404539b78",
         "field": {
           "Column": {

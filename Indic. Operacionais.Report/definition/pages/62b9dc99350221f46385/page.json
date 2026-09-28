@@ -8,7 +8,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "bedccc6c990a759a30a9",
+        "name": "b854ce899304ac4c8ad2",
         "field": {
           "Column": {
             "Expression": {
@@ -20,49 +20,10 @@
           }
         },
         "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "m",
-              "Entity": "mvp solicitacao_servicos",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "m"
-                          }
-                        },
-                        "Property": "empresa"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'ZAAZ SUL/SUDESTE'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "Drillthrough"
       },
       {
-        "name": "79e35d8f7a26865d16c6",
+        "name": "af14d9a431cb7ece00c8",
         "field": {
           "Column": {
             "Expression": {
@@ -74,49 +35,10 @@
           }
         },
         "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "m",
-              "Entity": "mvp solicitacao_servicos",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "m"
-                          }
-                        },
-                        "Property": "uf_ajustada"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'MG'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "Drillthrough"
       },
       {
-        "name": "897c7d26a415e1bdbb90",
+        "name": "1d7c1b54b690ab32c933",
         "field": {
           "Column": {
             "Expression": {
@@ -128,45 +50,6 @@
           }
         },
         "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "m",
-              "Entity": "mvp solicitacao_servicos",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "m"
-                          }
-                        },
-                        "Property": "cidade"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'CRUZÍLIA'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "Drillthrough"
       }
     ]
@@ -176,8 +59,8 @@
     "type": "Drillthrough",
     "parameters": [
       {
-        "name": "11f8182000a3b863cd6e",
-        "boundFilter": "bedccc6c990a759a30a9",
+        "name": "acb1c2c00685d99c300a",
+        "boundFilter": "b854ce899304ac4c8ad2",
         "fieldExpr": {
           "Column": {
             "Expression": {
@@ -190,8 +73,8 @@
         }
       },
       {
-        "name": "f8dddb95d733ab4d023d",
-        "boundFilter": "79e35d8f7a26865d16c6",
+        "name": "b8f67df0400ec44ad317",
+        "boundFilter": "af14d9a431cb7ece00c8",
         "fieldExpr": {
           "Column": {
             "Expression": {
@@ -204,8 +87,8 @@
         }
       },
       {
-        "name": "dd722e5419b053edd1d9",
-        "boundFilter": "897c7d26a415e1bdbb90",
+        "name": "80042e0d3640c554db3b",
+        "boundFilter": "1d7c1b54b690ab32c933",
         "fieldExpr": {
           "Column": {
             "Expression": {

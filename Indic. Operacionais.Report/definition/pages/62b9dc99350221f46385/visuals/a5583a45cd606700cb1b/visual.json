@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "a5583a45cd606700cb1b",
   "position": {
-    "x": 25.11627906976744,
-    "y": 703.25581395348831,
+    "x": 25.486725663716811,
+    "y": 703.716814159292,
     "z": 21000,
-    "height": 82.435597189695542,
-    "width": 224.82435597189695,
+    "height": 137.34513274336283,
+    "width": 225.13274336283183,
     "tabOrder": 21000
   },
   "visual": {
@@ -220,7 +220,47 @@
       ],
       "general": [
         {
-          "properties": {}
+          "properties": {
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "m",
+                    "Entity": "mvp solicitacao_servicos",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "m"
+                              }
+                            },
+                            "Property": "data_fechamento"
+                          }
+                        },
+                        "Right": {
+                          "DateSpan": {
+                            "Expression": {
+                              "Now": {}
+                            },
+                            "TimeUnit": 2
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
         }
       ]
     },
@@ -239,12 +279,17 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "data_fechamento",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "5b8e21e0a63480cd8c6a",
+        "name": "e7f448a0dd3404539b78",
         "field": {
           "Column": {
             "Expression": {
@@ -255,7 +300,8 @@
             "Property": "data_fechamento"
           }
         },
-        "type": "Categorical"
+        "type": "RelativeDate",
+        "howCreated": "User"
       }
     ]
   }
