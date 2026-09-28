@@ -2937,7 +2937,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "ProdutividadeBruta[TOTAL]": {
+			          "P. B. [PROD. BRUTA]": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -3419,7 +3419,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "GrossAtiv[TOTAL]": {
+			          "C. 1ª A. [TOTAL]": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -3522,7 +3522,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "GrossAtivProdutivas[O.S. OK]": {
+			          "V. I. 72H [TOTAL]": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -3565,7 +3565,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "GrossAtivProdutivas[SLA 72h]": {
+			          "V. I. 72H [NO PRAZO]": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -3793,7 +3793,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "GrossAtiv[NO PRAZO]": {
+			          "C. 1ª A.[CUMPRIDA]": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4034,7 +4034,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "GarantiaAtiv[REINCIDENTE 30D]": {
+			          "O.S I. G. 30D [REINCIDENTE]": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4200,6 +4200,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "O.S I. G. 30D [PROJ. REIN.]": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -4235,6 +4245,16 @@ cultureInfo pt-BR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "O.S I. G. 30D [PROJ. TOTAL]": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -4393,7 +4413,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "DiasUteis[TOTAL]": {
+			          "P. B. [DU TOTAL]": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4534,7 +4554,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "ReparosProdutivos[SLA 24h]": {
+			          "V. R. 24H [NO PRAZO]": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4597,7 +4617,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "ReparosProdutivos[TOTAL]": {
+			          "V. R. 24H [TOTAL]": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4868,7 +4888,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Reparos[REINCIDENTE 30D]": {
+			          "R. R. 30D [REINCIDENTE]": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4941,7 +4961,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Reparos[TOTAL]": {
+			          "R. R. 30D [TOTAL]": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -5059,6 +5079,16 @@ cultureInfo pt-BR
 			        },
 			        {
 			          "PROJEÇÃO": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "E. S. B. [PROJEÇÃO]": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",

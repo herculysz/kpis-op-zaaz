@@ -569,7 +569,8 @@ table Medidas
 			                    ),
 			                    "@DataAbertura", CALCULATE(MIN('mvp solicitacao_servicos'[data_abertura]))
 			                ),
-			                REMOVEFILTERS(d_Calendario),
+			                REMOVEFILTERS('mvp solicitacao_servicos'), -- Limpa TODOS os filtros de colunas vindos da linha
+			                REMOVEFILTERS(d_Calendario),               -- Limpa filtros do calendário
 			                'mvp solicitacao_servicos'[tipo_servico] = "REPARO",
 			                'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"}
 			            )
@@ -693,11 +694,11 @@ table Medidas
 	measure '{PER} Projecao_Reincidencia_meta' =
 			
 			
-			IF([Proj. Total] > 0, 0.10, BLANK())
+			IF([Proj. Total] > 0, 0.05, BLANK())
 		displayFolder: Garantia\Calculos
 		lineageTag: 93f32f53-2308-402f-90ac-80a10b1aa4c0
 
-		formatStringDefinition = "MAX "&"0%;-0%;0%"
+		formatStringDefinition = "0%;-0%;0%"
 
 	measure '{PER} Projecao_Reincidencia_taxa' =
 			
@@ -716,7 +717,7 @@ table Medidas
 			
 			VAR Taxa = [{PER} Projecao_Reincidencia_taxa]
 			VAR Meta = [{PER} Projecao_Reincidencia_meta]
-			VAR RedLight = Meta + 0.05
+			VAR RedLight = Meta + 0.01
 			RETURN
 			
 			SWITCH(
@@ -736,7 +737,7 @@ table Medidas
 			
 			VAR Taxa = [{PER} Projecao_Reincidencia_taxa]
 			VAR Meta = [{PER} Projecao_Reincidencia_meta]
-			VAR RedLight = Meta + 0.05
+			VAR RedLight = Meta + 0.01
 			RETURN
 			
 			SWITCH(
@@ -745,7 +746,7 @@ table Medidas
 			    Taxa < 0, BLANK(),
 			    Taxa < Meta, "#1b6242",
 			    Taxa < RedLight, "#856c16", 
-			    "#E5B389"
+			    "#7F0000"
 			)
 			```
 		displayFolder: Garantia\Cores

@@ -524,10 +524,28 @@
                 }
               },
               "index": 16,
-              "length": 17
+              "length": 17,
+              "sortDirection": "Descending"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas"
+                  }
+                },
+                "Property": "Reincidente_ATIV"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "objects": {
