@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "1ff90fe1b8f507809f74",
   "position": {
-    "x": 284.502024291498,
-    "y": 191.22267206477733,
-    "z": 2000,
-    "height": 831.74089068825913,
-    "width": 1601.2955465587045,
+    "x": 284.6511627906977,
+    "y": 228.83720930232559,
+    "z": 3000,
+    "height": 793.953488372093,
+    "width": 1600.4651162790697,
     "tabOrder": 1000
   },
   "visual": {
@@ -540,7 +540,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Reincidente_ATIV"
+                "Property": "TOTAL_REPARO"
               }
             },
             "direction": "Descending"

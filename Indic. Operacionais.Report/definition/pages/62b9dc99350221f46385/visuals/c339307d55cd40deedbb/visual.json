@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
-  "name": "ba7c042b4bc95a708e3c",
+  "name": "c339307d55cd40deedbb",
   "position": {
-    "x": 0,
-    "y": 0,
-    "z": 1000,
-    "height": 93.039647577092509,
-    "width": 1920,
-    "tabOrder": 3000
+    "x": 285,
+    "y": 115,
+    "z": 20500,
+    "height": 95,
+    "width": 1600,
+    "tabOrder": 23002
   },
   "visual": {
     "visualType": "shape",
@@ -18,7 +18,7 @@
             "tileShape": {
               "expr": {
                 "Literal": {
-                  "Value": "'rectangle'"
+                  "Value": "'line'"
                 }
               }
             }
@@ -38,7 +38,7 @@
           }
         }
       ],
-      "outline": [
+      "fill": [
         {
           "properties": {
             "show": {
@@ -51,16 +51,15 @@
           }
         }
       ],
-      "fill": [
+      "outline": [
         {
           "properties": {
-            "fillColor": {
+            "lineColor": {
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#F1F1F1'"
                     }
                   }
                 }
@@ -69,34 +68,6 @@
           },
           "selector": {
             "id": "default"
-          }
-        }
-      ]
-    },
-    "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Fundo Branco'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "dropShadow": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
           }
         }
       ]

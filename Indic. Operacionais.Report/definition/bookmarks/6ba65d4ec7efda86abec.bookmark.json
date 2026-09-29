@@ -6,7 +6,7 @@
     "targetVisualNames": []
   },
   "explorationState": {
-    "version": "1.11",
+    "version": "1.40",
     "activeSection": "62b9dc99350221f46385",
     "sections": {
       "62b9dc99350221f46385": {
@@ -64,7 +64,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "02e7793c70016ae8a40e",
+                  "name": "104f487540cde02d0a44",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -79,7 +79,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "3dc311825798e95040c0",
+                  "name": "f1aa8655788443b7098b",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -94,7 +94,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "7a2c98122d0207dd534a",
+                  "name": "78ef1746c5a50930c24a",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -109,7 +109,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "a6478c1c3c8bcb3c16c3",
+                  "name": "71c971a0be56c822b279",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -124,7 +124,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "2ed3c0379a17d4e51165",
+                  "name": "50804ab0755c696db01e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -139,7 +139,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "d74565526a1e0657795d",
+                  "name": "f925d3882c72bdcb3ca2",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -154,7 +154,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "efb0ef1111db2b657ce3",
+                  "name": "1993df5507b3c82e08d4",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -169,7 +169,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "adace63618112a010611",
+                  "name": "7dd505e1c096ca5b248e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -184,7 +184,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1c0bf34a4c9db5e4302b",
+                  "name": "fe8a7e02970e1607a6a7",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -199,7 +199,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "01ba3da807b07eabd915",
+                  "name": "04bd6fbcb39879202368",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -214,7 +214,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "04f5bbeadb91edc64c67",
+                  "name": "e67f15fbb4e70e2d030e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -229,7 +229,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "c8febb6f2ed1884556cb",
+                  "name": "070d330ae0a3a2401997",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -244,7 +244,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "bafa03440d239ec49d10",
+                  "name": "6a5e2694031e9b4c50d0",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -259,7 +259,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "c4677b6fc87aed5446ed",
+                  "name": "1a371bed0010e9d60dc0",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -274,7 +274,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "71d5e9ed509d2dea5ae7",
+                  "name": "b91328a14067cc60e250",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -289,7 +289,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e99bf1ff070505695ed0",
+                  "name": "0ddcec700b4e8486cb00",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -304,37 +304,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "5bf55428608080aa02c8",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "Prod. Bruta"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "73d9fc2b6edd0ce22d30",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "DU Total"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "2d41b3591330ea70debc",
+                  "name": "3ffeeed7a60c68090acb",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -349,7 +319,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "729584280386701a5300",
+                  "name": "0d2b09353add0dc4aced",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -364,7 +334,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "9d90ea34128645c67951",
+                  "name": "133f541ada07c0db349b",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -379,7 +349,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "4991030508a94a422024",
+                  "name": "5f7c7b5a179601b20840",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -394,7 +364,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "cb4986e8b202230135a8",
+                  "name": "18717d2cab7e6704e910",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -409,7 +379,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "cd030a70e9294d7d8b5b",
+                  "name": "f6b05116c5071701c20e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -424,7 +394,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "29c14cdfccb3e04caa8e",
+                  "name": "9044aaf00680209c509b",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -439,7 +409,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "717e8c4d0e37c1690bb8",
+                  "name": "44fc3ca92bc4a0cd2ae0",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -454,7 +424,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "79501a482b23c9468524",
+                  "name": "9ae30eed38a332ded427",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -469,7 +439,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "75a6442f1839413d2107",
+                  "name": "c620521894be0e3460d0",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -484,7 +454,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "f9b9740a3b0b4573da01",
+                  "name": "b05102fc541a3a6ee395",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -499,7 +469,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "27973eb0183505d8e6d6",
+                  "name": "31b0c354baa307d0c82e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -512,12 +482,57 @@
                     }
                   },
                   "howCreated": 0
+                },
+                {
+                  "name": "dc23194a1457e09d311c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "Prod. Bruta"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "49c77b3cdad6d5e00a08",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "DU Total"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
             "singleVisual": {
               "visualType": "tableEx",
               "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "PRODUTIVAS_GROSS_ATIV"
+                    }
+                  }
+                }
+              ],
               "projections": {
                 "Values": [
                   {
@@ -859,14 +874,15 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "_Par_analitico"
+                            "Entity": "Parâmetro_analitico"
                           }
                         },
-                        "Property": "Par_gross_ativ"
+                        "Property": "Parâmetro"
                       }
                     },
                     "index": 16,
-                    "length": 17
+                    "length": 17,
+                    "sortDirection": 2
                   }
                 ]
               }
@@ -888,7 +904,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "26de12f550e04cd92606",
+                  "name": "5222cb5803bd9012ba21",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -949,7 +965,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "b7cc8d3624a905002a10",
+                  "name": "8d03f56600018a805e0a",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -979,7 +995,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "4b67a013e692424692c4",
+                  "name": "718d14323312c0069500",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1034,7 +1050,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "b6a80b6fc19e86903ae5",
+                  "name": "7ee5cdd6e2e6e4414886",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1097,11 +1113,76 @@
               "objects": {}
             }
           },
+          "75eeb118336dc250cd10": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "8f3b257d91ad30979c79",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Parâmetro_analitico"
+                            }
+                          },
+                          "Property": "Value7"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7f40acc4b6325ec8c7da",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Parâmetro_analitico"
+                        }
+                      },
+                      "Property": "Value6"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advancedSlicerVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Parâmetro_analitico"
+                            }
+                          },
+                          "Property": "Value7"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  }
+                }
+              ]
+            }
+          },
           "78f1f9a30330f317de9d": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "9ee3057369203c6ed36b",
+                  "name": "3351ac604b809b4d6073",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1177,8 +1258,8 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "371f66d780c880abdbbd",
-                  "type": "Categorical",
+                  "name": "e7f448a0dd3404539b78",
+                  "type": "RelativeDate",
                   "expression": {
                     "Column": {
                       "Expression": {
@@ -1189,7 +1270,7 @@
                       "Property": "data_fechamento"
                     }
                   },
-                  "howCreated": 0
+                  "howCreated": 1
                 }
               ]
             },
@@ -1294,6 +1375,71 @@
               "objects": {}
             }
           },
+          "ba579420395ee214d330": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "b17e632868a0c2204d7d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Parâmetro_analitico"
+                            }
+                          },
+                          "Property": "Value5"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a9a1f93cd3a2355c6473",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Parâmetro_analitico"
+                        }
+                      },
+                      "Property": "Value4"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advancedSlicerVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Parâmetro_analitico"
+                            }
+                          },
+                          "Property": "Value5"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  }
+                }
+              ]
+            }
+          },
           "ba7c042b4bc95a708e3c": {
             "singleVisual": {
               "visualType": "shape",
@@ -1304,7 +1450,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "97a0623483d713a52219",
+                  "name": "8a0a3ad831d0a423304c",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1365,7 +1511,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "9056dfb01d6640db9616",
+                  "name": "d00a18f0a0e57031c49d",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1420,7 +1566,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "021f137a13b07d23732c",
+                  "name": "4b7c426cdcdec4ce0a93",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1475,7 +1621,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "895c26058eeee23cde10",
+                  "name": "cbe179185c02a41d6cd0",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1538,28 +1684,9 @@
               "objects": {}
             }
           },
-          "75eeb118336dc250cd10": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "c9072669352c7cc35700",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Par_analitico"
-                        }
-                      },
-                      "Property": "Value4"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
+          "48a711e7900035199407": {
             "singleVisual": {
-              "visualType": "advancedSlicerVisual",
+              "visualType": "shape",
               "objects": {}
             }
           }
