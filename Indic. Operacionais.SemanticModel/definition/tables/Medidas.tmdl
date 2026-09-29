@@ -535,7 +535,7 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Reincidente_ATIV =
+	measure Reincidente_ATIV = ```
 			
 			
 			IF(
@@ -549,10 +549,11 @@ table Medidas
 			                        'mvp solicitacao_servicos'[protocolo],
 			                        'mvp solicitacao_servicos'[id_contrato]
 			                    ),
-			                    "@DataFechamento", CALCULATE(MAX('mvp solicitacao_servicos'[data_fechamento])),
-			                    "@DataFimGarantia", CALCULATE(MAX('mvp solicitacao_servicos'[data_termino_garantia]))
+			                    "@DataFechamento", CALCULATE(MAX('mvp solicitacao_servicos'[data_fechamento]))
+			                    --"@DataFimGarantia", CALCULATE(MAX('mvp solicitacao_servicos'[data_termino_garantia])) -- [PONTO 2]: Removida a coluna @DataFimGarantia que vinha da tabela
 			                ),
 			                'mvp solicitacao_servicos'[tipo_servico] = "GROSS - ATIV",
+			                'mvp solicitacao_servicos'[produtivo] = 1, -- [PONTO 1]: Adicionado filtro de produtivo = 1
 			                'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"},
 			                USERELATIONSHIP(
 			                    d_Calendario[data],
@@ -580,15 +581,17 @@ table Medidas
 			                VAR _ProtocoloOriginal = [protocolo]
 			                VAR _ContratoOriginal = [id_contrato]
 			                VAR _DataFechamentoOriginal = [@DataFechamento]
-			                VAR _DataFimGarantia = [@DataFimGarantia]
+			                --VAR _DataFimGarantia = [@DataFimGarantia] 
+			                VAR _DataLimite30Dias = _DataFechamentoOriginal + 30 -- [PONTO 2]: Janela fixa de 30 dias
 			                RETURN
 			                    COUNTROWS(
 			                        FILTER(
 			                            _TodosChamados,
 			                            [id_contrato] = _ContratoOriginal
 			                                && [protocolo] <> _ProtocoloOriginal
-			                                && [@DataAbertura] >= _DataFechamentoOriginal
-			                                && [@DataAbertura] <= _DataFimGarantia
+			                                && [@DataAbertura] > _DataFechamentoOriginal -- [PONTO 3]: Alterado de >= para >
+			                                --&& [@DataAbertura] <= _DataFimGarantia
+			                                && [@DataAbertura] <= _DataLimite30Dias      -- [PONTO 2]: Comparação com a limite de 30 dias
 			                        )
 			                    ) > 0
 			            )
@@ -597,6 +600,7 @@ table Medidas
 			    ),
 			    BLANK()
 			)
+			```
 		formatString: 0
 		displayFolder: Garantia\Totais
 		lineageTag: 5ae166c4-b1b0-4ecb-ac0c-17b05abbd624
