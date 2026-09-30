@@ -295,6 +295,32 @@ table d_Calendario
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Intervalo de Data' = ```
+			
+			IF(
+			    'd_Calendario'[Data] < TODAY(), 
+			    "ATÉ ONTEM", 
+			    "HOJE"
+			)
+			```
+		lineageTag: 48cbd2b1-d1ee-409c-958f-0d947f80f7e6
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'É Menor ou Igual a Hoje' = ```
+			
+			IF(
+			    'd_Calendario'[Data] <= TODAY(), 
+			    "Sim", 
+			    "Não"
+			)
+			```
+		lineageTag: ad873851-98bc-4fdd-901d-ef62c421f113
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition d_Calendario = m
 		mode: import
 		source =

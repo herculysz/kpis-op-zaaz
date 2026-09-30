@@ -8,45 +8,15 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "b854ce899304ac4c8ad2",
+        "name": "d811e00cbb3ace036a61",
         "field": {
-          "Column": {
+          "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
+                "Entity": "Medidas"
               }
             },
-            "Property": "empresa"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "Drillthrough"
-      },
-      {
-        "name": "af14d9a431cb7ece00c8",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "uf_ajustada"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "Drillthrough"
-      },
-      {
-        "name": "1d7c1b54b690ab32c933",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "cidade"
+            "Property": "PRODUTIVAS_GROSS_ATIV"
           }
         },
         "type": "Categorical",
@@ -55,52 +25,25 @@
     ]
   },
   "pageBinding": {
-    "name": "158fae31825e10321386",
-    "type": "Drillthrough",
+    "name": "a2cde6658347570c006e",
+    "type": "Default",
     "parameters": [
       {
-        "name": "acb1c2c00685d99c300a",
-        "boundFilter": "b854ce899304ac4c8ad2",
+        "name": "dc780a2018b023b92035",
+        "boundFilter": "d811e00cbb3ace036a61",
         "fieldExpr": {
-          "Column": {
+          "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
+                "Entity": "Medidas"
               }
             },
-            "Property": "empresa"
-          }
-        }
-      },
-      {
-        "name": "b8f67df0400ec44ad317",
-        "boundFilter": "af14d9a431cb7ece00c8",
-        "fieldExpr": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "uf_ajustada"
-          }
-        }
-      },
-      {
-        "name": "80042e0d3640c554db3b",
-        "boundFilter": "1d7c1b54b690ab32c933",
-        "fieldExpr": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "cidade"
+            "Property": "PRODUTIVAS_GROSS_ATIV"
           }
         }
       }
-    ]
+    ],
+    "referenceScope": "CrossReport"
   },
   "objects": {
     "background": [
@@ -135,5 +78,6 @@
       }
     ]
   },
+  "visibility": "HiddenInViewMode",
   "type": "Drillthrough"
 }

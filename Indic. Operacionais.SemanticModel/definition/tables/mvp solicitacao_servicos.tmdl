@@ -430,7 +430,8 @@ table 'mvp solicitacao_servicos'
 				            FROM
 				                mvp.solicitacao_servicos
 				            WHERE
-								data_fechamento >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '2 month') AND data_fechamento < CURRENT_DATE
+								data_fechamento >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '1 month') 
+								-- AND data_fechamento < CURRENT_DATE
 				                -- data_fechamento >= '2026-08-01' AND data_fechamento < CURRENT_DATE
 				                -- ss.data_fechamento::date BETWEEN '2026-08-01' AND CURRENT_DATE
 				                -- AND status IN ('ABERTA','AGENDADA','ANDAMENTO','ENCAMINHADA','ABERTURA')

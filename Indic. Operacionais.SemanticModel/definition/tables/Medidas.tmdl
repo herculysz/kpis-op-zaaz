@@ -1595,6 +1595,16 @@ table Medidas
 		displayFolder: EntranteBase\Cores
 		lineageTag: 4eb3c597-3071-4a96-b1ca-e549997a35cc
 
+	measure Drill_through =
+			
+			SWITCH(
+			    TRUE(),
+			    -- Se a medida ativa/selecionada for O.S. OK (Tabela Eficácia da Instalação)
+			    ISSELECTEDMEASURE([PRODUTIVAS_GROSS_ATIV]), "[O.S. OK]",
+			    BLANK()
+			)
+		lineageTag: a94be5d1-c210-4d49-85be-f3fff0191e05
+
 	column 'Coluna 1'
 		dataType: string
 		isHidden

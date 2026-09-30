@@ -166,6 +166,11 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "filial_regional",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
   }
 }

@@ -158,6 +158,11 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "cidade",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
   }
 }

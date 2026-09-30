@@ -166,6 +166,11 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "status",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
   }
 }

@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "0faa78a24794886be628",
   "position": {
-    "x": 1169.3023255813953,
-    "y": 128.37209302325581,
+    "x": 1169.0575916230366,
+    "y": 144.18848167539267,
     "z": 11000,
-    "height": 900,
-    "width": 715.81395348837214,
+    "height": 883.50785340314144,
+    "width": 716.70157068062827,
     "tabOrder": 11000
   },
   "visual": {
@@ -1092,6 +1092,104 @@
             }
           ]
         }
+      },
+      {
+        "name": "3659bca66c047d7d18a9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mvp solicitacao_servicos"
+              }
+            },
+            "Property": "empresa"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "3ccd5969c56557029226",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mvp solicitacao_servicos"
+              }
+            },
+            "Property": "uf_ajustada"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "56cb7b010ad0d125a773",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mvp solicitacao_servicos"
+              }
+            },
+            "Property": "cidade"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "77654a92374c40abc752",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Prod. Bruta"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "dec6863bb1d9bb9e0a83",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "DU Total"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "23fe43f7ac29bb00b8b7",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Prod_Bruta_real"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "34c976fab32ce98ddcb2",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Prod_Bruta_Meta"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

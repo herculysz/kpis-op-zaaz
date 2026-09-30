@@ -239,6 +239,11 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "data_abertura",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
   }
 }
