@@ -4,10 +4,10 @@
   "position": {
     "x": 1424.9214659685865,
     "y": 144.18848167539267,
-    "z": 11000,
+    "z": 10000,
     "height": 884.9214659685864,
     "width": 459.42408376963351,
-    "tabOrder": 11000
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -718,7 +718,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'REINCIDÊNCIA DE REPARO EM 30 DIAS'"
+                  "Value": "'REINCIDÊNCIA EM 30 DIAS'"
                 }
               }
             },
@@ -1079,6 +1079,60 @@
             }
           ]
         }
+      },
+      {
+        "name": "b852f14b10309cb1e456",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mvp solicitacao_servicos"
+              }
+            },
+            "Property": "data_abertura_mes"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "mvp solicitacao_servicos",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "m"
+                          }
+                        },
+                        "Property": "data_abertura_mes"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'MÊS ATUAL'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
       }
     ]
   }

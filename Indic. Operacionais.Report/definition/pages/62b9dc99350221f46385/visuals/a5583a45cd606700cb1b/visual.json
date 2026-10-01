@@ -234,9 +234,8 @@
                 "Where": [
                   {
                     "Condition": {
-                      "Comparison": {
-                        "ComparisonKind": 0,
-                        "Left": {
+                      "Between": {
+                        "Expression": {
                           "Column": {
                             "Expression": {
                               "SourceRef": {
@@ -246,12 +245,32 @@
                             "Property": "data_fechamento"
                           }
                         },
-                        "Right": {
+                        "LowerBound": {
+                          "DateSpan": {
+                            "Expression": {
+                              "DateAdd": {
+                                "Expression": {
+                                  "DateAdd": {
+                                    "Expression": {
+                                      "Now": {}
+                                    },
+                                    "Amount": 1,
+                                    "TimeUnit": 0
+                                  }
+                                },
+                                "Amount": -2,
+                                "TimeUnit": 2
+                              }
+                            },
+                            "TimeUnit": 0
+                          }
+                        },
+                        "UpperBound": {
                           "DateSpan": {
                             "Expression": {
                               "Now": {}
                             },
-                            "TimeUnit": 2
+                            "TimeUnit": 0
                           }
                         }
                       }

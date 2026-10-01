@@ -537,6 +537,75 @@ table Medidas
 
 	measure Reincidente_ATIV = ```
 			
+			VAR _DatasSelecionadas =
+			    VALUES ( d_Calendario[data] )  -- captura o filtro de datas antes de qualquer REMOVEFILTERS
+			RETURN
+			IF(
+			    [Proj. Total] > 0,
+			    COALESCE(
+			        VAR _ChamadosBase =
+			            CALCULATETABLE(
+			                ADDCOLUMNS(
+			                    SUMMARIZE(
+			                        'mvp solicitacao_servicos',
+			                        'mvp solicitacao_servicos'[protocolo],
+			                        'mvp solicitacao_servicos'[id_contrato]
+			                    ),
+			                    "@DataFechamento", CALCULATE(MAX('mvp solicitacao_servicos'[data_fechamento]))
+			                ),
+			                'mvp solicitacao_servicos'[tipo_servico] = "GROSS - ATIV",
+			                'mvp solicitacao_servicos'[produtivo] = 1,
+			                'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"},
+			                USERELATIONSHIP(
+			                    d_Calendario[data],
+			                    'mvp solicitacao_servicos'[data_fechamento]
+			                )
+			            )
+			        VAR _TodosChamados =
+			            CALCULATETABLE(
+			                ADDCOLUMNS(
+			                    SUMMARIZE(
+			                        'mvp solicitacao_servicos',
+			                        'mvp solicitacao_servicos'[protocolo],
+			                        'mvp solicitacao_servicos'[id_contrato]
+			                    ),
+			                    "@DataAbertura", CALCULATE(MIN('mvp solicitacao_servicos'[data_abertura]))
+			                ),
+			                REMOVEFILTERS('mvp solicitacao_servicos'),  -- limpa filtros da linha (regional etc.)
+			                _DatasSelecionadas,                          -- reaplica as datas selecionadas no calendário
+			                USERELATIONSHIP(                             -- propaga essas datas via data_abertura
+			                    d_Calendario[data],
+			                    'mvp solicitacao_servicos'[data_abertura]
+			                ),
+			                'mvp solicitacao_servicos'[tipo_servico] = "REPARO",
+			                'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"}
+			            )
+			        VAR _Reincidentes =
+			            FILTER(
+			                _ChamadosBase,
+			                VAR _ProtocoloOriginal = [protocolo]
+			                VAR _ContratoOriginal = [id_contrato]
+			                VAR _DataFechamentoOriginal = [@DataFechamento]
+			                VAR _DataLimite30Dias = _DataFechamentoOriginal + 30
+			                RETURN
+			                    COUNTROWS(
+			                        FILTER(
+			                            _TodosChamados,
+			                            [id_contrato] = _ContratoOriginal
+			                                && [protocolo] <> _ProtocoloOriginal
+			                                && [@DataAbertura] > _DataFechamentoOriginal
+			                                && [@DataAbertura] <= _DataLimite30Dias
+			                        )
+			                    ) > 0
+			            )
+			        RETURN COUNTROWS(_Reincidentes),
+			        0
+			    ),
+			    BLANK()
+			)
+			
+			/*
+			Reincidente_ATIV = 
 			
 			IF(
 			    [Proj. Total] > 0,
@@ -600,6 +669,8 @@ table Medidas
 			    ),
 			    BLANK()
 			)
+			
+			*/
 			```
 		formatString: 0
 		displayFolder: Garantia\Totais
@@ -1595,15 +1666,40 @@ table Medidas
 		displayFolder: EntranteBase\Cores
 		lineageTag: 4eb3c597-3071-4a96-b1ca-e549997a35cc
 
-	measure Drill_through =
+	measure 'DATA FECHAMENTO MINMAX' = ```
 			
-			SWITCH(
-			    TRUE(),
-			    -- Se a medida ativa/selecionada for O.S. OK (Tabela Eficácia da Instalação)
-			    ISSELECTEDMEASURE([PRODUTIVAS_GROSS_ATIV]), "[O.S. OK]",
-			    BLANK()
-			)
-		lineageTag: a94be5d1-c210-4d49-85be-f3fff0191e05
+			VAR DataInicio = 
+			    CALCULATE(
+			        MIN('mvp solicitacao_servicos'[data_fechamento]),
+			        USERELATIONSHIP('d_calendario'[data], 'mvp solicitacao_servicos'[data_fechamento])
+			    )
+			VAR DataFim = 
+			    CALCULATE(
+			        MAX('mvp solicitacao_servicos'[data_fechamento]),
+			        USERELATIONSHIP('d_calendario'[data], 'mvp solicitacao_servicos'[data_fechamento])
+			    )
+			
+			RETURN
+			    "Fechamento de " & FORMAT(DataInicio, "dd/mm/yyyy") & " até " & FORMAT(DataFim, "dd/mm/yyyy")
+			```
+		lineageTag: d2558b38-e4e8-487a-8ccc-b9779993f80a
+
+	measure 'DATA ABERTURA MINMAX' = ```
+			
+			VAR DataInicio = 
+			    CALCULATE(
+			        MIN('mvp solicitacao_servicos'[data_abertura]),
+			        USERELATIONSHIP('d_calendario'[data], 'mvp solicitacao_servicos'[data_abertura])
+			    )
+			VAR DataFim = 
+			    CALCULATE(
+			        MAX('mvp solicitacao_servicos'[data_abertura]),
+			        USERELATIONSHIP('d_calendario'[data], 'mvp solicitacao_servicos'[data_abertura])
+			    )
+			RETURN
+			    "Abertura de " & FORMAT(DataInicio, "dd/mm/yyyy") & " até " & FORMAT(DataFim, "dd/mm/yyyy")
+			```
+		lineageTag: be91e727-b388-45ef-a1b1-9052c8874ee4
 
 	column 'Coluna 1'
 		dataType: string

@@ -18,7 +18,7 @@ table d_Calendario
 		dataType: int64
 		formatString: 0
 		lineageTag: 38991a76-51d7-4eb7-b627-e6f0d8937b36
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: dia
 
 		annotation SummarizationSetBy = Automatic
@@ -27,7 +27,7 @@ table d_Calendario
 		dataType: int64
 		formatString: 0
 		lineageTag: 9dc3a89e-7bc4-495d-af6c-8cb360ba4826
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: num_dia_semana
 
 		annotation SummarizationSetBy = Automatic
@@ -86,7 +86,7 @@ table d_Calendario
 		dataType: int64
 		formatString: 0
 		lineageTag: 5ce491d2-03fe-4405-bf1c-412b61973ab7
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: semana_ano
 
 		annotation SummarizationSetBy = Automatic
@@ -121,7 +121,7 @@ table d_Calendario
 		dataType: int64
 		formatString: 0
 		lineageTag: a2bb34f2-ab63-4115-b7e3-c082cc7ef1d1
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: num_mes
 
 		annotation SummarizationSetBy = Automatic
@@ -167,7 +167,7 @@ table d_Calendario
 		dataType: int64
 		formatString: 0
 		lineageTag: b5d83286-4bb4-4ac1-8a08-4e847beb8535
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: dias_no_mes
 
 		annotation SummarizationSetBy = Automatic
@@ -176,7 +176,7 @@ table d_Calendario
 		dataType: int64
 		formatString: 0
 		lineageTag: 75fb2a88-6c14-4bf2-bf38-bd7349308b47
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: num_trimestre
 
 		annotation SummarizationSetBy = Automatic
@@ -219,7 +219,7 @@ table d_Calendario
 		dataType: int64
 		formatString: 0
 		lineageTag: 57b2718e-9e79-4a67-b818-38b7cd87b2bb
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: num_semestre
 
 		annotation SummarizationSetBy = Automatic
@@ -236,7 +236,7 @@ table d_Calendario
 		dataType: int64
 		formatString: 0
 		lineageTag: f0c9a885-ca61-40d1-b954-efe461c0a130
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: ano
 
 		annotation SummarizationSetBy = Automatic
@@ -317,6 +317,41 @@ table d_Calendario
 			)
 			```
 		lineageTag: ad873851-98bc-4fdd-901d-ef62c421f113
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Filtro Periodo Dinamico' = ```
+			
+			
+			VAR _data = d_Calendario[Data]
+			VAR _Hoje = TODAY()
+			VAR _PrimeiroDiaDoMes = (DAY(_Hoje) = 1)
+			
+			// Identifica o mês/ano da linha da calendário
+			VAR _AnoMesLinha = YEAR(d_Calendario[Data]) * 100 + MONTH(d_Calendario[Data])
+			
+			// MÊS ATUAL e MÊS ANTERIOR baseados no dia de HOJE
+			VAR _AnoMesAtual = YEAR(_Hoje) * 100 + MONTH(_Hoje)
+			VAR _AnoMesAnterior = YEAR(EDATE(_Hoje, -1)) * 100 + MONTH(EDATE(_Hoje, -1))
+			
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        -- Se for o 1º dia do mês e a linha for do MÊS ANTERIOR -> Seleção Automática
+			        _PrimeiroDiaDoMes && _AnoMesLinha = _AnoMesAnterior, "MÊS ATUAL",
+			        
+			        -- Se NÃO for o 1º dia do mês e a linha for do MÊS ATUAL -> Seleção Automática
+			        NOT(_PrimeiroDiaDoMes) && _AnoMesLinha = _AnoMesAtual, "MÊS ATUAL",
+			        
+			        -- Mapeamentos explícitos adicionais para permitir consulta manual
+			        _AnoMesLinha = _AnoMesAtual, "MÊS ATUAL",
+			        _AnoMesLinha = _AnoMesAnterior, "MÊS ANTERIOR",
+			        
+			        "Outros"
+			    )
+			```
+		lineageTag: 3a3eeff3-66ca-4d55-860d-48186c1bd84f
 		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic

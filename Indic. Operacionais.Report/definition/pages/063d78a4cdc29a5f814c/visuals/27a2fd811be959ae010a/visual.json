@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "27a2fd811be959ae010a",
   "position": {
-    "x": 24.594363791631086,
-    "y": 342.68146883005977,
-    "z": 17001,
-    "height": 95.098206660973531,
-    "width": 204.95303159692571,
-    "tabOrder": 17001
+    "x": 525,
+    "y": 155,
+    "z": 15000,
+    "height": 25,
+    "width": 270,
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "d_Calendario"
+                      "Entity": "mvp solicitacao_servicos"
                     }
                   },
-                  "Property": "Intervalo de Data"
+                  "Property": "data_fechamento_intervalo"
                 }
               },
-              "queryRef": "d_Calendario.É Menor que Hoje",
-              "nativeQueryRef": "Intervalo de Data"
+              "queryRef": "mvp solicitacao_servicos.data_fechamento_intervalo",
+              "nativeQueryRef": "data_fechamento_intervalo"
             }
           ]
         }
@@ -47,8 +47,8 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "d",
-                    "Entity": "d_Calendario",
+                    "Name": "m",
+                    "Entity": "mvp solicitacao_servicos",
                     "Type": 0
                   }
                 ],
@@ -61,10 +61,10 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Source": "d"
+                                  "Source": "m"
                                 }
                               },
-                              "Property": "Intervalo de Data"
+                              "Property": "data_fechamento_intervalo"
                             }
                           }
                         ],
@@ -72,7 +72,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'ATÉ ONTEM'"
+                                "Value": "'ANTERIOR A HOJE'"
                               }
                             }
                           ]
@@ -256,14 +256,14 @@
             "rowCount": {
               "expr": {
                 "Literal": {
-                  "Value": "2L"
+                  "Value": "1L"
                 }
               }
             },
             "columnCount": {
               "expr": {
                 "Literal": {
-                  "Value": "1L"
+                  "Value": "2L"
                 }
               }
             },
@@ -271,6 +271,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "cellPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "4L"
                 }
               }
             }
@@ -386,6 +393,94 @@
             "id": "interaction:rest"
           }
         }
+      ],
+      "image": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "leftMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "6L"
+                }
+              }
+            },
+            "rightMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "6L"
+                }
+              }
+            },
+            "topMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "2L"
+                }
+              }
+            },
+            "bottomMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "2L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "interaction:hover"
+          }
+        },
+        {
+          "properties": {
+            "leftMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "6L"
+                }
+              }
+            },
+            "rightMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "6L"
+                }
+              }
+            },
+            "topMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "2L"
+                }
+              }
+            },
+            "bottomMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "2L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -409,23 +504,5 @@
       "filterChanges": true
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b15a7a9ede59082d3d03",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "d_Calendario"
-              }
-            },
-            "Property": "Intervalo de Data"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

@@ -1,0 +1,36 @@
+table Tabela_periodo
+	lineageTag: fa612c5e-be7e-4596-9b16-cd969e200537
+
+	column PERIODO
+		lineageTag: 38072020-bdd3-4ffb-814b-8af11f4f2a7d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [PERIODO]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DE_PARA_PERIODO
+		lineageTag: 123e7f86-943e-4e07-b048-ba8d8a7d0cd2
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [DE_PARA_PERIODO]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Tabela_periodo = calculated
+		mode: import
+		source =
+				
+				
+				DATATABLE(
+				
+				    "PERIODO", STRING,
+				    "DE_PARA_PERIODO", STRING,
+				    {
+				        {"ANTERIOR A HOJE", "PERÍODO PASSADO"},
+				        {"HOJE", "HOJE"}
+				    }
+				)
+
+	annotation PBI_Id = 336ed252a8d74375875911245c9c487a
+

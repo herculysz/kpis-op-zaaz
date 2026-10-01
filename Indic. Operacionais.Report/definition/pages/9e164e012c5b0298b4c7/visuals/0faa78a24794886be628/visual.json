@@ -4,10 +4,10 @@
   "position": {
     "x": 1169.0575916230366,
     "y": 144.18848167539267,
-    "z": 11000,
+    "z": 10000,
     "height": 883.50785340314144,
     "width": 716.70157068062827,
-    "tabOrder": 11000
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -1094,7 +1094,7 @@
         }
       },
       {
-        "name": "3659bca66c047d7d18a9",
+        "name": "71fbad63000ba620901b",
         "field": {
           "Column": {
             "Expression": {
@@ -1102,94 +1102,50 @@
                 "Entity": "mvp solicitacao_servicos"
               }
             },
-            "Property": "empresa"
+            "Property": "data_fechamento_mes"
           }
         },
-        "type": "Categorical"
-      },
-      {
-        "name": "3ccd5969c56557029226",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "mvp solicitacao_servicos",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "m"
+                          }
+                        },
+                        "Property": "data_fechamento_mes"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'MÊS ATUAL'"
+                        }
+                      }
+                    ]
+                  ]
+                }
               }
-            },
-            "Property": "uf_ajustada"
-          }
+            }
+          ]
         },
-        "type": "Categorical"
-      },
-      {
-        "name": "56cb7b010ad0d125a773",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "cidade"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "77654a92374c40abc752",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Prod. Bruta"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "dec6863bb1d9bb9e0a83",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "DU Total"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "23fe43f7ac29bb00b8b7",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Prod_Bruta_real"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "34c976fab32ce98ddcb2",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Prod_Bruta_Meta"
-          }
-        },
-        "type": "Advanced"
+        "howCreated": "User"
       }
     ]
   }

@@ -68,6 +68,60 @@
         },
         "howCreated": "User",
         "isLockedInViewMode": true
+      },
+      {
+        "name": "4843297085c107eae4b0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mvp solicitacao_servicos"
+              }
+            },
+            "Property": "data_fechamento_mes"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "mvp solicitacao_servicos",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "m"
+                          }
+                        },
+                        "Property": "data_fechamento_mes"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'MÊS ATUAL'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
       }
     ]
   },
@@ -103,5 +157,82 @@
         }
       }
     ]
-  }
+  },
+  "visualInteractions": [
+    {
+      "source": "64f1d9daf7fa29cc08d8",
+      "target": "f27cb1e44f5e225dd6e7",
+      "type": "DataFilter"
+    },
+    {
+      "source": "27a2fd811be959ae010a",
+      "target": "64f1d9daf7fa29cc08d8",
+      "type": "NoFilter"
+    },
+    {
+      "source": "27a2fd811be959ae010a",
+      "target": "af5a64071a8ba7b2abf7",
+      "type": "NoFilter"
+    },
+    {
+      "source": "27a2fd811be959ae010a",
+      "target": "0ec8ccbc9b652b940107",
+      "type": "NoFilter"
+    },
+    {
+      "source": "27a2fd811be959ae010a",
+      "target": "4c10a332c4e495e0ed30",
+      "type": "NoFilter"
+    },
+    {
+      "source": "0ec8ccbc9b652b940107",
+      "target": "ee66b4d7002501dfefe9",
+      "type": "NoFilter"
+    },
+    {
+      "source": "0ec8ccbc9b652b940107",
+      "target": "27a2fd811be959ae010a",
+      "type": "NoFilter"
+    },
+    {
+      "source": "0ec8ccbc9b652b940107",
+      "target": "4c10a332c4e495e0ed30",
+      "type": "NoFilter"
+    },
+    {
+      "source": "0ec8ccbc9b652b940107",
+      "target": "64f1d9daf7fa29cc08d8",
+      "type": "NoFilter"
+    },
+    {
+      "source": "27a2fd811be959ae010a",
+      "target": "ee66b4d7002501dfefe9",
+      "type": "DataFilter"
+    },
+    {
+      "source": "4c10a332c4e495e0ed30",
+      "target": "64f1d9daf7fa29cc08d8",
+      "type": "DataFilter"
+    },
+    {
+      "source": "4c10a332c4e495e0ed30",
+      "target": "af5a64071a8ba7b2abf7",
+      "type": "NoFilter"
+    },
+    {
+      "source": "4c10a332c4e495e0ed30",
+      "target": "ee66b4d7002501dfefe9",
+      "type": "NoFilter"
+    },
+    {
+      "source": "4c10a332c4e495e0ed30",
+      "target": "27a2fd811be959ae010a",
+      "type": "NoFilter"
+    },
+    {
+      "source": "4c10a332c4e495e0ed30",
+      "target": "0ec8ccbc9b652b940107",
+      "type": "NoFilter"
+    }
+  ]
 }

@@ -1,4 +1,20 @@
 relationship 0a1f5e62-aca2-5208-27cf-80e229bc24b9
+	isActive: false
 	fromColumn: 'mvp solicitacao_servicos'.data_fechamento
 	toColumn: d_Calendario.data
+
+relationship 89e14724-dec3-cf02-32ac-799469c5e3e0
+	isActive: false
+	fromColumn: 'mvp solicitacao_servicos'.data_abertura
+	toColumn: d_Calendario.data
+
+relationship d7702af9-d3f6-30b3-3fd5-5db37739a25d
+	isActive: false
+	fromColumn: 'mvp solicitacao_servicos'.data_abertura_intervalo
+	toColumn: Tabela_periodo.DE_PARA_PERIODO
+
+relationship febe461d-6186-fb87-87b2-d3ee138e692c
+	isActive: false
+	fromColumn: 'mvp solicitacao_servicos'.data_fechamento_intervalo
+	toColumn: Tabela_periodo.PERIODO
 

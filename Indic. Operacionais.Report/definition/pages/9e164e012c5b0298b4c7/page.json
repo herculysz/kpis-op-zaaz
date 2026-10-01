@@ -4,5 +4,27 @@
   "displayName": "Garantia",
   "displayOption": "FitToPage",
   "height": 1080,
-  "width": 1920
+  "width": 1920,
+  "visualInteractions": [
+    {
+      "source": "e6f225dc09925e0c7166",
+      "target": "0faa78a24794886be628",
+      "type": "NoFilter"
+    },
+    {
+      "source": "e6f225dc09925e0c7166",
+      "target": "9479b45c008bc0b039ae",
+      "type": "NoFilter"
+    },
+    {
+      "source": "9479b45c008bc0b039ae",
+      "target": "076a5587862787bbd242",
+      "type": "NoFilter"
+    },
+    {
+      "source": "9479b45c008bc0b039ae",
+      "target": "e6f225dc09925e0c7166",
+      "type": "NoFilter"
+    }
+  ]
 }

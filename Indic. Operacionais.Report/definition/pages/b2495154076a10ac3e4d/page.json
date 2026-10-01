@@ -4,5 +4,67 @@
   "displayName": "Reparo",
   "displayOption": "FitToPage",
   "height": 1080,
-  "width": 1920
+  "width": 1920,
+  "visualInteractions": [
+    {
+      "source": "117b15025c2ec9058421",
+      "target": "47375fa5a4b432d99dcd",
+      "type": "NoFilter"
+    },
+    {
+      "source": "117b15025c2ec9058421",
+      "target": "25801c501d80c44c52da",
+      "type": "NoFilter"
+    },
+    {
+      "source": "117b15025c2ec9058421",
+      "target": "2269ba06ce28d148c4ec",
+      "type": "NoFilter"
+    },
+    {
+      "source": "117b15025c2ec9058421",
+      "target": "84716040be0e0059543c",
+      "type": "NoFilter"
+    },
+    {
+      "source": "47375fa5a4b432d99dcd",
+      "target": "117b15025c2ec9058421",
+      "type": "NoFilter"
+    },
+    {
+      "source": "47375fa5a4b432d99dcd",
+      "target": "25801c501d80c44c52da",
+      "type": "NoFilter"
+    },
+    {
+      "source": "47375fa5a4b432d99dcd",
+      "target": "6c20b5959c59a1c660eb",
+      "type": "NoFilter"
+    },
+    {
+      "source": "47375fa5a4b432d99dcd",
+      "target": "84716040be0e0059543c",
+      "type": "NoFilter"
+    },
+    {
+      "source": "25801c501d80c44c52da",
+      "target": "47375fa5a4b432d99dcd",
+      "type": "NoFilter"
+    },
+    {
+      "source": "25801c501d80c44c52da",
+      "target": "117b15025c2ec9058421",
+      "type": "NoFilter"
+    },
+    {
+      "source": "25801c501d80c44c52da",
+      "target": "6c20b5959c59a1c660eb",
+      "type": "NoFilter"
+    },
+    {
+      "source": "25801c501d80c44c52da",
+      "target": "2269ba06ce28d148c4ec",
+      "type": "NoFilter"
+    }
+  ]
 }
