@@ -373,6 +373,102 @@ createOrReplace
 
 			annotation UnderlyingDateTimeDataType = Time
 
+		column data_abertura_intervalo = ```
+				
+				IF(
+				    'mvp solicitacao_servicos'[data_abertura] < TODAY(), 
+				    "ANTERIOR A HOJE", 
+				    "HOJE"
+				)
+				```
+			lineageTag: 2c9aeb87-472f-4f21-84df-8104727ff1ce
+			summarizeBy: none
+
+			annotation SummarizationSetBy = Automatic
+
+		column data_fechamento_intervalo = ```
+				
+				IF(
+				    'mvp solicitacao_servicos'[data_fechamento] < TODAY(), 
+				    "ANTERIOR A HOJE", 
+				    "HOJE"
+				)
+				```
+			lineageTag: aa982dd3-5119-48f4-af54-37b0459be8ea
+			summarizeBy: none
+
+			annotation SummarizationSetBy = Automatic
+
+		column data_abertura_mes = ```
+				
+				
+				VAR _data = 'mvp solicitacao_servicos'[data_abertura]
+				VAR _Hoje = TODAY()
+				VAR _PrimeiroDiaDoMes = (DAY(_Hoje) = 1)
+				
+				// Identifica o mês/ano da linha da calendário
+				VAR _AnoMesLinha = YEAR(_data) * 100 + MONTH(_data)
+				
+				// MÊS ATUAL e MÊS ANTERIOR baseados no dia de HOJE
+				VAR _AnoMesAtual = YEAR(_Hoje) * 100 + MONTH(_Hoje)
+				VAR _AnoMesAnterior = YEAR(EDATE(_Hoje, -1)) * 100 + MONTH(EDATE(_Hoje, -1))
+				
+				RETURN
+				    SWITCH(
+				        TRUE(),
+				        -- Se for o 1º dia do mês e a linha for do MÊS ANTERIOR -> Seleção Automática
+				        _PrimeiroDiaDoMes && _AnoMesLinha = _AnoMesAnterior, "MÊS ATUAL",
+				        
+				        -- Se NÃO for o 1º dia do mês e a linha for do MÊS ATUAL -> Seleção Automática
+				        NOT(_PrimeiroDiaDoMes) && _AnoMesLinha = _AnoMesAtual, "MÊS ATUAL",
+				        
+				        -- Mapeamentos explícitos adicionais para permitir consulta manual
+				        _AnoMesLinha = _AnoMesAtual, "MÊS ATUAL",
+				        _AnoMesLinha = _AnoMesAnterior, "MÊS ANTERIOR",
+				        
+				        "Outros"
+				    )
+				```
+			lineageTag: f9a7281c-2934-4c68-a2d8-d4f6b4167abb
+			summarizeBy: none
+
+			annotation SummarizationSetBy = Automatic
+
+		column data_fechamento_mes = ```
+				
+				
+				VAR _data = 'mvp solicitacao_servicos'[data_fechamento]
+				VAR _Hoje = TODAY()
+				VAR _PrimeiroDiaDoMes = (DAY(_Hoje) = 1)
+				
+				// Identifica o mês/ano da linha da calendário
+				VAR _AnoMesLinha = YEAR(_data) * 100 + MONTH(_data)
+				
+				// MÊS ATUAL e MÊS ANTERIOR baseados no dia de HOJE
+				VAR _AnoMesAtual = YEAR(_Hoje) * 100 + MONTH(_Hoje)
+				VAR _AnoMesAnterior = YEAR(EDATE(_Hoje, -1)) * 100 + MONTH(EDATE(_Hoje, -1))
+				
+				RETURN
+				    SWITCH(
+				        TRUE(),
+				        -- Se for o 1º dia do mês e a linha for do MÊS ANTERIOR -> Seleção Automática
+				        _PrimeiroDiaDoMes && _AnoMesLinha = _AnoMesAnterior, "MÊS ATUAL",
+				        
+				        -- Se NÃO for o 1º dia do mês e a linha for do MÊS ATUAL -> Seleção Automática
+				        NOT(_PrimeiroDiaDoMes) && _AnoMesLinha = _AnoMesAtual, "MÊS ATUAL",
+				        
+				        -- Mapeamentos explícitos adicionais para permitir consulta manual
+				        _AnoMesLinha = _AnoMesAtual, "MÊS ATUAL",
+				        _AnoMesLinha = _AnoMesAnterior, "MÊS ANTERIOR",
+				        
+				        "Outros"
+				    )
+				```
+			lineageTag: 8537a3ae-61a5-45c0-b504-6cd650732590
+			summarizeBy: none
+
+			annotation SummarizationSetBy = Automatic
+
 		partition 'mvp solicitacao_servicos' = m
 			mode: import
 			source = ```
@@ -432,7 +528,8 @@ createOrReplace
 					            FROM
 					                mvp.solicitacao_servicos
 					            WHERE
-									data_fechamento >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '2 month') AND data_fechamento < CURRENT_DATE
+									data_fechamento >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '12 month') 
+									-- AND data_fechamento < CURRENT_DATE
 					                -- data_fechamento >= '2026-08-01' AND data_fechamento < CURRENT_DATE
 					                -- ss.data_fechamento::date BETWEEN '2026-08-01' AND CURRENT_DATE
 					                -- AND status IN ('ABERTA','AGENDADA','ANDAMENTO','ENCAMINHADA','ABERTURA')

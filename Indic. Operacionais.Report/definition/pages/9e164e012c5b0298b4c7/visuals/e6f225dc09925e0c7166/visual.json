@@ -2,9 +2,9 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "e6f225dc09925e0c7166",
   "position": {
-    "x": 865,
-    "y": 155,
-    "z": 12000,
+    "x": 872.5,
+    "y": 112.265625,
+    "z": 14000,
     "height": 25,
     "width": 270,
     "tabOrder": 12000
@@ -499,5 +499,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "802bb768b0654a794053",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mvp solicitacao_servicos"
+              }
+            },
+            "Property": "data_abertura_intervalo"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

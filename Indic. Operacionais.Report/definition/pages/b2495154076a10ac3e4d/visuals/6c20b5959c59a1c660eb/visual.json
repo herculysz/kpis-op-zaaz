@@ -4,7 +4,7 @@
   "position": {
     "x": 284.13612565445027,
     "y": 144.18848167539267,
-    "z": 12000,
+    "z": 15000,
     "height": 883.50785340314144,
     "width": 544.24083769633512,
     "tabOrder": 12000
@@ -1175,6 +1175,118 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "5e62976c6d34c0287477",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mvp solicitacao_servicos"
+              }
+            },
+            "Property": "empresa"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ffc1613b55630edc89bb",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mvp solicitacao_servicos"
+              }
+            },
+            "Property": "uf_ajustada"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c789a50e365d6705a255",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mvp solicitacao_servicos"
+              }
+            },
+            "Property": "cidade"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b1c27a0e0508b6c6a5b6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "TOTAL_REPARO"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f51a2260c957e708566d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "PROJEÇÃO_REPARO"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "20d0b0d430977469e962",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Clientes_count"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "720b2c32738137676ab9",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "{PER} Projecao_entrante_taxa"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e0b735cd06759145c034",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "{PER} Projecao_entrante_meta"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }
