@@ -7,7 +7,7 @@
     "z": 21000,
     "height": 27.777777777777779,
     "width": 284.44444444444446,
-    "tabOrder": 17002
+    "tabOrder": 19000
   },
   "visual": {
     "visualType": "card",
@@ -147,23 +147,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "4a2f6eb3da280e70b0d8",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "DATA FECHAMENTO MINMAX"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

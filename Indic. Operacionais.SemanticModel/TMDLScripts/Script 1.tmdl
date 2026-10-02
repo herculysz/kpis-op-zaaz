@@ -375,10 +375,26 @@ createOrReplace
 
 		column data_abertura_intervalo = ```
 				
+				/*
 				IF(
 				    'mvp solicitacao_servicos'[data_abertura] < TODAY(), 
 				    "ANTERIOR A HOJE", 
 				    "HOJE"
+				)
+				*/
+				
+				VAR _hoje = TODAY()
+				VAR _dataabertura = 'mvp solicitacao_servicos'[data_abertura]
+				
+				RETURN
+				SWITCH(
+				    TRUE(),
+				    ISBLANK(_dataabertura), BLANK(),
+				    _dataabertura = _hoje, "HOJE",
+				    YEAR(_dataabertura) = YEAR(_hoje) && MONTH(_dataabertura) = MONTH(_hoje), "MÊS ATUAL",
+				    _dataabertura < DATE(YEAR(_hoje), MONTH(_hoje), 1), "MESES ANTERIORES",
+				    _dataabertura > EOMONTH(_hoje, 0), "MÊS FUTURO",
+				    "OUTRO"
 				)
 				```
 			lineageTag: 2c9aeb87-472f-4f21-84df-8104727ff1ce
@@ -388,10 +404,24 @@ createOrReplace
 
 		column data_fechamento_intervalo = ```
 				
-				IF(
+				/*IF(
 				    'mvp solicitacao_servicos'[data_fechamento] < TODAY(), 
 				    "ANTERIOR A HOJE", 
 				    "HOJE"
+				)*/
+				
+				VAR _hoje = TODAY()
+				VAR _dataFechamento = 'mvp solicitacao_servicos'[data_fechamento]
+				
+				RETURN
+				SWITCH(
+				    TRUE(),
+				    ISBLANK(_dataFechamento), BLANK(),
+				    _dataFechamento = _hoje, "HOJE",
+				    YEAR(_dataFechamento) = YEAR(_hoje) && MONTH(_dataFechamento) = MONTH(_hoje), "MÊS ATUAL",
+				    _dataFechamento < DATE(YEAR(_hoje), MONTH(_hoje), 1), "MESES ANTERIORES",
+				    _dataFechamento > EOMONTH(_hoje, 0), "MÊS FUTURO",
+				    "OUTRO"
 				)
 				```
 			lineageTag: aa982dd3-5119-48f4-af54-37b0459be8ea
@@ -528,7 +558,8 @@ createOrReplace
 					            FROM
 					                mvp.solicitacao_servicos
 					            WHERE
-									data_fechamento >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '12 month') 
+									data_fechamento >= DATE '2026-01-01'
+									-- data_fechamento >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '1 month') 
 									-- AND data_fechamento < CURRENT_DATE
 					                -- data_fechamento >= '2026-08-01' AND data_fechamento < CURRENT_DATE
 					                -- ss.data_fechamento::date BETWEEN '2026-08-01' AND CURRENT_DATE

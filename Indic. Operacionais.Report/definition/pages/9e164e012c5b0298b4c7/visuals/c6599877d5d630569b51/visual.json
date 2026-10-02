@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "c6599877d5d630569b51",
   "position": {
-    "x": 865,
-    "y": 153.75,
-    "z": 15001,
+    "x": 865.55555555555554,
+    "y": 153.33333333333334,
+    "z": 16000,
     "height": 27.777777777777779,
     "width": 284.44444444444446,
-    "tabOrder": 13003
+    "tabOrder": 16000
   },
   "visual": {
     "visualType": "card",
@@ -147,78 +147,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "5515d39cc1905de4e4cd",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "data_abertura_mes"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "m",
-              "Entity": "mvp solicitacao_servicos",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "m"
-                          }
-                        },
-                        "Property": "data_abertura_mes"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'MÊS ATUAL'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User",
-        "isLockedInViewMode": true
-      },
-      {
-        "name": "dc1a7a426ca0bc3853d4",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "DATA ABERTURA MINMAX"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

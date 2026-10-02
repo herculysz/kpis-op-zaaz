@@ -1680,7 +1680,11 @@ table Medidas
 			    )
 			
 			RETURN
+			IF(
+			    ISBLANK(DataInicio) || ISBLANK(DataFim),
+			    "Selecione o filtro acima ☝️",
 			    "Fechamento de " & FORMAT(DataInicio, "dd/mm/yyyy") & " até " & FORMAT(DataFim, "dd/mm/yyyy")
+			)
 			```
 		lineageTag: d2558b38-e4e8-487a-8ccc-b9779993f80a
 
@@ -1697,7 +1701,11 @@ table Medidas
 			        USERELATIONSHIP('d_calendario'[data], 'mvp solicitacao_servicos'[data_abertura])
 			    )
 			RETURN
+			IF(
+			    ISBLANK(DataInicio) || ISBLANK(DataFim),
+			    "Selecione o filtro acima ☝️",
 			    "Abertura de " & FORMAT(DataInicio, "dd/mm/yyyy") & " até " & FORMAT(DataFim, "dd/mm/yyyy")
+			)
 			```
 		lineageTag: be91e727-b388-45ef-a1b1-9052c8874ee4
 

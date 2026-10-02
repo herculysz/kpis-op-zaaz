@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
-  "name": "7c0210836516e32072b3",
+  "name": "9fd2cd21603c859bc79c",
   "position": {
-    "x": 28.448275862068968,
-    "y": 1034.4827586206898,
-    "z": 4000,
-    "height": 20.689655172413794,
-    "width": 96.551724137931046,
-    "tabOrder": 2000
+    "x": 0,
+    "y": 1032.8571428571429,
+    "z": 20002,
+    "height": 25.714285714285715,
+    "width": 100.71428571428572,
+    "tabOrder": 20001
   },
   "visual": {
     "visualType": "textbox",
@@ -19,13 +19,21 @@
               {
                 "textRuns": [
                   {
-                    "value": "Atualizado em:",
+                    "value": "🕑 ",
                     "textStyle": {
-                      "fontSize": "8pt",
+                      "fontSize": "12pt",
+                      "color": "#b3b3b3"
+                    }
+                  },
+                  {
+                    "value": "Atualizado:",
+                    "textStyle": {
+                      "fontSize": "10pt",
                       "color": "#b3b3b3"
                     }
                   }
-                ]
+                ],
+                "horizontalTextAlignment": "right"
               }
             ]
           }

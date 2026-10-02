@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "27a2fd811be959ae010a",
   "position": {
-    "x": 532.14285714285722,
-    "y": 115.00000000000001,
+    "x": 410.83333333333337,
+    "y": 115,
     "z": 20000,
     "height": 25,
-    "width": 270,
+    "width": 391.66666666666669,
     "tabOrder": 15000
   },
   "visual": {
@@ -31,6 +31,23 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "mvp solicitacao_servicos"
+                  }
+                },
+                "Property": "data_fechamento_intervalo"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "objects": {
@@ -72,7 +89,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'ANTERIOR A HOJE'"
+                                "Value": "'MÊS ATUAL'"
                               }
                             }
                           ]
@@ -129,7 +146,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "13D"
+                  "Value": "10D"
                 }
               }
             }
@@ -155,7 +172,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "10D"
                 }
               }
             }
@@ -181,7 +198,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "10D"
                 }
               }
             }
@@ -214,7 +231,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "10D"
                 }
               }
             }
@@ -240,13 +257,24 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "10D"
                 }
               }
             }
           },
           "selector": {
             "id": "interaction:rest"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
           }
         }
       ],
@@ -263,7 +291,7 @@
             "columnCount": {
               "expr": {
                 "Literal": {
-                  "Value": "2L"
+                  "Value": "3L"
                 }
               }
             },
@@ -504,23 +532,5 @@
       "filterChanges": true
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "dbe7b3f6491d8516a651",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "data_fechamento_intervalo"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

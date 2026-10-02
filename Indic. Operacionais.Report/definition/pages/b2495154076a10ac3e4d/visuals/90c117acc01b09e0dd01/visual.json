@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "90c117acc01b09e0dd01",
   "position": {
-    "x": 543,
-    "y": 154,
-    "z": 18001,
+    "x": 544.44444444444446,
+    "y": 154.44444444444443,
+    "z": 19000,
     "height": 27.777777777777779,
     "width": 284.44444444444446,
-    "tabOrder": 15004
+    "tabOrder": 19000
   },
   "visual": {
     "visualType": "card",
@@ -147,78 +147,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "4e4fe3470c2a0983a20a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "DATA FECHAMENTO MINMAX"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ab981c5ca5310e025948",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "data_fechamento_mes"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "m",
-              "Entity": "mvp solicitacao_servicos",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "m"
-                          }
-                        },
-                        "Property": "data_fechamento_mes"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'MÊS ATUAL'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User",
-        "isLockedInViewMode": true
-      }
-    ]
   }
 }
