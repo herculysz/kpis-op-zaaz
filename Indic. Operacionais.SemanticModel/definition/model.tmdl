@@ -28,6 +28,8 @@ ref table par_med_Backlog_Reparos
 ref table 'mvp base_clientes'
 ref table Parâmetro_analitico
 ref table Tabela_periodo
+ref table Empresa_UF_Cidade
+ref table Cidade
 
 ref cultureInfo pt-BR
 

@@ -1121,6 +1121,118 @@
             }
           ]
         }
+      },
+      {
+        "name": "2927b391b2c02f6b00db",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mvp solicitacao_servicos"
+              }
+            },
+            "Property": "empresa"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d404e021f9afc8f3169e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mvp solicitacao_servicos"
+              }
+            },
+            "Property": "uf_ajustada"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "83fa4696320941476cea",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mvp solicitacao_servicos"
+              }
+            },
+            "Property": "cidade"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "360cf38c34508546310a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "TOTAL_REPARO"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "688cadbb6fa5ec3d3701",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "PROJEÇÃO_REPARO"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9ae016ab2dbe16da394f",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Clientes_count"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9a2a13d5dd359332068c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "{PER} Projecao_entrante_taxa"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e5104f86bde285f94e08",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "{PER} Projecao_entrante_meta"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

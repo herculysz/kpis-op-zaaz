@@ -7831,6 +7831,336 @@ cultureInfo pt-BR
 			    }
 			  },
 			  "Relationships": {
+			    "tabela_periodo_has_periodo": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabela_periodo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabela_periodo": {
+			          "Target": {
+			            "Entity": "tabela_periodo"
+			          }
+			        },
+			        "tabela_periodo.periodo": {
+			          "Target": {
+			            "Entity": "tabela_periodo.periodo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabela_periodo"
+			            },
+			            "Object": {
+			              "Role": "tabela_periodo.periodo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabela_periodos_have_periodos"
+			        }
+			      ]
+			    },
+			    "d_calendario_has_filtro_periodo_dinamico": {
+			      "Binding": {
+			        "ConceptualEntity": "d_Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_calendario": {
+			          "Target": {
+			            "Entity": "d_calendario"
+			          }
+			        },
+			        "d_calendario.filtro_periodo_dinamico": {
+			          "Target": {
+			            "Entity": "d_calendario.filtro_periodo_dinamico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.filtro_periodo_dinamico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_calendarios_have_filtro_periodo_dinamicos"
+			        }
+			      ]
+			    },
+			    "d_calendario_has_é_menor_ou_igual_a_hoje": {
+			      "Binding": {
+			        "ConceptualEntity": "d_Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_calendario": {
+			          "Target": {
+			            "Entity": "d_calendario"
+			          }
+			        },
+			        "d_calendario.é_menor_ou_igual_a_hoje": {
+			          "Target": {
+			            "Entity": "d_calendario.é_menor_ou_igual_a_hoje"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.é_menor_ou_igual_a_hoje"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_calendarios_have_é_menor_ou_igual_a_hoje"
+			        }
+			      ]
+			    },
+			    "d_calendario_has_intervalo_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "d_Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_calendario": {
+			          "Target": {
+			            "Entity": "d_calendario"
+			          }
+			        },
+			        "d_calendario.intervalo_de_data": {
+			          "Target": {
+			            "Entity": "d_calendario.intervalo_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.intervalo_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_calendarios_have_intervalo_de_data"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_medida_data_abertura_minmax": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "medida.data_abertura_minmax": {
+			          "Target": {
+			            "Entity": "medida.data_abertura_minmax"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "medida.data_abertura_minmax"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_data_abertura_minmax"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_medida_data_fechamento_minmax": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "medida.data_fechamento_minmax": {
+			          "Target": {
+			            "Entity": "medida.data_fechamento_minmax"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "medida.data_fechamento_minmax"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_data_fechamento_minmax"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_data_fechamento_me": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "mvp_solicitacao_servico.data_fechamento_me": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico.data_fechamento_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "mvp_solicitacao_servico.data_fechamento_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_data_fechamento_me"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_data_abertura_me": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "mvp_solicitacao_servico.data_abertura_me": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico.data_abertura_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "mvp_solicitacao_servico.data_abertura_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_data_abertura_me"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_data_fechamento_intervalo": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "mvp_solicitacao_servico.data_fechamento_intervalo": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico.data_fechamento_intervalo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "mvp_solicitacao_servico.data_fechamento_intervalo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_data_fechamento_intervalos"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_data_abertura_intervalo": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "mvp_solicitacao_servico.data_abertura_intervalo": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico.data_abertura_intervalo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "mvp_solicitacao_servico.data_abertura_intervalo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_data_abertura_intervalos"
+			        }
+			      ]
+			    },
 			    "parâmetro_analitico_has_value_7": {
 			      "Binding": {
 			        "ConceptualEntity": "Parâmetro_analitico"
@@ -14672,336 +15002,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "mvp_solicitacao_servicos_have_id_tickets"
-			        }
-			      ]
-			    },
-			    "mvp_solicitacao_servico_has_data_abertura_intervalo": {
-			      "Binding": {
-			        "ConceptualEntity": "mvp solicitacao_servicos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "mvp_solicitacao_servico": {
-			          "Target": {
-			            "Entity": "mvp_solicitacao_servico"
-			          }
-			        },
-			        "mvp_solicitacao_servico.data_abertura_intervalo": {
-			          "Target": {
-			            "Entity": "mvp_solicitacao_servico.data_abertura_intervalo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mvp_solicitacao_servico"
-			            },
-			            "Object": {
-			              "Role": "mvp_solicitacao_servico.data_abertura_intervalo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mvp_solicitacao_servicos_have_data_abertura_intervalos"
-			        }
-			      ]
-			    },
-			    "mvp_solicitacao_servico_has_data_fechamento_intervalo": {
-			      "Binding": {
-			        "ConceptualEntity": "mvp solicitacao_servicos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "mvp_solicitacao_servico": {
-			          "Target": {
-			            "Entity": "mvp_solicitacao_servico"
-			          }
-			        },
-			        "mvp_solicitacao_servico.data_fechamento_intervalo": {
-			          "Target": {
-			            "Entity": "mvp_solicitacao_servico.data_fechamento_intervalo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mvp_solicitacao_servico"
-			            },
-			            "Object": {
-			              "Role": "mvp_solicitacao_servico.data_fechamento_intervalo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mvp_solicitacao_servicos_have_data_fechamento_intervalos"
-			        }
-			      ]
-			    },
-			    "mvp_solicitacao_servico_has_data_abertura_me": {
-			      "Binding": {
-			        "ConceptualEntity": "mvp solicitacao_servicos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "mvp_solicitacao_servico": {
-			          "Target": {
-			            "Entity": "mvp_solicitacao_servico"
-			          }
-			        },
-			        "mvp_solicitacao_servico.data_abertura_me": {
-			          "Target": {
-			            "Entity": "mvp_solicitacao_servico.data_abertura_me"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mvp_solicitacao_servico"
-			            },
-			            "Object": {
-			              "Role": "mvp_solicitacao_servico.data_abertura_me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mvp_solicitacao_servicos_have_data_abertura_me"
-			        }
-			      ]
-			    },
-			    "mvp_solicitacao_servico_has_data_fechamento_me": {
-			      "Binding": {
-			        "ConceptualEntity": "mvp solicitacao_servicos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "mvp_solicitacao_servico": {
-			          "Target": {
-			            "Entity": "mvp_solicitacao_servico"
-			          }
-			        },
-			        "mvp_solicitacao_servico.data_fechamento_me": {
-			          "Target": {
-			            "Entity": "mvp_solicitacao_servico.data_fechamento_me"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mvp_solicitacao_servico"
-			            },
-			            "Object": {
-			              "Role": "mvp_solicitacao_servico.data_fechamento_me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mvp_solicitacao_servicos_have_data_fechamento_me"
-			        }
-			      ]
-			    },
-			    "mvp_solicitacao_servico_has_medida_data_fechamento_minmax": {
-			      "Binding": {
-			        "ConceptualEntity": "mvp solicitacao_servicos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "mvp_solicitacao_servico": {
-			          "Target": {
-			            "Entity": "mvp_solicitacao_servico"
-			          }
-			        },
-			        "medida.data_fechamento_minmax": {
-			          "Target": {
-			            "Entity": "medida.data_fechamento_minmax"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mvp_solicitacao_servico"
-			            },
-			            "Object": {
-			              "Role": "medida.data_fechamento_minmax"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mvp_solicitacao_servicos_have_data_fechamento_minmax"
-			        }
-			      ]
-			    },
-			    "mvp_solicitacao_servico_has_medida_data_abertura_minmax": {
-			      "Binding": {
-			        "ConceptualEntity": "mvp solicitacao_servicos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "mvp_solicitacao_servico": {
-			          "Target": {
-			            "Entity": "mvp_solicitacao_servico"
-			          }
-			        },
-			        "medida.data_abertura_minmax": {
-			          "Target": {
-			            "Entity": "medida.data_abertura_minmax"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mvp_solicitacao_servico"
-			            },
-			            "Object": {
-			              "Role": "medida.data_abertura_minmax"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mvp_solicitacao_servicos_have_data_abertura_minmax"
-			        }
-			      ]
-			    },
-			    "d_calendario_has_intervalo_de_data": {
-			      "Binding": {
-			        "ConceptualEntity": "d_Calendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_calendario": {
-			          "Target": {
-			            "Entity": "d_calendario"
-			          }
-			        },
-			        "d_calendario.intervalo_de_data": {
-			          "Target": {
-			            "Entity": "d_calendario.intervalo_de_data"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.intervalo_de_data"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "d_calendarios_have_intervalo_de_data"
-			        }
-			      ]
-			    },
-			    "d_calendario_has_é_menor_ou_igual_a_hoje": {
-			      "Binding": {
-			        "ConceptualEntity": "d_Calendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_calendario": {
-			          "Target": {
-			            "Entity": "d_calendario"
-			          }
-			        },
-			        "d_calendario.é_menor_ou_igual_a_hoje": {
-			          "Target": {
-			            "Entity": "d_calendario.é_menor_ou_igual_a_hoje"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.é_menor_ou_igual_a_hoje"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "d_calendarios_have_é_menor_ou_igual_a_hoje"
-			        }
-			      ]
-			    },
-			    "d_calendario_has_filtro_periodo_dinamico": {
-			      "Binding": {
-			        "ConceptualEntity": "d_Calendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_calendario": {
-			          "Target": {
-			            "Entity": "d_calendario"
-			          }
-			        },
-			        "d_calendario.filtro_periodo_dinamico": {
-			          "Target": {
-			            "Entity": "d_calendario.filtro_periodo_dinamico"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.filtro_periodo_dinamico"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "d_calendarios_have_filtro_periodo_dinamicos"
-			        }
-			      ]
-			    },
-			    "tabela_periodo_has_periodo": {
-			      "Binding": {
-			        "ConceptualEntity": "Tabela_periodo"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "tabela_periodo": {
-			          "Target": {
-			            "Entity": "tabela_periodo"
-			          }
-			        },
-			        "tabela_periodo.periodo": {
-			          "Target": {
-			            "Entity": "tabela_periodo.periodo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "tabela_periodo"
-			            },
-			            "Object": {
-			              "Role": "tabela_periodo.periodo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "tabela_periodos_have_periodos"
 			        }
 			      ]
 			    },

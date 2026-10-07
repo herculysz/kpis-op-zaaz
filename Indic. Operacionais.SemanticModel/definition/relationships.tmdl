@@ -18,3 +18,7 @@ relationship febe461d-6186-fb87-87b2-d3ee138e692c
 	fromColumn: 'mvp solicitacao_servicos'.data_fechamento_intervalo
 	toColumn: Tabela_periodo.PERIODO
 
+relationship ee058e6f-ef73-deed-4ed2-815a40679b0f
+	fromColumn: 'mvp solicitacao_servicos'.cidade
+	toColumn: Cidade.Cidade
+

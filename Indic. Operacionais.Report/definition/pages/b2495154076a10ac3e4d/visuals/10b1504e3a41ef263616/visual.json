@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
-  "name": "0a7eb6ec294a896b7a93",
+  "name": "10b1504e3a41ef263616",
   "position": {
-    "x": 28.333333333333336,
-    "y": 173.33333333333334,
-    "z": 16000,
+    "x": 28.272251308900525,
+    "y": 230.41884816753927,
+    "z": 24004,
     "height": 56.666666666666671,
     "width": 200,
-    "tabOrder": 12000
+    "tabOrder": 24004
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "mvp solicitacao_servicos"
+                      "Entity": "Cidade"
                     }
                   },
-                  "Property": "tipo_servico"
+                  "Property": "Cidade"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.tipo_servico",
-              "nativeQueryRef": "tipo_servico",
+              "queryRef": "Cidade.Cidade",
+              "nativeQueryRef": "Cidade",
               "active": true
             }
           ]
@@ -69,6 +69,44 @@
                 "Literal": {
                   "Value": "true"
                 }
+              }
+            },
+            "selfFilter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "c",
+                    "Entity": "Cidade",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Contains": {
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "c"
+                              }
+                            },
+                            "Property": "Cidade"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "'campi'"
+                          }
+                        }
+                      }
+                    },
+                    "Annotations": {
+                      "PowerBI.MParameterBehavior": 1
+                    }
+                  }
+                ]
               }
             }
           }
@@ -123,7 +161,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'TIPO DE SERVIÇO'"
+                  "Value": "'CIDADE'"
                 }
               }
             },
@@ -167,10 +205,29 @@
       ]
     },
     "syncGroup": {
-      "groupName": "tipo_servico",
+      "groupName": "Cidade",
       "fieldChanges": true,
       "filterChanges": true
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5f0d8c37807b10028a2e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mvp solicitacao_servicos"
+              }
+            },
+            "Property": "tipo_servico"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      }
+    ]
   }
 }

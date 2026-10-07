@@ -1,0 +1,31 @@
+table Cidade
+	lineageTag: 7675c136-6915-4e19-950c-2a3f9c98606a
+
+	column Cidade
+		lineageTag: 36ae3c39-1394-45fc-bcb5-0eb3a22906f6
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Cidade]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Cidade = calculated
+		mode: import
+		source = ```
+				
+				VAR TabelaUnida = 
+				    UNION (
+				        SELECTCOLUMNS ( 'mvp base_clientes', "Cidade", 'mvp base_clientes'[ajuste_cidade] ),
+				        SELECTCOLUMNS ( 'mvp solicitacao_servicos', "Cidade", 'mvp solicitacao_servicos'[cidade] )
+				    )
+				RETURN
+				FILTER (
+				    DISTINCT ( TabelaUnida ),
+				    NOT ISBLANK ( [Cidade] )
+				        --&& TRIM ( [Cidade] ) <> ""
+				        && [Cidade]<> ""
+				)
+				```
+
+	annotation PBI_Id = b85ae0a58bae4da6b6e1950113ae688d
+

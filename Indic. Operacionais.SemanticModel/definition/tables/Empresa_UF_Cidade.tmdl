@@ -1,0 +1,52 @@
+table Empresa_UF_Cidade
+	lineageTag: eb049461-ac0f-4f02-98ef-002dfbfc0829
+
+	column Empresa
+		lineageTag: deb822e9-b806-4099-a147-08bd8fcd6318
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Empresa]
+
+		annotation SummarizationSetBy = Automatic
+
+	column UF
+		lineageTag: 4a88f1f5-6848-4a30-a464-bce93ef152eb
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [UF]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cidade
+		lineageTag: 674dc7a4-1747-490c-8581-49cf0183647c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Cidade]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Empresa_UF_Cidade = calculated
+		mode: import
+		source = ```
+				
+				DISTINCT (
+				    UNION (
+				        SELECTCOLUMNS (
+				            'mvp base_clientes',
+				            "Empresa", 'mvp base_clientes'[empresa],
+				            "UF", 'mvp base_clientes'[ajuste_uf],
+				            "Cidade", 'mvp base_clientes'[ajuste_cidade]
+				            
+				        ),
+				        SELECTCOLUMNS (
+				            'mvp solicitacao_servicos',
+				            "Empresa", 'mvp solicitacao_servicos'[empresa],
+				            "UF", 'mvp solicitacao_servicos'[uf_ajustada],
+				            "Cidade", 'mvp solicitacao_servicos'[cidade]
+				        )
+				    )
+				)
+				```
+
+	annotation PBI_Id = 070aea595984490886e4bb96288f8467
+
