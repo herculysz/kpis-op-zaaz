@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "c6599877d5d630569b51",
   "position": {
-    "x": 865.55555555555554,
-    "y": 153.33333333333334,
-    "z": 16000,
+    "x": 865.13089005235611,
+    "y": 152.67015706806282,
+    "z": 14000,
     "height": 27.777777777777779,
     "width": 284.44444444444446,
-    "tabOrder": 16000
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "card",
@@ -23,11 +23,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "DATA ABERTURA MINMAX"
+                  "Property": "DATA FECHAMENTO MINMAX"
                 }
               },
-              "queryRef": "Medidas.DATA ABERTURA MINMAX",
-              "nativeQueryRef": "DATA ABERTURA MINMAX"
+              "queryRef": "Medidas.DATA FECHAMENTO MINMAX",
+              "nativeQueryRef": "DATA FECHAMENTO MINMAX"
             }
           ]
         }

@@ -80,6 +80,16 @@
       "source": "73b791d732c07e00e0e2",
       "target": "c6599877d5d630569b51",
       "type": "NoFilter"
+    },
+    {
+      "source": "e6f225dc09925e0c7166",
+      "target": "c6599877d5d630569b51",
+      "type": "DataFilter"
+    },
+    {
+      "source": "e6f225dc09925e0c7166",
+      "target": "076a5587862787bbd242",
+      "type": "DataFilter"
     }
   ]
 }

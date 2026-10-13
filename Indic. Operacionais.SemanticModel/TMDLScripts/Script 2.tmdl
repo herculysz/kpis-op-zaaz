@@ -1,0 +1,586 @@
+createOrReplace
+
+	table 'mvp solicitacao_servicos'
+		lineageTag: bff224f5-cd61-4515-81af-b51dddd47aaa
+
+		column id_ticket
+			dataType: int64
+			formatString: 0
+			lineageTag: 132421c6-a67a-4745-9951-a1596fb07a23
+			summarizeBy: sum
+			sourceColumn: id_ticket
+
+			annotation SummarizationSetBy = Automatic
+
+		column id_contrato
+			dataType: int64
+			formatString: 0
+			lineageTag: d43f3799-3150-474c-9b97-a234ed35c3d1
+			summarizeBy: sum
+			sourceColumn: id_contrato
+
+			annotation SummarizationSetBy = Automatic
+
+		column id_cliente
+			dataType: int64
+			formatString: 0
+			lineageTag: 18d6d73f-7381-444b-9e50-89e40e16f921
+			summarizeBy: sum
+			sourceColumn: id_cliente
+
+			annotation SummarizationSetBy = Automatic
+
+		column cliente
+			dataType: string
+			lineageTag: e07e42d0-cd72-4356-b86c-b2d377d9f303
+			summarizeBy: none
+			sourceColumn: cliente
+
+			annotation SummarizationSetBy = Automatic
+
+		column tipo_solicitacao
+			dataType: string
+			lineageTag: 26e6143b-f4ce-4b93-bb9a-c0d326f3b4b1
+			summarizeBy: none
+			sourceColumn: tipo_solicitacao
+
+			annotation SummarizationSetBy = Automatic
+
+		column diagnostico_final
+			dataType: string
+			lineageTag: 60814f20-d2ec-48b1-9af7-e10e3efc818c
+			summarizeBy: none
+			sourceColumn: diagnostico_final
+
+			annotation SummarizationSetBy = Automatic
+
+		column tipo_servico
+			dataType: string
+			lineageTag: 9680585c-01c0-46a4-b981-1c4f741d152d
+			summarizeBy: none
+			sourceColumn: tipo_servico
+
+			annotation SummarizationSetBy = Automatic
+
+		column produtivo
+			dataType: int64
+			formatString: 0
+			lineageTag: 279c58c4-57ff-4a33-abf0-ca10745b4432
+			summarizeBy: sum
+			sourceColumn: produtivo
+
+			annotation SummarizationSetBy = Automatic
+
+		column status
+			dataType: string
+			lineageTag: 8443f506-8000-4bea-bf7c-08b06baf744f
+			summarizeBy: none
+			sourceColumn: status
+
+			annotation SummarizationSetBy = Automatic
+
+		column data_primeira_agenda
+			dataType: dateTime
+			formatString: Short Date
+			lineageTag: 88701b87-4e8a-4256-b7d5-8b1c036e9d8b
+			summarizeBy: none
+			sourceColumn: data_primeira_agenda
+
+			annotation SummarizationSetBy = Automatic
+
+		column data_agendamento_atual
+			dataType: dateTime
+			formatString: Short Date
+			lineageTag: c21bd13b-f7df-4939-a865-872aa0a45627
+			summarizeBy: none
+			sourceColumn: data_agendamento_atual
+
+			annotation SummarizationSetBy = Automatic
+
+		column login
+			dataType: string
+			lineageTag: 5c85c184-0d77-46f0-9149-7dc2d537e335
+			summarizeBy: none
+			sourceColumn: login
+
+			annotation SummarizationSetBy = Automatic
+
+		column id_tecnico
+			dataType: int64
+			formatString: 0
+			lineageTag: e7bcc541-84f3-4eb7-b78c-accdfbcbde1d
+			summarizeBy: sum
+			sourceColumn: id_tecnico
+
+			annotation SummarizationSetBy = Automatic
+
+		column tecnico
+			dataType: string
+			lineageTag: b2931cfc-baff-4e9a-b2e1-044f8e9dce06
+			summarizeBy: none
+			sourceColumn: tecnico
+
+			annotation SummarizationSetBy = Automatic
+
+		column filial_regional
+			dataType: string
+			lineageTag: 3106863b-3953-4540-a0e8-777a7351c574
+			summarizeBy: none
+			sourceColumn: filial_regional
+
+			annotation SummarizationSetBy = Automatic
+
+		column nome_atendente
+			dataType: string
+			lineageTag: 4bf08455-808e-4ee6-8179-4256e8d036f5
+			summarizeBy: none
+			sourceColumn: nome_atendente
+
+			annotation SummarizationSetBy = Automatic
+
+		column setor
+			dataType: string
+			lineageTag: e5e95215-3889-4b66-a7ba-1dab8b05dd08
+			summarizeBy: none
+			sourceColumn: setor
+
+			annotation SummarizationSetBy = Automatic
+
+		column cod_ibge
+			dataType: int64
+			formatString: 0
+			lineageTag: 58b6a873-2d7a-4ed9-af2c-c3f2e466ee73
+			summarizeBy: sum
+			sourceColumn: cod_ibge
+
+			annotation SummarizationSetBy = Automatic
+
+		column cidade
+			dataType: string
+			lineageTag: 6c2b26e0-38b4-4b50-845f-e1d75289e7ef
+			summarizeBy: none
+			sourceColumn: cidade
+
+			annotation SummarizationSetBy = Automatic
+
+		column uf
+			dataType: string
+			lineageTag: f59abfd6-24eb-4d53-971c-8eba781d883a
+			summarizeBy: none
+			sourceColumn: uf
+
+			annotation SummarizationSetBy = Automatic
+
+		column sla_24h
+			dataType: int64
+			formatString: 0
+			lineageTag: eba74f6a-3cbb-4a69-8c14-527132b4483f
+			summarizeBy: sum
+			sourceColumn: sla_24h
+
+			annotation SummarizationSetBy = Automatic
+
+		column sla_48h
+			dataType: int64
+			formatString: 0
+			lineageTag: 30e44d6f-ba73-4915-ac22-c8ecf5bf0150
+			summarizeBy: sum
+			sourceColumn: sla_48h
+
+			annotation SummarizationSetBy = Automatic
+
+		column sla_72h
+			dataType: int64
+			formatString: 0
+			lineageTag: e7bc1aea-ce4d-4342-acab-a488837d3496
+			summarizeBy: sum
+			sourceColumn: sla_72h
+
+			annotation SummarizationSetBy = Automatic
+
+		column primeira_agenda
+			dataType: int64
+			formatString: 0
+			lineageTag: b0a72c9e-6c12-4086-bbfa-c3ee3de044ec
+			summarizeBy: sum
+			sourceColumn: primeira_agenda
+
+			annotation SummarizationSetBy = Automatic
+
+		column empresa
+			dataType: string
+			lineageTag: 05a194ee-fe60-4cb8-9032-4c247f6305aa
+			summarizeBy: none
+			sourceColumn: empresa
+
+			annotation SummarizationSetBy = Automatic
+
+		column dt_carga
+			dataType: dateTime
+			formatString: General Date
+			lineageTag: c5ee28f1-226f-432c-a0f3-4e0107966d30
+			summarizeBy: none
+			sourceColumn: dt_carga
+
+			annotation SummarizationSetBy = Automatic
+
+		column uf_ajustada
+			dataType: string
+			lineageTag: 6019dd9f-3a83-4517-a4ca-0967f307be21
+			summarizeBy: none
+			sourceColumn: uf_ajustada
+
+			annotation SummarizationSetBy = Automatic
+
+		column horas
+			dataType: double
+			lineageTag: f355beee-d49e-4c15-a3b8-38ccd87ca051
+			summarizeBy: sum
+			sourceColumn: horas
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		column faixa_tempo
+			dataType: string
+			lineageTag: bae32e4e-5ed9-45f4-b7f1-2ad39542cdb6
+			summarizeBy: none
+			sourceColumn: faixa_tempo
+			sortByColumn: faixa_tempo_classificador
+
+			changedProperty = SortByColumn
+
+			annotation SummarizationSetBy = Automatic
+
+		column faixa_tempo_classificador
+			dataType: int64
+			formatString: 0
+			lineageTag: 5aeccced-2c55-47db-8310-7dce4d8ec1da
+			summarizeBy: sum
+			sourceColumn: faixa_tempo_classificador
+
+			annotation SummarizationSetBy = Automatic
+
+		column noprazo
+			dataType: int64
+			formatString: 0
+			lineageTag: 21696100-fcc8-424b-9d31-92c06bfb3392
+			summarizeBy: sum
+			sourceColumn: noprazo
+
+			annotation SummarizationSetBy = Automatic
+
+		column id
+			dataType: int64
+			formatString: 0
+			lineageTag: 1407e3c0-7330-420f-995a-0d401e9f740e
+			summarizeBy: sum
+			sourceColumn: id
+
+			annotation SummarizationSetBy = Automatic
+
+		column protocolo
+			dataType: string
+			lineageTag: 1a14cff6-45e5-402f-81fd-2b36620ba9b6
+			summarizeBy: none
+			sourceColumn: protocolo
+
+			annotation SummarizationSetBy = Automatic
+
+		column data_termino_garantia
+			dataType: dateTime
+			formatString: Short Date
+			lineageTag: 2676aa86-73ab-4ba3-ac90-6f87787cd552
+			summarizeBy: none
+			sourceColumn: data_termino_garantia
+
+			annotation SummarizationSetBy = Automatic
+
+		column duracao_servico
+			dataType: double
+			lineageTag: 2d1d82d3-0919-4171-b7bb-a28b949d459f
+			summarizeBy: sum
+			sourceColumn: duracao_servico
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		column EhAteOntem = ```
+				
+				    IF(
+				        'mvp solicitacao_servicos'[data_fechamento] < TODAY(),
+				        "Sim",
+				        "Não"
+				    )
+				```
+			lineageTag: c6a47976-5487-470c-9337-8efacc41f5fd
+			summarizeBy: none
+
+			annotation SummarizationSetBy = Automatic
+
+		column noprazo2
+			dataType: int64
+			formatString: 0
+			lineageTag: b319cd23-84fb-49c9-b384-5be37f16501a
+			summarizeBy: sum
+			sourceColumn: noprazo2
+
+			annotation SummarizationSetBy = Automatic
+
+		column data_abertura
+			dataType: dateTime
+			formatString: Short Date
+			lineageTag: 2f992e4f-1392-418f-8a67-2aa1705755a6
+			summarizeBy: none
+			sourceColumn: data_abertura
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation UnderlyingDateTimeDataType = Date
+
+		column hora_abertura
+			dataType: dateTime
+			formatString: Long Time
+			lineageTag: de6fb3fc-27b2-473c-99de-7f48e21a7aed
+			summarizeBy: none
+			sourceColumn: hora_abertura
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation UnderlyingDateTimeDataType = Time
+
+		column data_fechamento
+			dataType: dateTime
+			formatString: Short Date
+			lineageTag: 709fe7a5-204d-4a62-ba3e-d5964d3082dd
+			summarizeBy: none
+			sourceColumn: data_fechamento
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation UnderlyingDateTimeDataType = Date
+
+		column hora_fechamento
+			dataType: dateTime
+			formatString: Long Time
+			lineageTag: a070a72b-2fdd-408f-b0a9-a7698feb9496
+			summarizeBy: none
+			sourceColumn: hora_fechamento
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation UnderlyingDateTimeDataType = Time
+
+		column data_abertura_intervalo = ```
+				
+				/*
+				IF(
+				    'mvp solicitacao_servicos'[data_abertura] < TODAY(), 
+				    "ANTERIOR A HOJE", 
+				    "HOJE"
+				)
+				*/
+				
+				VAR _hoje = TODAY()
+				VAR _dataabertura = 'mvp solicitacao_servicos'[data_abertura]
+				
+				RETURN
+				SWITCH(
+				    TRUE(),
+				    ISBLANK(_dataabertura), BLANK(),
+				    _dataabertura = _hoje, "HOJE",
+				    YEAR(_dataabertura) = YEAR(_hoje) && MONTH(_dataabertura) = MONTH(_hoje), "MÊS ATUAL",
+				    _dataabertura < DATE(YEAR(_hoje), MONTH(_hoje), 1), "MESES ANTERIORES",
+				    _dataabertura > EOMONTH(_hoje, 0), "MÊS FUTURO",
+				    "OUTRO"
+				)
+				```
+			lineageTag: 2c9aeb87-472f-4f21-84df-8104727ff1ce
+			summarizeBy: none
+
+			annotation SummarizationSetBy = Automatic
+
+		column data_fechamento_intervalo = ```
+				
+				/*IF(
+				    'mvp solicitacao_servicos'[data_fechamento] < TODAY(), 
+				    "ANTERIOR A HOJE", 
+				    "HOJE"
+				)*/
+				
+				VAR _hoje = TODAY()
+				VAR _dataFechamento = 'mvp solicitacao_servicos'[data_fechamento]
+				
+				RETURN
+				SWITCH(
+				    TRUE(),
+				    ISBLANK(_dataFechamento), BLANK(),
+				    _dataFechamento = _hoje, "HOJE",
+				    YEAR(_dataFechamento) = YEAR(_hoje) && MONTH(_dataFechamento) = MONTH(_hoje), "MÊS ATUAL",
+				    _dataFechamento < DATE(YEAR(_hoje), MONTH(_hoje), 1), "MESES ANTERIORES",
+				    _dataFechamento > EOMONTH(_hoje, 0), "MÊS FUTURO",
+				    "OUTRO"
+				)
+				```
+			lineageTag: aa982dd3-5119-48f4-af54-37b0459be8ea
+			summarizeBy: none
+
+			annotation SummarizationSetBy = Automatic
+
+		column data_abertura_mes = ```
+				
+				
+				VAR _data = 'mvp solicitacao_servicos'[data_abertura]
+				VAR _Hoje = TODAY()
+				VAR _PrimeiroDiaDoMes = (DAY(_Hoje) = 1)
+				
+				// Identifica o mês/ano da linha da calendário
+				VAR _AnoMesLinha = YEAR(_data) * 100 + MONTH(_data)
+				
+				// MÊS ATUAL e MÊS ANTERIOR baseados no dia de HOJE
+				VAR _AnoMesAtual = YEAR(_Hoje) * 100 + MONTH(_Hoje)
+				VAR _AnoMesAnterior = YEAR(EDATE(_Hoje, -1)) * 100 + MONTH(EDATE(_Hoje, -1))
+				
+				RETURN
+				    SWITCH(
+				        TRUE(),
+				        -- Se for o 1º dia do mês e a linha for do MÊS ANTERIOR -> Seleção Automática
+				        _PrimeiroDiaDoMes && _AnoMesLinha = _AnoMesAnterior, "MÊS ATUAL",
+				        
+				        -- Se NÃO for o 1º dia do mês e a linha for do MÊS ATUAL -> Seleção Automática
+				        NOT(_PrimeiroDiaDoMes) && _AnoMesLinha = _AnoMesAtual, "MÊS ATUAL",
+				        
+				        -- Mapeamentos explícitos adicionais para permitir consulta manual
+				        _AnoMesLinha = _AnoMesAtual, "MÊS ATUAL",
+				        _AnoMesLinha = _AnoMesAnterior, "MÊS ANTERIOR",
+				        
+				        "Outros"
+				    )
+				```
+			lineageTag: f9a7281c-2934-4c68-a2d8-d4f6b4167abb
+			summarizeBy: none
+
+			annotation SummarizationSetBy = Automatic
+
+		column data_fechamento_mes = ```
+				
+				
+				VAR _data = 'mvp solicitacao_servicos'[data_fechamento]
+				VAR _Hoje = TODAY()
+				VAR _PrimeiroDiaDoMes = (DAY(_Hoje) = 1)
+				
+				// Identifica o mês/ano da linha da calendário
+				VAR _AnoMesLinha = YEAR(_data) * 100 + MONTH(_data)
+				
+				// MÊS ATUAL e MÊS ANTERIOR baseados no dia de HOJE
+				VAR _AnoMesAtual = YEAR(_Hoje) * 100 + MONTH(_Hoje)
+				VAR _AnoMesAnterior = YEAR(EDATE(_Hoje, -1)) * 100 + MONTH(EDATE(_Hoje, -1))
+				
+				RETURN
+				    SWITCH(
+				        TRUE(),
+				        -- Se for o 1º dia do mês e a linha for do MÊS ANTERIOR -> Seleção Automática
+				        _PrimeiroDiaDoMes && _AnoMesLinha = _AnoMesAnterior, "MÊS ATUAL",
+				        
+				        -- Se NÃO for o 1º dia do mês e a linha for do MÊS ATUAL -> Seleção Automática
+				        NOT(_PrimeiroDiaDoMes) && _AnoMesLinha = _AnoMesAtual, "MÊS ATUAL",
+				        
+				        -- Mapeamentos explícitos adicionais para permitir consulta manual
+				        _AnoMesLinha = _AnoMesAtual, "MÊS ATUAL",
+				        _AnoMesLinha = _AnoMesAnterior, "MÊS ANTERIOR",
+				        
+				        "Outros"
+				    )
+				```
+			lineageTag: 8537a3ae-61a5-45c0-b504-6cd650732590
+			summarizeBy: none
+
+			annotation SummarizationSetBy = Automatic
+
+		partition 'mvp solicitacao_servicos' = m
+			mode: import
+			source = ```
+					let
+					    Fonte = Value.NativeQuery(
+					        PostgreSQL.Database(
+					            host, /* ip:porta */
+					            database    /* database */
+					        ), 
+					        "
+					        SELECT
+					            t.*,
+					            CASE
+					                WHEN horas <= 12  THEN 'ATÉ 12H'
+					                WHEN horas <= 24  THEN 'DE 12H A 24H'
+					                WHEN horas <= 36  THEN 'DE 24H A 36H'
+					                WHEN horas <= 48  THEN 'DE 36H A 48H'
+					                WHEN horas <= 72  THEN 'DE 48H A 72H'
+					                WHEN horas <= 96  THEN 'DE 72H A 96H'
+					                WHEN horas <= 120 THEN 'DE 96H A 120H'
+					                WHEN horas > 120  THEN 'ACIMA DE 120H'
+					            END AS FAIXA_TEMPO,
+					            CASE
+					                WHEN horas <= 12  THEN 1
+					                WHEN horas <= 24  THEN 2
+					                WHEN horas <= 36  THEN 3
+					                WHEN horas <= 48  THEN 4
+					                WHEN horas <= 72  THEN 5
+					                WHEN horas <= 96  THEN 6
+					                WHEN horas <= 120 THEN 7
+					                WHEN horas > 120  THEN 8
+					            END AS FAIXA_TEMPO_CLASSIFICADOR
+					        FROM (
+					            SELECT
+					                *,
+					                (data_fechamento + INTERVAL '30 days')::date AS data_termino_garantia,
+					                CASE
+					                    WHEN uf = 'SP' AND filial_regional IN ('FILIAL MG', 'ICONECTA', 'VOUE') THEN 'MG'
+					                    ELSE uf
+					                END AS uf_ajustada,
+					                CASE
+					                    WHEN status NOT IN ('ABERTA', 'AGENDADA', 'ANDAMENTO', 'ENCAMINHADA', 'ABERTURA') THEN NULL
+					                    ELSE ROUND(EXTRACT(EPOCH FROM (NOW() - data_abertura)) / 3600, 2)
+					                END AS horas,
+					                CASE
+					                    WHEN data_fechamento::date <= data_primeira_agenda::date THEN 1
+					                    ELSE 0
+					                END AS noprazo,
+									CASE
+										WHEN status IN	('FINALIZADA', 'FECHAMENTO', 'ENCERRAMENTO') THEN EXTRACT(EPOCH FROM (data_fechamento - data_abertura)) / 3600
+										ELSE NULL 
+									END AS duracao_servico,
+									CASE
+										WHEN (data_fechamento::date - data_abertura::date) <= 1 THEN 1
+									ELSE 0
+									END AS noprazo2
+					            FROM
+					                mvp.solicitacao_servicos
+					            WHERE
+									data_fechamento >= DATE '2026-01-01'
+									-- data_fechamento >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '1 month') 
+									-- AND data_fechamento < CURRENT_DATE
+					                -- data_fechamento >= '2026-08-01' AND data_fechamento < CURRENT_DATE
+					                -- ss.data_fechamento::date BETWEEN '2026-08-01' AND CURRENT_DATE
+					                -- AND status IN ('ABERTA','AGENDADA','ANDAMENTO','ENCAMINHADA','ABERTURA')
+					                -- AND status IN ('ENCERRAMENTO', 'FINALIZADA', 'FECHAMENTO')
+					                -- AND tipo_servico = 'REPARO'
+					                -- AND tipo_servico = 'GROSS - ATIV'
+					        ) AS t
+					        ", 
+					        null, 
+					        [EnableFolding = true]
+					    ),
+					    #"Dividir Coluna por Delimitador" = Table.SplitColumn(Table.TransformColumnTypes(Fonte, {{"data_fechamento", type text}}, "pt-BR"), "data_fechamento", Splitter.SplitTextByDelimiter(" ", QuoteStyle.None), {"data_fechamento.1", "data_fechamento.2"}),
+					    #"Dividir Coluna por Delimitador1" = Table.SplitColumn(Table.TransformColumnTypes(#"Dividir Coluna por Delimitador", {{"data_abertura", type text}}, "pt-BR"), "data_abertura", Splitter.SplitTextByDelimiter(" ", QuoteStyle.None), {"data_abertura.1", "data_abertura.2"}),
+					    #"Colunas Renomeadas" = Table.RenameColumns(#"Dividir Coluna por Delimitador1",{{"data_fechamento.1", "data_fechamento"}, {"data_fechamento.2", "hora_fechamento"}, {"data_abertura.1", "data_abertura"}, {"data_abertura.2", "hora_abertura"}}),
+					    #"Tipo Alterado" = Table.TransformColumnTypes(#"Colunas Renomeadas",{{"data_fechamento", type date}, {"hora_fechamento", type time}, {"data_abertura", type date}, {"hora_abertura", type time}})
+					in
+					    #"Tipo Alterado"
+					```
+
+		annotation PBI_NavigationStepName = Navegação
+
+		annotation PBI_ResultType = Table
+

@@ -950,6 +950,9 @@ cultureInfo pt-BR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "cidade": {
@@ -7828,6 +7831,113 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "empresa_UF_cidade": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Empresa_UF_Cidade"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "empresa UF cidade": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Empresa_UF_Cidade": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "empresa_UF_cidade.empresa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Empresa_UF_Cidade",
+			          "ConceptualProperty": "Empresa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "empresa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "empresa_UF_cidade.uf": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Empresa_UF_Cidade",
+			          "ConceptualProperty": "UF"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "uf": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "empresa_UF_cidade.cidade": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Empresa_UF_Cidade",
+			          "ConceptualProperty": "Cidade"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cidade": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cidade": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Cidade"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cidade": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "cidade.cidade": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Cidade",
+			          "ConceptualProperty": "Cidade"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cidade": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cidade name": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
 			    }
 			  },
 			  "Relationships": {
@@ -14378,39 +14488,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "mvp_solicitacao_servico_has_cidade": {
-			      "Binding": {
-			        "ConceptualEntity": "mvp solicitacao_servicos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "mvp_solicitacao_servico": {
-			          "Target": {
-			            "Entity": "mvp_solicitacao_servico"
-			          }
-			        },
-			        "mvp_solicitacao_servico.cidade": {
-			          "Target": {
-			            "Entity": "mvp_solicitacao_servico.cidade"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mvp_solicitacao_servico"
-			            },
-			            "Object": {
-			              "Role": "mvp_solicitacao_servico.cidade"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mvp_solicitacao_servicos_have_cidades"
-			        }
-			      ]
-			    },
 			    "mvp_solicitacao_servico_has_cod_ibge": {
 			      "Binding": {
 			        "ConceptualEntity": "mvp solicitacao_servicos"
@@ -15005,6 +15082,52 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
+			    "cidade_is_named_cidade": {
+			      "Binding": {
+			        "ConceptualEntity": "Cidade"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cidade": {
+			          "Target": {
+			            "Entity": "cidade"
+			          }
+			        },
+			        "cidade.cidade": {
+			          "Target": {
+			            "Entity": "cidade.cidade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "cidade"
+			            },
+			            "Name": {
+			              "Role": "cidade.cidade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cidades_are_names_IDs_of_cidades"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cidade"
+			            },
+			            "Object": {
+			              "Role": "cidade.cidade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cidades_have_cidades"
+			        }
+			      ]
+			    },
 			    "tabela_periodo_has_de_para_periodo": {
 			      "Binding": {
 			        "ConceptualEntity": "Tabela_periodo"
@@ -15035,6 +15158,151 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "tabela_periodos_have_de_para_periodos"
+			        }
+			      ]
+			    },
+			    "empresa_UF_cidade_has_empresa": {
+			      "Binding": {
+			        "ConceptualEntity": "Empresa_UF_Cidade"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "empresa_UF_cidade": {
+			          "Target": {
+			            "Entity": "empresa_UF_cidade"
+			          }
+			        },
+			        "empresa_UF_cidade.empresa": {
+			          "Target": {
+			            "Entity": "empresa_UF_cidade.empresa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "empresa_UF_cidade"
+			            },
+			            "Object": {
+			              "Role": "empresa_UF_cidade.empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "empresa_UF_cidades_have_empresas"
+			        }
+			      ]
+			    },
+			    "empresa_UF_cidade_has_uf": {
+			      "Binding": {
+			        "ConceptualEntity": "Empresa_UF_Cidade"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "empresa_UF_cidade": {
+			          "Target": {
+			            "Entity": "empresa_UF_cidade"
+			          }
+			        },
+			        "empresa_UF_cidade.uf": {
+			          "Target": {
+			            "Entity": "empresa_UF_cidade.uf"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "empresa_UF_cidade"
+			            },
+			            "Object": {
+			              "Role": "empresa_UF_cidade.uf"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "empresa_UF_cidades_have_ufs"
+			        }
+			      ]
+			    },
+			    "empresa_UF_cidade_has_cidade": {
+			      "Binding": {
+			        "ConceptualEntity": "Empresa_UF_Cidade"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "empresa_UF_cidade": {
+			          "Target": {
+			            "Entity": "empresa_UF_cidade"
+			          }
+			        },
+			        "empresa_UF_cidade.cidade": {
+			          "Target": {
+			            "Entity": "empresa_UF_cidade.cidade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "empresa_UF_cidade"
+			            },
+			            "Object": {
+			              "Role": "empresa_UF_cidade.cidade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "empresa_UF_cidades_have_cidades"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_cidade": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "cidade": {
+			          "Target": {
+			            "Entity": "cidade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "cidade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_cidades"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cidade"
+			            },
+			            "Object": {
+			              "Role": "mvp_solicitacao_servico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cidades_have_mvp_solicitacao_servicos"
 			        }
 			      ]
 			    }

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "e6f225dc09925e0c7166",
   "position": {
-    "x": 752.22222222222217,
-    "y": 112.22222222222221,
-    "z": 14000,
+    "x": 752.041884816754,
+    "y": 111.67539267015708,
+    "z": 12000,
     "height": 25.454545454545453,
     "width": 389.09090909090907,
-    "tabOrder": 12000
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -23,11 +23,11 @@
                       "Entity": "mvp solicitacao_servicos"
                     }
                   },
-                  "Property": "data_abertura_intervalo"
+                  "Property": "data_fechamento_intervalo"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.data_abertura_intervalo",
-              "nativeQueryRef": "data_abertura_intervalo"
+              "queryRef": "mvp solicitacao_servicos.data_fechamento_intervalo",
+              "nativeQueryRef": "data_fechamento_intervalo"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "mvp solicitacao_servicos"
                   }
                 },
-                "Property": "data_abertura_intervalo"
+                "Property": "data_fechamento_intervalo"
               }
             },
             "direction": "Descending"
@@ -76,7 +76,7 @@
                                   "Source": "m"
                                 }
                               },
-                              "Property": "data_abertura_intervalo"
+                              "Property": "data_fechamento_intervalo"
                             }
                           }
                         ],

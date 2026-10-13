@@ -19,7 +19,7 @@
             "height": 481,
             "width": 234
           },
-          "zIndex": 8
+          "zIndex": 7
         },
         {
           "location": {
@@ -32,7 +32,7 @@
             "height": 689,
             "width": 234
           },
-          "zIndex": 6
+          "zIndex": 10
         },
         {
           "location": {
@@ -45,7 +45,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 7
+          "zIndex": 6
         },
         {
           "location": {
@@ -109,7 +109,7 @@
             "height": 200,
             "width": 234
           },
-          "zIndex": 9
+          "zIndex": 8
         },
         {
           "location": {
@@ -135,7 +135,7 @@
             "height": 200,
             "width": 234
           },
-          "zIndex": 10
+          "zIndex": 9
         }
       ],
       "name": "Todas as tabelas",
