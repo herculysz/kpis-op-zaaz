@@ -1388,69 +1388,57 @@ table Medidas
 			
 			VAR _ReparosNoContexto =
 			    CALCULATETABLE(
-			        SELECTCOLUMNS(
-			            'mvp solicitacao_servicos',
-			            "@Contrato", 'mvp solicitacao_servicos'[id_contrato],
-			            "@Abertura", 'mvp solicitacao_servicos'[data_abertura],
-			            "@Fechamento", 'mvp solicitacao_servicos'[data_fechamento]
-			            ,"@Protocolo", 'mvp solicitacao_servicos'[protocolo] ---- adicionado posteriormente para filtrar out protocolos repetidos
+			        DISTINCT(
+			            SELECTCOLUMNS(
+			                'mvp solicitacao_servicos',
+			                "@Contrato", 'mvp solicitacao_servicos'[id_contrato],
+			                "@Abertura", 'mvp solicitacao_servicos'[data_abertura] + 'mvp solicitacao_servicos'[hora_abertura],
+			                "@Empresa", 'mvp solicitacao_servicos'[empresa],
+			                "@Cidade", 'mvp solicitacao_servicos'[cidade],
+			                "@Filial", 'mvp solicitacao_servicos'[filial_regional],
+			                "@UF",
+			                    IF(
+			                        'mvp solicitacao_servicos'[uf] = "SP"
+			                            && 'mvp solicitacao_servicos'[filial_regional] IN {"FILIAL MG", "ICONECTA", "VOUE"},
+			                        "MG",
+			                        'mvp solicitacao_servicos'[uf]
+			                    )
+			            )
 			        ),
 			        'mvp solicitacao_servicos'[tipo_servico] = "REPARO"
-			        --,'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"}
 			    )
 			VAR _TodosOsReparos =
 			    CALCULATETABLE(
 			        SELECTCOLUMNS(
 			            'mvp solicitacao_servicos',
 			            "@Contrato", 'mvp solicitacao_servicos'[id_contrato],
-			            "@Abertura", 'mvp solicitacao_servicos'[data_abertura],
-			            "@Fechamento", 'mvp solicitacao_servicos'[data_fechamento]
-			            ,"@Protoclo", 'mvp solicitacao_servicos'[protocolo] ---- adicionado posteriormente para filtrar out protocolos repetidos
+			            "@Fechamento", 'mvp solicitacao_servicos'[data_fechamento] + 'mvp solicitacao_servicos'[hora_fechamento]
 			        ),
 			        REMOVEFILTERS('mvp solicitacao_servicos'),
 			        REMOVEFILTERS(d_Calendario),
-			        'mvp solicitacao_servicos'[tipo_servico] = "REPARO"
-			        --,'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"}
+			        'mvp solicitacao_servicos'[tipo_servico] = "REPARO",
+			        NOT ISBLANK('mvp solicitacao_servicos'[data_fechamento])
 			    )
-			VAR _ComFechamentoAnterior =
-			    ADDCOLUMNS(
+			VAR _Reincidentes =
+			    FILTER(
 			        _ReparosNoContexto,
-			        "@FechamentoAnterior",
-			            VAR _ContratoAtual = [@Contrato]
-			            VAR _AberturaAtual = [@Abertura]
-			            VAR _ProtocoloAtual = [@Protocolo] ---- adicionado posteriormente para filtrar out protocolos repetidos
-			            RETURN
-			                MAXX(
-			                    TOPN(
-			                        1,
-			                        FILTER(
-			                            _TodosOsReparos,
-			                            [@Contrato] = _ContratoAtual
-			                                && [@Abertura] <= _AberturaAtual --- alteardo < para <=
-			                                && [@Protoclo] <> _ProtocoloAtual ---- adicionado posteriormente para filtrar out protocolos repetidos
-			                        ),
-			                        [@Abertura], DESC
-			                    ),
-			                    [@Fechamento]
-			                )
+			        VAR _ContratoAtual = [@Contrato]
+			        VAR _AberturaAtual = [@Abertura]
+			        RETURN
+			            NOT ISBLANK(_ContratoAtual)
+			                && NOT ISBLANK(_AberturaAtual)
+			                && COUNTROWS(
+			                    FILTER(
+			                        _TodosOsReparos,
+			                        [@Contrato] = _ContratoAtual
+			                            && NOT ISBLANK([@Fechamento])
+			                            && [@Fechamento] < _AberturaAtual
+			                            && [@Fechamento] >= _AberturaAtual - 30
+			                    )
+			                ) > 0
 			    )
 			RETURN
-			
-			IF( [TOTAL_REPARO]>0,
-			COUNTROWS(
-			        FILTER(
-			            _ComFechamentoAnterior,
-			            NOT ISBLANK([@FechamentoAnterior])
-			                && NOT ISBLANK([@Abertura])
-			                && DATEDIFF(
-			                    DATEVALUE([@FechamentoAnterior]),
-			                    DATEVALUE([@Abertura]),
-			                    DAY
-			                ) <= 30
-			        )
-			    ) + 0,
-			    BLANK()
-			)
+			    COUNTROWS(_Reincidentes) + 0
 			
 			
 			

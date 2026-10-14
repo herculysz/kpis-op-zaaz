@@ -523,7 +523,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "1e75cb847d557c5a3a42",
+                  "name": "4d411885fc1b9a5ff61e",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -553,7 +553,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "5387a69081ac3358dcae",
+                  "name": "39991474f4f07d166265",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -684,7 +684,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "b9505f36c18d83874714",
+                  "name": "f23bb5aefab71f9ec804",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -861,7 +861,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "a5c87f64e2564448a789",
+                  "name": "74c2eb264b3ea5b2053a",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -907,7 +907,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "2ba7037a5d09236fa8d5",
+                  "name": "79b2fc760ff6853a3574",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1126,6 +1126,86 @@
             "singleVisual": {
               "visualType": "textbox",
               "objects": {}
+            }
+          },
+          "8a45cdc01dd488bb28a6": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "d62fc5ee166444ae1296",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "DU PLAN"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "DU PLAN"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "5a9593186f6623255790": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "ed71f224171898c8c198",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "DU REAL"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "DU REAL"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
