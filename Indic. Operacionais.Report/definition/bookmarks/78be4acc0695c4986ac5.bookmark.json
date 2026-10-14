@@ -11,6 +11,46 @@
     "sections": {
       "b2495154076a10ac3e4d": {
         "visualContainers": {
+          "023cd939e88a2c7c84e8": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "f5ff1c2f1482491ceee7",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "DU PLAN ABERTURA"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "DU PLAN ABERTURA"
+                    }
+                  }
+                }
+              ]
+            }
+          },
           "10b1504e3a41ef263616": {
             "filters": {
               "byExpr": [
@@ -30,7 +70,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "c507fc86023274534246",
+                  "name": "e757b529911d78faed10",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -634,7 +674,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "a6515e9e2c35838ea80e",
+                  "name": "b0f71fc31821714637f1",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -658,6 +698,46 @@
             "singleVisual": {
               "visualType": "card",
               "objects": {}
+            }
+          },
+          "3f546d03030bee361300": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "107eac366ba1734587d7",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "DU REAL ABERTURA"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "DU REAL ABERTURA"
+                    }
+                  }
+                }
+              ]
             }
           },
           "47375fa5a4b432d99dcd": {
@@ -939,7 +1019,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "03f0f1126c801a9e174d",
+                  "name": "b1bf12f3c6d0da3016ce",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1265,11 +1345,81 @@
               "objects": {}
             }
           },
+          "9080399b9931fc375165": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "623c41c2cc01c631c658",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp solicitacao_servicos"
+                        }
+                      },
+                      "Property": "data_abertura"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'RelativeDatePicker'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp solicitacao_servicos"
+                        }
+                      },
+                      "Property": "data_abertura"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp solicitacao_servicos"
+                        }
+                      },
+                      "Property": "data_abertura"
+                    }
+                  }
+                ]
+              }
+            }
+          },
           "90c117acc01b09e0dd01": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "43f597f73c474686b63f",
+                  "name": "4655f051aca60242e841",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1370,7 +1520,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "31c681320c5890ed1767",
+                  "name": "d879e0a5d2cab5796bf6",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1407,7 +1557,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "e89b670378d704484a1c",
+                  "name": "320f4790a06ff0e9ba83",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1486,7 +1636,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "1d465aa6e72fe9e60227",
+                  "name": "47fba1ca28ee133272f6",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1505,156 +1655,6 @@
             "singleVisual": {
               "visualType": "card",
               "objects": {}
-            }
-          },
-          "3f546d03030bee361300": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "f188fa0b9c3904d55872",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "DU REAL ABERTURA"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "card",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "DU REAL ABERTURA"
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          "023cd939e88a2c7c84e8": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "2efb1cdbe4e8b4e89f29",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "DU PLAN ABERTURA"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "card",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "DU PLAN ABERTURA"
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          "9080399b9931fc375165": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "7923cd91daf8f827d70c",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "mvp solicitacao_servicos"
-                        }
-                      },
-                      "Property": "data_abertura"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'RelativeDatePicker'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "orderBy": [
-                {
-                  "Direction": 1,
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "mvp solicitacao_servicos"
-                        }
-                      },
-                      "Property": "data_abertura"
-                    }
-                  }
-                }
-              ],
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "mvp solicitacao_servicos"
-                        }
-                      },
-                      "Property": "data_abertura"
-                    }
-                  }
-                ]
-              }
             }
           }
         }

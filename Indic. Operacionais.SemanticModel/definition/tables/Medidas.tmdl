@@ -926,7 +926,7 @@ table Medidas
 			                "ROUTER ADICIONAL", -- OK
 			                "TROCA EQUIP." -- OK
 			            },
-			            'mvp solicitacao_servicos'[tecnico] <> "" && NOT(ISBLANK('mvp solicitacao_servicos'[tecnico])),
+			            --'mvp solicitacao_servicos'[tecnico] <> "" && NOT(ISBLANK('mvp solicitacao_servicos'[tecnico])),
 			            'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"},
 			            USERELATIONSHIP(
 			                d_Calendario[data],
