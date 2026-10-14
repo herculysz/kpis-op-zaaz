@@ -7938,9 +7938,326 @@ cultureInfo pt-BR
 			        }
 			      ],
 			      "NameType": "Name"
+			    },
+			    "mvp_solicitacao_servico.ajuste_uf": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mvp solicitacao_servicos",
+			          "ConceptualProperty": "ajuste_uf"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ajuste uf": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ajuste_uf": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "UF": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.produtivas_gross_ativ_contrato": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "PRODUTIVAS_GROSS_ATIV_CONTRATO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "produtivas gross ativ contrato": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PRODUTIVAS_GROSS_ATIV_CONTRATO": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "produtiva aggregate ativ contrato": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.665
+			          }
+			        },
+			        {
+			          "produtiva overall ativ contrato": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.665
+			          }
+			        },
+			        {
+			          "produtiva whole ativ contrato": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.665
+			          }
+			        },
+			        {
+			          "produtiva sum ativ contrato": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "produtiva total ativ contrato": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "mvp_solicitacao_servico_has_ajuste_uf": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "mvp_solicitacao_servico.ajuste_uf": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico.ajuste_uf"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "mvp_solicitacao_servico.ajuste_uf"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_ajuste_ufs"
+			        }
+			      ]
+			    },
+			    "cidade_has_cidade": {
+			      "Binding": {
+			        "ConceptualEntity": "Cidade"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cidade": {
+			          "Target": {
+			            "Entity": "cidade"
+			          }
+			        },
+			        "cidade.cidade": {
+			          "Target": {
+			            "Entity": "cidade.cidade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cidade"
+			            },
+			            "Object": {
+			              "Role": "cidade.cidade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cidades_have_cidades"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "cidade"
+			            },
+			            "Name": {
+			              "Role": "cidade.cidade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cidades_are_names_IDs_of_cidades"
+			        }
+			      ]
+			    },
+			    "empresa_UF_cidade_has_cidade": {
+			      "Binding": {
+			        "ConceptualEntity": "Empresa_UF_Cidade"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "empresa_UF_cidade": {
+			          "Target": {
+			            "Entity": "empresa_UF_cidade"
+			          }
+			        },
+			        "empresa_UF_cidade.cidade": {
+			          "Target": {
+			            "Entity": "empresa_UF_cidade.cidade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "empresa_UF_cidade"
+			            },
+			            "Object": {
+			              "Role": "empresa_UF_cidade.cidade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "empresa_UF_cidades_have_cidades"
+			        }
+			      ]
+			    },
+			    "empresa_UF_cidade_has_uf": {
+			      "Binding": {
+			        "ConceptualEntity": "Empresa_UF_Cidade"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "empresa_UF_cidade": {
+			          "Target": {
+			            "Entity": "empresa_UF_cidade"
+			          }
+			        },
+			        "empresa_UF_cidade.uf": {
+			          "Target": {
+			            "Entity": "empresa_UF_cidade.uf"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "empresa_UF_cidade"
+			            },
+			            "Object": {
+			              "Role": "empresa_UF_cidade.uf"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "empresa_UF_cidades_have_ufs"
+			        }
+			      ]
+			    },
+			    "empresa_UF_cidade_has_empresa": {
+			      "Binding": {
+			        "ConceptualEntity": "Empresa_UF_Cidade"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "empresa_UF_cidade": {
+			          "Target": {
+			            "Entity": "empresa_UF_cidade"
+			          }
+			        },
+			        "empresa_UF_cidade.empresa": {
+			          "Target": {
+			            "Entity": "empresa_UF_cidade.empresa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "empresa_UF_cidade"
+			            },
+			            "Object": {
+			              "Role": "empresa_UF_cidade.empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "empresa_UF_cidades_have_empresas"
+			        }
+			      ]
+			    },
+			    "tabela_periodo_has_de_para_periodo": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabela_periodo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabela_periodo": {
+			          "Target": {
+			            "Entity": "tabela_periodo"
+			          }
+			        },
+			        "tabela_periodo.de_para_periodo": {
+			          "Target": {
+			            "Entity": "tabela_periodo.de_para_periodo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabela_periodo"
+			            },
+			            "Object": {
+			              "Role": "tabela_periodo.de_para_periodo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabela_periodos_have_de_para_periodos"
+			        }
+			      ]
+			    },
 			    "tabela_periodo_has_periodo": {
 			      "Binding": {
 			        "ConceptualEntity": "Tabela_periodo"
@@ -11406,15 +11723,15 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medida_has_reincidente_ATIV": {
+			    "mvp_solicitacao_servico_has_medida_reincidente_ATIV": {
 			      "Binding": {
-			        "ConceptualEntity": "Medidas"
+			        "ConceptualEntity": "mvp solicitacao_servicos"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "medida": {
+			        "mvp_solicitacao_servico": {
 			          "Target": {
-			            "Entity": "medida"
+			            "Entity": "mvp_solicitacao_servico"
 			          }
 			        },
 			        "medida.reincidente_ATIV": {
@@ -11427,7 +11744,7 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "medida"
+			              "Role": "mvp_solicitacao_servico"
 			            },
 			            "Object": {
 			              "Role": "medida.reincidente_ATIV"
@@ -11435,7 +11752,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "medidas_have_reincidente_ATIV"
+			          "ID": "mvp_solicitacao_servicos_have_reincidente_ATIV"
 			        }
 			      ]
 			    },
@@ -15082,66 +15399,20 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "cidade_is_named_cidade": {
+			    "mvp_solicitacao_servico_has_medida_produtivas_gross_ativ_contrato": {
 			      "Binding": {
-			        "ConceptualEntity": "Cidade"
+			        "ConceptualEntity": "mvp solicitacao_servicos"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "cidade": {
+			        "mvp_solicitacao_servico": {
 			          "Target": {
-			            "Entity": "cidade"
+			            "Entity": "mvp_solicitacao_servico"
 			          }
 			        },
-			        "cidade.cidade": {
+			        "medida.produtivas_gross_ativ_contrato": {
 			          "Target": {
-			            "Entity": "cidade.cidade"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Name": {
-			            "Subject": {
-			              "Role": "cidade"
-			            },
-			            "Name": {
-			              "Role": "cidade.cidade"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "cidades_are_names_IDs_of_cidades"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "cidade"
-			            },
-			            "Object": {
-			              "Role": "cidade.cidade"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "cidades_have_cidades"
-			        }
-			      ]
-			    },
-			    "tabela_periodo_has_de_para_periodo": {
-			      "Binding": {
-			        "ConceptualEntity": "Tabela_periodo"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "tabela_periodo": {
-			          "Target": {
-			            "Entity": "tabela_periodo"
-			          }
-			        },
-			        "tabela_periodo.de_para_periodo": {
-			          "Target": {
-			            "Entity": "tabela_periodo.de_para_periodo"
+			            "Entity": "medida.produtivas_gross_ativ_contrato"
 			          }
 			        }
 			      },
@@ -15149,114 +15420,15 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "tabela_periodo"
+			              "Role": "mvp_solicitacao_servico"
 			            },
 			            "Object": {
-			              "Role": "tabela_periodo.de_para_periodo"
+			              "Role": "medida.produtivas_gross_ativ_contrato"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "tabela_periodos_have_de_para_periodos"
-			        }
-			      ]
-			    },
-			    "empresa_UF_cidade_has_empresa": {
-			      "Binding": {
-			        "ConceptualEntity": "Empresa_UF_Cidade"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "empresa_UF_cidade": {
-			          "Target": {
-			            "Entity": "empresa_UF_cidade"
-			          }
-			        },
-			        "empresa_UF_cidade.empresa": {
-			          "Target": {
-			            "Entity": "empresa_UF_cidade.empresa"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "empresa_UF_cidade"
-			            },
-			            "Object": {
-			              "Role": "empresa_UF_cidade.empresa"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "empresa_UF_cidades_have_empresas"
-			        }
-			      ]
-			    },
-			    "empresa_UF_cidade_has_uf": {
-			      "Binding": {
-			        "ConceptualEntity": "Empresa_UF_Cidade"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "empresa_UF_cidade": {
-			          "Target": {
-			            "Entity": "empresa_UF_cidade"
-			          }
-			        },
-			        "empresa_UF_cidade.uf": {
-			          "Target": {
-			            "Entity": "empresa_UF_cidade.uf"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "empresa_UF_cidade"
-			            },
-			            "Object": {
-			              "Role": "empresa_UF_cidade.uf"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "empresa_UF_cidades_have_ufs"
-			        }
-			      ]
-			    },
-			    "empresa_UF_cidade_has_cidade": {
-			      "Binding": {
-			        "ConceptualEntity": "Empresa_UF_Cidade"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "empresa_UF_cidade": {
-			          "Target": {
-			            "Entity": "empresa_UF_cidade"
-			          }
-			        },
-			        "empresa_UF_cidade.cidade": {
-			          "Target": {
-			            "Entity": "empresa_UF_cidade.cidade"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "empresa_UF_cidade"
-			            },
-			            "Object": {
-			              "Role": "empresa_UF_cidade.cidade"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "empresa_UF_cidades_have_cidades"
+			          "ID": "mvp_solicitacao_servicos_have_produtivas_gross_ativ_contrato"
 			        }
 			      ]
 			    },

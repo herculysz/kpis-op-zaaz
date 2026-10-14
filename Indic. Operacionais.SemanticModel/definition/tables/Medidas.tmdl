@@ -1385,6 +1385,7 @@ table Medidas
 			            "@Contrato", 'mvp solicitacao_servicos'[id_contrato],
 			            "@Abertura", 'mvp solicitacao_servicos'[data_abertura],
 			            "@Fechamento", 'mvp solicitacao_servicos'[data_fechamento]
+			            ,"@Protocolo", 'mvp solicitacao_servicos'[protocolo] ---- adicionado posteriormente para filtrar out protocolos repetidos
 			        ),
 			        'mvp solicitacao_servicos'[tipo_servico] = "REPARO",
 			        'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"}
@@ -1396,6 +1397,7 @@ table Medidas
 			            "@Contrato", 'mvp solicitacao_servicos'[id_contrato],
 			            "@Abertura", 'mvp solicitacao_servicos'[data_abertura],
 			            "@Fechamento", 'mvp solicitacao_servicos'[data_fechamento]
+			            ,"@Protoclo", 'mvp solicitacao_servicos'[protocolo] ---- adicionado posteriormente para filtrar out protocolos repetidos
 			        ),
 			        REMOVEFILTERS('mvp solicitacao_servicos'),
 			        REMOVEFILTERS(d_Calendario),
@@ -1408,6 +1410,7 @@ table Medidas
 			        "@FechamentoAnterior",
 			            VAR _ContratoAtual = [@Contrato]
 			            VAR _AberturaAtual = [@Abertura]
+			            VAR _ProtocoloAtual = [@Protocolo] ---- adicionado posteriormente para filtrar out protocolos repetidos
 			            RETURN
 			                MAXX(
 			                    TOPN(
@@ -1415,7 +1418,8 @@ table Medidas
 			                        FILTER(
 			                            _TodosOsReparos,
 			                            [@Contrato] = _ContratoAtual
-			                                && [@Abertura] < _AberturaAtual
+			                                && [@Abertura] <= _AberturaAtual --- alteardo < para <=
+			                                && [@Protoclo] <> _ProtocoloAtual ---- adicionado posteriormente para filtrar out protocolos repetidos
 			                        ),
 			                        [@Abertura], DESC
 			                    ),
@@ -1602,7 +1606,8 @@ table Medidas
 			VAR EmpresasContexto =
 			    VALUES('mvp solicitacao_servicos'[empresa])
 			VAR UFsContexto =
-			    VALUES('mvp solicitacao_servicos'[uf_ajustada])
+			    --VALUES('mvp solicitacao_servicos'[uf_ajustada])
+			    VALUES('mvp solicitacao_servicos'[ajuste_uf])
 			VAR CidadesContexto =
 			    SELECTCOLUMNS(
 			        VALUES('mvp solicitacao_servicos'[cidade]),
@@ -1628,7 +1633,11 @@ table Medidas
 			                    || 'mvp base_clientes'[empresa] IN EmpresasContexto
 			            )
 			                && (
+			                    /*
 			                    NOT ISINSCOPE('mvp solicitacao_servicos'[uf_ajustada])
+			                        || 'mvp base_clientes'[ajuste_uf] IN UFsContexto
+			                        */
+			                    NOT ISINSCOPE('mvp solicitacao_servicos'[ajuste_uf])
 			                        || 'mvp base_clientes'[ajuste_uf] IN UFsContexto
 			                )
 			                && (
@@ -1660,7 +1669,8 @@ table Medidas
 			
 			RETURN
 			    CALCULATE(
-			        COUNTROWS('mvp base_clientes'),
+			        --COUNTROWS('mvp base_clientes'),
+			        DISTINCTCOUNT('mvp base_clientes'[id_contrato]),
 			        'mvp base_clientes'[estagio] IN estagiosAtivos && 'mvp base_clientes'[status] IN statusAtivos
 			    )
 		formatString: 0
@@ -1798,6 +1808,82 @@ table Medidas
 		formatString: 0
 		displayFolder: Garantia\Totais
 		lineageTag: 29ef08a4-bdd0-4259-911a-460cba37cb80
+
+	measure Reincidente_REPARO2 = ```
+			
+			VAR _TotalAtiv = [TOTAL_REPARO_PRODUTIVO_IMPRODUTIVO]
+			VAR _DatasSelecionadas = VALUES ( d_Calendario[data] )  -- captura o filtro de datas antes de qualquer REMOVEFILTERS
+			
+			RETURN
+			IF(
+			    _TotalAtiv > 0,
+			    COALESCE(
+			        -- Bloco onde criamos as variáveis internas de tabela
+			        VAR _ChamadosBase =
+			            CALCULATETABLE(
+			                ADDCOLUMNS(
+			                    SUMMARIZE(
+			                        'mvp solicitacao_servicos',
+			                        'mvp solicitacao_servicos'[protocolo],
+			                        'mvp solicitacao_servicos'[id_contrato]
+			                    ),
+			                    "@DataFechamento", CALCULATE(MAX('mvp solicitacao_servicos'[data_fechamento]))
+			                ),
+			                'mvp solicitacao_servicos'[tipo_servico] = "REPARO",
+			                'mvp solicitacao_servicos'[produtivo] = 1,
+			                'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"},
+			                USERELATIONSHIP(
+			                    d_Calendario[data],
+			                    'mvp solicitacao_servicos'[data_fechamento]
+			                )
+			            )
+			        VAR _TodosChamados =
+			            CALCULATETABLE(
+			                ADDCOLUMNS(
+			                    SUMMARIZE(
+			                        'mvp solicitacao_servicos',
+			                        'mvp solicitacao_servicos'[protocolo],
+			                        'mvp solicitacao_servicos'[id_contrato]
+			                    ),
+			                    "@DataAbertura", CALCULATE(MIN('mvp solicitacao_servicos'[data_abertura]))
+			                ),
+			                REMOVEFILTERS('mvp solicitacao_servicos'),  
+			                _DatasSelecionadas,                        
+			                USERELATIONSHIP(                            
+			                    d_Calendario[data],
+			                    'mvp solicitacao_servicos'[data_abertura]
+			                ),
+			                'mvp solicitacao_servicos'[tipo_servico] = "REPARO",
+			                'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"}
+			            )
+			        VAR _Reincidentes =
+			            FILTER(
+			                _ChamadosBase,
+			                VAR _ProtocoloOriginal = [protocolo]
+			                VAR _ContratoOriginal = [id_contrato]
+			                VAR _DataFechamentoOriginal = [@DataFechamento]
+			                VAR _DataLimite30Dias = _DataFechamentoOriginal + 30
+			                RETURN
+			                    COUNTROWS(
+			                        FILTER(
+			                            _TodosChamados,
+			                            [id_contrato] = _ContratoOriginal
+			                                && [protocolo] <> _ProtocoloOriginal
+			                                && [@DataAbertura] >= _DataFechamentoOriginal --- trocado > para >--
+			                                && [@DataAbertura] <= _DataLimite30Dias
+			                        )
+			                    ) > 0
+			            )
+			        RETURN 
+			            COUNTROWS(_Reincidentes),
+			        0
+			    ),
+			    BLANK()
+			)
+			```
+		formatString: 0
+		displayFolder: Reincidente_Reparo\Totais
+		lineageTag: a050d638-b283-4a40-b9fb-09319f01dabe
 
 	column 'Coluna 1'
 		dataType: string

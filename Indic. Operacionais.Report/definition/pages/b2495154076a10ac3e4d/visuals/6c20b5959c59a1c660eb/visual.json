@@ -39,10 +39,10 @@
                       "Entity": "mvp solicitacao_servicos"
                     }
                   },
-                  "Property": "uf_ajustada"
+                  "Property": "ajuste_uf"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.uf_ajustada",
+              "queryRef": "mvp solicitacao_servicos.ajuste_uf",
               "nativeQueryRef": "UF",
               "active": true,
               "displayName": "UF"
@@ -172,7 +172,7 @@
           },
           {
             "queryRefs": [
-              "mvp solicitacao_servicos.uf_ajustada"
+              "mvp solicitacao_servicos.ajuste_uf"
             ],
             "isCollapsed": true,
             "identityKeys": [
@@ -183,7 +183,7 @@
                       "Entity": "mvp solicitacao_servicos"
                     }
                   },
-                  "Property": "uf_ajustada"
+                  "Property": "ajuste_uf"
                 }
               }
             ],
@@ -1049,7 +1049,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "0a09426ab7edd2aec3db",
+        "name": "b615bd178cf8e21b93d2",
         "field": {
           "Column": {
             "Expression": {
@@ -1057,70 +1057,108 @@
                 "Entity": "mvp solicitacao_servicos"
               }
             },
-            "Property": "uf"
+            "Property": "empresa"
           }
         },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "m",
-              "Entity": "mvp solicitacao_servicos",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Not": {
-                  "Expression": {
-                    "In": {
-                      "Expressions": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "m"
-                              }
-                            },
-                            "Property": "uf"
-                          }
-                        }
-                      ],
-                      "Values": [
-                        [
-                          {
-                            "Literal": {
-                              "Value": "null"
-                            }
-                          }
-                        ]
-                      ]
-                    }
-                  }
-                }
+        "type": "Categorical"
+      },
+      {
+        "name": "ba10439414a0f1421a3f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mvp solicitacao_servicos"
               }
-            }
-          ]
+            },
+            "Property": "cidade"
+          }
         },
-        "howCreated": "User",
-        "isLockedInViewMode": true,
-        "objects": {
-          "general": [
-            {
-              "properties": {
-                "isInvertedSelectionMode": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "true"
-                    }
-                  }
-                }
+        "type": "Categorical"
+      },
+      {
+        "name": "dc2822c7ffdbb984553d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
               }
-            }
-          ]
-        }
+            },
+            "Property": "TOTAL_REPARO"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3f2534ee5dae76d54211",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "PROJEÇÃO_REPARO"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "05ec1e99be5775e245f3",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Clientes_count"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "932cb670767e3db4b65c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "{PER} Projecao_entrante_taxa"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "67873bf5cccc8f3a8018",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "{PER} Projecao_entrante_meta"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c54bb116b5dfb58e756d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mvp solicitacao_servicos"
+              }
+            },
+            "Property": "ajuste_uf"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

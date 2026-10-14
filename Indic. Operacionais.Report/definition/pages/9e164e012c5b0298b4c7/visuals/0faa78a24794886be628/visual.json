@@ -39,12 +39,13 @@
                       "Entity": "mvp solicitacao_servicos"
                     }
                   },
-                  "Property": "uf_ajustada"
+                  "Property": "ajuste_uf"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.uf_ajustada",
-              "nativeQueryRef": "uf_ajustada",
-              "active": true
+              "queryRef": "mvp solicitacao_servicos.ajuste_uf",
+              "nativeQueryRef": "UF",
+              "active": true,
+              "displayName": "UF"
             },
             {
               "field": {
@@ -156,7 +157,7 @@
           },
           {
             "queryRefs": [
-              "mvp solicitacao_servicos.uf_ajustada"
+              "mvp solicitacao_servicos.ajuste_uf"
             ],
             "isCollapsed": true,
             "identityKeys": [
@@ -167,7 +168,7 @@
                       "Entity": "mvp solicitacao_servicos"
                     }
                   },
-                  "Property": "uf_ajustada"
+                  "Property": "ajuste_uf"
                 }
               }
             ],
@@ -1032,49 +1033,6 @@
           }
         },
         "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "m",
-              "Entity": "mvp solicitacao_servicos",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Not": {
-                  "Expression": {
-                    "In": {
-                      "Expressions": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "m"
-                              }
-                            },
-                            "Property": "uf"
-                          }
-                        }
-                      ],
-                      "Values": [
-                        [
-                          {
-                            "Literal": {
-                              "Value": "null"
-                            }
-                          }
-                        ]
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "User",
         "isLockedInViewMode": true,
         "objects": {
@@ -1092,6 +1050,104 @@
             }
           ]
         }
+      },
+      {
+        "name": "75fa1a37a9d17099540e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mvp solicitacao_servicos"
+              }
+            },
+            "Property": "empresa"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "3bbc2b6e44b78062496f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mvp solicitacao_servicos"
+              }
+            },
+            "Property": "cidade"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "971b539c9b6a39546162",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Prod. Bruta"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b2642473f4beaea4e352",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "DU Total"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "479fc1dee3493d03069c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Prod_Bruta_real"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c27db82eb201f34b4b09",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Prod_Bruta_Meta"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "7229b45cf06865ce8222",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mvp solicitacao_servicos"
+              }
+            },
+            "Property": "ajuste_uf"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

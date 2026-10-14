@@ -39,13 +39,12 @@
                       "Entity": "mvp solicitacao_servicos"
                     }
                   },
-                  "Property": "uf_ajustada"
+                  "Property": "ajuste_uf"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.uf_ajustada",
-              "nativeQueryRef": "uf_ajustada",
-              "active": true,
-              "displayName": "uf_ajustada"
+              "queryRef": "mvp solicitacao_servicos.ajuste_uf",
+              "nativeQueryRef": "ajuste_uf",
+              "active": true
             },
             {
               "field": {
@@ -157,7 +156,7 @@
           },
           {
             "queryRefs": [
-              "mvp solicitacao_servicos.uf_ajustada"
+              "mvp solicitacao_servicos.ajuste_uf"
             ],
             "isCollapsed": true,
             "identityKeys": [
@@ -168,7 +167,7 @@
                       "Entity": "mvp solicitacao_servicos"
                     }
                   },
-                  "Property": "uf_ajustada"
+                  "Property": "ajuste_uf"
                 }
               }
             ],

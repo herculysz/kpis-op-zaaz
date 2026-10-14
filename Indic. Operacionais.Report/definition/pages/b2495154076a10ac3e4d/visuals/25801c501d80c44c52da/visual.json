@@ -23,11 +23,11 @@
                       "Entity": "mvp solicitacao_servicos"
                     }
                   },
-                  "Property": "data_abertura_intervalo"
+                  "Property": "data_fechamento_intervalo"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.data_abertura_intervalo",
-              "nativeQueryRef": "data_abertura_intervalo"
+              "queryRef": "mvp solicitacao_servicos.data_fechamento_intervalo",
+              "nativeQueryRef": "data_fechamento_intervalo"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "mvp solicitacao_servicos"
                   }
                 },
-                "Property": "data_abertura_intervalo"
+                "Property": "data_fechamento_intervalo"
               }
             },
             "direction": "Descending"
@@ -76,7 +76,7 @@
                                   "Source": "m"
                                 }
                               },
-                              "Property": "data_abertura_intervalo"
+                              "Property": "data_fechamento_intervalo"
                             }
                           }
                         ],

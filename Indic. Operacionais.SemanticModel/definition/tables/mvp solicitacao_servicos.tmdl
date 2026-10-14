@@ -497,6 +497,31 @@ table 'mvp solicitacao_servicos'
 
 		annotation SummarizationSetBy = Automatic
 
+	column ajuste_uf = ```
+			
+			VAR estadosSSE = {"MG", "PR", "SP"}
+			VAR estadosNONE = {"CE", "MA", "PA", "PI"}
+			VAR estadosNE = {"BA", "CE", "PB", "PE", "RN"}
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        'mvp solicitacao_servicos'[uf] = "SP" && 'mvp solicitacao_servicos'[filial_regional] IN {"FILIAL MG", "ICONECTA", "VOUE"}, "MG",
+			
+			        --(ISBLANK('mvp solicitacao_servicos'[uf]) || 'mvp solicitacao_servicos'[uf] = ""), "SEM INFORMAÇÃO",
+			
+			        'mvp solicitacao_servicos'[empresa] = "ZAAZ NORDESTE" && NOT('mvp solicitacao_servicos'[uf] IN estadosNE), "PB",
+			        'mvp solicitacao_servicos'[empresa] = "ZAAZ NORTE" && NOT('mvp solicitacao_servicos'[uf] IN estadosNONE), "PA",
+			        'mvp solicitacao_servicos'[empresa] = "ZAAZ SUL/SUDESTE" && NOT('mvp solicitacao_servicos'[uf] IN estadosSSE), "SP",
+			        
+			        'mvp solicitacao_servicos'[uf]
+			    )
+			
+			```
+		lineageTag: 7b118a6b-79be-423c-a637-0992b2c898ff
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'mvp solicitacao_servicos' = m
 		mode: import
 		source = ```
