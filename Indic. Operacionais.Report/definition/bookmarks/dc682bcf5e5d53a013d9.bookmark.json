@@ -523,7 +523,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "c3a7c84ba9af1786b6cc",
+                  "name": "1e75cb847d557c5a3a42",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -553,7 +553,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "acc01fe23c87fc6feeae",
+                  "name": "5387a69081ac3358dcae",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -684,7 +684,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "3cb943308eab44eb15e2",
+                  "name": "b9505f36c18d83874714",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -709,8 +709,51 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "e67993edd3f6f7065bee",
+                  "name": "a6ce481ddece93126be4",
                   "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "m",
+                        "Entity": "mvp solicitacao_servicos",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "m"
+                                        }
+                                      },
+                                      "Property": "data_fechamento_intervalo"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "null"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
                   "expression": {
                     "Column": {
                       "Expression": {
@@ -818,7 +861,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "75df9a395aa792d92ff6",
+                  "name": "a5c87f64e2564448a789",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -864,7 +907,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "5e4cc6d26e225945ba1c",
+                  "name": "2ba7037a5d09236fa8d5",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -925,8 +968,51 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "5fab5f31edcf1849dccb",
+                  "name": "59311d6df096d7ae2b4a",
                   "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "m",
+                        "Entity": "mvp solicitacao_servicos",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "m"
+                                        }
+                                      },
+                                      "Property": "data_fechamento_intervalo"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "null"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
                   "expression": {
                     "Column": {
                       "Expression": {

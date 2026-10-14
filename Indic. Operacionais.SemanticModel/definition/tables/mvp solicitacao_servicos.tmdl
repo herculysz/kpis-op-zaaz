@@ -581,7 +581,7 @@ table 'mvp solicitacao_servicos'
 				            FROM
 				                mvp.solicitacao_servicos
 				            WHERE
-								data_fechamento >= DATE '2026-01-01'
+								data_fechamento >= DATE '2026-01-01' OR data_abertura >= DATE '2026-01-01' or data_fechamento is NULL
 								-- data_fechamento >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '1 month') 
 								-- AND data_fechamento < CURRENT_DATE
 				                -- data_fechamento >= '2026-08-01' AND data_fechamento < CURRENT_DATE

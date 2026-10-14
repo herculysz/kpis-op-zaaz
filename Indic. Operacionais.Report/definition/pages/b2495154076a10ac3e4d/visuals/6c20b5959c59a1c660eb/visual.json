@@ -43,9 +43,8 @@
                 }
               },
               "queryRef": "mvp solicitacao_servicos.ajuste_uf",
-              "nativeQueryRef": "UF",
-              "active": true,
-              "displayName": "UF"
+              "nativeQueryRef": "ajuste_uf",
+              "active": true
             },
             {
               "field": {
@@ -1145,20 +1144,6 @@
           }
         },
         "type": "Advanced"
-      },
-      {
-        "name": "c54bb116b5dfb58e756d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "ajuste_uf"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

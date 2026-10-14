@@ -23,11 +23,11 @@
                       "Entity": "mvp solicitacao_servicos"
                     }
                   },
-                  "Property": "data_fechamento_intervalo"
+                  "Property": "data_abertura_intervalo"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.data_fechamento_intervalo",
-              "nativeQueryRef": "data_fechamento_intervalo"
+              "queryRef": "mvp solicitacao_servicos.data_abertura_intervalo",
+              "nativeQueryRef": "data_abertura_intervalo"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "mvp solicitacao_servicos"
                   }
                 },
-                "Property": "data_fechamento_intervalo"
+                "Property": "data_abertura_intervalo"
               }
             },
             "direction": "Descending"
@@ -76,7 +76,7 @@
                                   "Source": "m"
                                 }
                               },
-                              "Property": "data_fechamento_intervalo"
+                              "Property": "data_abertura_intervalo"
                             }
                           }
                         ],
@@ -792,5 +792,88 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c3f940c14f1d5ebdf1ec",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mvp solicitacao_servicos"
+              }
+            },
+            "Property": "data_abertura_intervalo"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "mvp solicitacao_servicos",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "m"
+                              }
+                            },
+                            "Property": "data_abertura_intervalo"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'MÊS FUTURO'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
   }
 }

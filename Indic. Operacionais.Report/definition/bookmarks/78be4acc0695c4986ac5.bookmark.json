@@ -30,7 +30,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "0a094371deb258824049",
+                  "name": "c507fc86023274534246",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -85,8 +85,58 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "a6dd8e76781bd0d970a0",
+                  "name": "c3f940c14f1d5ebdf1ec",
                   "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "m",
+                        "Entity": "mvp solicitacao_servicos",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "m"
+                                        }
+                                      },
+                                      "Property": "data_abertura_intervalo"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "'MÊS FUTURO'"
+                                      }
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "null"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
                   "expression": {
                     "Column": {
                       "Expression": {
@@ -94,7 +144,7 @@
                           "Entity": "mvp solicitacao_servicos"
                         }
                       },
-                      "Property": "data_fechamento_intervalo"
+                      "Property": "data_abertura_intervalo"
                     }
                   },
                   "howCreated": 0
@@ -130,7 +180,7 @@
                                               "Source": "m"
                                             }
                                           },
-                                          "Property": "data_fechamento_intervalo"
+                                          "Property": "data_abertura_intervalo"
                                         }
                                       }
                                     ],
@@ -177,7 +227,7 @@
                           "Entity": "mvp solicitacao_servicos"
                         }
                       },
-                      "Property": "data_fechamento_intervalo"
+                      "Property": "data_abertura_intervalo"
                     }
                   }
                 }
@@ -431,8 +481,58 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "0ad5023ec864f71dde6d",
+                  "name": "2685493b80a4fa0020ea",
                   "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "m",
+                        "Entity": "mvp solicitacao_servicos",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "m"
+                                        }
+                                      },
+                                      "Property": "data_abertura_intervalo"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "null"
+                                      }
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "'MÊS FUTURO'"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
                   "expression": {
                     "Column": {
                       "Expression": {
@@ -440,7 +540,7 @@
                           "Entity": "mvp solicitacao_servicos"
                         }
                       },
-                      "Property": "data_fechamento_intervalo"
+                      "Property": "data_abertura_intervalo"
                     }
                   },
                   "howCreated": 0
@@ -476,7 +576,7 @@
                                               "Source": "m"
                                             }
                                           },
-                                          "Property": "data_fechamento_intervalo"
+                                          "Property": "data_abertura_intervalo"
                                         }
                                       }
                                     ],
@@ -523,7 +623,7 @@
                           "Entity": "mvp solicitacao_servicos"
                         }
                       },
-                      "Property": "data_fechamento_intervalo"
+                      "Property": "data_abertura_intervalo"
                     }
                   }
                 }
@@ -534,7 +634,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "e7996a2cba8b97425395",
+                  "name": "a6515e9e2c35838ea80e",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -564,8 +664,51 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "2ff8d4380118dffe25d2",
+                  "name": "de3f3d7e87acd7f3af25",
                   "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "m",
+                        "Entity": "mvp solicitacao_servicos",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "m"
+                                        }
+                                      },
+                                      "Property": "data_fechamento_intervalo"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "null"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
                   "expression": {
                     "Column": {
                       "Expression": {
@@ -796,7 +939,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "c54bb116b5dfb58e756d",
+                  "name": "03f0f1126c801a9e174d",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1126,7 +1269,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "749a003680fd88f70ed7",
+                  "name": "43f597f73c474686b63f",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1135,7 +1278,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "DATA FECHAMENTO MINMAX"
+                      "Property": "DATA ABERTURA MINMAX"
                     }
                   },
                   "howCreated": 0
@@ -1227,7 +1370,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "8b509142cc02256494c5",
+                  "name": "31c681320c5890ed1767",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1236,7 +1379,7 @@
                           "Entity": "Medidas"
                         }
                       },
-                      "Property": "DATA FECHAMENTO MINMAX"
+                      "Property": "DATA ABERTURA MINMAX"
                     }
                   },
                   "howCreated": 0
@@ -1264,7 +1407,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "2e38a5151bbaadfc7091",
+                  "name": "e89b670378d704484a1c",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1343,7 +1486,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "46df495b8add237398a5",
+                  "name": "1d465aa6e72fe9e60227",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1362,6 +1505,156 @@
             "singleVisual": {
               "visualType": "card",
               "objects": {}
+            }
+          },
+          "3f546d03030bee361300": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "f188fa0b9c3904d55872",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "DU REAL ABERTURA"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "DU REAL ABERTURA"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "023cd939e88a2c7c84e8": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "2efb1cdbe4e8b4e89f29",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "DU PLAN ABERTURA"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "DU PLAN ABERTURA"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "9080399b9931fc375165": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "7923cd91daf8f827d70c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp solicitacao_servicos"
+                        }
+                      },
+                      "Property": "data_abertura"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'RelativeDatePicker'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp solicitacao_servicos"
+                        }
+                      },
+                      "Property": "data_abertura"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp solicitacao_servicos"
+                        }
+                      },
+                      "Property": "data_abertura"
+                    }
+                  }
+                ]
+              }
             }
           }
         }

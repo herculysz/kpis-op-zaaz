@@ -23,11 +23,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "DATA FECHAMENTO MINMAX"
+                  "Property": "DATA ABERTURA MINMAX"
                 }
               },
-              "queryRef": "Medidas.DATA FECHAMENTO MINMAX",
-              "nativeQueryRef": "DATA FECHAMENTO MINMAX"
+              "queryRef": "Medidas.DATA ABERTURA MINMAX",
+              "nativeQueryRef": "DATA ABERTURA MINMAX"
             }
           ]
         }

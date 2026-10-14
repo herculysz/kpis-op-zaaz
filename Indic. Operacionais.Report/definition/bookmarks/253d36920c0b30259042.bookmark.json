@@ -97,7 +97,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "3b944f715f2d6b77311f",
+                  "name": "77347c38a169c4b79c8a",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -152,8 +152,51 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "2edc52394c51660805e8",
+                  "name": "8e6168deec609c7918ce",
                   "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "m",
+                        "Entity": "mvp solicitacao_servicos",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "m"
+                                        }
+                                      },
+                                      "Property": "data_fechamento_intervalo"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "null"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
                   "expression": {
                     "Column": {
                       "Expression": {
@@ -279,8 +322,51 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "3ad836a3d349a2312964",
+                  "name": "4f4bed0621b704e7e494",
                   "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "m",
+                        "Entity": "mvp solicitacao_servicos",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "m"
+                                        }
+                                      },
+                                      "Property": "data_fechamento_intervalo"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "null"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
                   "expression": {
                     "Column": {
                       "Expression": {
@@ -452,7 +538,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "35d7adad17ff6e770404",
+                  "name": "fc3427aabed8daef3cd9",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -489,8 +575,51 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "445a6bf700e9344fc007",
+                  "name": "536e2562df9335d3c9d1",
                   "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "m",
+                        "Entity": "mvp solicitacao_servicos",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "m"
+                                        }
+                                      },
+                                      "Property": "data_fechamento_intervalo"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "null"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
                   "expression": {
                     "Column": {
                       "Expression": {
@@ -619,7 +748,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "336c79d63aeaee96134b",
+                  "name": "4c63c7005b7f40f3dea3",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -734,7 +863,7 @@
               },
               "byExpr": [
                 {
-                  "name": "2f268f3231acbad96bb0",
+                  "name": "f6c1e32c76fef1d602b7",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -749,7 +878,22 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "0bea84b84c24311314d6",
+                  "name": "f9a347b53b5924b55b3c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp solicitacao_servicos"
+                        }
+                      },
+                      "Property": "ajuste_uf"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e3d84fed652ff16c6464",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -764,7 +908,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "32dd163117e76eeaffc9",
+                  "name": "4832cae894fc32a7c049",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -779,7 +923,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "438acd3c79fef91b7e5a",
+                  "name": "e8770f875202c8a62956",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -794,7 +938,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "49033a797e4918c61aa0",
+                  "name": "f3085815df32f7f8fe6e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -809,7 +953,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "6f1aa55e336afab99a8a",
+                  "name": "3fc5ad63960ee79f6a8c",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -819,21 +963,6 @@
                         }
                       },
                       "Property": "{PER} agenda_meta"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "9630ddd87ef161f8b902",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "mvp solicitacao_servicos"
-                        }
-                      },
-                      "Property": "ajuste_uf"
                     }
                   },
                   "howCreated": 0
@@ -941,7 +1070,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "295e87fd6536050d8f74",
+                  "name": "78a9e02f89bdf5a90148",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -966,7 +1095,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "a62ce4edad08136c6ef3",
+                  "name": "a100e982b48f5b903f4c",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1057,7 +1186,7 @@
               },
               "byExpr": [
                 {
-                  "name": "97bcd145b1e29d484f95",
+                  "name": "34a8e196928431092810",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1072,7 +1201,22 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "83c519b7a62fdd707905",
+                  "name": "bf37d293261eaa1a6cb6",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp solicitacao_servicos"
+                        }
+                      },
+                      "Property": "ajuste_uf"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e40a48f987f3e053b8d7",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1087,7 +1231,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "321eae0ced8299fd13e2",
+                  "name": "2a301b076cefcbea537d",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1102,7 +1246,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "759bd9c450f0b0e1c028",
+                  "name": "e5eb09514210ed7ba037",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1117,7 +1261,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "6048361ef67ec42c91ae",
+                  "name": "0abebdbf5508a592a325",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1132,7 +1276,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1935a7eb8d931e68593d",
+                  "name": "b74d41bc9b62ac31539b",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1142,21 +1286,6 @@
                         }
                       },
                       "Property": "{PER} velocidade_meta"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "2a15888b51893551a97d",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "mvp solicitacao_servicos"
-                        }
-                      },
-                      "Property": "ajuste_uf"
                     }
                   },
                   "howCreated": 0
@@ -1298,7 +1427,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "b65bb21caf10d4f61cba",
+                  "name": "ff29d6d9896ce5c39fe0",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1328,7 +1457,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "397bc97302b67c843ee6",
+                  "name": "25d2b1eea69072f9fc37",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1424,7 +1553,7 @@
               },
               "byExpr": [
                 {
-                  "name": "86a6361bb99bbee9b7fc",
+                  "name": "417ddcb16a7695993704",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1439,7 +1568,22 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "779cd52541125cd7b914",
+                  "name": "6ff956cc764553e091ec",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mvp solicitacao_servicos"
+                        }
+                      },
+                      "Property": "ajuste_uf"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f9f6b6c3108984ff19ec",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1454,7 +1598,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "c7b5dcbd67b12a0e9fea",
+                  "name": "0faf5539f58a065eb324",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1469,7 +1613,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "9b16d44ce05b73b245f9",
+                  "name": "3f6be8b9654a61baaccd",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1484,7 +1628,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "21d989426998dee6717a",
+                  "name": "6b33f31c5db3762b4617",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1499,7 +1643,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e8c30d8896e61626043e",
+                  "name": "1aa23a01f1b796e94f8d",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1509,21 +1653,6 @@
                         }
                       },
                       "Property": "{PER} eficacia_meta"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "c5415aca5759252e7919",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "mvp solicitacao_servicos"
-                        }
-                      },
-                      "Property": "ajuste_uf"
                     }
                   },
                   "howCreated": 0
