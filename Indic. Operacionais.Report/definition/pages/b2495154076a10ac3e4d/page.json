@@ -99,7 +99,7 @@
     {
       "source": "922289da3ec57b1a227e",
       "target": "58d2a60ce957d340a606",
-      "type": "NoFilter"
+      "type": "DataFilter"
     },
     {
       "source": "922289da3ec57b1a227e",

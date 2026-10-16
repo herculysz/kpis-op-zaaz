@@ -44,7 +44,7 @@
     {
       "source": "73b791d732c07e00e0e2",
       "target": "076a5587862787bbd242",
-      "type": "NoFilter"
+      "type": "DataFilter"
     },
     {
       "source": "73b791d732c07e00e0e2",
@@ -54,12 +54,12 @@
     {
       "source": "73b791d732c07e00e0e2",
       "target": "e6f225dc09925e0c7166",
-      "type": "NoFilter"
+      "type": "DataFilter"
     },
     {
       "source": "73b791d732c07e00e0e2",
       "target": "c6599877d5d630569b51",
-      "type": "NoFilter"
+      "type": "DataFilter"
     },
     {
       "source": "e6f225dc09925e0c7166",
