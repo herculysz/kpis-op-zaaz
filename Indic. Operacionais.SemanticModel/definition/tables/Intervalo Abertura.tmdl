@@ -1,0 +1,31 @@
+table 'Intervalo Abertura'
+	lineageTag: b54ac8c3-0905-45d9-8f4f-6e4ab29e3c1e
+
+	column Intervalo
+		lineageTag: 40684b99-0a76-4ae7-a8a1-32dab08f21e9
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Intervalo]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Intervalo Abertura' = calculated
+		mode: import
+		source = ```
+				
+				VAR TabelaUnida = 
+				    UNION (
+				        SELECTCOLUMNS ( 'mvp solicitacao_servicos', "Intervalo", 'mvp solicitacao_servicos'[data_abertura_intervalo] ),
+				        SELECTCOLUMNS( 'reincidencia_reparo', "Intervalo", reincidencia_reparo[data_abertura_intervalo] )
+				    )
+				RETURN
+				FILTER (
+				    DISTINCT ( TabelaUnida ),
+				    NOT ISBLANK ( [Intervalo] )
+				        --&& TRIM ( [Intervalo] ) <> ""
+				        && [Intervalo]<> ""
+				)
+				```
+
+	annotation PBI_Id = 1530e89ee55b4c63abfac764dd0303f7
+

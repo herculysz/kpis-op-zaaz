@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "076a5587862787bbd242",
   "position": {
     "x": 284.13612565445027,
@@ -1052,118 +1052,6 @@
         },
         "type": "RelativeDate",
         "howCreated": "User"
-      },
-      {
-        "name": "abb4c0f9bdf227e915f3",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "empresa"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "f2e298fd35fb0beea686",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "cidade"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "4cd02191020644703cb2",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Reincidente_ATIV"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "2d6f4395d5b25eb21ea1",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Proj. Rein"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "86ab0f00b58a377a7ccb",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Proj. Total"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4f6656aa2ec9be80618b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "{PER} Projecao_Reincidencia_taxa"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b6e28909bbfd7dce22ae",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "{PER} Projecao_Reincidencia_meta"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "3f728dd34d88722e448f",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "ajuste_uf"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

@@ -1,0 +1,385 @@
+table reincidencia_reparo
+	lineageTag: 2dd7d555-74f2-43bb-9219-1a40f774a23c
+
+	column id_solicitacao_atual
+		dataType: string
+		lineageTag: 70f6ec09-757e-4bba-9f6e-6bd5cc615e53
+		summarizeBy: none
+		sourceColumn: id_solicitacao_atual
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_ticket
+		dataType: int64
+		formatString: 0
+		lineageTag: 71fbc1cc-ee43-4d30-8eca-5d5d8f458028
+		summarizeBy: sum
+		sourceColumn: id_ticket
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_contrato
+		dataType: int64
+		formatString: 0
+		lineageTag: 8ec466e7-8331-487d-bb4c-7b8a99569f78
+		summarizeBy: sum
+		sourceColumn: id_contrato
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_cliente
+		dataType: int64
+		formatString: 0
+		lineageTag: a888444f-c7c2-4a87-9af5-7a4db630090b
+		summarizeBy: sum
+		sourceColumn: id_cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column cliente
+		dataType: string
+		lineageTag: d160c7c3-e53f-4d48-a0ce-ad36507b34de
+		summarizeBy: none
+		sourceColumn: cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_solicitacao
+		dataType: string
+		lineageTag: 19dfe7bc-03cb-4082-bcb7-201e21a05e3d
+		summarizeBy: none
+		sourceColumn: tipo_solicitacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column diagnostico_final
+		dataType: string
+		lineageTag: d6f6ced7-8653-4c6d-be97-2a521608b3c3
+		summarizeBy: none
+		sourceColumn: diagnostico_final
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_servico
+		dataType: string
+		lineageTag: 4dd50e5a-9b45-4b7d-8ea0-3d37f3353433
+		summarizeBy: none
+		sourceColumn: tipo_servico
+
+		annotation SummarizationSetBy = Automatic
+
+	column produtivo
+		dataType: int64
+		formatString: 0
+		lineageTag: 4450cfd4-9d2d-468f-b9c2-02a72569f297
+		summarizeBy: sum
+		sourceColumn: produtivo
+
+		annotation SummarizationSetBy = Automatic
+
+	column status_atual
+		dataType: string
+		lineageTag: 3ab56ac7-48b8-4caf-9001-f2c30aeef6cc
+		summarizeBy: none
+		sourceColumn: status_atual
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_abertura
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 235a0337-aa2e-4c08-96f9-f38e697e374e
+		summarizeBy: none
+		sourceColumn: data_abertura
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column hora_abertura
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 8c3681bf-10cd-4c39-b571-400985bc8d41
+		summarizeBy: none
+		sourceColumn: hora_abertura
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column data_primeira_agenda
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 33227b15-f209-477c-be88-1004bdbf6404
+		summarizeBy: none
+		sourceColumn: data_primeira_agenda
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column hora_primeira_agenda
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 460722ec-bf38-46a5-8f54-ad3a1542059c
+		summarizeBy: none
+		sourceColumn: hora_primeira_agenda
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column data_agendamento_atual
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 4ef55344-b596-4e23-a6d1-9de6c29d4715
+		summarizeBy: none
+		sourceColumn: data_agendamento_atual
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column hora_agendamento_atual
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 2cee1a78-f6fb-449c-80bc-f2690d270909
+		summarizeBy: none
+		sourceColumn: hora_agendamento_atual
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column data_fechamento
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: f6da6f7d-8310-4e9e-a27b-4fe90c197bc7
+		summarizeBy: none
+		sourceColumn: data_fechamento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column hora_fechamento
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 9289232d-fc19-4363-9829-033bee1535d6
+		summarizeBy: none
+		sourceColumn: hora_fechamento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column tecnico_atual
+		dataType: string
+		lineageTag: dbaf1936-8d3a-4cd1-9ab7-843eaf536bde
+		summarizeBy: none
+		sourceColumn: tecnico_atual
+
+		annotation SummarizationSetBy = Automatic
+
+	column filial_regional
+		dataType: string
+		lineageTag: b19d119b-8774-4d17-8cbb-c20fae43bed2
+		summarizeBy: none
+		sourceColumn: filial_regional
+
+		annotation SummarizationSetBy = Automatic
+
+	column cidade
+		dataType: string
+		lineageTag: cb9d5105-6922-4ff9-a696-bd0994617a25
+		summarizeBy: none
+		sourceColumn: cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column uf
+		dataType: string
+		lineageTag: 1fe7e841-d97e-440e-9426-34fec46b526b
+		summarizeBy: none
+		sourceColumn: uf
+
+		annotation SummarizationSetBy = Automatic
+
+	column empresa
+		dataType: string
+		lineageTag: 974d67ce-dd99-4594-b12f-69059cd3366a
+		summarizeBy: none
+		sourceColumn: empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column dt_carga
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ae6b10f5-5799-408c-b7ad-82bfc5720060
+		summarizeBy: none
+		sourceColumn: dt_carga
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_solicitacao_anterior
+		dataType: string
+		lineageTag: 316b7390-3420-4af2-a5b4-3b96769f1456
+		summarizeBy: none
+		sourceColumn: id_solicitacao_anterior
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_solicitacao_anterior
+		dataType: string
+		lineageTag: 277f8323-1d8c-4d96-9edd-481c486e62b6
+		summarizeBy: none
+		sourceColumn: tipo_solicitacao_anterior
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_abertura_anterior
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 45db03f9-2481-4fcb-a9d8-dbc7461cd8bc
+		summarizeBy: none
+		sourceColumn: data_abertura_anterior
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column hora_abertura_anterior
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: e05b9ad9-c234-4e69-ae18-dbc73df5fb65
+		summarizeBy: none
+		sourceColumn: hora_abertura_anterior
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column data_fechamento_anterior
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: b269f552-1a0e-48cb-bf10-1a8ae576edf9
+		summarizeBy: none
+		sourceColumn: data_fechamento_anterior
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column hora_fechamento_anterior
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: cec5f7b3-e700-42f3-a9a4-a03c298f066d
+		summarizeBy: none
+		sourceColumn: hora_fechamento_anterior
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column status_anterior
+		dataType: string
+		lineageTag: 72db817a-8d79-4b95-a783-fae6d6c89e85
+		summarizeBy: none
+		sourceColumn: status_anterior
+
+		annotation SummarizationSetBy = Automatic
+
+	column tecnico_anterior
+		dataType: string
+		lineageTag: 553c2c3c-61c7-43e6-879d-ca8de96ae863
+		summarizeBy: none
+		sourceColumn: tecnico_anterior
+
+		annotation SummarizationSetBy = Automatic
+
+	column dias_dif_entre_protocolo
+		dataType: int64
+		formatString: 0
+		lineageTag: 4a474685-0c2b-485c-87ae-e4ae24f4c1bd
+		summarizeBy: sum
+		sourceColumn: dias_dif_entre_protocolo
+
+		annotation SummarizationSetBy = Automatic
+
+	column reincidente_30d
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 93b7cd3d-800a-4656-ba0b-cdabe122c2b2
+		summarizeBy: none
+		sourceColumn: reincidente_30d
+
+		annotation SummarizationSetBy = Automatic
+
+	column ajuste_uf = ```
+			
+			VAR estadosSSE = {"MG", "PR", "SP"}
+			VAR estadosNONE = {"CE", "MA", "PA", "PI"}
+			VAR estadosNE = {"BA", "CE", "PB", "PE", "RN"}
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        'reincidencia_reparo'[uf] = "SP" && 'reincidencia_reparo'[filial_regional] IN {"FILIAL MG", "ICONECTA", "VOUE"}, "MG",
+			
+			        --(ISBLANK('reincidencia_reparo'[uf]) || 'reincidencia_reparo'[uf] = ""), "SEM INFORMAÇÃO",
+			
+			        'reincidencia_reparo'[empresa] = "ZAAZ NORDESTE" && NOT('reincidencia_reparo'[uf] IN estadosNE), "PB",
+			        'reincidencia_reparo'[empresa] = "ZAAZ NORTE" && NOT('reincidencia_reparo'[uf] IN estadosNONE), "PA",
+			        'reincidencia_reparo'[empresa] = "ZAAZ SUL/SUDESTE" && NOT('reincidencia_reparo'[uf] IN estadosSSE), "SP",
+			        
+			        'reincidencia_reparo'[uf]
+			    )
+			
+			```
+		lineageTag: 0eceefae-f4de-4d53-b47b-8f1666a1243a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_abertura_intervalo =
+			
+			
+			VAR _hoje = TODAY()
+			VAR _dataabertura = 'reincidencia_reparo'[data_abertura]
+			
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(_dataabertura), BLANK(),
+			    _dataabertura = _hoje, "HOJE",
+			    YEAR(_dataabertura) = YEAR(_hoje) && MONTH(_dataabertura) = MONTH(_hoje), "MÊS ATUAL",
+			    _dataabertura < DATE(YEAR(_hoje), MONTH(_hoje), 1), "MESES ANTERIORES",
+			    _dataabertura > EOMONTH(_hoje, 0), "MÊS FUTURO",
+			    "OUTRO"
+			)
+		lineageTag: 288cbf35-c2f3-4089-978c-12f10b03fcfb
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition reincidencia_reparo = m
+		mode: import
+		source =
+				let
+				    Fonte = PostgreSQL.Database(host, database),
+				    platinum_vw_reincidencia_reparo = Fonte{[Schema="platinum",Item="vw_reincidencia_reparo"]}[Data],
+				    #"Dividir Coluna por Delimitador" = Table.SplitColumn(Table.TransformColumnTypes(platinum_vw_reincidencia_reparo, {{"data_abertura", type text}}, "pt-BR"), "data_abertura", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"data_abertura.1", "data_abertura.2"}),
+				    #"Dividir Coluna por Delimitador1" = Table.SplitColumn(Table.TransformColumnTypes(#"Dividir Coluna por Delimitador", {{"data_primeira_agenda", type text}}, "pt-BR"), "data_primeira_agenda", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"data_primeira_agenda.1", "data_primeira_agenda.2"}),
+				    #"Dividir Coluna por Delimitador2" = Table.SplitColumn(Table.TransformColumnTypes(#"Dividir Coluna por Delimitador1", {{"data_agendamento_atual", type text}}, "pt-BR"), "data_agendamento_atual", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"data_agendamento_atual.1", "data_agendamento_atual.2"}),
+				    #"Dividir Coluna por Delimitador3" = Table.SplitColumn(Table.TransformColumnTypes(#"Dividir Coluna por Delimitador2", {{"data_fechamento", type text}}, "pt-BR"), "data_fechamento", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"data_fechamento.1", "data_fechamento.2"}),
+				    #"Dividir Coluna por Delimitador4" = Table.SplitColumn(Table.TransformColumnTypes(#"Dividir Coluna por Delimitador3", {{"data_abertura_anterior", type text}}, "pt-BR"), "data_abertura_anterior", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"data_abertura_anterior.1", "data_abertura_anterior.2"}),
+				    #"Dividir Coluna por Delimitador5" = Table.SplitColumn(Table.TransformColumnTypes(#"Dividir Coluna por Delimitador4", {{"data_fechamento_anterior", type text}}, "pt-BR"), "data_fechamento_anterior", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"data_fechamento_anterior.1", "data_fechamento_anterior.2"}),
+				    #"Colunas Renomeadas" = Table.RenameColumns(#"Dividir Coluna por Delimitador5",{{"data_abertura.1", "data_abertura"}, {"data_abertura.2", "hora_abertura"}, {"data_primeira_agenda.1", "data_primeira_agenda"}, {"data_primeira_agenda.2", "hora_primeira_agenda"}, {"data_agendamento_atual.1", "data_agendamento_atual"}, {"data_agendamento_atual.2", "hora_agendamento_atual"}, {"data_fechamento.1", "data_fechamento"}, {"data_fechamento.2", "hora_fechamento"}, {"data_abertura_anterior.1", "data_abertura_anterior"}, {"data_abertura_anterior.2", "hora_abertura_anterior"}, {"data_fechamento_anterior.1", "data_fechamento_anterior"}, {"data_fechamento_anterior.2", "hora_fechamento_anterior"}}),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Colunas Renomeadas",{{"data_abertura", type date}, {"hora_abertura", type time}, {"data_primeira_agenda", type date}, {"hora_primeira_agenda", type time}, {"data_agendamento_atual", type date}, {"hora_agendamento_atual", type time}, {"data_fechamento", type date}, {"hora_fechamento", type time}, {"data_abertura_anterior", type date}, {"hora_abertura_anterior", type time}, {"data_fechamento_anterior", type date}, {"hora_fechamento_anterior", type time}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

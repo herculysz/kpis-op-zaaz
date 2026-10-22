@@ -1147,6 +1147,9 @@ cultureInfo pt-BR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "empresa": {
@@ -4859,26 +4862,6 @@ cultureInfo pt-BR
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
-			        },
-			        {
-			          "REINCIDENTE": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "[REINCIDENTE]": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -7117,6 +7100,9 @@ cultureInfo pt-BR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "data abertura intervalo": {
@@ -7947,6 +7933,9 @@ cultureInfo pt-BR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "ajuste uf": {
@@ -8475,10 +8464,2437 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "medida.reincidente_ativ_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "REINCIDENTE_ATIV2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reincidente ativ 2": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "REINCIDENTE_ATIV2": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida.reincidente_reparo_novo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "REINCIDENTE_REPARO_NOVO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reincidente reparo novo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "REINCIDENTE_REPARO_NOVO": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reincidencia reparo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "reincidencia_reparo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo.id_solicitacao_atual": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "id_solicitacao_atual"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id solicitacao atual": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id_solicitacao_atual": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification solicitacao atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "identity solicitacao atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "identifier solicitacao atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "credential solicitacao atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "PROTOCOLO ATUAL": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo.id_ticket": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "id_ticket"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id ticket": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id_ticket": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ticket": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "identification ticket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity ticket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier ticket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential ticket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "id coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "id permit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "id voucher": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "id receipt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "permit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "ID TICKET ATUAL": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo.id_contrato": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "id_contrato"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id contrato": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id_contrato": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification contrato": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity contrato": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier contrato": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential contrato": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo.id_cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "id_cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id cliente": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id_cliente": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification cliente": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity cliente": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier cliente": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential cliente": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo.cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cliente": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo.tipo_solicitacao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "tipo_solicitacao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo solicitacao": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tipo_solicitacao": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "TIPO SOLICITAÇÃO ATUAL": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo.diagnostico_final": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "diagnostico_final"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "diagnostico final": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "diagnostico_final": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "diagnostico decider": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        },
+			        {
+			          "DIAGNÓSTICO": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo.tipo_servico": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "tipo_servico"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo servico": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tipo_servico": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "TIPO SERVIÇO ATUAL": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo.produtivo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "produtivo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "produtivo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo.status_atual": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "status_atual"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "status atual": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "status_atual": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "category atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "importance atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "prestige atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "prominence atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "condition atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "class atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "grade atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "level atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "position atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "rank atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo.data_abertura": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "data_abertura"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data abertura": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data_abertura": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information abertura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact abertura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info abertura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic abertura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document abertura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure abertura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record abertura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "DATA ABERTURA ATUAL": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "reincidencia_reparo.hora_abertura": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "hora_abertura"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hora abertura": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hora_abertura": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "time": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "HORA ABERTURA ATUAL": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "reincidencia_reparo.data_primeira_agenda": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "data_primeira_agenda"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data primeira agenda": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data_primeira_agenda": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information primeira agenda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact primeira agenda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info primeira agenda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic primeira agenda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document primeira agenda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure primeira agenda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record primeira agenda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "data primeira schema": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "data primeira memo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "data primeira program": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "reincidencia_reparo.hora_primeira_agenda": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "hora_primeira_agenda"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hora primeira agenda": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hora_primeira_agenda": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "time": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "hora primeira schema": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "hora primeira memo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "hora primeira program": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "hora primeira schedule": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "hora primeira plan": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "hora primeira outline": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "hora primeira itinerary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "reincidencia_reparo.data_agendamento_atual": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "data_agendamento_atual"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data agendamento atual": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data_agendamento_atual": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information agendamento atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact agendamento atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info agendamento atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic agendamento atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document agendamento atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure agendamento atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record agendamento atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "reincidencia_reparo.hora_agendamento_atual": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "hora_agendamento_atual"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hora agendamento atual": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hora_agendamento_atual": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "time": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "reincidencia_reparo.data_fechamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "data_fechamento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data fechamento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data_fechamento": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information fechamento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact fechamento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info fechamento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic fechamento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document fechamento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure fechamento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record fechamento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "DATA FECHAMENTO ATUAL": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "reincidencia_reparo.hora_fechamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "hora_fechamento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hora fechamento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hora_fechamento": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "time": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "HORA FECHAMENTO ATUAL": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "reincidencia_reparo.tecnico_atual": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "tecnico_atual"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tecnico atual": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tecnico_atual": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "TÉCNICO ATUAL": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo.filial_regional": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "filial_regional"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "filial regional": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "filial_regional": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo.cidade": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "cidade"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "cidade": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo.uf": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "uf"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "uf": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo.empresa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "empresa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "empresa": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "REGIÃO": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo.dt_carga": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "dt_carga"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dt carga": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dt_carga": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "reincidencia_reparo.id_solicitacao_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "id_solicitacao_anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id solicitacao anterior": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id_solicitacao_anterior": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification solicitacao anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "identity solicitacao anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "identifier solicitacao anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "credential solicitacao anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "PROTOCOLO ANTERIOR": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo.tipo_solicitacao_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "tipo_solicitacao_anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo solicitacao anterior": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tipo_solicitacao_anterior": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "TIPO SOLICITAÇÃO ANTERIOR": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo.data_abertura_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "data_abertura_anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data abertura anterior": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data_abertura_anterior": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information abertura anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact abertura anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info abertura anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic abertura anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document abertura anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure abertura anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record abertura anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "reincidencia_reparo.hora_abertura_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "hora_abertura_anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hora abertura anterior": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hora_abertura_anterior": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "time": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "reincidencia_reparo.data_fechamento_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "data_fechamento_anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data fechamento anterior": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data_fechamento_anterior": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information fechamento anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact fechamento anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info fechamento anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic fechamento anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document fechamento anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure fechamento anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record fechamento anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "reincidencia_reparo.hora_fechamento_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "hora_fechamento_anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hora fechamento anterior": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hora_fechamento_anterior": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "time": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "reincidencia_reparo.status_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "status_anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "status anterior": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "status_anterior": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "category anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "importance anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "prestige anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "prominence anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "condition anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "class anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "grade anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "level anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "position anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "rank anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo.tecnico_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "tecnico_anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tecnico anterior": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tecnico_anterior": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "TÉCNICO ANTERIOR": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo.dias_dif_entre_protocolo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "dias_dif_entre_protocolo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dias dif entre protocolo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dias_dif_entre_protocolo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Dias de Dif Entre Protocolos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo.reincidente_3_0d": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "reincidente_30d"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reincidente 3 0d": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "reincidente_30d": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo.ajuste_uf": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "ajuste_uf"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "ajuste uf": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ajuste_uf": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "UF": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.data_abertura_minmax_reparo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "DATA ABERTURA MINMAX REPARO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data abertura minmax reparo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information abertura minmax reparo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "fact abertura minmax reparo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "info abertura minmax reparo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "statistic abertura minmax reparo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "document abertura minmax reparo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "figure abertura minmax reparo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "record abertura minmax reparo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "medida.reincidente_reparo_novo_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "REINCIDENTE_REPARO_NOVO 2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reincidente_reparo_novo 2": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "REINCIDENTE": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "[REINCIDENTE]": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo.data_abertura_intervalo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reincidencia_reparo",
+			          "ConceptualProperty": "data_abertura_intervalo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "data abertura intervalo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data_abertura_intervalo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "information abertura intervalo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact abertura intervalo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info abertura intervalo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic abertura intervalo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document abertura intervalo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure abertura intervalo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record abertura intervalo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "intervalo_abertura": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Intervalo Abertura"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "intervalo abertura": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "intervalo_abertura.intervalo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Intervalo Abertura",
+			          "ConceptualProperty": "Intervalo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "intervalo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "empresa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Empresa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "empresa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "empresa.empresa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Empresa",
+			          "ConceptualProperty": "Empresa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "empresa": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "empresa name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "REGIONAL": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "uf": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UF"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "uf": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "uf.uf": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UF",
+			          "ConceptualProperty": "UF"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "uf": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "uf name": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
 			    }
 			  },
 			  "Relationships": {
-			    "mvp_solicitacao_servico_has_ajuste_uf": {
+			    "mvp_solicitacao_servico_has_intervalo_abertura": {
 			      "Binding": {
 			        "ConceptualEntity": "mvp solicitacao_servicos"
 			      },
@@ -8489,9 +10905,9 @@ cultureInfo pt-BR
 			            "Entity": "mvp_solicitacao_servico"
 			          }
 			        },
-			        "mvp_solicitacao_servico.ajuste_uf": {
+			        "intervalo_abertura": {
 			          "Target": {
-			            "Entity": "mvp_solicitacao_servico.ajuste_uf"
+			            "Entity": "intervalo_abertura"
 			          }
 			        }
 			      },
@@ -8502,12 +10918,1608 @@ cultureInfo pt-BR
 			              "Role": "mvp_solicitacao_servico"
 			            },
 			            "Object": {
-			              "Role": "mvp_solicitacao_servico.ajuste_uf"
+			              "Role": "intervalo_abertura"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mvp_solicitacao_servicos_have_ajuste_ufs"
+			          "ID": "mvp_solicitacao_servicos_have_intervalo_aberturas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "intervalo_abertura"
+			            },
+			            "Object": {
+			              "Role": "mvp_solicitacao_servico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "intervalo_aberturas_have_mvp_solicitacao_servicos"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_uf1": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "uf": {
+			          "Target": {
+			            "Entity": "uf"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "uf"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_ufs"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "uf"
+			            },
+			            "Object": {
+			              "Role": "mvp_solicitacao_servico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ufs_have_mvp_solicitacao_servicos"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_empresa": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "empresa": {
+			          "Target": {
+			            "Entity": "empresa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_empresas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "empresa"
+			            },
+			            "Object": {
+			              "Role": "mvp_solicitacao_servico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "empresas_have_mvp_solicitacao_servicos"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_cidade": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "cidade": {
+			          "Target": {
+			            "Entity": "cidade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "cidade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_cidades"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cidade"
+			            },
+			            "Object": {
+			              "Role": "mvp_solicitacao_servico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cidades_have_mvp_solicitacao_servicos"
+			        }
+			      ]
+			    },
+			    "uf_has_uf": {
+			      "Binding": {
+			        "ConceptualEntity": "UF"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "uf": {
+			          "Target": {
+			            "Entity": "uf"
+			          }
+			        },
+			        "uf.uf": {
+			          "Target": {
+			            "Entity": "uf.uf"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "uf"
+			            },
+			            "Object": {
+			              "Role": "uf.uf"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ufs_have_ufs"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "uf"
+			            },
+			            "Name": {
+			              "Role": "uf.uf"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ufs_are_names_IDs_of_ufs"
+			        }
+			      ]
+			    },
+			    "empresa_has_empresa": {
+			      "Binding": {
+			        "ConceptualEntity": "Empresa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "empresa": {
+			          "Target": {
+			            "Entity": "empresa"
+			          }
+			        },
+			        "empresa.empresa": {
+			          "Target": {
+			            "Entity": "empresa.empresa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "empresa"
+			            },
+			            "Object": {
+			              "Role": "empresa.empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "empresas_have_empresas"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "empresa"
+			            },
+			            "Name": {
+			              "Role": "empresa.empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "empresas_are_names_IDs_of_empresas"
+			        }
+			      ]
+			    },
+			    "intervalo_abertura_has_intervalo": {
+			      "Binding": {
+			        "ConceptualEntity": "Intervalo Abertura"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "intervalo_abertura": {
+			          "Target": {
+			            "Entity": "intervalo_abertura"
+			          }
+			        },
+			        "intervalo_abertura.intervalo": {
+			          "Target": {
+			            "Entity": "intervalo_abertura.intervalo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "intervalo_abertura"
+			            },
+			            "Object": {
+			              "Role": "intervalo_abertura.intervalo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "intervalo_aberturas_have_intervalos"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_medida_reincidente_reparo_novo_2": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "medida.reincidente_reparo_novo_2": {
+			          "Target": {
+			            "Entity": "medida.reincidente_reparo_novo_2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "medida.reincidente_reparo_novo_2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_reincidente_reparo_novo_2"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_medida_data_abertura_minmax_reparo": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "medida.data_abertura_minmax_reparo": {
+			          "Target": {
+			            "Entity": "medida.data_abertura_minmax_reparo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "medida.data_abertura_minmax_reparo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_data_abertura_minmax_reparo"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_reincidente_3_0d": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.reincidente_3_0d": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.reincidente_3_0d"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.reincidente_3_0d"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_reincidente_3_0ds"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_dias_dif_entre_protocolo": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.dias_dif_entre_protocolo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.dias_dif_entre_protocolo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.dias_dif_entre_protocolo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_dias_dif_entre_protocolos"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_tecnico_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.tecnico_anterior": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.tecnico_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.tecnico_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_tecnico_anterior"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_status_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.status_anterior": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.status_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.status_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_status_anterior"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_hora_fechamento_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.hora_fechamento_anterior": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.hora_fechamento_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.hora_fechamento_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_hora_fechamento_anterior"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_data_fechamento_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.data_fechamento_anterior": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.data_fechamento_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.data_fechamento_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_data_fechamento_anterior"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_hora_abertura_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.hora_abertura_anterior": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.hora_abertura_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.hora_abertura_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_hora_abertura_anterior"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_data_abertura_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.data_abertura_anterior": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.data_abertura_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.data_abertura_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_data_abertura_anterior"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_tipo_solicitacao_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.tipo_solicitacao_anterior": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.tipo_solicitacao_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.tipo_solicitacao_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_tipo_solicitacao_anterior"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_id_solicitacao_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.id_solicitacao_anterior": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.id_solicitacao_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.id_solicitacao_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_id_solicitacao_anterior"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_dt_carga": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.dt_carga": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.dt_carga"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.dt_carga"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_dt_cargas"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_uf": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.uf": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.uf"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.uf"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_ufs"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_filial_regional": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.filial_regional": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.filial_regional"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.filial_regional"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_filial_regionals"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_tecnico_atual": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.tecnico_atual": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.tecnico_atual"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.tecnico_atual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_tecnico_atuals"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_hora_fechamento": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.hora_fechamento": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.hora_fechamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.hora_fechamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_hora_fechamentos"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_data_fechamento": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.data_fechamento": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.data_fechamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.data_fechamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_data_fechamentos"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_hora_agendamento_atual": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.hora_agendamento_atual": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.hora_agendamento_atual"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.hora_agendamento_atual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_hora_agendamento_atuals"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_data_agendamento_atual": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.data_agendamento_atual": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.data_agendamento_atual"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.data_agendamento_atual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_data_agendamento_atuals"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_hora_primeira_agenda": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.hora_primeira_agenda": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.hora_primeira_agenda"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.hora_primeira_agenda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_hora_primeira_agendas"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_data_primeira_agenda": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.data_primeira_agenda": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.data_primeira_agenda"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.data_primeira_agenda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_data_primeira_agendas"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_hora_abertura": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.hora_abertura": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.hora_abertura"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.hora_abertura"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_hora_aberturas"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_data_abertura": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.data_abertura": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.data_abertura"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.data_abertura"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_data_aberturas"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_status_atual": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.status_atual": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.status_atual"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.status_atual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_status_atuals"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_produtivo": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.produtivo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.produtivo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.produtivo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_produtivos"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_tipo_servico": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.tipo_servico": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.tipo_servico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.tipo_servico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_tipo_servicos"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_diagnostico_final": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.diagnostico_final": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.diagnostico_final"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.diagnostico_final"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_diagnostico_finals"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_tipo_solicitacao": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.tipo_solicitacao": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.tipo_solicitacao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.tipo_solicitacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_tipo_solicitacaos"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.cliente": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_clientes"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_id_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.id_cliente": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.id_cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.id_cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_id_clientes"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_id_contrato": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.id_contrato": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.id_contrato"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.id_contrato"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_id_contratos"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_id_ticket": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.id_ticket": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.id_ticket"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.id_ticket"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_id_tickets"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_id_solicitacao_atual": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "reincidencia_reparo.id_solicitacao_atual": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo.id_solicitacao_atual"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo.id_solicitacao_atual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_id_solicitacao_atuals"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_medida_reincidente_reparo_novo": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "medida.reincidente_reparo_novo": {
+			          "Target": {
+			            "Entity": "medida.reincidente_reparo_novo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "medida.reincidente_reparo_novo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_reincidente_reparo_novo"
+			        }
+			      ]
+			    },
+			    "medida_has_reincidente_ativ_2": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.reincidente_ativ_2": {
+			          "Target": {
+			            "Entity": "medida.reincidente_ativ_2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.reincidente_ativ_2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_reincidente_ativ_2"
+			        }
+			      ]
+			    },
+			    "medida_has_du_plan_abertura": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.du_plan_abertura": {
+			          "Target": {
+			            "Entity": "medida.du_plan_abertura"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.du_plan_abertura"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_du_plan_abertura"
+			        }
+			      ]
+			    },
+			    "medida_has_du_real_abertura": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.du_real_abertura": {
+			          "Target": {
+			            "Entity": "medida.du_real_abertura"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.du_real_abertura"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_du_real_abertura"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_medida_reincidente_REPARO2": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "medida.reincidente_REPARO2": {
+			          "Target": {
+			            "Entity": "medida.reincidente_REPARO2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "medida.reincidente_REPARO2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_reincidente_REPARO2"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_medida_produtivas_gross_ativ_contrato": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "medida.produtivas_gross_ativ_contrato": {
+			          "Target": {
+			            "Entity": "medida.produtivas_gross_ativ_contrato"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "medida.produtivas_gross_ativ_contrato"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_produtivas_gross_ativ_contrato"
 			        }
 			      ]
 			    },
@@ -8983,39 +12995,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "mvp_solicitacao_servicos_have_data_fechamento_intervalos"
-			        }
-			      ]
-			    },
-			    "mvp_solicitacao_servico_has_data_abertura_intervalo": {
-			      "Binding": {
-			        "ConceptualEntity": "mvp solicitacao_servicos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "mvp_solicitacao_servico": {
-			          "Target": {
-			            "Entity": "mvp_solicitacao_servico"
-			          }
-			        },
-			        "mvp_solicitacao_servico.data_abertura_intervalo": {
-			          "Target": {
-			            "Entity": "mvp_solicitacao_servico.data_abertura_intervalo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mvp_solicitacao_servico"
-			            },
-			            "Object": {
-			              "Role": "mvp_solicitacao_servico.data_abertura_intervalo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mvp_solicitacao_servicos_have_data_abertura_intervalos"
 			        }
 			      ]
 			    },
@@ -11098,15 +15077,15 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medida_has_cor_txt_reincidente_taxa": {
+			    "reincidencia_reparo_has_medida_cor_txt_reincidente_taxa": {
 			      "Binding": {
-			        "ConceptualEntity": "Medidas"
+			        "ConceptualEntity": "reincidencia_reparo"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "medida": {
+			        "reincidencia_reparo": {
 			          "Target": {
-			            "Entity": "medida"
+			            "Entity": "reincidencia_reparo"
 			          }
 			        },
 			        "medida.cor_txt_reincidente_taxa": {
@@ -11119,7 +15098,7 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "medida"
+			              "Role": "reincidencia_reparo"
 			            },
 			            "Object": {
 			              "Role": "medida.cor_txt_reincidente_taxa"
@@ -11127,19 +15106,52 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "medidas_have_cor_txt_reincidente_taxa"
+			          "ID": "reincidencia_reparos_have_cor_txt_reincidente_taxa"
 			        }
 			      ]
 			    },
-			    "medida_has_cor_back_reincidente_taxa": {
+			    "mvp_solicitacao_servico_has_medida_cor_txt_reincidente_taxa": {
 			      "Binding": {
-			        "ConceptualEntity": "Medidas"
+			        "ConceptualEntity": "mvp solicitacao_servicos"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "medida": {
+			        "mvp_solicitacao_servico": {
 			          "Target": {
-			            "Entity": "medida"
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "medida.cor_txt_reincidente_taxa": {
+			          "Target": {
+			            "Entity": "medida.cor_txt_reincidente_taxa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "medida.cor_txt_reincidente_taxa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_cor_txt_reincidente_taxa"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_medida_cor_back_reincidente_taxa": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
 			          }
 			        },
 			        "medida.cor_back_reincidente_taxa": {
@@ -11152,7 +15164,7 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "medida"
+			              "Role": "reincidencia_reparo"
 			            },
 			            "Object": {
 			              "Role": "medida.cor_back_reincidente_taxa"
@@ -11160,7 +15172,40 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "medidas_have_cor_back_reincidente_taxa"
+			          "ID": "reincidencia_reparos_have_cor_back_reincidente_taxa"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_medida_cor_back_reincidente_taxa": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "medida.cor_back_reincidente_taxa": {
+			          "Target": {
+			            "Entity": "medida.cor_back_reincidente_taxa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "medida.cor_back_reincidente_taxa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_cor_back_reincidente_taxa"
 			        }
 			      ]
 			    },
@@ -11197,15 +15242,15 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medida_has_PER_Reincidencia_Reparo_taxa": {
+			    "reincidencia_reparo_has_medida_PER_Reincidencia_Reparo_taxa": {
 			      "Binding": {
-			        "ConceptualEntity": "Medidas"
+			        "ConceptualEntity": "reincidencia_reparo"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "medida": {
+			        "reincidencia_reparo": {
 			          "Target": {
-			            "Entity": "medida"
+			            "Entity": "reincidencia_reparo"
 			          }
 			        },
 			        "medida.PER_Reincidencia_Reparo_taxa": {
@@ -11218,7 +15263,7 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "medida"
+			              "Role": "reincidencia_reparo"
 			            },
 			            "Object": {
 			              "Role": "medida.PER_Reincidencia_Reparo_taxa"
@@ -11226,7 +15271,40 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "medidas_have_PER_Reincidencia_Reparo_taxa"
+			          "ID": "reincidencia_reparos_have_PER_Reincidencia_Reparo_taxa"
+			        }
+			      ]
+			    },
+			    "mvp_solicitacao_servico_has_medida_PER_Reincidencia_Reparo_taxa": {
+			      "Binding": {
+			        "ConceptualEntity": "mvp solicitacao_servicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mvp_solicitacao_servico": {
+			          "Target": {
+			            "Entity": "mvp_solicitacao_servico"
+			          }
+			        },
+			        "medida.PER_Reincidencia_Reparo_taxa": {
+			          "Target": {
+			            "Entity": "medida.PER_Reincidencia_Reparo_taxa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mvp_solicitacao_servico"
+			            },
+			            "Object": {
+			              "Role": "medida.PER_Reincidencia_Reparo_taxa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mvp_solicitacao_servicos_have_PER_Reincidencia_Reparo_taxa"
 			        }
 			      ]
 			    },
@@ -15038,39 +19116,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "mvp_solicitacao_servico_has_empresa": {
-			      "Binding": {
-			        "ConceptualEntity": "mvp solicitacao_servicos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "mvp_solicitacao_servico": {
-			          "Target": {
-			            "Entity": "mvp_solicitacao_servico"
-			          }
-			        },
-			        "mvp_solicitacao_servico.empresa": {
-			          "Target": {
-			            "Entity": "mvp_solicitacao_servico.empresa"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mvp_solicitacao_servico"
-			            },
-			            "Object": {
-			              "Role": "mvp_solicitacao_servico.empresa"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mvp_solicitacao_servicos_have_empresas"
-			        }
-			      ]
-			    },
 			    "mvp_solicitacao_servico_has_primeira_agenda": {
 			      "Binding": {
 			        "ConceptualEntity": "mvp solicitacao_servicos"
@@ -15232,7 +19277,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mvp_solicitacao_servicos_have_ufs"
+			          "ID": "mvp_solicitacao_servicos_have_ufs1"
 			        }
 			      ]
 			    },
@@ -15830,147 +19875,15 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "mvp_solicitacao_servico_has_medida_produtivas_gross_ativ_contrato": {
+			    "reincidencia_reparo_has_cidade": {
 			      "Binding": {
-			        "ConceptualEntity": "mvp solicitacao_servicos"
+			        "ConceptualEntity": "reincidencia_reparo"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "mvp_solicitacao_servico": {
+			        "reincidencia_reparo": {
 			          "Target": {
-			            "Entity": "mvp_solicitacao_servico"
-			          }
-			        },
-			        "medida.produtivas_gross_ativ_contrato": {
-			          "Target": {
-			            "Entity": "medida.produtivas_gross_ativ_contrato"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mvp_solicitacao_servico"
-			            },
-			            "Object": {
-			              "Role": "medida.produtivas_gross_ativ_contrato"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mvp_solicitacao_servicos_have_produtivas_gross_ativ_contrato"
-			        }
-			      ]
-			    },
-			    "mvp_solicitacao_servico_has_medida_reincidente_REPARO2": {
-			      "Binding": {
-			        "ConceptualEntity": "mvp solicitacao_servicos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "mvp_solicitacao_servico": {
-			          "Target": {
-			            "Entity": "mvp_solicitacao_servico"
-			          }
-			        },
-			        "medida.reincidente_REPARO2": {
-			          "Target": {
-			            "Entity": "medida.reincidente_REPARO2"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mvp_solicitacao_servico"
-			            },
-			            "Object": {
-			              "Role": "medida.reincidente_REPARO2"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mvp_solicitacao_servicos_have_reincidente_REPARO2"
-			        }
-			      ]
-			    },
-			    "medida_has_du_real_abertura": {
-			      "Binding": {
-			        "ConceptualEntity": "Medidas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "medida": {
-			          "Target": {
-			            "Entity": "medida"
-			          }
-			        },
-			        "medida.du_real_abertura": {
-			          "Target": {
-			            "Entity": "medida.du_real_abertura"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "medida"
-			            },
-			            "Object": {
-			              "Role": "medida.du_real_abertura"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "medidas_have_du_real_abertura"
-			        }
-			      ]
-			    },
-			    "medida_has_du_plan_abertura": {
-			      "Binding": {
-			        "ConceptualEntity": "Medidas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "medida": {
-			          "Target": {
-			            "Entity": "medida"
-			          }
-			        },
-			        "medida.du_plan_abertura": {
-			          "Target": {
-			            "Entity": "medida.du_plan_abertura"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "medida"
-			            },
-			            "Object": {
-			              "Role": "medida.du_plan_abertura"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "medidas_have_du_plan_abertura"
-			        }
-			      ]
-			    },
-			    "mvp_solicitacao_servico_has_cidade": {
-			      "Binding": {
-			        "ConceptualEntity": "mvp solicitacao_servicos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "mvp_solicitacao_servico": {
-			          "Target": {
-			            "Entity": "mvp_solicitacao_servico"
+			            "Entity": "reincidencia_reparo"
 			          }
 			        },
 			        "cidade": {
@@ -15983,7 +19896,7 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "mvp_solicitacao_servico"
+			              "Role": "reincidencia_reparo"
 			            },
 			            "Object": {
 			              "Role": "cidade"
@@ -15991,7 +19904,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mvp_solicitacao_servicos_have_cidades"
+			          "ID": "reincidencia_reparos_have_cidades"
 			        },
 			        {
 			          "Attribute": {
@@ -15999,12 +19912,150 @@ cultureInfo pt-BR
 			              "Role": "cidade"
 			            },
 			            "Object": {
-			              "Role": "mvp_solicitacao_servico"
+			              "Role": "reincidencia_reparo"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "cidades_have_mvp_solicitacao_servicos"
+			          "ID": "cidades_have_reincidencia_reparos"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_empresa": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "empresa": {
+			          "Target": {
+			            "Entity": "empresa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_empresas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "empresa"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "empresas_have_reincidencia_reparos"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_uf1": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "uf": {
+			          "Target": {
+			            "Entity": "uf"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "uf"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_ufs1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "uf"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ufs_have_reincidencia_reparos"
+			        }
+			      ]
+			    },
+			    "reincidencia_reparo_has_intervalo_abertura": {
+			      "Binding": {
+			        "ConceptualEntity": "reincidencia_reparo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reincidencia_reparo": {
+			          "Target": {
+			            "Entity": "reincidencia_reparo"
+			          }
+			        },
+			        "intervalo_abertura": {
+			          "Target": {
+			            "Entity": "intervalo_abertura"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reincidencia_reparo"
+			            },
+			            "Object": {
+			              "Role": "intervalo_abertura"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reincidencia_reparos_have_intervalo_aberturas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "intervalo_abertura"
+			            },
+			            "Object": {
+			              "Role": "reincidencia_reparo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "intervalo_aberturas_have_reincidencia_reparos"
 			        }
 			      ]
 			    }

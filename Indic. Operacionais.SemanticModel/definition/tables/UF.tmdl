@@ -1,0 +1,32 @@
+table UF
+	lineageTag: 424ff0f2-c39a-48c0-9d77-09b9564f4b6c
+
+	column UF
+		lineageTag: 9fdb673e-ddfc-47e4-9e18-11cd1dfe17f0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [UF]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition UF = calculated
+		mode: import
+		source = ```
+				
+				VAR TabelaUnida = 
+				    UNION (
+				        SELECTCOLUMNS ( 'mvp base_clientes', "UF", 'mvp base_clientes'[ajuste_UF] ),
+				        SELECTCOLUMNS ( 'mvp solicitacao_servicos', "UF", 'mvp solicitacao_servicos'[ajuste_uf] ),
+				        SELECTCOLUMNS( 'reincidencia_reparo', "UF", reincidencia_reparo[ajuste_uf] )
+				    )
+				RETURN
+				FILTER (
+				    DISTINCT ( TabelaUnida ),
+				    NOT ISBLANK ( [UF] )
+				        --&& TRIM ( [UF] ) <> ""
+				        && [UF]<> ""
+				)
+				```
+
+	annotation PBI_Id = 0b17172ed4b2438fa19413e79c3a10c3
+

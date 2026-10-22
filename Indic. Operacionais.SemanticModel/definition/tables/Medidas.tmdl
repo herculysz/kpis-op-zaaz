@@ -538,14 +538,14 @@ table Medidas
 	measure Reincidente_ATIV = ```
 			
 			VAR _TotalAtiv = [PRODUTIVAS_GROSS_ATIV_CONTRATO]
-			VAR _DatasSelecionadas = VALUES ( d_Calendario[data] )  -- captura o filtro de datas antes de qualquer REMOVEFILTERS
+			VAR _DatasSelecionadas = VALUES ( d_Calendario[data] )  
 			
 			RETURN
 			IF(
 			    _TotalAtiv > 0,
 			    COALESCE(
-			        -- Bloco onde criamos as variáveis internas de tabela
-			        VAR _ChamadosBase =
+			        
+			        VAR _ChamadosBase = -- BASE
 			            CALCULATETABLE(
 			                ADDCOLUMNS(
 			                    SUMMARIZE(
@@ -563,7 +563,7 @@ table Medidas
 			                    'mvp solicitacao_servicos'[data_fechamento]
 			                )
 			            )
-			        VAR _TodosChamados =
+			        VAR _TodosChamados = -- TODOS
 			            CALCULATETABLE(
 			                ADDCOLUMNS(
 			                    SUMMARIZE(
@@ -573,9 +573,9 @@ table Medidas
 			                    ),
 			                    "@DataAbertura", CALCULATE(MIN('mvp solicitacao_servicos'[data_abertura]))
 			                ),
-			                REMOVEFILTERS('mvp solicitacao_servicos'),  -- limpa filtros da linha (regional etc.)
-			                _DatasSelecionadas,                         -- reaplica as datas selecionadas no calendário
-			                USERELATIONSHIP(                            -- propaga essas datas via data_abertura
+			                REMOVEFILTERS('mvp solicitacao_servicos'),  
+			                _DatasSelecionadas,                         
+			                USERELATIONSHIP(                            
 			                    d_Calendario[data],
 			                    'mvp solicitacao_servicos'[data_abertura]
 			                ),
@@ -1406,6 +1406,7 @@ table Medidas
 			            )
 			        ),
 			        'mvp solicitacao_servicos'[tipo_servico] = "REPARO"
+			        ,'mvp solicitacao_servicos'[status] <> "CANCELADO" --adicionado posteriormente para excluir solicitações canceladas
 			    )
 			VAR _TodosOsReparos =
 			    CALCULATETABLE(
@@ -1417,6 +1418,7 @@ table Medidas
 			        REMOVEFILTERS('mvp solicitacao_servicos'),
 			        REMOVEFILTERS(d_Calendario),
 			        'mvp solicitacao_servicos'[tipo_servico] = "REPARO",
+			        'mvp solicitacao_servicos'[status] <> "CANCELADO", --adicionado posteriormente para excluir solicitações canceladas
 			        NOT ISBLANK('mvp solicitacao_servicos'[data_fechamento])
 			    )
 			VAR _Reincidentes =
@@ -1454,6 +1456,7 @@ table Medidas
 			CALCULATE(
 			    COUNTROWS('mvp solicitacao_servicos'),
 			    'mvp solicitacao_servicos'[tipo_servico] IN {"REPARO"},
+			    'mvp solicitacao_servicos'[status] <> "CANCELADO", -- adicionado posteriormente para excluir os cancelados
 			    --'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"},
 			    USERELATIONSHIP(
 			        d_Calendario[data],
@@ -1472,11 +1475,14 @@ table Medidas
 	measure '{PER} Reincidencia_Reparo_taxa' =
 			
 			
-			DIVIDE(
-			    [REINCIDENTE_REPARO],
-			    [TOTAL_REPARO],
-			    0
-			)
+			IF([TOTAL_REPARO]>0,
+			    DIVIDE(
+			        --[REINCIDENTE_REPARO],
+			        [REINCIDENTE_REPARO_NOVO 2],
+			        [TOTAL_REPARO],
+			        0
+			    )+0,
+			BLANK())
 		formatString: 0.00%;-0.00%;0.00%
 		displayFolder: Reincidente_Reparo\Calculos
 		lineageTag: 292f4af6-87d3-4602-8cc1-90145ac3271e
@@ -1936,6 +1942,153 @@ table Medidas
 		lineageTag: 7f6832d2-e399-49f2-b8ea-5c8f7570d599
 
 		formatStringDefinition = "DUP "&"0.00"
+
+	measure REINCIDENTE_ATIV2 = ```
+			
+			
+			VAR _AtivNoContexto =
+			    CALCULATETABLE(
+			        DISTINCT(
+			            SELECTCOLUMNS(
+			                'mvp solicitacao_servicos',
+			                "@Contrato", 'mvp solicitacao_servicos'[id_contrato],
+			                "@Abertura", 'mvp solicitacao_servicos'[data_abertura] + 'mvp solicitacao_servicos'[hora_abertura],
+			                "@Empresa", 'mvp solicitacao_servicos'[empresa],
+			                "@Cidade", 'mvp solicitacao_servicos'[cidade],
+			                "@Filial", 'mvp solicitacao_servicos'[filial_regional],
+			                "@UF",
+			                    IF(
+			                        'mvp solicitacao_servicos'[uf] = "SP"
+			                            && 'mvp solicitacao_servicos'[filial_regional] IN {"FILIAL MG", "ICONECTA", "VOUE"},
+			                        "MG",
+			                        'mvp solicitacao_servicos'[uf]
+			                    )
+			            )
+			        ),
+			        'mvp solicitacao_servicos'[tipo_servico] = "GROSS - ATIV",
+			        'mvp solicitacao_servicos'[produtivo] = 1,
+			        'mvp solicitacao_servicos'[status] IN {"ENCERRAMENTO", "FINALIZADA", "FECHAMENTO"}
+			    )
+			VAR _TodosOsReparos =
+			    CALCULATETABLE(
+			        SELECTCOLUMNS(
+			            'mvp solicitacao_servicos',
+			            "@ContratoAnterior", 'mvp solicitacao_servicos'[id_contrato],
+			            "@FechamentoAnterior", 'mvp solicitacao_servicos'[data_fechamento] + 'mvp solicitacao_servicos'[hora_fechamento]
+			        ),
+			        REMOVEFILTERS('mvp solicitacao_servicos'),
+			        REMOVEFILTERS(d_Calendario),
+			        'mvp solicitacao_servicos'[tipo_servico] = "REPARO",
+			        'mvp solicitacao_servicos'[status] <> "CANCELADO", --adicionado posteriormente para excluir solicitações canceladas
+			        NOT ISBLANK('mvp solicitacao_servicos'[data_fechamento])
+			    )
+			VAR _Reincidentes =
+			    FILTER(
+			        _AtivNoContexto,
+			        VAR _ContratoAtual = [@Contrato]
+			        VAR _AberturaAtual = [@Abertura]
+			        RETURN
+			            NOT ISBLANK(_ContratoAtual)
+			                && NOT ISBLANK(_AberturaAtual)
+			                && COUNTROWS(
+			                    FILTER(
+			                        _TodosOsReparos,
+			                        [@Contrato] = _ContratoAtual
+			                            && NOT ISBLANK([@FechamentoAnterior])
+			                            && [@FechamentoAnterior] <= _AberturaAtual
+			                            && [@FechamentoAnterior] >= _AberturaAtual - 30
+			                    )
+			                ) > 0
+			    )
+			RETURN
+			    COUNTROWS(_Reincidentes) + 0
+			
+			
+			
+			```
+		formatString: 0
+		displayFolder: Garantia\Totais
+		lineageTag: 75ac5267-e4c7-4be4-af28-af0590b26a2d
+
+	measure REINCIDENTE_REPARO_NOVO = ```
+			
+			
+			CALCULATE(
+			    COUNTROWS(reincidencia_reparo),
+			    USERELATIONSHIP(reincidencia_reparo[data_abertura], d_Calendario[data])
+			)
+			
+			```
+		formatString: 0
+		displayFolder: Reincidente_Reparo_2
+		lineageTag: 934d3b7f-4956-4619-809c-7a86fd2add6b
+
+	measure 'DATA ABERTURA MINMAX REPARO' = ```
+			
+			VAR DataInicio = 
+			    CALCULATE(
+			        MIN('reincidencia_reparo'[data_abertura]),
+			        USERELATIONSHIP('d_calendario'[data], 'reincidencia_reparo'[data_abertura])
+			    )
+			VAR DataFim = 
+			    CALCULATE(
+			        MAX('reincidencia_reparo'[data_abertura]),
+			        USERELATIONSHIP('d_calendario'[data], 'reincidencia_reparo'[data_abertura])
+			    )
+			RETURN
+			IF(
+			    ISBLANK(DataInicio) || ISBLANK(DataFim),
+			    "Selecione o filtro acima ☝️",
+			    "Abertura de " & FORMAT(DataInicio, "dd/mm/yyyy") & " até " & FORMAT(DataFim, "dd/mm/yyyy")
+			)
+			```
+		displayFolder: Reincidente_Reparo_2
+		lineageTag: 7065f417-03e8-4c44-8a54-54c19a77389a
+
+	measure 'REINCIDENTE_REPARO_NOVO 2' =
+			
+			
+			VAR EmpresasContexto =
+			    VALUES('mvp solicitacao_servicos'[empresa])
+			VAR UFsContexto =
+			    VALUES('mvp solicitacao_servicos'[ajuste_uf])
+			VAR CidadesContexto =
+			    SELECTCOLUMNS(
+			        VALUES('mvp solicitacao_servicos'[cidade]),
+			        "Cidade",
+			            VAR CidadeAtual = 'mvp solicitacao_servicos'[cidade]
+			            VAR PosicaoUF = SEARCH(" | ", CidadeAtual, 1, 0)
+			            RETURN
+			                IF(
+			                    PosicaoUF > 0,
+			                    LEFT(CidadeAtual, PosicaoUF - 1),
+			                    CidadeAtual
+			                )
+			    )
+			RETURN
+			    CALCULATE(
+			        --DISTINCTCOUNT('reincidencia_reparo'[id_cliente]),
+			        COUNTROWS('reincidencia_reparo'),
+			        USERELATIONSHIP('reincidencia_reparo'[data_abertura], d_Calendario[data]),
+			        FILTER(
+			            'reincidencia_reparo',
+			            (
+			                NOT ISINSCOPE('mvp solicitacao_servicos'[empresa])
+			                    || 'reincidencia_reparo'[empresa] IN EmpresasContexto
+			            )
+			                && (
+			                    NOT ISINSCOPE('mvp solicitacao_servicos'[ajuste_uf])
+			                        || 'reincidencia_reparo'[ajuste_uf] IN UFsContexto
+			                )
+			                && (
+			                    NOT ISINSCOPE('mvp solicitacao_servicos'[cidade])
+			                        || 'reincidencia_reparo'[cidade] IN CidadesContexto
+			                )
+			        )
+			    )
+		formatString: #,0
+		displayFolder: Reincidente_Reparo_2
+		lineageTag: e51086bb-1802-4af8-b6fa-03b76df470bb
 
 	column 'Coluna 1'
 		dataType: string

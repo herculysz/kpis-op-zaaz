@@ -16,7 +16,8 @@ table Cidade
 				VAR TabelaUnida = 
 				    UNION (
 				        SELECTCOLUMNS ( 'mvp base_clientes', "Cidade", 'mvp base_clientes'[ajuste_cidade] ),
-				        SELECTCOLUMNS ( 'mvp solicitacao_servicos', "Cidade", 'mvp solicitacao_servicos'[cidade] )
+				        SELECTCOLUMNS ( 'mvp solicitacao_servicos', "Cidade", 'mvp solicitacao_servicos'[cidade] ),
+				        SELECTCOLUMNS( 'reincidencia_reparo', "Cidade", reincidencia_reparo[cidade] )
 				    )
 				RETURN
 				FILTER (

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "84716040be0e0059543c",
   "position": {
     "x": 1424.9214659685865,
@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "mvp solicitacao_servicos"
+                      "Entity": "Empresa"
                     }
                   },
-                  "Property": "empresa"
+                  "Property": "Empresa"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.empresa",
+              "queryRef": "Empresa.Empresa",
               "nativeQueryRef": "REGIONAL",
               "active": true,
               "displayName": "REGIONAL"
@@ -36,32 +36,31 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "mvp solicitacao_servicos"
+                      "Entity": "UF"
                     }
                   },
-                  "Property": "ajuste_uf"
+                  "Property": "UF"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.ajuste_uf",
+              "queryRef": "UF.UF",
               "nativeQueryRef": "UF",
-              "active": true,
-              "displayName": "UF"
+              "active": true
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "mvp solicitacao_servicos"
+                      "Entity": "Cidade"
                     }
                   },
-                  "Property": "cidade"
+                  "Property": "Cidade"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.cidade",
-              "nativeQueryRef": "Cidade",
+              "queryRef": "Cidade.Cidade",
+              "nativeQueryRef": "CIDADE",
               "active": false,
-              "displayName": "Cidade"
+              "displayName": "CIDADE"
             }
           ]
         },
@@ -75,10 +74,10 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "REINCIDENTE_REPARO"
+                  "Property": "REINCIDENTE_REPARO_NOVO 2"
                 }
               },
-              "queryRef": "Medidas.REINCIDENTE_REPARO_VERIFICADOR",
+              "queryRef": "Medidas.REINCIDENTE_REPARO_NOVO 2",
               "nativeQueryRef": "REINCIDENTE",
               "displayName": "REINCIDENTE"
             },
@@ -139,17 +138,17 @@
         "levels": [
           {
             "queryRefs": [
-              "mvp solicitacao_servicos.empresa"
+              "Empresa.Empresa"
             ],
             "identityKeys": [
               {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "mvp solicitacao_servicos"
+                      "Entity": "Empresa"
                     }
                   },
-                  "Property": "empresa"
+                  "Property": "Empresa"
                 }
               }
             ],
@@ -157,7 +156,7 @@
           },
           {
             "queryRefs": [
-              "mvp solicitacao_servicos.ajuste_uf"
+              "UF.UF"
             ],
             "isCollapsed": true,
             "identityKeys": [
@@ -165,10 +164,10 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "mvp solicitacao_servicos"
+                      "Entity": "UF"
                     }
                   },
-                  "Property": "ajuste_uf"
+                  "Property": "UF"
                 }
               }
             ],
@@ -176,21 +175,9 @@
           },
           {
             "queryRefs": [
-              "mvp solicitacao_servicos.cidade"
+              "Cidade.Cidade"
             ],
             "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "mvp solicitacao_servicos"
-                    }
-                  },
-                  "Property": "cidade"
-                }
-              }
-            ],
             "isPinned": true
           }
         ],
@@ -457,20 +444,6 @@
               }
             }
           }
-        },
-        {
-          "properties": {
-            "levelSubtotalEnabled": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "mvp solicitacao_servicos.cidade"
-          }
         }
       ],
       "values": [
@@ -691,22 +664,6 @@
           },
           "selector": {
             "metadata": "Medidas.{PER} Reincidencia_Reparo_taxa"
-          }
-        }
-      ],
-      "columnWidth": [
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "218D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "mvp solicitacao_servicos.empresa"
           }
         }
       ]
@@ -1007,21 +964,24 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "13edd3a88fbd3181f2be",
+        "name": "85955a494db5514da259",
+        "ordinal": 0,
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
+                "Entity": "reincidencia_reparo"
               }
             },
-            "Property": "empresa"
+            "Property": "ajuste_uf"
           }
         },
-        "type": "Categorical"
+        "type": "Categorical",
+        "howCreated": "User"
       },
       {
-        "name": "e6a2a0ded5e52770aae1",
+        "name": "9ea4dabba1c384711fbe",
+        "ordinal": 1,
         "field": {
           "Column": {
             "Expression": {
@@ -1032,52 +992,12 @@
             "Property": "cidade"
           }
         },
-        "type": "Categorical"
+        "type": "Categorical",
+        "howCreated": "User"
       },
       {
-        "name": "69fbb6dac3a553baef3e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "REINCIDENTE_REPARO"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c7d0e586b35786f5cfe2",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "TOTAL_REPARO"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b94a850156afd8a0819e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "{PER} Reincidencia_Reparo_taxa"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "1f1ec122109177e11721",
+        "name": "6831c70393e6647860c4",
+        "ordinal": 2,
         "field": {
           "Measure": {
             "Expression": {
@@ -1091,7 +1011,101 @@
         "type": "Advanced"
       },
       {
-        "name": "b24b2e29ddd7caf2c204",
+        "name": "7a8367ca99ef38fe3316",
+        "ordinal": 3,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mvp solicitacao_servicos"
+              }
+            },
+            "Property": "empresa"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "2a1e628dac7a1e9042ce",
+        "ordinal": 4,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "reincidencia_reparo"
+              }
+            },
+            "Property": "cidade"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "9c4d870bdf671df763cf",
+        "ordinal": 5,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "REINCIDENTE_REPARO_NOVO 2"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2b4765bfbeb886a4aee8",
+        "ordinal": 6,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "reincidencia_reparo"
+              }
+            },
+            "Property": "empresa"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "e6d7719ba9721bd3d1cc",
+        "ordinal": 7,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "{PER} Reincidencia_Reparo_taxa"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f6822ea02c8cb6c70f97",
+        "ordinal": 8,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "TOTAL_REPARO"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5521d6410df4c25b5a57",
+        "ordinal": 9,
         "field": {
           "Column": {
             "Expression": {
@@ -1102,8 +1116,10 @@
             "Property": "ajuste_uf"
           }
         },
-        "type": "Categorical"
+        "type": "Categorical",
+        "howCreated": "User"
       }
-    ]
+    ],
+    "filterSortOrder": "Custom"
   }
 }

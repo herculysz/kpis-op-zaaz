@@ -8,7 +8,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "c6f08b731208604a3624",
+        "name": "9712e4b6093fe0db18ee",
         "field": {
           "Measure": {
             "Expression": {
@@ -16,7 +16,7 @@
                 "Entity": "Medidas"
               }
             },
-            "Property": "REINCIDENTE_REPARO"
+            "Property": "REINCIDENTE_REPARO_NOVO 2"
           }
         },
         "type": "Categorical",
@@ -25,12 +25,14 @@
     ]
   },
   "pageBinding": {
-    "name": "10a80a65b9b0a40a4cac",
+    "name": "e37b14138c36a66d51b7",
     "type": "Drillthrough",
     "parameters": [
       {
-        "name": "caa045e423052c508ddb",
-        "boundFilter": "c6f08b731208604a3624",
+        "name": "b56cf035fe6273e5ec65",
+        "boundFilter": "9712e4b6093fe0db18ee",
+        "asAggregation": false,
+        "qnaSingleSelectRequired": false,
         "fieldExpr": {
           "Measure": {
             "Expression": {
@@ -38,7 +40,7 @@
                 "Entity": "Medidas"
               }
             },
-            "Property": "REINCIDENTE_REPARO"
+            "Property": "REINCIDENTE_REPARO_NOVO 2"
           }
         }
       }

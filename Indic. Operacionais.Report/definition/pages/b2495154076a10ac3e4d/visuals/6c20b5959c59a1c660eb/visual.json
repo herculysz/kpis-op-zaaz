@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "6c20b5959c59a1c660eb",
   "position": {
     "x": 284.13612565445027,
@@ -1044,107 +1044,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b615bd178cf8e21b93d2",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "empresa"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ba10439414a0f1421a3f",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "cidade"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "dc2822c7ffdbb984553d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "TOTAL_REPARO"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "3f2534ee5dae76d54211",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "PROJEÇÃO_REPARO"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "05ec1e99be5775e245f3",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Clientes_count"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "932cb670767e3db4b65c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "{PER} Projecao_entrante_taxa"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "67873bf5cccc8f3a8018",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "{PER} Projecao_entrante_meta"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

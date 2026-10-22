@@ -1,0 +1,32 @@
+table Empresa
+	lineageTag: faa482f7-a5bf-4ead-aea1-d133642d1d9c
+
+	column Empresa
+		lineageTag: d498756a-533c-46fc-ad0c-20da1e222b62
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Empresa]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Empresa = calculated
+		mode: import
+		source = ```
+				
+				VAR TabelaUnida = 
+				    UNION (
+				        SELECTCOLUMNS ( 'mvp base_clientes', "Empresa", 'mvp base_clientes'[Empresa] ),
+				        SELECTCOLUMNS ( 'mvp solicitacao_servicos', "Empresa", 'mvp solicitacao_servicos'[Empresa] ),
+				        SELECTCOLUMNS( 'reincidencia_reparo', "Empresa", reincidencia_reparo[Empresa] )
+				    )
+				RETURN
+				FILTER (
+				    DISTINCT ( TabelaUnida ),
+				    NOT ISBLANK ( [Empresa] )
+				        --&& TRIM ( [Empresa] ) <> ""
+				        && [Empresa]<> ""
+				)
+				```
+
+	annotation PBI_Id = b9ae2827e521402f88f08c9d3057f650
+

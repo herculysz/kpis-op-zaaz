@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "25801c501d80c44c52da",
   "position": {
     "x": 1485.7068062827225,
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "mvp solicitacao_servicos"
+                      "Entity": "Intervalo Abertura"
                     }
                   },
-                  "Property": "data_abertura_intervalo"
+                  "Property": "Intervalo"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.data_abertura_intervalo",
-              "nativeQueryRef": "data_abertura_intervalo"
+              "queryRef": "Intervalo Abertura.Intervalo",
+              "nativeQueryRef": "Intervalo"
             }
           ]
         }
@@ -39,10 +39,10 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "mvp solicitacao_servicos"
+                    "Entity": "Intervalo Abertura"
                   }
                 },
-                "Property": "data_abertura_intervalo"
+                "Property": "Intervalo"
               }
             },
             "direction": "Descending"
@@ -59,8 +59,8 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "m",
-                    "Entity": "mvp solicitacao_servicos",
+                    "Name": "i",
+                    "Entity": "Intervalo Abertura",
                     "Type": 0
                   }
                 ],
@@ -73,10 +73,10 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Source": "m"
+                                  "Source": "i"
                                 }
                               },
-                              "Property": "data_abertura_intervalo"
+                              "Property": "Intervalo"
                             }
                           }
                         ],
@@ -796,15 +796,15 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "2685493b80a4fa0020ea",
+        "name": "de21be7d657fcbff4609",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
+                "Entity": "Intervalo Abertura"
               }
             },
-            "Property": "data_abertura_intervalo"
+            "Property": "Intervalo"
           }
         },
         "type": "Categorical",
@@ -812,8 +812,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "m",
-              "Entity": "mvp solicitacao_servicos",
+              "Name": "i",
+              "Entity": "Intervalo Abertura",
               "Type": 0
             }
           ],
@@ -828,10 +828,10 @@
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "m"
+                                "Source": "i"
                               }
                             },
-                            "Property": "data_abertura_intervalo"
+                            "Property": "Intervalo"
                           }
                         }
                       ],
@@ -858,6 +858,7 @@
             }
           ]
         },
+        "isLockedInViewMode": true,
         "objects": {
           "general": [
             {

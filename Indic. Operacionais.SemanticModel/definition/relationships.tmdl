@@ -4,7 +4,6 @@ relationship 0a1f5e62-aca2-5208-27cf-80e229bc24b9
 	toColumn: d_Calendario.data
 
 relationship 89e14724-dec3-cf02-32ac-799469c5e3e0
-	isActive: false
 	fromColumn: 'mvp solicitacao_servicos'.data_abertura
 	toColumn: d_Calendario.data
 
@@ -21,4 +20,41 @@ relationship febe461d-6186-fb87-87b2-d3ee138e692c
 relationship ee058e6f-ef73-deed-4ed2-815a40679b0f
 	fromColumn: 'mvp solicitacao_servicos'.cidade
 	toColumn: Cidade.Cidade
+
+relationship e5878720-cfb8-2a88-93c3-6db5ed662d30
+	fromColumn: reincidencia_reparo.cidade
+	toColumn: Cidade.Cidade
+
+relationship 2a145534-4d00-7226-dd07-5a0d50c1296e
+	fromColumn: reincidencia_reparo.data_abertura
+	toColumn: d_Calendario.data
+
+relationship 9c32ec97-1737-6980-7559-a47048544948
+	isActive: false
+	fromColumn: reincidencia_reparo.data_fechamento
+	toColumn: d_Calendario.data
+
+relationship 56578971-59c6-597f-134e-45dcf1fda5f6
+	fromColumn: reincidencia_reparo.empresa
+	toColumn: Empresa.Empresa
+
+relationship 367e894f-a6ed-f7fb-b430-b997f3c78528
+	fromColumn: 'mvp solicitacao_servicos'.empresa
+	toColumn: Empresa.Empresa
+
+relationship 2ec9f4ee-ce68-8593-03cd-dbdda6bf1a19
+	fromColumn: reincidencia_reparo.ajuste_uf
+	toColumn: UF.UF
+
+relationship 7e762b95-ca09-e43b-3e14-ebcf4c0aa389
+	fromColumn: 'mvp solicitacao_servicos'.ajuste_uf
+	toColumn: UF.UF
+
+relationship ac635229-4040-1724-d952-0dba5fe66ff6
+	fromColumn: reincidencia_reparo.data_abertura_intervalo
+	toColumn: 'Intervalo Abertura'.Intervalo
+
+relationship 2c5515d2-e307-2336-8f9c-9a25ce4f5e4b
+	fromColumn: 'mvp solicitacao_servicos'.data_abertura_intervalo
+	toColumn: 'Intervalo Abertura'.Intervalo
 

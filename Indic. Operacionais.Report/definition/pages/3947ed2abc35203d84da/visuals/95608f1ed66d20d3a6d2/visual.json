@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "95608f1ed66d20d3a6d2",
   "position": {
     "x": 284.18262150220914,
@@ -20,44 +20,59 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "mvp solicitacao_servicos"
+                      "Entity": "reincidencia_reparo"
                     }
                   },
-                  "Property": "protocolo"
+                  "Property": "id_solicitacao_atual"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.protocolo",
-              "nativeQueryRef": "PROTOCOLO",
-              "displayName": "PROTOCOLO"
+              "queryRef": "reincidencia_reparo.id_solicitacao_atual",
+              "nativeQueryRef": "PROTOCOLO ATUAL",
+              "displayName": "PROTOCOLO ATUAL"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "mvp solicitacao_servicos"
+                      "Entity": "reincidencia_reparo"
                     }
                   },
                   "Property": "id_ticket"
                 }
               },
-              "queryRef": "Sum(mvp solicitacao_servicos.id_ticket)",
-              "nativeQueryRef": "id_ticket",
-              "displayName": "ID TICKET"
+              "queryRef": "Sum(reincidencia_reparo.id_ticket)",
+              "nativeQueryRef": "ID TICKET ATUAL",
+              "displayName": "ID TICKET ATUAL"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "mvp solicitacao_servicos"
+                      "Entity": "reincidencia_reparo"
+                    }
+                  },
+                  "Property": "id_cliente"
+                }
+              },
+              "queryRef": "Sum(reincidencia_reparo.id_cliente)",
+              "nativeQueryRef": "ID CLIENTE",
+              "displayName": "ID CLIENTE"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "reincidencia_reparo"
                     }
                   },
                   "Property": "id_contrato"
                 }
               },
-              "queryRef": "Sum(mvp solicitacao_servicos.id_contrato)",
-              "nativeQueryRef": "ID CONTRATO1",
+              "queryRef": "Sum(reincidencia_reparo.id_contrato)",
+              "nativeQueryRef": "ID CONTRATO",
               "displayName": "ID CONTRATO"
             },
             {
@@ -65,28 +80,43 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "mvp solicitacao_servicos"
+                      "Entity": "reincidencia_reparo"
                     }
                   },
                   "Property": "data_abertura"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.data_abertura",
-              "nativeQueryRef": "DATA ABERTURA",
-              "displayName": "DATA ABERTURA"
+              "queryRef": "reincidencia_reparo.data_abertura",
+              "nativeQueryRef": "DATA ABERTURA ATUAL",
+              "displayName": "DATA ABERTURA ATUAL"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "mvp solicitacao_servicos"
+                      "Entity": "reincidencia_reparo"
+                    }
+                  },
+                  "Property": "hora_abertura"
+                }
+              },
+              "queryRef": "reincidencia_reparo.hora_abertura",
+              "nativeQueryRef": "HORA ABERTURA ATUAL",
+              "displayName": "HORA ABERTURA ATUAL"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "reincidencia_reparo"
                     }
                   },
                   "Property": "data_primeira_agenda"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.data_primeira_agenda",
+              "queryRef": "reincidencia_reparo.data_primeira_agenda",
               "nativeQueryRef": "DATA PRIMEIRA AGENDA",
               "displayName": "DATA PRIMEIRA AGENDA"
             },
@@ -95,73 +125,103 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "mvp solicitacao_servicos"
+                      "Entity": "reincidencia_reparo"
+                    }
+                  },
+                  "Property": "hora_primeira_agenda"
+                }
+              },
+              "queryRef": "reincidencia_reparo.hora_primeira_agenda",
+              "nativeQueryRef": "HORA PRIMEIRA AGENDA",
+              "displayName": "HORA PRIMEIRA AGENDA"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "reincidencia_reparo"
                     }
                   },
                   "Property": "data_fechamento"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.data_fechamento",
-              "nativeQueryRef": "DATA FECHAMENTO",
-              "displayName": "DATA FECHAMENTO"
+              "queryRef": "reincidencia_reparo.data_fechamento",
+              "nativeQueryRef": "DATA FECHAMENTO ATUAL",
+              "displayName": "DATA FECHAMENTO ATUAL"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "mvp solicitacao_servicos"
+                      "Entity": "reincidencia_reparo"
+                    }
+                  },
+                  "Property": "hora_fechamento"
+                }
+              },
+              "queryRef": "reincidencia_reparo.hora_fechamento",
+              "nativeQueryRef": "HORA FECHAMENTO ATUAL",
+              "displayName": "HORA FECHAMENTO ATUAL"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "reincidencia_reparo"
                     }
                   },
                   "Property": "tipo_servico"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.tipo_servico",
-              "nativeQueryRef": "TIPO SERVIÇO",
-              "displayName": "TIPO SERVIÇO"
+              "queryRef": "reincidencia_reparo.tipo_servico",
+              "nativeQueryRef": "TIPO SERVIÇO ATUAL",
+              "displayName": "TIPO SERVIÇO ATUAL"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "mvp solicitacao_servicos"
+                      "Entity": "reincidencia_reparo"
                     }
                   },
                   "Property": "tipo_solicitacao"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.tipo_solicitacao",
-              "nativeQueryRef": "TIPO SOLICITAÇÃO",
-              "displayName": "TIPO SOLICITAÇÃO"
+              "queryRef": "reincidencia_reparo.tipo_solicitacao",
+              "nativeQueryRef": "TIPO SOLICITAÇÃO ATUAL",
+              "displayName": "TIPO SOLICITAÇÃO ATUAL"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "mvp solicitacao_servicos"
+                      "Entity": "reincidencia_reparo"
                     }
                   },
-                  "Property": "status"
+                  "Property": "status_atual"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.status",
-              "nativeQueryRef": "STATUS",
-              "displayName": "STATUS"
+              "queryRef": "reincidencia_reparo.status_atual",
+              "nativeQueryRef": "STATUS ATUAL",
+              "displayName": "STATUS ATUAL"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "mvp solicitacao_servicos"
+                      "Entity": "reincidencia_reparo"
                     }
                   },
                   "Property": "cliente"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.cliente",
+              "queryRef": "reincidencia_reparo.cliente",
               "nativeQueryRef": "CLIENTE",
               "displayName": "CLIENTE"
             },
@@ -170,14 +230,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "mvp solicitacao_servicos"
+                      "Entity": "reincidencia_reparo"
                     }
                   },
                   "Property": "diagnostico_final"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.diagnostico_final",
-              "nativeQueryRef": "DIAGNÓSTICO1",
+              "queryRef": "reincidencia_reparo.diagnostico_final",
+              "nativeQueryRef": "DIAGNÓSTICO",
               "displayName": "DIAGNÓSTICO"
             },
             {
@@ -185,28 +245,28 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "mvp solicitacao_servicos"
+                      "Entity": "reincidencia_reparo"
                     }
                   },
-                  "Property": "tecnico"
+                  "Property": "tecnico_atual"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.tecnico",
-              "nativeQueryRef": "TÉCNICO",
-              "displayName": "TÉCNICO"
+              "queryRef": "reincidencia_reparo.tecnico_atual",
+              "nativeQueryRef": "TÉCNICO ATUAL",
+              "displayName": "TÉCNICO ATUAL"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "mvp solicitacao_servicos"
+                      "Entity": "reincidencia_reparo"
                     }
                   },
                   "Property": "empresa"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.empresa",
+              "queryRef": "reincidencia_reparo.empresa",
               "nativeQueryRef": "REGIÃO",
               "displayName": "REGIÃO"
             },
@@ -215,13 +275,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "mvp solicitacao_servicos"
+                      "Entity": "reincidencia_reparo"
                     }
                   },
-                  "Property": "uf_ajustada"
+                  "Property": "ajuste_uf"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.uf_ajustada",
+              "queryRef": "reincidencia_reparo.ajuste_uf",
               "nativeQueryRef": "UF",
               "displayName": "UF"
             },
@@ -230,13 +290,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "mvp solicitacao_servicos"
+                      "Entity": "reincidencia_reparo"
                     }
                   },
                   "Property": "filial_regional"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.filial_regional",
+              "queryRef": "reincidencia_reparo.filial_regional",
               "nativeQueryRef": "FILIAL REGIONAL",
               "displayName": "FILIAL REGIONAL"
             },
@@ -245,15 +305,165 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "mvp solicitacao_servicos"
+                      "Entity": "reincidencia_reparo"
                     }
                   },
                   "Property": "cidade"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.cidade",
-              "nativeQueryRef": "CIDADE1",
+              "queryRef": "reincidencia_reparo.cidade",
+              "nativeQueryRef": "CIDADE",
               "displayName": "CIDADE"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "reincidencia_reparo"
+                    }
+                  },
+                  "Property": "produtivo"
+                }
+              },
+              "queryRef": "Sum(reincidencia_reparo.produtivo)",
+              "nativeQueryRef": "PRODUTIVO",
+              "displayName": "PRODUTIVO"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "reincidencia_reparo"
+                    }
+                  },
+                  "Property": "id_solicitacao_anterior"
+                }
+              },
+              "queryRef": "reincidencia_reparo.id_solicitacao_anterior",
+              "nativeQueryRef": "PROTOCOLO ANTERIOR",
+              "displayName": "PROTOCOLO ANTERIOR"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "reincidencia_reparo"
+                    }
+                  },
+                  "Property": "data_abertura_anterior"
+                }
+              },
+              "queryRef": "reincidencia_reparo.data_abertura_anterior",
+              "nativeQueryRef": "DATA ABERTURA ANTERIOR",
+              "displayName": "DATA ABERTURA ANTERIOR"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "reincidencia_reparo"
+                    }
+                  },
+                  "Property": "hora_abertura_anterior"
+                }
+              },
+              "queryRef": "reincidencia_reparo.hora_abertura_anterior",
+              "nativeQueryRef": "HORA ABERTURA ANTERIOR",
+              "displayName": "HORA ABERTURA ANTERIOR"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "reincidencia_reparo"
+                    }
+                  },
+                  "Property": "data_fechamento_anterior"
+                }
+              },
+              "queryRef": "reincidencia_reparo.data_fechamento_anterior",
+              "nativeQueryRef": "DATA FECHAMENTO ANTERIOR",
+              "displayName": "DATA FECHAMENTO ANTERIOR"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "reincidencia_reparo"
+                    }
+                  },
+                  "Property": "hora_fechamento_anterior"
+                }
+              },
+              "queryRef": "reincidencia_reparo.hora_fechamento_anterior",
+              "nativeQueryRef": "HORA FECHAMENTO ANTERIOR",
+              "displayName": "HORA FECHAMENTO ANTERIOR"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "reincidencia_reparo"
+                    }
+                  },
+                  "Property": "status_anterior"
+                }
+              },
+              "queryRef": "reincidencia_reparo.status_anterior",
+              "nativeQueryRef": "STATUS ANTERIOR",
+              "displayName": "STATUS ANTERIOR"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "reincidencia_reparo"
+                    }
+                  },
+                  "Property": "tipo_solicitacao_anterior"
+                }
+              },
+              "queryRef": "reincidencia_reparo.tipo_solicitacao_anterior",
+              "nativeQueryRef": "TIPO SOLICITAÇÃO ANTERIOR",
+              "displayName": "TIPO SOLICITAÇÃO ANTERIOR"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "reincidencia_reparo"
+                    }
+                  },
+                  "Property": "tecnico_anterior"
+                }
+              },
+              "queryRef": "reincidencia_reparo.tecnico_anterior",
+              "nativeQueryRef": "TÉCNICO ANTERIOR",
+              "displayName": "TÉCNICO ANTERIOR"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "reincidencia_reparo"
+                    }
+                  },
+                  "Property": "dias_dif_entre_protocolo"
+                }
+              },
+              "queryRef": "Sum(reincidencia_reparo.dias_dif_entre_protocolo)",
+              "nativeQueryRef": "Dias de Dif Entre Protocolos",
+              "displayName": "Dias de Dif Entre Protocolos"
             },
             {
               "field": {
@@ -263,10 +473,10 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "REINCIDENTE_REPARO"
+                  "Property": "REINCIDENTE_REPARO_NOVO 2"
                 }
               },
-              "queryRef": "Medidas.REINCIDENTE_REPARO",
+              "queryRef": "Medidas.REINCIDENTE_REPARO_NOVO 2",
               "nativeQueryRef": "[REINCIDENTE]",
               "displayName": "[REINCIDENTE]"
             }
@@ -697,41 +907,218 @@
           }
         },
         "type": "Advanced",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "m1",
-              "Entity": "Medidas",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Comparison": {
-                  "ComparisonKind": 1,
-                  "Left": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Source": "m1"
-                        }
-                      },
-                      "Property": "REINCIDENTE_REPARO"
-                    }
-                  },
-                  "Right": {
-                    "Literal": {
-                      "Value": "0L"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
+        "howCreated": "User",
         "isLockedInViewMode": true
+      },
+      {
+        "name": "ed778146b831fca10163",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "reincidencia_reparo"
+              }
+            },
+            "Property": "id_solicitacao_atual"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f38b84de07868dc04441",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "reincidencia_reparo"
+              }
+            },
+            "Property": "id_ticket"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4031ae75830b67eb0994",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "reincidencia_reparo"
+              }
+            },
+            "Property": "id_contrato"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3a219d93eb2f36ac0306",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "reincidencia_reparo"
+              }
+            },
+            "Property": "data_primeira_agenda"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "8b9f9e53d09857b97ea1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "reincidencia_reparo"
+              }
+            },
+            "Property": "data_fechamento"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "70c84ef493bdf16d41ea",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "reincidencia_reparo"
+              }
+            },
+            "Property": "tipo_servico"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "eb83a145f13cf0d60f79",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "reincidencia_reparo"
+              }
+            },
+            "Property": "tipo_solicitacao"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "fd2f3c3e07c9cc89c547",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "reincidencia_reparo"
+              }
+            },
+            "Property": "status_atual"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e9473e09ec45162592e2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "reincidencia_reparo"
+              }
+            },
+            "Property": "cliente"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "06bec99fb5b8c36a8964",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "reincidencia_reparo"
+              }
+            },
+            "Property": "diagnostico_final"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "fac8f4deeebc6d7eb456",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "reincidencia_reparo"
+              }
+            },
+            "Property": "tecnico_atual"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c9f8258cdb8be6ec6e39",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "reincidencia_reparo"
+              }
+            },
+            "Property": "empresa"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7afec8a48238e321f925",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "reincidencia_reparo"
+              }
+            },
+            "Property": "ajuste_uf"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "bd27253ca8e59bbe34ac",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "reincidencia_reparo"
+              }
+            },
+            "Property": "filial_regional"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "bf4a0b94b433c833fc39",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "reincidencia_reparo"
+              }
+            },
+            "Property": "cidade"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }
