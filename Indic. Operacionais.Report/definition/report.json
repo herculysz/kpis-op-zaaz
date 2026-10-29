@@ -2,22 +2,13 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
   "themeCollection": {
     "baseTheme": {
-      "name": "Fluent2-CY26SU07",
+      "name": "Fluent2-CY26SU10",
       "reportVersionAtImport": {
-        "visual": "2.11.0",
+        "visual": "2.14.0",
         "report": "3.4.0",
         "page": "2.3.1"
       },
       "type": "SharedResources"
-    },
-    "customTheme": {
-      "name": "Custom5272219798032481.json",
-      "reportVersionAtImport": {
-        "visual": "2.11.0",
-        "report": "3.4.0",
-        "page": "2.3.1"
-      },
-      "type": "RegisteredResources"
     }
   },
   "objects": {
@@ -54,8 +45,8 @@
       "type": "SharedResources",
       "items": [
         {
-          "name": "Fluent2-CY26SU07",
-          "path": "BaseThemes/Fluent2-CY26SU07.json",
+          "name": "Fluent2-CY26SU10",
+          "path": "BaseThemes/Fluent2-CY26SU10.json",
           "type": "BaseTheme"
         }
       ]
@@ -64,11 +55,6 @@
       "name": "RegisteredResources",
       "type": "RegisteredResources",
       "items": [
-        {
-          "name": "Custom5272219798032481.json",
-          "path": "Custom5272219798032481.json",
-          "type": "CustomTheme"
-        },
         {
           "name": "zaaz-icon1291532454041714.jpg",
           "path": "zaaz-icon1291532454041714.jpg",

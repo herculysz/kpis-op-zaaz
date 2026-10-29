@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definitionProperties/2.0.0/schema.json",
   "version": "4.0",
   "datasetReference": {
-    "byPath": {
-      "path": "../Indic. Operacionais.SemanticModel"
+    "byConnection": {
+      "connectionString": "Data Source=\"powerbi://api.powerbi.com/v1.0/myorg/BI ZAAZ - PROD\";initial catalog=Semantico-mvp;access mode=readonly;integrated security=ClaimsToken;semanticmodelid=6c69ebc2-6a01-4b7a-bf4c-dbf6581a0949"
     }
   }
 }

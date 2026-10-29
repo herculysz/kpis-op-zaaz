@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "5bcac5b117ab90162ec0",
+  "displayName": "Garantia",
+  "displayOption": "FitToPage",
+  "height": 1080,
+  "width": 1920,
+  "visualInteractions": [
+    {
+      "source": "15d97986bcbd1a84e021",
+      "target": "9f8858b62c0aa7de271a",
+      "type": "NoFilter"
+    },
+    {
+      "source": "15d97986bcbd1a84e021",
+      "target": "b46ce29e03c4d0c8c0a0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "15d97986bcbd1a84e021",
+      "target": "6552ebce349897dd210d",
+      "type": "NoFilter"
+    },
+    {
+      "source": "15d97986bcbd1a84e021",
+      "target": "f4f6c2e78d39bdc30080",
+      "type": "NoFilter"
+    },
+    {
+      "source": "15d97986bcbd1a84e021",
+      "target": "9a240c8a59936ce63560",
+      "type": "NoFilter"
+    },
+    {
+      "source": "15d97986bcbd1a84e021",
+      "target": "2fa517b1b02902ac5b18",
+      "type": "NoFilter"
+    },
+    {
+      "source": "b46ce29e03c4d0c8c0a0",
+      "target": "15d97986bcbd1a84e021",
+      "type": "NoFilter"
+    },
+    {
+      "source": "b46ce29e03c4d0c8c0a0",
+      "target": "c53632a0eccc007028ca",
+      "type": "NoFilter"
+    },
+    {
+      "source": "b46ce29e03c4d0c8c0a0",
+      "target": "327130a74732e536da02",
+      "type": "NoFilter"
+    },
+    {
+      "source": "b46ce29e03c4d0c8c0a0",
+      "target": "a2601f9592d31da40300",
+      "type": "NoFilter"
+    }
+  ]
+}
