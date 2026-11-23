@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "mvp solicitacao_servicos"
+                      "Entity": "d_Calendario"
                     }
                   },
-                  "Property": "data_abertura"
+                  "Property": "data"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.data_abertura",
-              "nativeQueryRef": "data_abertura",
+              "queryRef": "d_Calendario.data",
+              "nativeQueryRef": "data",
               "active": true
             }
           ]

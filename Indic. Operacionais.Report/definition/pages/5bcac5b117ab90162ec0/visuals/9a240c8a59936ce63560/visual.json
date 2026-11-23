@@ -1059,6 +1059,118 @@
         },
         "type": "RelativeDate",
         "howCreated": "User"
+      },
+      {
+        "name": "f094083b1f754d72a3a0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mvp solicitacao_servicos"
+              }
+            },
+            "Property": "empresa"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "5276b18d0836e88dd41d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mvp solicitacao_servicos"
+              }
+            },
+            "Property": "ajuste_uf"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "80dc7effa2dc5095cb85",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mvp solicitacao_servicos"
+              }
+            },
+            "Property": "cidade"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b2c9a4f9fc867973ca42",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Reincidente_ATIV"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "313f2e14e0f75b8ff633",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Proj. Rein"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "86a850fe7d9d6f859f87",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Proj. Total"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "93614e2722f4992f8631",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "{PER} Projecao_Reincidencia_taxa"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fcd438e915a7c8966f40",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "{PER} Projecao_Reincidencia_meta"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }
