@@ -277,6 +277,76 @@
                       "Entity": "Medidas"
                     }
                   },
+                  "Property": "Tipo Servico Reincidente"
+                }
+              },
+              "queryRef": "Medidas.Tipo Servico Reincidente",
+              "nativeQueryRef": "Tipo Servico Reincidente"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Tipo Solicitacao Reincidente"
+                }
+              },
+              "queryRef": "Medidas.Tipo Solicitacao Reincidente",
+              "nativeQueryRef": "Tipo Solicitacao Reincidente"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Tecnico Reincidente"
+                }
+              },
+              "queryRef": "Medidas.Tecnico Reincidente",
+              "nativeQueryRef": "Tecnico Reincidente"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Diagnostico Final Reincidente"
+                }
+              },
+              "queryRef": "Medidas.Diagnostico Final Reincidente",
+              "nativeQueryRef": "Diagnostico Final Reincidente"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Data Fechamento Reincidente"
+                }
+              },
+              "queryRef": "Medidas.Data Fechamento Reincidente",
+              "nativeQueryRef": "Data Fechamento Reincidente"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
                   "Property": "Reincidente_ATIV"
                 }
               },
@@ -376,6 +446,19 @@
               "expr": {
                 "Literal": {
                   "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -988,6 +1071,20 @@
               }
             },
             "Property": "Protocolo Reincidente"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ddff730b43d0c6e68581",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Tipo Solicitacao Reincidente"
           }
         },
         "type": "Advanced"
