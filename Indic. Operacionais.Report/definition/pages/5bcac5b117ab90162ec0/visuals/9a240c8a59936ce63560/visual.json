@@ -75,10 +75,10 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Reincidente_ATIV"
+                  "Property": "Reincidente_ATIV4"
                 }
               },
-              "queryRef": "Medidas.Protocolos em garantia",
+              "queryRef": "Medidas.Reincidente_ATIV4",
               "nativeQueryRef": "REINCIDENTE",
               "displayName": "REINCIDENTE"
             },
@@ -1101,20 +1101,6 @@
           }
         },
         "type": "Categorical"
-      },
-      {
-        "name": "b2c9a4f9fc867973ca42",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Reincidente_ATIV"
-          }
-        },
-        "type": "Advanced"
       },
       {
         "name": "313f2e14e0f75b8ff633",

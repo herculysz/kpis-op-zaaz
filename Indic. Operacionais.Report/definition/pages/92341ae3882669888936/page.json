@@ -8,7 +8,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "b27bb745016b8606c8e6",
+        "name": "6b0453f013d8c3c8f5c0",
         "field": {
           "Measure": {
             "Expression": {
@@ -16,7 +16,7 @@
                 "Entity": "Medidas"
               }
             },
-            "Property": "Reincidente_ATIV"
+            "Property": "Reincidente_ATIV4"
           }
         },
         "type": "Categorical",
@@ -25,12 +25,12 @@
     ]
   },
   "pageBinding": {
-    "name": "1dfe15f976b029166949",
+    "name": "b9d1db25dea1df7d99f9",
     "type": "Drillthrough",
     "parameters": [
       {
-        "name": "7d0ff40d208dc90217b7",
-        "boundFilter": "b27bb745016b8606c8e6",
+        "name": "8d28fb381410423193cc",
+        "boundFilter": "6b0453f013d8c3c8f5c0",
         "asAggregation": false,
         "qnaSingleSelectRequired": false,
         "fieldExpr": {
@@ -40,7 +40,7 @@
                 "Entity": "Medidas"
               }
             },
-            "Property": "Reincidente_ATIV"
+            "Property": "Reincidente_ATIV4"
           }
         }
       }

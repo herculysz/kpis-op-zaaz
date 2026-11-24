@@ -38,12 +38,12 @@
                       "Entity": "mvp solicitacao_servicos"
                     }
                   },
-                  "Property": "id_ticket"
+                  "Property": "id_contrato"
                 }
               },
-              "queryRef": "Sum(mvp solicitacao_servicos.id_ticket)",
-              "nativeQueryRef": "id_ticket",
-              "displayName": "ID TICKET"
+              "queryRef": "Sum(mvp solicitacao_servicos.id_contrato)",
+              "nativeQueryRef": "ID CONTRATO1",
+              "displayName": "ID CONTRATO"
             },
             {
               "field": {
@@ -53,12 +53,12 @@
                       "Entity": "mvp solicitacao_servicos"
                     }
                   },
-                  "Property": "id_contrato"
+                  "Property": "id_ticket"
                 }
               },
-              "queryRef": "Sum(mvp solicitacao_servicos.id_contrato)",
-              "nativeQueryRef": "ID CONTRATO1",
-              "displayName": "ID CONTRATO"
+              "queryRef": "Sum(mvp solicitacao_servicos.id_ticket)",
+              "nativeQueryRef": "id_ticket",
+              "displayName": "ID TICKET"
             },
             {
               "field": {
@@ -277,6 +277,34 @@
                       "Entity": "Medidas"
                     }
                   },
+                  "Property": "Contrato Reincidente"
+                }
+              },
+              "queryRef": "Medidas.Contrato Reincidente",
+              "nativeQueryRef": "Contrato Reincidente"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Ticket Reincidente"
+                }
+              },
+              "queryRef": "Medidas.Ticket Reincidente",
+              "nativeQueryRef": "Ticket Reincidente"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
                   "Property": "Tipo Servico Reincidente"
                 }
               },
@@ -347,10 +375,10 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Reincidente_ATIV"
+                  "Property": "Reincidente_ATIV4"
                 }
               },
-              "queryRef": "Medidas.Reincidente_ATIV",
+              "queryRef": "Medidas.Reincidente_ATIV4",
               "nativeQueryRef": "[REINCIDENTE]",
               "displayName": "[REINCIDENTE]"
             }
@@ -789,55 +817,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "c175d88089ad5aa0ce42",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Reincidente_ATIV"
-          }
-        },
-        "type": "Advanced",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "m1",
-              "Entity": "Medidas",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Comparison": {
-                  "ComparisonKind": 1,
-                  "Left": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Source": "m1"
-                        }
-                      },
-                      "Property": "Reincidente_ATIV"
-                    }
-                  },
-                  "Right": {
-                    "Literal": {
-                      "Value": "0L"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
-        "isLockedInViewMode": true
-      },
-      {
         "name": "63899332dcf90bef2219",
         "field": {
           "Column": {
@@ -850,20 +829,6 @@
           }
         },
         "type": "Advanced"
-      },
-      {
-        "name": "c576902b5d07cc0e7ff6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "id_ticket"
-          }
-        },
-        "type": "Categorical"
       },
       {
         "name": "969cbdc5dfb59200b47e",
@@ -1088,6 +1053,110 @@
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "016fc1c4481057e9c79d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Tipo Servico Reincidente"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4a29cb84a5a5f7edc613",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Tecnico Reincidente"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6e3aa47fb4ad20e8fe72",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Diagnostico Final Reincidente"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c67af94664f942bff227",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Data Fechamento Reincidente"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "05b8aa035ce129aad795",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Reincidente_ATIV4"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m1",
+              "Entity": "Medidas",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 1,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "m1"
+                        }
+                      },
+                      "Property": "Reincidente_ATIV4"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "0L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       }
     ]
   }
