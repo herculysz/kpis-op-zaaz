@@ -188,12 +188,27 @@
                       "Entity": "mvp solicitacao_servicos"
                     }
                   },
-                  "Property": "tecnico"
+                  "Property": "Colaborador"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.tecnico",
-              "nativeQueryRef": "TÉCNICO",
-              "displayName": "TÉCNICO"
+              "queryRef": "mvp solicitacao_servicos.Colaborador",
+              "nativeQueryRef": "COLABORADOR",
+              "displayName": "COLABORADOR"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mvp solicitacao_servicos"
+                    }
+                  },
+                  "Property": "funcao_colaborador"
+                }
+              },
+              "queryRef": "mvp solicitacao_servicos.funcao_colaborador",
+              "nativeQueryRef": "FUNÇÃO COLABORADOR",
+              "displayName": "FUNÇÃO COLABORADOR"
             },
             {
               "field": {
@@ -376,7 +391,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'TABELA ANALÍTICA'"
+                  "Value": "'GARANTIA - [PRODUTIVIDADE BRUTA]'"
                 }
               }
             },
@@ -415,6 +430,13 @@
                   "Value": "true"
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -422,13 +444,6 @@
       "padding": [
         {
           "properties": {
-            "top": {
-              "expr": {
-                "Literal": {
-                  "Value": "14D"
-                }
-              }
-            },
             "right": {
               "expr": {
                 "Literal": {
@@ -447,6 +462,13 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
+                }
+              }
+            },
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
                 }
               }
             }
