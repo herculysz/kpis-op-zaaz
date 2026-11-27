@@ -4,10 +4,10 @@
   "position": {
     "x": 828.11972371450508,
     "y": 147.35226400613968,
-    "z": 6,
+    "z": 6000,
     "height": 879.69301611665389,
     "width": 521.62701458173444,
-    "tabOrder": 2
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -1057,104 +1057,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "4ab813bc9e40320a7991",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "empresa"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "0294309666a3c935b48d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "ajuste_uf"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "c1f0b2bdd359a65200d7",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "cidade"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "45a4795615acc08eb1bd",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "NO_PRAZO_SLA72H_ATIV"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b60572a01c83d5043bed",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "PRODUTIVAS_GROSS_ATIV"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "d97acb9b6da4d60e7c0d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "{PER} velocidade_taxa"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "0bf8d082980b603b3e59",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "{PER} velocidade_meta"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

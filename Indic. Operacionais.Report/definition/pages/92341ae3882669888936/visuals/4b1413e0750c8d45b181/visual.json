@@ -4,10 +4,10 @@
   "position": {
     "x": 284.18262150220914,
     "y": 144.2120765832106,
-    "z": 10,
+    "z": 9000,
     "height": 877.99705449189992,
     "width": 1600.4712812960236,
-    "tabOrder": 10
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "tableEx",
@@ -188,12 +188,27 @@
                       "Entity": "mvp solicitacao_servicos"
                     }
                   },
-                  "Property": "tecnico"
+                  "Property": "Colaborador"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.tecnico",
-              "nativeQueryRef": "TÉCNICO",
-              "displayName": "TÉCNICO"
+              "queryRef": "mvp solicitacao_servicos.Colaborador",
+              "nativeQueryRef": "COLABORADOR",
+              "displayName": "COLABORADOR"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mvp solicitacao_servicos"
+                    }
+                  },
+                  "Property": "funcao_colaborador"
+                }
+              },
+              "queryRef": "mvp solicitacao_servicos.funcao_colaborador",
+              "nativeQueryRef": "FUNÇÃO COLABORADOR",
+              "displayName": "FUNÇÃO COLABORADOR"
             },
             {
               "field": {
@@ -816,300 +831,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "63899332dcf90bef2219",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "protocolo"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "969cbdc5dfb59200b47e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "id_contrato"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "f4d21b71ba1981669b42",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "data_abertura"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ef15944eed5267714225",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "data_primeira_agenda"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "21fc830e992f1eb0debe",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "data_fechamento"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "c6a921dfed3161a7d556",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "tipo_servico"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "71a01b597c9b4ef48452",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "tipo_solicitacao"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "6cff788c79e01c4dd183",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "status"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "8570b6367a49b41e1522",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "cliente"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "d428f92f9c0b85693bfe",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "diagnostico_final"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "e10eb77fb2a6e9de4404",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "tecnico"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "5a01cf53ddfe54fe22d6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "empresa"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "caa7d1da435a7a5882b6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "uf_ajustada"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "4afd6172ea857d220c41",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "filial_regional"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "febe499b822f9bc1a608",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mvp solicitacao_servicos"
-              }
-            },
-            "Property": "cidade"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "41e5fa41b645b95c188b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Protocolo Reincidente"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ddff730b43d0c6e68581",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Tipo Solicitacao Reincidente"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "016fc1c4481057e9c79d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Tipo Servico Reincidente"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4a29cb84a5a5f7edc613",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Tecnico Reincidente"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "6e3aa47fb4ad20e8fe72",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Diagnostico Final Reincidente"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c67af94664f942bff227",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Data Fechamento Reincidente"
-          }
-        },
-        "type": "Advanced"
-      },
       {
         "name": "05b8aa035ce129aad795",
         "field": {

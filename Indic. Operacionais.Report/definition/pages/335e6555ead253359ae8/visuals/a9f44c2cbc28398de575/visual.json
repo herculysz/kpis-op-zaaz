@@ -4,10 +4,10 @@
   "position": {
     "x": 284.18262150220914,
     "y": 144.2120765832106,
-    "z": 10,
+    "z": 9000,
     "height": 877.99705449189992,
     "width": 1600.4712812960236,
-    "tabOrder": 10
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "tableEx",
@@ -248,12 +248,27 @@
                       "Entity": "vw_reincidencia_reparo"
                     }
                   },
-                  "Property": "tecnico_atual"
+                  "Property": "colaborador_atual"
                 }
               },
-              "queryRef": "reincidencia_reparo.tecnico_atual",
-              "nativeQueryRef": "TÉCNICO ATUAL",
-              "displayName": "TÉCNICO ATUAL"
+              "queryRef": "vw_reincidencia_reparo.colaborador_atual",
+              "nativeQueryRef": "COLABORADOR ATUAL",
+              "displayName": "COLABORADOR ATUAL"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "vw_reincidencia_reparo"
+                    }
+                  },
+                  "Property": "descricao_funcao_atual"
+                }
+              },
+              "queryRef": "vw_reincidencia_reparo.descricao_funcao_atual",
+              "nativeQueryRef": "FUNÇÃO ATUAL",
+              "displayName": "FUNÇÃO ATUAL"
             },
             {
               "field": {
@@ -443,12 +458,27 @@
                       "Entity": "vw_reincidencia_reparo"
                     }
                   },
-                  "Property": "tecnico_anterior"
+                  "Property": "colaborador_anterior"
                 }
               },
-              "queryRef": "reincidencia_reparo.tecnico_anterior",
-              "nativeQueryRef": "TÉCNICO ANTERIOR",
-              "displayName": "TÉCNICO ANTERIOR"
+              "queryRef": "vw_reincidencia_reparo.colaborador_anterior",
+              "nativeQueryRef": "COLABORADOR ANTERIOR",
+              "displayName": "COLABORADOR ANTERIOR"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "vw_reincidencia_reparo"
+                    }
+                  },
+                  "Property": "descricao_funcao_anterior"
+                }
+              },
+              "queryRef": "vw_reincidencia_reparo.descricao_funcao_anterior",
+              "nativeQueryRef": "FUNÇÃO ANTERIOR",
+              "displayName": "FUNÇÃO ANTERIOR"
             },
             {
               "field": {

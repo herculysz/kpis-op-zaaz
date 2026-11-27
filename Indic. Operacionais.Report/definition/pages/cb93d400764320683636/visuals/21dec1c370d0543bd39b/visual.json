@@ -4,10 +4,10 @@
   "position": {
     "x": 1065.35686876439,
     "y": 154.71987720644668,
-    "z": 21,
+    "z": 20000,
     "height": 27.777777777777779,
     "width": 284.44444444444446,
-    "tabOrder": 21
+    "tabOrder": 20000
   },
   "visual": {
     "visualType": "card",
@@ -147,23 +147,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "daafce26639724d53c83",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "DATA FECHAMENTO MINMAX"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

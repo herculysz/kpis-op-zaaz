@@ -4,10 +4,10 @@
   "position": {
     "x": 284.18262150220914,
     "y": 144.2120765832106,
-    "z": 10,
+    "z": 9000,
     "height": 877.99705449189992,
     "width": 1600.4712812960236,
-    "tabOrder": 10
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "tableEx",
@@ -188,12 +188,27 @@
                       "Entity": "mvp solicitacao_servicos"
                     }
                   },
-                  "Property": "tecnico"
+                  "Property": "Colaborador"
                 }
               },
-              "queryRef": "mvp solicitacao_servicos.tecnico",
-              "nativeQueryRef": "TÉCNICO",
-              "displayName": "TÉCNICO"
+              "queryRef": "mvp solicitacao_servicos.Colaborador",
+              "nativeQueryRef": "COLABORADOR",
+              "displayName": "COLABORADOR"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mvp solicitacao_servicos"
+                    }
+                  },
+                  "Property": "funcao_colaborador"
+                }
+              },
+              "queryRef": "mvp solicitacao_servicos.funcao_colaborador",
+              "nativeQueryRef": "FUNÇÃO COLABORADOR",
+              "displayName": "FUNÇÃO COLABORADOR"
             },
             {
               "field": {

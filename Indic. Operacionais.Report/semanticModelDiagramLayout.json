@@ -1,0 +1,295 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 2
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1462.6023400130925,
+            "y": 413.67159157121012
+          },
+          "nodeIndex": "Medidas",
+          "nodeLineageTag": "4b362e9d-aa35-4bdf-9a66-4a20a11fc8eb",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1746.6023400130925,
+            "y": 499.67159157121012
+          },
+          "nodeIndex": "Atualizacao",
+          "nodeLineageTag": "b5e77921-14a8-4406-bf2a-8f13bcf5822e",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1186.0608281303021,
+            "y": 621.3065139408053
+          },
+          "nodeIndex": "Cidade",
+          "nodeLineageTag": "7675c136-6915-4e19-950c-2a3f9c98606a",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 919.50939584429443,
+            "y": 266.126433167688
+          },
+          "nodeIndex": "d_Calendario",
+          "nodeLineageTag": "fa213065-d1e3-4ab6-810e-ee1f80c7540a",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 891.64637021032672,
+            "y": 790.515721778032
+          },
+          "nodeIndex": "Empresa",
+          "nodeLineageTag": "faa482f7-a5bf-4ead-aea1-d133642d1d9c",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2030.6023400130925,
+            "y": 487.67159157121012
+          },
+          "nodeIndex": "Empresa_UF_Cidade",
+          "nodeLineageTag": "eb049461-ac0f-4f02-98ef-002dfbfc0829",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 949.68737745944213,
+            "y": -50
+          },
+          "nodeIndex": "Filial_Regional",
+          "nodeLineageTag": "b6d089f8-4088-4b65-8596-25999e05b942",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50.0195379281904,
+            "y": 497.20466330303429
+          },
+          "nodeIndex": "Função",
+          "nodeLineageTag": "247a8158-c6e5-4e0d-89ea-5789637cd27f",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2314.6023400130925,
+            "y": 511.67159157121012
+          },
+          "nodeIndex": "IndicadoresGrafico",
+          "nodeLineageTag": "1a46abb3-a285-4fc7-874d-f98795e9b19f",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 339.90772098371997,
+            "y": 973.34318314242023
+          },
+          "nodeIndex": "Intervalo Abertura",
+          "nodeLineageTag": "b54ac8c3-0905-45d9-8f4f-6e4ab29e3c1e",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2598.6023400130925,
+            "y": 463.67159157121012
+          },
+          "nodeIndex": "Metas_gross_bl",
+          "nodeLineageTag": "7699818f-0218-4022-b791-9ac77fdb0c94",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2882.6023400130925,
+            "y": 499.67159157121012
+          },
+          "nodeIndex": "Metas_mvno",
+          "nodeLineageTag": "e76cc212-d500-4379-952b-3f909fd3f6b4",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3166.6023400130925,
+            "y": 499.67159157121012
+          },
+          "nodeIndex": "Metas_sky_plus",
+          "nodeLineageTag": "22eaf031-3513-4154-9592-62cab565887f",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3450.6023400130925,
+            "y": 463.67159157121012
+          },
+          "nodeIndex": "Metas_vendas_bl",
+          "nodeLineageTag": "f79dc4a5-9eef-431e-941e-e61dee491e07",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1228.6023400130925,
+            "y": 106.34429460716262
+          },
+          "nodeIndex": "mvp base_clientes",
+          "nodeLineageTag": "460c6ea7-7cc8-4ada-a4f6-84c435766e55",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 339.927344653555,
+            "y": 565.38234940259747
+          },
+          "nodeIndex": "mvp solicitacao_servicos",
+          "nodeLineageTag": "bff224f5-cd61-4515-81af-b51dddd47aaa",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3734.6023400130925,
+            "y": 487.67159157121012
+          },
+          "nodeIndex": "par_med_Backlog_Reparos",
+          "nodeLineageTag": "c1bba914-0b92-46fb-9c88-808ac5914fa6",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4018.6023400130925,
+            "y": 439.67159157121012
+          },
+          "nodeIndex": "Parâmetro_analitico",
+          "nodeLineageTag": "d3ce9b66-f45b-49de-b0f9-eeb09c4303b8",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 800.76266998283131
+          },
+          "nodeIndex": "Tabela_periodo",
+          "nodeLineageTag": "fa612c5e-be7e-4596-9b16-cd969e200537",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 685.39090590077979,
+            "y": 106.91613158374923
+          },
+          "nodeIndex": "UF",
+          "nodeLineageTag": "424ff0f2-c39a-48c0-9d77-09b9564f4b6c",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 629.7063866525101,
+            "y": 435.31980963791278
+          },
+          "nodeIndex": "vw_reincidencia_reparo",
+          "nodeLineageTag": "2dd7d555-74f2-43bb-9219-1a40f774a23c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas as tabelas",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas as tabelas",
+  "defaultDiagram": "Todas as tabelas"
+}
